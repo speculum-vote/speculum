@@ -5,11 +5,11 @@
   "federal_register": "89 FR 81994 (Doc. 2024-21950)",
   "published": "2024-10-09",
   "effective": "2024-12-23",
-  "required": "<cite index=\"11-1\">DOE published a final rule to establish and amend the certification provisions, labeling requirements, and enforcement provisions for specific consumer products and commercial and industrial equipment.</cite> <cite index=\"15-10\">The products named include central air conditioners and heat pumps, dishwashers, residential clothes washers, pool heaters, dehumidifiers, external power supplies, battery chargers, computer room air conditioners and direct-expansion outdoor air systems, among others.</cite> The obligations fall on the manufacturers who certify these products to DOE. The rule changed reporting, labeling and enforcement provisions. DOE's rule states that it is not amending the test procedures or energy conservation standards for central air conditioners and heat pumps, dishwashers and residential clothes washers.",
-  "benefits": "In the portions I opened, DOE did not state a quantified dollar or energy-savings benefit for this rule. Ballotpedia, a secondary source, lists the estimated benefit as $0 and says the rule was <cite index=\"17-3\">not deemed significant</cite>. I did not open DOE's full regulatory-review sections to confirm there is no quantified benefit elsewhere in the document. DOE's stated qualitative benefit is that <cite index=\"15-9\">certification reports give DOE and consumers current efficiency information and support effective enforcement.</cite>",
-  "costs": "Ballotpedia, a secondary source, reports an estimated cost of $212,065. I did not confirm how that figure is built up. For residential clothes washers, DOE determined that <cite index=\"33-1\">its amendments would not cause any measurable change in reporting burden or hours.</cite> No CBO, GAO or court finding disputing these estimates was found.",
-  "agency_reasons": "DOE said it was updating certification and labeling requirements because, since its previous certification rule (87 FR 43952, July 2022), <cite index=\"11-5\">it had proposed or finalized test procedures and/or energy conservation standards for multiple products and equipment.</cite> It said the amendments ensure <cite index=\"13-5\">reporting consistent with currently applicable energy conservation standards and test procedures.</cite>",
-  "sponsor_reasons": "A James Magazine item reproducing Rep. Andrew Clyde's (R-GA) statement describes the rule as having <cite index=\"42-2\">added costs and red tape for appliance manufacturers, with consumers bearing the ultimate cost.</cite> That wording appears in the magazine's narration, not inside Clyde's quoted statement. A House Republican release carrying statements from Clyde and Rep. McClain described the rule as placing <cite index=\"39-10\">undue burdens on manufacturers and consumers, leading to increased costs and limiting consumer choice.</cite> That release described the rule as requiring higher energy efficiency standards. I did not review Democratic floor statements in full.",
+  "required": "<cite index=\"11-1\">DOE published a final rule to establish and amend the certification provisions, labeling requirements, and enforcement provisions for specific consumer products and commercial and industrial equipment.</cite> <cite index=\"15-10\">The products named include central air conditioners and heat pumps, dishwashers, residential clothes washers, pool heaters, dehumidifiers, external power supplies, battery chargers, computer room air conditioners and direct-expansion outdoor air systems, among others.</cite> The obligations fall on the manufacturers who certify these products to DOE. The rule changed reporting, labeling and enforcement provisions.",
+  "benefits": "The portions of DOE's document that were reviewed do not state a quantified dollar or energy-savings benefit for this rule. Ballotpedia, a secondary source, lists the estimated benefit as $0 and says the rule was <cite index=\"17-3\">not deemed significant</cite>. DOE's full regulatory-review sections were not opened to confirm there is no quantified benefit elsewhere in the document. DOE's stated qualitative benefit is that <cite index=\"15-9\">certification reports give DOE and consumers current efficiency information and support effective enforcement.</cite>",
+  "costs": "Ballotpedia, a secondary source, reports an estimated cost of $212,065. How that figure is built up was not confirmed. No CBO, GAO or court finding disputing these estimates was found.",
+  "agency_reasons": "DOE said it was establishing and amending certification requirements, labeling requirements, and enforcement provisions for these products and equipment to ensure reporting that is consistent with currently applicable energy conservation standards and test procedures.",
+  "sponsor_reasons": "A James Magazine item reproducing Rep. Andrew Clyde's (R-GA) statement describes the rule as one that <cite index=\"42-2\">put additional costs and red tape on appliance manufacturers, with consumers bearing the ultimate cost.</cite> That wording appears in the magazine's narration, not inside Clyde's quoted statement. A House Republican release carrying statements from Clyde and Rep. McClain described the rule as placing <cite index=\"39-10\">undue burdens on manufacturers and consumers, leading to increased costs and limiting consumer choice.</cite> That release described the rule as requiring higher energy efficiency standards. Democratic floor statements were not reviewed in full.",
   "status": "Became law. H.J.Res.42 passed the House on 2025-03-05. The Senate passed the resolution 2025-04-30 (52-46); <cite index=\"58-1\">the Senate Daily Press logged the vote as party line.</cite> <cite index=\"20-4\">It was sent to the President on May 6, 2025, and signed May 9, 2025, becoming Pub. L. 119-8.</cite> <cite index=\"22-8,22-9,22-10\">The law states that Congress disapproves the rule (89 Fed. Reg. 81994, October 9, 2024) and that it shall have no force or effect.</cite> The rule is therefore void and not in force.",
   "sources": [
    {
@@ -114,7 +114,18 @@
     6
    ]
   },
-  "_revised": 1
+  "_revised": 1,
+  "_revised_fields": [
+   "agency_reasons",
+   "costs",
+   "required",
+   "sponsor_reasons"
+  ],
+  "_voiced_fields": [
+   "benefits",
+   "costs",
+   "sponsor_reasons"
+  ]
  },
  "outcomes": [
   {
@@ -127,12 +138,13 @@
     "publisher": "Office of the Federal Register / DOE",
     "date": "2025-09-09"
    },
-   "counterpoint": "I found no record of changes in actual enforcement or compliance.",
-   "_revised": 1
+   "counterpoint": "The sources record no changes in actual enforcement or compliance.",
+   "_revised": 1,
+   "_voiced": 1
   },
   {
    "grade": "estimated",
-   "claim": "DOE found no measurable change in reporting burden or hours for residential clothes washers from these amendments. DOE's own estimates of reporting burden for the rule's other products, including electric pool heaters, are in section IV.C of the final rule, which I could not read, so I do not state them here. Any burden figures would be DOE's forecasts, not measured outcomes.",
+   "claim": "DOE found no measurable change in reporting burden or hours for residential clothes washers from these amendments. DOE's own estimates of reporting burden for the rule's other products, including electric pool heaters, are in section IV.C of the final rule, which could not be read, so they are not stated here. Any burden figures would be DOE's forecasts, not measured outcomes.",
    "date": "2024-10-09",
    "source": {
     "title": "Federal Register: Certification Requirements... final rule (Paperwork Reduction Act section)",
@@ -141,8 +153,9 @@
     "date": "2024-10-09"
    },
    "quote": "DOE makes a final determination that these amendments would not cause any measurable change in reporting burden or hours for RCWs.",
-   "counterpoint": "DOE stated that certification reports provide DOE and consumers with efficiency information and support effective enforcement. That information benefit is not quantified in the sources I opened, so no dollar comparison with the burden can be made.",
-   "_revised": 1
+   "counterpoint": "DOE stated that certification reports provide DOE and consumers with efficiency information and support effective enforcement. That information benefit is not quantified in the sources opened, so no dollar comparison with the burden can be made.",
+   "_revised": 1,
+   "_voiced": 1
   },
   {
    "grade": "associated",
