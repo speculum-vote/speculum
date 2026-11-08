@@ -26,6 +26,7 @@
 {% endif %}{% endfor %}{% endfor %}
 </tbody></table></div>
 {% endmacro %}
+{% macro fieldcheck(key) %}{% set fi = ((c.mechanism or {})._field_items or {}).get(key) %}{% if fi %}{{ checkline(fi) }}{% endif %}{% endmacro %}
 {% block body %}
 {% set mx = c.mechanism or {} %}{% set pg = c.page %}
 <p class="meta"><a href="../dependents.html">The Dependents</a> · {{ c.rule_name }}</p>
@@ -65,18 +66,18 @@
 <li>
   <div class="step" id="record">2 · {{ pg.record_title }}</div>
   {% if c.mechanism %}
-  {% if mx.rule %}<p><b>{{ mx.rule }}</b>{% if mx.federal_register %} <span class="muted">· {{ mx.federal_register }}</span>{% endif %}{% if mx.published %} <span class="muted">· published {{ mx.published }}</span>{% endif %}{% if mx.effective %} <span class="muted">· effective {{ mx.effective }}</span>{% endif %}</p>{% endif %}
-  {% if mx[pg.main] %}<p>{{ mx[pg.main] }}</p>{% endif %}
+  {% if mx.rule %}<p><b>{{ mx.rule }}</b>{% if mx.federal_register %} <span class="muted">· {{ mx.federal_register }}</span>{% endif %}{% if mx.published %} <span class="muted">· published {{ mx.published }}</span>{% endif %}{% if mx.effective %} <span class="muted">· effective {{ mx.effective }}</span>{% endif %}</p>{{ fieldcheck('header') }}{% endif %}
+  {% if mx[pg.main] %}<p>{{ mx[pg.main] }}</p>{{ fieldcheck(pg.main) }}{% endif %}
   {% if pg.pair and (mx[pg.pair[0][0]] or mx[pg.pair[1][0]]) %}
   <div class="readings" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
     <div class="reading"><div class="label">{{ pg.pair[0][1] }}</div><div class="context" style="margin-top:6px">{{ mx[pg.pair[0][0]] or 'None given.' }}</div></div>
     <div class="reading"><div class="label">{{ pg.pair[1][1] }}</div><div class="context" style="margin-top:6px">{{ mx[pg.pair[1][0]] or 'None given.' }}</div></div>
   </div>
-  <p class="meta">{{ pg.pair[2] }}</p>
+  <p class="meta">{{ pg.pair[2] }}</p>{{ fieldcheck(pg.pair[0][0]) }}{{ fieldcheck(pg.pair[1][0]) }}
   {% endif %}
-  {% for key, label in pg.lines %}{% if mx[key] %}<p><b>{{ label }}:</b> {{ mx[key] }}</p>
+  {% for key, label in pg.lines %}{% if mx[key] %}<p><b>{{ label }}:</b> {{ mx[key] }}</p>{{ fieldcheck(key) }}
   {% endif %}{% endfor %}
-  {% if mx.status %}<p><b>{{ pg.status_label }}:</b> {{ mx.status }}</p>{% endif %}
+  {% if mx.status %}<p><b>{{ pg.status_label }}:</b> {{ mx.status }}</p>{{ fieldcheck('status') }}{% endif %}
   {% if mx.sources %}<p class="src">{% for s in mx.sources %}<a href="{{ s.url }}">{{ s.title }}</a>{% if s.publisher %}, {{ s.publisher }}{% endif %}{% if s.date %}, {{ s.date }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
   {% else %}<p class="muted">Not yet researched.</p>{% endif %}
 </li>

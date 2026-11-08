@@ -761,6 +761,36 @@ def claim_fp(obj: dict) -> str:
     return hashlib.sha256(json.dumps(body, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
 
 
+RECORD_HEADER = ("rule", "agency", "federal_register", "published", "effective")
+
+
+def record_fields(mx: dict | None) -> dict:
+    """A record that names each field's own sources ("field_sources") is checked field by field: one claim for
+    the identifying details (rule, agency, citation, dates) and one for each text field, each with only the
+    sources that field cites. A record without field_sources (the arms-sale records) is checked whole."""
+    mx = mx or {}
+    fs = mx.get("field_sources")
+    if not isinstance(fs, dict):
+        return {}
+    srcs = [s for s in (mx.get("sources") or []) if isinstance(s, dict)]
+
+    def pick(keys):
+        idx = sorted({i for k in keys for i in (fs.get(k) or []) if isinstance(i, int) and 0 <= i < len(srcs)})
+        return [srcs[i] for i in idx] or list(srcs)
+    about = mx.get("rule") or mx.get("agency")
+    out = {}
+    head = {k: mx[k] for k in RECORD_HEADER if mx.get(k)}
+    if head:
+        out["header"] = {"item": {"record": head}, "sources": pick(list(head))}
+    for k, v in mx.items():
+        if k in RECORD_HEADER or k in ("sources", "field_sources") or k.startswith("_") or not isinstance(v, str) or not v.strip():
+            continue
+        out[k] = {"item": {"field": k, "text": v, **({"record_of": about} if about else {})}, "sources": pick([k])}
+    for c in out.values():
+        c["fp"] = claim_fp({**c["item"], "sources": [s.get("url") for s in c["sources"]]})
+    return out
+
+
 def tag_claims(research: dict, advocacy_cfg: dict) -> None:
     for o in research.get("outcomes", []) + research.get("context", []):
         o["_fp"] = claim_fp(o)
@@ -776,13 +806,20 @@ def all_claims(research: dict, advocacy_cfg: dict, drafts: list[dict] | None = N
     tag_claims(research, advocacy_cfg)
     research = {**research, "outcomes": list(research.get("outcomes", [])),
                 "resolutions": dict(research.get("resolutions") or {})}
+    out = []
     for i, d in enumerate(drafts or []):
         research["outcomes"] += d.get("outcomes", [])
-        if d.get("mechanism"):
-            research["resolutions"][f"draft-{i}"] = d["mechanism"]
+        name = d.get("_id") or f"draft-{i}"
+        fields = record_fields(d.get("mechanism"))
+        if fields:                                        # checked field by field
+            for k, c in fields.items():
+                out.append({"fp": c["fp"], "kind": "record field", "grade": None,
+                            "label": f"{name}: {'identifying details' if k == 'header' else k.replace('_', ' ')}",
+                            "item": c["item"], "sources": c["sources"]})
+        elif d.get("mechanism"):
+            research["resolutions"][name] = d["mechanism"]
         for o in d.get("outcomes", []) + ([d["mechanism"]] if d.get("mechanism") else []):
             o["_fp"] = claim_fp(o)
-    out = []
     for kind in ("outcomes", "context"):
         for o in research.get(kind, []):
             srcs = [o["source"]] + list(o.get("also") or []) if o.get("source") else list(o.get("also") or [])
@@ -826,7 +863,25 @@ def apply_checks(ch: dict, checks: dict, disputes: dict) -> None:
     for x in ch.get("context") or []:
         mark(x, graded=bool(x.get("grade")))
     mx = ch.get("mechanism") or {}
-    ch["mechanism_public"], ch["mechanism_check"], ch["mechanism_disputed"] = _passes(mx.get("_fp"), checks, open_fps)
+    fields = record_fields(mx)
+    if fields:
+        # Field by field: each field is shown only once it passes; the chain goes public once its core
+        # fields pass (what the measure did, and what became of it).
+        items = {}
+        for k, c in fields.items():
+            ok, chk, disputed = _passes(c["fp"], checks, open_fps)
+            items[k] = {"_fp": c["fp"], "_check": chk, "_disputed": disputed, "_public": ok,
+                        "claim": c["item"].get("text") or ", ".join(str(v) for v in c["item"].get("record", {}).values())}
+            if not ok:
+                held["disputed" if disputed else "unchecked" if not chk else "failed"] += 1
+        mx["_field_items"] = items
+        core = [k for k in ((ch.get("page") or {}).get("main"), "status") if k]
+        ch["mechanism_public"] = bool(core) and all((items.get(k) or {}).get("_public") for k in core)
+        first_bad = next((items[k] for k in core if k in items and not items[k]["_public"]), None)
+        ch["mechanism_check"] = (first_bad or {}).get("_check") or next((items[k]["_check"] for k in core if k in items), None)
+        ch["mechanism_disputed"] = any(items[k]["_disputed"] for k in core if k in items)
+    else:
+        ch["mechanism_public"], ch["mechanism_check"], ch["mechanism_disputed"] = _passes(mx.get("_fp"), checks, open_fps)
     orgs = [o for side in (ch.get("advocacy_orgs") or {}).values() for o in side]
     for o in orgs:
         o["_public"], o["_check"], o["_disputed"] = _passes(o.get("_fp"), checks, open_fps)

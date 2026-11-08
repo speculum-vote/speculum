@@ -251,6 +251,10 @@ def cmd_chains(args) -> int:
     if args.draft:
         done = interpret.draft_missing(out, ROOT / "chains" / "drafts", limit=args.limit)
         log.info("drafted: %s", ", ".join(done) or "none")
+    if args.revise:
+        checks = chains.load_json(ROOT / "chains" / "checks.json", {}).get("checks", {})
+        done = interpret.revise_failed(ROOT / "chains" / "drafts", checks, limit=args.limit)
+        log.info("revised after the source check: %d (%s)", len(done), "; ".join(done) or "none")
     return 0
 
 
@@ -326,6 +330,7 @@ def main(argv=None) -> int:
     b.add_argument("--out", default="dist")
     c = sub.add_parser("chains", help="build consequence chains; with --draft, ask the AI drafter for missing research")
     c.add_argument("--draft", action="store_true")
+    c.add_argument("--revise", action="store_true", help="revise, once each, drafted claims the source check did not pass")
     c.add_argument("--check", action="store_true", help="one small live request to prove the API key works")
     c.add_argument("--limit", type=int, default=3, help="most chains to draft in one run")
     a = sub.add_parser("approve", help="record a person's approval of one chain's current research")

@@ -270,6 +270,15 @@ def public_view(c: dict) -> dict:
     v = dict(c)
     v["outcomes"] = [o for o in c.get("outcomes") or [] if o.get("_public")]
     v["context"] = [x for x in c.get("context") or [] if x.get("_public")]
+    fi = (c.get("mechanism") or {}).get("_field_items")
+    if fi:                                                   # a record checked field by field: passed fields only
+        mx = {k: val for k, val in c["mechanism"].items()
+              if k in ("sources", "field_sources", "_field_items") or (fi.get("header" if k in chains_mod.RECORD_HEADER else k) or {}).get("_public")}
+        pair = ((c.get("page") or {}).get("pair") or [None, None])[:2]
+        if pair[0] and not all((fi.get(p[0]) or {}).get("_public") for p in pair):
+            for p in pair:                                   # estimates are shown in pairs, or not at all
+                mx.pop(p[0], None)
+        v["mechanism"] = mx
     if not c.get("advocacy_public"):
         v["advocacy_pattern"], v["advocacy_withheld"] = None, True
     return v

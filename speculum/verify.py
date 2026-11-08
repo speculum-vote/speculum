@@ -47,7 +47,10 @@ sources say what the claim says. You are strict: a claim that adds a figure, a d
 causal link or a degree of certainty that the source does not state is not supported, even if it is
 probably true. Quoted words must appear in the source. Paraphrase must not change meaning or strength.
 Counterpoints and scope notes attached to a claim are part of it and must also be supported (by the cited
-source or by a source named inside them). Do not use your own knowledge to fill gaps.
+source or by a source named inside them). Do not use your own knowledge to fill gaps. A claim may carry
+"quote", the passage its writer relied on, and "locator", where it is: the quote must appear in the source
+(allowing for spacing and line breaks), and the claim must not go beyond it. A "record field" claim is one
+field of a decision's record ("record_of" names the decision); judge only that field's text.
 
 Evidence grades, for outcome claims:
 {GRADES}
@@ -65,8 +68,61 @@ light of all sources, the claim as written still stands. Add to your JSON:
   or missing a necessary caveat), false if it does not."""
 
 
+HEAD_CHARS = 20_000          # a long source's opening: its title, summary and dates
+WINDOW = 2_500               # characters kept on each side of a passage the claim points to
+
+
+def _needles(item: dict) -> list[str]:
+    """What to look for in a long source: the claim's figures, quoted words and distinctive phrases."""
+    text = json.dumps(item, ensure_ascii=False)
+    found = set(re.findall(r"\$?\d[\d,]*(?:\.\d+)?(?:\s?(?:%|percent|million|billion|tons?|quads?|hours?|lb))?", text))
+    found |= {q for q in re.findall(r"[\"\u201c']([^\"\u201d']{12,160})[\"\u201d']", text)}
+    for k in ("quote", "locator"):
+        v = item.get(k)
+        if isinstance(v, str) and len(v) >= 8:
+            found.add(v[:160])
+            found |= {w for w in re.split(r"[.;:]\s+", v) if len(w) >= 24}
+    return sorted((n.strip() for n in found if len(n.strip()) >= 3 and not re.fullmatch(r"(19|20)\d\d|\d{1,2}", n.strip())), key=len, reverse=True)
+
+
+def passages(txt: str, item: dict, limit: int = MAX_SOURCE_CHARS) -> str:
+    """A source too long to read whole: its opening, then every passage the claim points to (its figures,
+    quotes and phrases), in document order, with gaps marked. Short sources are returned whole."""
+    if len(txt) <= limit:
+        return txt
+    low = txt.lower()
+    spans = [(0, HEAD_CHARS)]
+    for n in _needles(item):
+        start, nl = 0, n.lower()
+        for _ in range(12):                                  # at most twelve places per figure or phrase
+            i = low.find(nl, start)
+            if i < 0:
+                break
+            spans.append((max(0, i - WINDOW), min(len(txt), i + len(n) + WINDOW)))
+            start = i + len(n)
+    spans.sort()
+    merged = []
+    for a, b in spans:
+        if merged and a <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], b))
+        else:
+            merged.append((a, b))
+    out, used = [], 0
+    for a, b in merged:
+        piece = txt[a:b]
+        if used + len(piece) > limit:
+            piece = piece[: max(0, limit - used)]
+        if not piece:
+            break
+        out.append(piece)
+        used += len(piece)
+    note = f"[Excerpts from a long document ({len(txt):,} characters): its opening and every passage containing the claim's figures or quoted words, in order. '[...]' marks text left out.]\n"
+    return note + "\n[...]\n".join(out)
+
+
 def _text(url: str) -> str | None:
-    """The readable text of a source, or None if it cannot be fetched here."""
+    """The readable text of a source, or None if it cannot be fetched here. The whole of it: check_claim
+    chooses what to send."""
     try:
         r = requests.get(url, timeout=60, headers={"User-Agent": UA, "Accept": "text/html,application/pdf,*/*"})
         r.raise_for_status()
@@ -78,7 +134,7 @@ def _text(url: str) -> str | None:
         try:
             from pypdf import PdfReader
             pages = PdfReader(io.BytesIO(r.content)).pages
-            return "\n".join((p.extract_text() or "") for p in pages)[:MAX_SOURCE_CHARS]
+            return "\n".join((p.extract_text() or "") for p in pages)
         except Exception as exc:
             log.info("pdf read failed %s: %s", url, exc)
             return None
@@ -87,7 +143,7 @@ def _text(url: str) -> str | None:
     txt = re.sub(r"(?s)<[^>]+>", " ", html)
     txt = re.sub(r"&nbsp;", " ", txt)
     txt = re.sub(r"\s+", " ", txt).strip()
-    return txt[:MAX_SOURCE_CHARS] if len(txt) > 200 else None
+    return txt if len(txt) > 200 else None
 
 
 def _ask(key: str, prompt: str, fetch_urls: list[str]) -> dict:
@@ -115,12 +171,14 @@ def check_claim(key: str, claim: dict, dispute: dict | None = None) -> dict:
     for s in srcs:
         t = _text(s["url"])
         if t:
+            t = passages(t, claim["item"])
             parts.append(f"SOURCE: {s.get('title')} ({s.get('publisher')}, {s.get('date')})\nURL: {s['url']}\nTEXT:\n{t}")
         else:
             unread.append(s["url"])
     if dispute:
         t = _text(dispute["source"])
         if t:
+            t = passages(t, claim["item"])
             parts.append(f"READER'S SOURCE\nURL: {dispute['source']}\nTEXT:\n{t}")
         else:
             unread.append(dispute["source"])
@@ -151,7 +209,7 @@ def run(data_root: Path, limit: int = 40, key: str | None = None) -> dict:
     cdir = data_root / "chains"
     research = chains.load_json(cdir / "research.json", {})
     adv = chains.load_json(data_root / "advocacy.json", {})
-    drafts = [chains.load_json(p, {}) for p in sorted((cdir / "drafts").glob("*.json"))] if (cdir / "drafts").exists() else []
+    drafts = [{**chains.load_json(p, {}), "_id": p.stem} for p in sorted((cdir / "drafts").glob("*.json"))] if (cdir / "drafts").exists() else []
     claims = {c["fp"]: c for c in chains.all_claims(research, adv, drafts)}
     store = chains.load_json(cdir / "checks.json", {"checks": {}})
     checks = store.setdefault("checks", {})
