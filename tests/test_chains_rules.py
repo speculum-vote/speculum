@@ -111,3 +111,13 @@ def test_a_decision_reads_its_own_congress_after_it_closes():
     c = next(x for x in out if x["rule"] == "rules-overturned")
     assert c["window_start"] == "2025-01-01"
     assert next(r for r in c["chambers"][0]["members"] if r["bioguide"] == "H0")["lobby"] == 500.0
+
+
+def test_a_rule_providing_for_consideration_is_not_the_decision():
+    v = {"votes": [{"id": "h-119-1-140", "chamber": "house", "congress": 119, "bill": "HRES 436", "date": "2025-05-22",
+                    "question": "On Agreeing to the Resolution", "result": "Passed",
+                    "title": "Providing for consideration of the bill (H.R. 1) to provide for reconciliation pursuant to title II of H. Con. Res. 14."}],
+         "positions": {"h-119-1-140": {}}}
+    assert chains.build(_members(), {}, {"years": [2025]}, v, {}, {}, {}, spend={"quarters": {}}, bill_info={"bills": {}}) == []
+    assert chains.measures(v) == []
+    assert chains.procedural("H.Res. 566") and chains.procedural("SRES 12") and not chains.procedural("HJRES 61")

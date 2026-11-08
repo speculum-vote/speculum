@@ -239,6 +239,14 @@ def rule_parts(title: str) -> tuple[str | None, str | None]:
     return (a.group(1).strip() if a else None), (name or None)
 
 
+def procedural(bill: str | None) -> bool:
+    """A simple House or Senate resolution (H.Res., S.Res.), such as a rule "providing for consideration of" a
+    measure. Its title quotes the measure's own, but it decides only how the measure is debated, so no theme
+    counts it as the decision."""
+    from .bills import norm
+    return bool(bill) and norm(bill).startswith(("HRES", "SRES"))
+
+
 def measures(votes: dict) -> list[tuple[int, str]]:
     """Every measure a Dependents rule selects, by its own title (Senate roll calls carry one). Their bill
     details (final status: became law or not) are fetched each night ahead of anything else."""
@@ -246,7 +254,7 @@ def measures(votes: dict) -> list[tuple[int, str]]:
     out = []
     for v in (votes or {}).get("votes") or []:
         t = v.get("title") or ""
-        if v.get("bill") and any(r["test"].search(t) for r in RULES):
+        if v.get("bill") and not procedural(v["bill"]) and any(r["test"].search(t) for r in RULES):
             k = (int(v.get("congress") or 0), norm(v["bill"]))
             if k[0] and k not in out:
                 out.append(k)
@@ -331,7 +339,7 @@ def build(members: list[dict], finance: dict, lobbying: dict, votes: dict, secto
     for rule in RULES:
         for v in votes.get("votes", []):
             title = title_of(v)
-            if not rule["test"].search(title):
+            if not rule["test"].search(title) or procedural(v.get("bill")):
                 continue
             # One chain per measure: the House writes "HJRES 61" and the Senate "HJRES61" for the same resolution.
             bill = (bills_mod.norm(v.get("bill")) if rule["money"] == "lobbied" else v.get("bill")) or v["id"]
