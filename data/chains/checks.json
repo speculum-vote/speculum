@@ -832,115 +832,734 @@
    "kind": "outcome",
    "label": "Amnesty International identified Chinese-made GB50A guided bombs (North Darfur, 9 Mar 2025"
   },
-  "b6c970bcdbd10400": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "04831077635e6c03": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The Unified Agenda entry supports two effective-date delays (02/20/25 and 03/20/25), the May 20, 2025 withdrawal, and that the rule 'no longer has force or effect.' It does not state that the standards never took effect, though no effective date is listed. It also does not contain the compliance dates (Dec. 23, 2027; Dec. 31, 2028), the DOE walk-in coolers page statement, the Congress.gov summary language, the point that display doors and panels were not amended, or the counterpoint about compliance spending and later effects.",
+   "note": "Every field matches the Federal Register document: the title, final-rule action, RIN 1904-AD79, docket EERE-2017-BT-STD-0009, the issuing office (EERE, DOE), the citation 89 FR 104616, publication on 12/23/2024 and the effective date of February 21, 2025.",
    "quotes": [
-    "Final Rule; Delay of Effective Date 02/20/25 90 FR 9951",
-    "Final Rule; Delay of Effective Date 03/20/25 90 FR 13054",
-    "Final Rule; Withdrawal 05/20/25 90 FR 21391"
+    "Department of Energy 10 CFR Part 431 [EERE-2017-BT-STD-0009] RIN 1904-AD79",
+    "AGENCY: Office of Energy Efficiency and Renewable Energy, Department of Energy. ACTION: Final rule.",
+    "Document Citation 89 FR 104616 Document Number 2024-28474 Document Type Rule Pages 104616-104855 (240 pages) Publication Date 12/23/2024"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: identifying details"
+  },
+  "635838195ec7dcf8": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the field matches the rule: adoption with significant savings, technological feasibility and economic justification; no change for display doors or panels; MDEC standards for non-display doors and AWEF2 standards for refrigeration systems; compliance on December 23, 2027 and December 31, 2028. The sentence 'manufacturers could meet the non-display door level with existing equipment' overstates and blurs the source. DOE said only that new manufacturing equipment or tooling 'is likely not required', and it still expected anti-sweat heater controls, product redesign and testing ($1.4M in product conversion costs), with only about 32% of current shipments meeting TSL 1. The 'indirectly to the businesses that buy and use it' framing is also an inference not stated in the rule.",
+   "quotes": [
+    "In this final rule, DOE is adopting amended energy conservation standards for walk-ins. It has determined that the amended energy conservation standards for these products would result in significant conservation of energy and are technologically feasible and economically justified.",
+    "DOE is not amending energy conservation standards for display doors or panels at this time and the existing standards will remain in effect.",
+    "Compliance with the amended standards established for walk-in non-display doors in this final rule is required on and after December 23, 2027. Compliance with the amended standards established for walk-in refrigeration systems in this final rule is required on and after December 31, 2028."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: required"
+  },
+  "3b5c409abaf27026": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The NPV ($2.00B–$4.74B), analysis periods, 1.60 quads FFC, 6.3%, 28.82 Mt CO2, 8.8 thousand tons SO2 and the 3%-case annualized figures ($369.8M, $96.5M, $189.4M, net $554.5M) all match the rule. The 7%-case figure misleads: $326.5M is the climate benefit under the 2023 SC-GHG estimates (2% near-term Ramsey rate), not a result of the 7% rate. Under the same 2021 interim estimates used for the 3% figures, the climate benefit is $96.5M in both cases, so setting $326.5M beside $96.5M falsely implies the discount rate caused the difference.",
+   "quotes": [
+    "The cumulative net present value (“NPV”) of total consumer benefits of the standards for walk-ins ranges from $2.00 billion USD (at a 7-percent discount rate) to $4.74 billion USD (at a 3-percent discount rate).",
+    "amount to 1.60 quadrillion British thermal units (“Btu”), or quads of-full-fuel cycle energy savings. This represents a savings of 6.3 percent relative to the energy use of these products in the case without amended standards",
+    "Using a 3-percent discount rate for all benefits and costs, the estimated cost of the standards is $101.2 million per year in increased equipment costs, while the estimated annual benefits are $369.8 million in reduced equipment operating costs, $96.5 million in climate benefits, and $189.4 million in health benefits. In this case, the net benefit would amount to $554.5 million per year."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: benefits"
+  },
+  "33ec0387d911d9ba": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The final rule gives annualized equipment costs of $101.2 million per year at 3% and $99.1 million per year at 7% for consumer costs, and the TSD (and the final rule) state the INPV change of -$63 million to -$42 million for walk-ins. The GAO report restates DOE's NPV range as DOE's statements without assessing it. Nothing in it disputes the estimates, which is consistent with the claim's no-dispute statement.",
+   "quotes": [
+    "Using a 3-percent discount rate for all benefits and costs, the estimated cost of the standards is $101.2 million per year in increased equipment costs",
+    "Using a 7-percent discount rate for consumer benefits and costs and health benefits from reduced NOX and SO2 emissions, and the 3-percent discount rate case for climate benefits from reduced GHG emissions, the estimated cost of the standards adopted in this rule is $99.1 million per year in increased equipment costs",
+    "For walk-ins, the change in INPV ranges from -$63 million to -$42 million."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: costs"
+  },
+  "64dda5f047e5984d": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The first sentence repeats the summary's description of EPCA's periodic-review requirement nearly word for word. The second sentence combines the summary's finding of significant energy conservation, technological feasibility and economic justification with the synopsis's 'maximum improvement' determinations for TSL 1 (non-display doors) and TSL 2 (refrigeration systems), which are the only adopted standards.",
+   "quotes": [
+    "EPCA also requires the U.S. Department of Energy (\"DOE\") to periodically review its existing standards to determine whether more-stringent standards would be technologically feasible and economically justified, and would result in significant energy savings.",
+    "It has determined that the amended energy conservation standards for these products would result in significant conservation of energy and are technologically feasible and economically justified.",
+    "DOE has determined that TSL 1 represents the maximum improvement in energy efficiency that is technologically feasible and economically justified for non-display doors and that TSL 2 represents the maximum improvement in energy efficiency that is technologically feasible and economically justified for refrigeration systems."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: agency reasons"
+  },
+  "a1fab576ebd71ad9": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Bice, McClain, Guthrie/Latta, Fedorchak and NACS-letter statements, and DOE's annualized cost figures of $99.1M and $101.2M per year, all match the sources. However, the cited DOE TSD does report a present-value consumer incremental product cost of $0.96 billion at a 7% discount rate ($1.78 billion at 3%), so the statement that no ~$1 billion total cost figure appears in DOE's analysis is contradicted by the source.",
+   "quotes": [
+    "By overturning this rule, we are protecting economic freedom, preserving consumer choice, and ensuring businesses aren't forced to bear unnecessary costs.",
+    "The rule, with an estimated compliance cost of nearly $1 billion",
+    "we will protect small businesses from unnecessary compliance cost and preserve the diversity of choice available to consumers"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: sponsor reasons"
+  },
+  "ea1ebe8bd28cf9ad": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "I couldn't load the Congress.gov bill page (access denied), so I checked the claim against the two sources supplied. Public Law 119-7 confirms House passage on Mar. 27 and Senate passage on Apr. 2–3, 2025. It also confirms approval on May 9, 2025 and disapproval of 89 Fed. Reg. 104616 with 'no force or effect'. The DOE Unified Agenda entry for RIN 1904-AD79 confirms the May 5 presentment, the May 9 signing, both effective-date delays (90 FR 9951 on 02/20/25 and 90 FR 13054 on 03/20/25) and the withdrawal (90 FR 21391 on 05/20/25). 'The rule is void' is a fair paraphrase of 'shall have no force or effect'.",
+   "quotes": [
+    "Mar. 27, considered and passed House.",
+    "Apr. 2, 3, considered and passed Senate.",
+    "such rule shall have no force or effect."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres24: status"
+  },
+  "9b1b8152df386d54": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source matches every field: the full title, the final-rule action, 10 CFR Parts 429 and 431, the issuing office (Office of Energy Efficiency and Renewable Energy, DOE), the citation 89 FR 81994 and Doc. 2024-21950, the 10/09/2024 publication date and the 2024-12-23 effective date. The source's related-documents list also shows a 09/09/2025 Congressional Review Act revocation, which this field does not address.",
+   "quotes": [
+    "Department of Energy 10 CFR Parts 429 and 431 [EERE-2023-BT-CE-0001] RIN 1904-AF48",
+    "AGENCY: Office of Energy Efficiency and Renewable Energy, Department of Energy. ACTION: Final rule.",
+    "Document Citation 89 FR 81994 Document Number 2024-21950"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: identifying details"
+  },
+  "f165bf25de270700": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The rule's purpose, the listed products and the manufacturer certification obligations match the summary, synopsis and dates text. The provided text has no statement that DOE is not amending test procedures or energy conservation standards for central air conditioners and heat pumps, dishwashers or residential clothes washers; it says only that the rule ensures reporting consistent with currently applicable standards and test procedures.",
+   "quotes": [
+    "is publishing a final rule to establish and amend the certification provisions, labeling requirements, and enforcement provisions for specific types of consumer products and commercial and industrial equipment",
+    "to ensure reporting that is consistent with currently applicable energy conservation standards and test procedures",
+    "manufacturers must submit the initial certification report for basic models distributed in commerce beginning May 7, 2025"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: required"
+  },
+  "c4af90130f6a7e75": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Ballotpedia page lists the estimated benefit as $0 and the type as 'Not deemed significant'. The DOE rule says certification reports give DOE and consumers up-to-date efficiency information and support effective enforcement. The claim paraphrases that sentence without changing its meaning, and it is open that DOE's full regulatory-review sections were not checked.",
+   "quotes": [
+    "Estimated benefit: $0",
+    "Type: Not deemed significant",
+    "Certification reports provide DOE and consumers with comprehensive, up-to-date efficiency information and support effective enforcement."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: benefits"
+  },
+  "d9b242e9743a6fa5": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Ballotpedia does list an estimated cost of $212,065, and the claim correctly treats that as a secondary figure it did not confirm. However, the quoted passage about residential clothes washers ('its amendments would not cause any measurable change in reporting burden or hours') appears in neither cited source: the September 2025 CRA revocation rule only says the overall certification burden averages 35 hours per response, and Ballotpedia does not mention it.",
+   "quotes": [
+    "Estimated cost: $212,065",
+    "Public reporting burden for the certification is estimated to average 35 hours per response"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: costs"
+  },
+  "b09d7528360101cb": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The second part is supported: DOE's summary says it is amending these requirements \"to ensure reporting that is consistent with currently applicable energy conservation standards and test procedures.\" The claim's quote drops \"that is\" but keeps the meaning. The first quoted passage (\"it had proposed or finalized test procedures and/or energy conservation standards for multiple products and equipment\") does not appear in the provided text. The source mentions the July 22, 2022 Final Rule (87 FR 43952) only as one of several certification rulemakings; it does not call it the previous rule or link it to that stated rationale.",
+   "quotes": [
+    "DOE is establishing and making amendments to the certification requirements, labeling requirements, and enforcement provisions for these products and equipment to ensure reporting that is consistent with currently applicable energy conservation standards and test procedures",
+    "87 FR 43952 (the July 22, 2022 Final Rule amending certification provisions for CFLKs, general service incandescent lamps, incandescent reflector lamps,"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: agency reasons"
+  },
+  "54aa17754e3fb115": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The House Republican release is quoted verbatim, it does describe the rule as requiring 'higher energy efficiency standards', and the James Magazine wording is correctly placed in the narration rather than Clyde's quoted statement. However, the cited magazine passage is not verbatim: the source says the rule 'put additional costs and red tape on appliance manufacturers', not 'added costs and red tape for appliance manufacturers'.",
+   "quotes": [
+    "rescinds the Biden-Harris Administration’s final rule that put additional costs and red tape on appliance manufacturers, with consumers bearing the ultimate cost.",
+    "requires certain consumer products and commercial and industrial equipment to meet higher energy efficiency standards, placing undue burdens on manufacturers and consumers, leading to increased costs and limiting consumer choice."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: sponsor reasons"
+  },
+  "b06f038821be623e": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every element matches the sources. The public law's history gives House passage on Mar. 5 and the Senate Daily Press records Senate passage 52-46, 'party line.' The Federal Register gives Senate passage Apr. 30, presentment May 6, signature May 9 and Pub. L. 119-8. The law's text gives the disapproval of 89 Fed. Reg. 81994 with no force or effect. The closing 'void and not in force' matches DOE's statement of the rule's 'nullification under the CRA' and that it 'has no force or effect.'",
+   "quotes": [
+    "Mar. 5, considered and passed House.",
+    "By a vote of 52-46, the Senate passed H.J.Res.42, the Husted DOE appliance standards CRA, party line.",
+    "It was sent to the President on May 6, 2025, and it was signed on May 9, 2025, thereby becoming Pub. L. 119-8 ."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres42: status"
+  },
+  "e707717701bdc953": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every field matches the source: the EPA rule title, 40 CFR part 63 subpart XXXX, RIN 2060-AV70, citation 89 FR 94886, document number 2024-26895, publication date 11/29/2024 and effective date November 29, 2024. The rule is described as amendments to the existing NESHAP.",
+   "quotes": [
+    "A Rule by the Environmental Protection Agency on 11/29/2024 Published Document: 2024-26895 (89 FR 94886)",
+    "RIN 2060-AV70",
+    "This final rule is effective on November 29, 2024."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: identifying details"
+  },
+  "21a6120d8ec0997c": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the claim matches the rule and the law: first-time limits for the rubber processing subcategory, 15 major sources with 12 doing rubber processing, THC and fPM as surrogates, facility-wide averaging, 3 years for existing sources (Nov. 29, 2027), and H.J.Res. 61's disapproval. But the rule ties RTOs to THC only. It says fPM/metal HAP compliance comes from replacing or upgrading baghouses, and that only 'some existing sources' (8 new RTOs) need add-on controls. The claim that EPA expected facilities to meet 'the limits' with RTOs overstates and misattributes this.",
+   "quotes": [
+    "The source category covered by the NESHAP currently includes 15 major source facilities.",
+    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
+    "For THC, we estimate that the installation of RTOs or similar control devices will achieve annual reductions of THC of 94 Mg (104 tons) across the source category. For fPM and metal HAP, we estimate that the replacement or upgrade of baghouses will achieve annual reductions"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: required"
+  },
+  "1890c262bba7d9c1": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every element matches the preamble: the 94 Mg (104 tons) annual THC cut from RTOs or similar devices across the source category, the 160 lb/yr metal HAP cut, EPA's inability to quantify HAP benefits with a qualitative assessment in its place, and the statement that it is reasonable to expect improved air quality and public health.",
+   "quotes": [
+    "For THC, we estimate that the installation of RTOs or similar control devices will achieve annual reductions of THC of 94 Mg (104 tons) across the source category.",
+    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
+    "It is reasonable to expect that emissions reductions from this rule will improve air quality and public health for populations exposed to emissions from rubber tire manufacturing facilities."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: benefits"
+  },
+  "1667010fb6090e68": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every figure matches its source. The final rule gives $13.3 million per year in annualized cost to existing sources and $2.12 million per year in recordkeeping and reporting for all facilities under the NESHAP, and the 2023 proposal gives $20.8 million per year. Sen. Scott's release says EPA quantified $2.7–8.1 million per year in disbenefits on top of the $13.3 million, and the final rule confirms that range itself. The no-dispute line is the researcher's own statement of absence.",
+   "quotes": [
+    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year.",
+    "The annual recordkeeping and reporting costs for all facilities to comply with all of the requirements in the NESHAP is estimated to be $2.12 million per year.",
+    "We estimate the total annualized cost of the proposed rule to existing sources in the Rubber Tire Manufacturing source category to be $20.8 million per year."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: costs"
+  },
+  "28a32af6d130ef06": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Each element matches the final rule. The summary says EPA is amending the NESHAP 'as required by the Clean Air Act' so that all HAP emissions are regulated, and that rubber processing is the only unregulated subcategory. The background describes the April 2020 D.C. Circuit LEAN holding on unregulated emissions in the 8-year technology review, and the rulemaking was undertaken in response to it.",
+   "quotes": [
+    "The U.S. Environmental Protection Agency (EPA) is promulgating amendments to the National Emission Standards for Hazardous Air Pollutants (NESHAP) for Rubber Tire Manufacturing, as required by the Clean Air Act (CAA).",
+    "To ensure that all emissions of hazardous air pollutants (HAP) from sources in the source category are regulated, the EPA is promulgating emissions standards for the rubber processing subcategory of the rubber tire manufacturing industry, which is the only unregulated subcategory within the Rubber Tire Manufacturing source category.",
+    "In the Louisiana Environmental Action Network v. EPA (LEAN) decision issued on April 21, 2020, the United States Court of Appeals for the District of Columbia Circuit held that the EPA has an obligation to address unregulated emissions from a major source category when the Agency conducts the 8-year technology review."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: agency reasons"
+  },
+  "32997698269bd65f": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the claim matches the sources: Griffith introducing the resolution with Scott and Wicker, the USTMA CEO's words on adverse environmental impact, significant financial burdens and negligible benefits, the RTO and CO2 point, and Griffith's remark on questionable data and negligible health benefits. But the claim gives the CEO words she did not say. The phrase 'already comply with stringent air emission rules' comes from Rep. Griffith's quote. The CEO said only that facilities have 'long understood and complied with the existing' NESHAP standards.",
+   "quotes": [
+    "Rubber tire manufacturers already comply with stringent air emission rules. I am introducing this CRA resolution",
+    "Tire manufacturing facilities have long understood and complied with the existing National Emission Standards for Hazardous Air Pollutants (NESHAP) standards",
+    "the agency's revised final NESHAP rule actually creates an adverse environmental impact, while imposing significant financial burdens on tire manufacturing facilities and providing negligible, if any, benefits"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: sponsor reasons"
+  },
+  "fb06a7175ff7adfc": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Public Law 119-14 and the 2026-06-22 Federal Register notice support every part of the status field: the House passed it March 5 and the Senate May 6, 2025; it was signed and became law May 23, 2025; under the resolution and the CRA the rule has no legal force or effect; and EPA removed the 2024 changes to subpart XXXX, going back to the text in effect under the 2020 rule. The Wicker press release adds nothing that contradicts this; it reports Senate passage only.",
+   "quotes": [
+    "Congress disapproves the rule submitted by the Environmental Protection Agency relating to ''National Emission Standards for Hazardous Air Pollutants: Rubber Tire Manufacturing'' (89 Fed. Reg. 94886 (November 29, 2024)), and such rule shall have no force or effect.",
+    "On March 5, 2025, the United States House of Representatives passed a joint resolution, H.J. Res. 61, disapproving the 2024 Rubber Tire Rule under the CRA",
+    "The United States Senate passed H.J. Res. 61 on May 6, 2025, and President Donald J. Trump signed it into law as Public Law 119-14"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres61: status"
+  },
+  "36f6fef240a7958b": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Federal Register page lists Department of Energy, docket EERE-2017-BT-STD-0007, 10 CFR 431, citation 90 FR 7464, RIN 1904-AD82, publication date 01/21/2025 and effective date 2025-03-24. The agency line reads 'Office of Energy Efficiency and Renewable Energy, Department of Energy' and the action is 'Final rule', so every field matches.",
+   "quotes": [
+    "Agency/Docket Number EERE-2017-BT-STD-0007 CFR 10 CFR 431 Document Citation 90 FR 7464 Document Number 2024-31214 Document Type Rule Pages 7464-7648 (185 pages) Publication Date 01/21/2025 RIN 1904-AD82",
+    "Effective Date 2025-03-24 Dates Text The effective date of this rule is March 24, 2025.",
+    "AGENCY: Office of Energy Efficiency and Renewable Energy, Department of Energy. ACTION: Final rule."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: identifying details"
+  },
+  "5037067bc57318ec": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the field checks out: DOE adopted new and amended CRE standards at TSL 3, with compliance from January 22, 2029. The March 7, 2025 notice delayed the effective date from March 24 to May 20, 2025 and left the compliance date at January 22, 2029. The withdrawal notice says the joint resolution disapproved the rule, so it has no force or effect. The unsourced line that 'the costs and savings fall on the businesses that buy and run the equipment' goes beyond the rule, which also estimates that manufacturers will bear $117.7 million in conversion costs and an INPV loss.",
+   "quotes": [
+    "In this final rule, DOE is adopting new and amended energy conservation standards for CRE.",
+    "Compliance with the new and amended standards established for commercial refrigerators, freezers, and refrigerator-freezers in this final rule is required on and after Monday, January 22, 2029.",
+    "DOE has determined that TSL 3 represents the maximum improvement in energy efficiency that is technologically feasible and economically justified."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: required"
+  },
+  "0bb332f37b772cb2": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Items 1–5 match the final rule's figures: NPV of $1.32B/$3.43B, health benefits of $0.86B/$2.19B, 1.11 quads FFC (6.5%), 19.7 Mt CO2 / 6.0 thousand tons SO2 / 36.9 thousand tons NOx (as stated in the synopsis), and 91% of purchasers. Item 6 drops the source's condition that the $537–540M and $444–447M annualized net benefits are calculated 'using the 2023 SC-GHG estimates'; the source also reports a separate, lower net benefit using the 2021 interim SC-GHG estimates, so the unqualified figure overstates the result.",
+   "quotes": [
+    "The cumulative net present value (\"NPV\") of total consumer benefits of the standards for CRE ranges from $1.32 billion 2023$ (at a 7-percent discount rate) to $3.43 billion 2023$ (at a 3-percent discount rate).",
+    "The estimated monetary value of the health benefits from reduced SO2 and NOX emissions at TSL 3 is $0.86 billion using a 7-percent discount rate and $2.19 billion using a 3-percent discount rate.",
+    "amount to 1.11 quadrillion British thermal units (\"Btu\"), or quads. This represents a savings of 6.5 percent relative to the energy use of this equipment"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: benefits"
+  },
+  "88a6445859d748ee": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The no-standards INPV ($3,022.3 million, 2023$), the TSL 3 INPV change (about −$77.8M to −$51.3M, −2.6% to −1.7%; section V.B.2 gives −$78.7M), the 9% of purchasers with a net LCC cost, and the 0.9–7.0 year payback range all match the rule. But the claim that the NPV is net of higher installation costs is not supported: the rule defines NPV as operating-cost savings minus increased equipment costs, and says DOE assumed installation costs do not vary by efficiency level and did not account for them.",
+   "quotes": [
+    "DOE estimates that the INPV for manufacturers of CRE in the case without new and amended standards is $3,022.3 million in 2023$",
+    "DOE estimates the change in INPV to range from −2.6 percent to −1.7 percent, which is approximately −$77.8 million to −$51.3 million",
+    "This NPV expresses the estimated total value of future operating-cost savings minus the estimated increased equipment costs"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: costs"
+  },
+  "8b63ba8801681494": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Both sentences closely paraphrase the rule's SUMMARY. DOE determined the new and amended standards would result in significant energy conservation and are technologically feasible and economically justified, and EPCA requires periodic review of existing standards against those same three criteria. Neither meaning nor strength is changed.",
+   "quotes": [
+    "It has determined that the new and amended energy conservation standards for this equipment would result in significant conservation of energy and are technologically feasible and economically justified.",
+    "EPCA also requires the U.S. Department of Energy (\"DOE\") to periodically review its existing standards to determine whether more-stringent standards would be technologically feasible and economically justified and would result in significant energy savings."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: agency reasons"
+  },
+  "529951d7a313d2ba": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Goldman's release attributes an $8 billion burden estimate to DOE, the Guthrie/Latta words appear verbatim, and the E&C release says DOE estimated a payback period of more than 90 years for at least one standard. The two cite-tagged DOE passages are close paraphrases rather than verbatim text, but they keep the meaning and do not present the figures as verified.",
+   "quotes": [
+    "which the Department of Energy estimates would have imposed an $8 billion burden on small businesses and consumers",
+    "yet another example of needless regulation raising prices for businesses and families while failing to provide cost savings or increasing food safety",
+    "the Biden-Harris Department of Energy itself estimating that at least one standard would have a payback period of more than 90 years"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: sponsor reasons"
+  },
+  "4d25d067a9860a19": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The DOE withdrawal notice states that President Trump signed the joint resolution of disapproval into law on May 9, 2025. It says that under the CRA the rule has no force or effect, and that DOE withdrew it as of May 20, 2025 with notice that its standards have no force or effect, all at 90 FR 21392; 'void' fairly restates 'no force or effect'.",
+   "quotes": [
+    "On May 9, 2025, President Trump signed into law a joint resolution of disapproval of the January 2025 Final Rule.",
+    "In accordance with the Congressional Review Act, the January 2025 Final Rule shall have no force or effect.",
+    "As of May 20, 2025, the final rule on energy conservation standards for commercial refrigerators, freezers, and refrigerator- freezers, published in the Federal Register on January 21, 2025, at 90 FR 7464 , and delayed at 90 FR 11466 (Mar. 7, 2025), is withdrawn."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-hjres75: status"
+  },
+  "b5689abaef905881": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source matches every element of the record field: the title, RIN 1010-AE11, BOEM within the Department of the Interior, 89 FR 71160, Docket BOEM-2023-0012, amendment of 30 CFR part 550, publication on 09/03/2024, and the effective date of October 3, 2024.",
+   "quotes": [
+    "Docket No. BOEM-2023-0012 CFR 30 CFR 550 Document Citation 89 FR 71160",
+    "Publication Date 09/03/2024 RIN 1010-AE11",
+    "This final rule is effective October 3, 2024."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: identifying details"
+  },
+  "a81a1dbb77e2b517": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Federal Register summary supports the first two sentences: the report requirement for any exploration or development plan, the prior \"reason to believe\" standard, and the minimum survey information and procedures. BOEM's press release supports the third sentence, which the claim attributes to the announcement: a qualified marine archaeologist must collect and analyze survey data.",
+   "quotes": [
+    "finalizing regulatory amendments to require lessees and operators to submit an archaeological report with any oil and gas exploration or development plan they submit to BOEM for approval of proposed activities on the Outer Continental Shelf (OCS)",
+    "The previous regulations required an archaeological report only if the plan covered an area that a BOEM Regional Director had “reason to believe” may have contained an archaeological resource.",
+    "This rule defines the minimum level of survey information necessary to support the conclusions in the archaeological report, the procedures for reporting possible archaeological resources and continuing operations when a possible resource is present, and what to do if an unanticipated archaeological resource is discovered during operations."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: required"
+  },
+  "cdb9e3bae15ae32a": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Federal Register describes the final rule's estimated benefits as qualitative. Its Table 1 lists the claim's quoted benefit with no dollar or unit figure, and it says the rule will make it more likely that archaeological resources are found before an OCS operator inadvertently damages them, in compliance with NHPA section 106. Ballotpedia lists the estimated benefit as $0, and its footnote says these estimates are dollar amounts and points readers elsewhere for qualitative benefits, which supports the claim's reading of that figure.",
+   "quotes": [
+    "The estimated benefits associated with this final rulemaking are qualitative benefits",
+    "Provides regulatory clarity and certainty for operators.",
+    "thereby increasing the likelihood that these resources will be located and identified before they can be inadvertently damaged by an OCS operator"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: benefits"
+  },
+  "370179b403da08c0": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The rule and the OMB record support every figure: $5,925,770 (3%) and $4,452,834 (7%), the $398,305 annualized cost and its attribution, the 'no or negligible' cost finding, 505 burden hours, $31,457 federal cost, the small-entity analysis, BOEM's rejection of the 'substantial' cost claim, and industry commenters' dispute of the costing. Neither source shows that bill sponsors dispute the cost characterisation; that clause rests only on a cross-reference to another field, not on a cited or named source.",
+   "quotes": [
+    "BOEM estimates that the changes would increase total OCS archaeology survey costs over the next 20 years by $5,925,770, using a 3 percent discount rate, or by $4,452,834, using a 7 percent discount rate.",
+    "Annualized Incremental Costs $398,305 2024 3 20 years Increased compliance costs due to increased measurement capability requirements in water depths less than or equal to 100 meters.",
+    "Most of the revisions in this final rule will have no or negligible cost impacts for operators."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: costs"
+  },
+  "74d2940ec30afedf": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every element of the field matches the sources. The Federal Register final rule gives the purpose of addressing concerns that BOEM's existing requirements fail to adequately protect marine archaeological resources, cites BOEM's inability to accurately identify the location of such potential resources, and ties the rule to compliance with NHPA section 106. Ballotpedia, which the claim names, and the BOEM press release both carry Director Klein's statement, and the claim's paraphrase of it keeps the original meaning and strength.",
+   "quotes": [
+    "The purpose of this final rule is to address concerns that BOEM's existing regulatory requirements fail to adequately protect marine archaeological resources.",
+    "specifically, BOEM's inability to accurately identify the location of such potential resources",
+    "This final rule will increase the protection of archaeological resources in compliance with section 106 of the National Historic Preservation Act (NHPA)"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: agency reasons"
+  },
+  "1e0bf5ea24353a64": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every part of the field checks out. Hyde-Smith's release says Kennedy introduced S.J.Res.11 and she cosponsored it. Kennedy's press release describes his floor speech as saying the rule places an 'immense burden' on small producers by forcing them to map the ocean floor for shipwrecks. The Congressional Record has the survey, 4,000-shipwreck and cost remarks. The Hyde-Smith quote, the Westerman/Natural Resources Committee wording, the NOIA statements in Ezell's release and the Interior Department's signing statement all match their sources. 'About 4,000' is a minor softening of Kennedy's flat '4,000', and the note that these figures come from floor remarks is consistent with the Record.",
+   "quotes": [
+    "the Biden administration's rule places an immense burden on small oil and natural gas producers by forcing them to map the ocean floor in search of shipwrecks before they could begin production",
+    "That is how we found 4,000 shipwrecks. And it has cost hundreds and hundreds of millions of dollars.",
+    "It is an unnecessary and excessive burden on offshore energy activities"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: sponsor reasons"
+  },
+  "97f036bb999a7457": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Public Law 119-3 supports the disapproval wording, 'no force or effect', the March 14, 2025 approval date, and Senate passage on Feb. 25 and House passage on Mar. 6. Ezell's release supports the House vote of 221-202 and 'rendered void'. No cited source gives the Senate 54-44 vote: the Kennedy release says only that the resolution passed 'with bipartisan support'. Note also that the BOEM Federal Register notice dates House passage to March 4, which conflicts with the Mar. 6 date in the public law.",
+   "quotes": [
+    "Congress disapproves the rule submitted by the Bureau of Ocean Energy Management relating to ``Protection of Marine Archaeological Resources'' (89 Fed. Reg. 71160 (September 3, 2024)), and such rule shall have no force or effect.",
+    "Approved March 14, 2025.",
+    "Feb. 25, considered and passed Senate. Mar. 6, considered and passed House."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres11: status"
+  },
+  "597fc04838254379": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Federal Register page confirms each element of the record field. The rule title, the OCC (Treasury) as agency, citation 89 FR 78207, Doc. 2024-21560, publication on 09/25/2024 and the January 1, 2025 effective date all match. The page also confirms that the final rule adds a policy statement as an appendix.",
+   "quotes": [
+    "Business Combinations Under the Bank Merger Act A Rule by the Comptroller of the Currency on 09/25/2024 Published Document: 2024-21560 (89 FR 78207)",
+    "AGENCY: Office of the Comptroller of the Currency (OCC), Treasury. ACTION: Final rule.",
+    "The OCC is adopting a final rule to amend its procedures for reviewing applications under the Bank Merger Act and adding, as an appendix, a policy statement"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: identifying details"
+  },
+  "f0e179aa45de5de9": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Federal Register text supports each element of the field. It confirms removal of § 5.33(i) with the 15th-day deemed-approval mechanism, removal of § 5.33(j) and § 5.33(d)(3), the added policy-statement appendix and the January 1, 2025 effective date. The bulletin matches the quoted highlights and the stated scope, and Latham confirms that all applicants must now use the Interagency Bank Merger Act Application.",
+   "quotes": [
+    "Paragraph (i) currently provides that a filing that qualifies either as a business reorganization as defined in § 5.33(d)(3) or for a streamlined application under § 5.33(j) is deemed approved as of the 15th day after the close of the comment period, unless the OCC notifies the applicant that the filing is not eligible for expedited review or the expedited review process is extended",
+    "the final rule removes § 5.33(i) and (j) as proposed. Further, because the term \"business reorganization,\" as defined in § 5.33(d)(3), is only used to define a class of applications eligible for expedited review under § 5.33(i), the final rule also removes § 5.33(d)(3).",
+    "The final rule removes provisions in 12 CFR 5.33 related to expedited review and the use of the streamlined business combination application."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: required"
+  },
+  "06261c011bafc029": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source matches the absence of any quantified benefit estimate, the alignment and transparency rationale, the RFA statement that timing will likely not change, and the OCC not being aware of any deemed approval under § 5.33(i). But the source places deemed approval on 'the 15th day after the close of the comment period,' not a bare 'day 15'. Calling the alignment point 'its stated expected benefit' also omits the RFA's other stated benefit, that appendix A should give institutions 'additional clarity and transparency.'",
+   "quotes": [
+    "Instead, this change will more closely align the regulatory framework with the OCC's current practices and promote transparency.",
+    "Second, the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications.",
+    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: benefits"
+  },
+  "5d9a3bc997d0fcc9": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The final rule supports the small-entity certification, the de minimis characterization and the $183 million UMRA conclusion, and gives no dollar estimate of compliance costs. The SBA Advocacy letter questions the RFA certification's factual basis and recommends keeping expedited review and a streamlined application for small entities. The closing absence statement is the researcher's own and is not contradicted by either source.",
+   "quotes": [
+    "the OCC expects that, if implemented, the final rule will not have a significant economic impact on any small entities. For these reasons, the OCC certifies that the final rule would not have a significant economic impact on a substantial number of small entities.",
+    "Therefore, the OCC concludes that the final rule will not result in an expenditure of $183 million or more annually by State, local, and Tribal governments or by the private sector.",
+    "Accordingly, the OCC expects these changes to have a de minimis impact on small entities."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: costs"
+  },
+  "d5294d687933b1dc": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The OCC proposal overview supports the 'significant corporate transaction requiring OCC decisioning', 'not deemed approved solely due to the passage of time' and clarity/transparency statements. The final rule supports the 'varying views' (mixed) comments and the supporters' remark that expedited review 'fails to adequately prevent anti-competitive mergers.'",
+   "quotes": [
+    "Any business combination subject to a filing is a significant corporate transaction requiring OCC decisioning, which should not be deemed approved solely due to the passage of time.",
+    "To provide greater clarity to financial institutions and transparency to the public, the OCC is also proposing a policy statement",
+    "Most commenters agreed that the OCC should update its merger regulations and guidelines, but expressed varying views on the proposed changes."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: agency reasons"
+  },
+  "56a90177f12a23ab": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The Barr release quotes Kennedy saying Congress should reverse the rule \"to stabilize the banking industry.\" The same release says the rule imposes new hurdles and vague, subjective criteria restricting banks of all sizes, especially community and regional banks, and the ABA Banking Journal confirms ABA's support and its statement on new standards, arbitrary asset thresholds and lack of clarity and predictability. The Barr wording is the release's narrative, not a direct quote, and the ABA paraphrase drops \"unhelpful and biased\" and \"and their customers\", but neither changes the meaning.",
+   "quotes": [
+    "In order to stabilize the banking industry and protect the Americans who depend on strong banks, Congress should quickly reverse the Biden administration’s bureaucratic rule,” said Senator John Kennedy",
+    "imposes new regulatory hurdles and vague, subjective criteria that would severely restrict banks of all sizes—particularly community and regional banks—from pursuing mergers and strategic partnerships",
+    "The American Bankers Association supported the resolution."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: sponsor reasons"
+  },
+  "3c2018032d6a187a": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every element matches the sources. The ABA article gives the 52-47 Senate vote on May 7, 2025. GovInfo confirms House passage on May 20, PL 119-19 approved June 20, 2025, and 139 Stat. 70. The enrolled text disapproves the rule at 89 Fed. Reg. 78207 and says it 'shall have no force or effect'.",
+   "quotes": [
+    "The Senate today voted 52-47 in favor of a resolution to overturn a 2024 final rule",
+    "May 6, 7, considered and passed Senate. May 20, considered and passed House.",
+    "Public Law 119-19 Date Approved ... June 20, 2025"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres13: status"
+  },
+  "7053cff01c9cf563": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Entry 58 (RIN 1904-AD79) lists two effective-date delays, on 02/20/25 (90 FR 9951) and 03/20/25 (90 FR 13054), and a withdrawal on 05/20/25 (90 FR 21391). It also states the rule was withdrawn because it 'no longer has force or effect', so every element of the claim matches. As an official agency record in the Federal Register, it supports the 'documented' grade.",
+   "quotes": [
+    "Final Rule; Delay of Effective Date 02/20/25 90 FR 9951 Final Rule; Delay of Effective Date 03/20/25 90 FR 13054 Final Rule; Withdrawal 05/20/25 90 FR 21391",
+    "the Department withdrew the rule from the Federal Register because the rule no longer has force or effect"
    ],
    "kind": "outcome",
-   "label": "The amended standards never took effect. DOE delayed the rule's effective date twice, then"
+   "label": "DOE delayed the rule's effective date twice, on 02/20/25 (90 FR 9951) and 03/20/25 (90 FR "
   },
-  "948842588c6bc1e6": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "a1b7f74f79ce526c": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The source matches the NPV of $2.00–$4.74 billion, 1.60 quads FFC savings, 28.82 Mt CO2, the $554.5M/yr net benefit with $369.8M in operating-cost savings at 3%, and equipment costs of $99.1–$101.2M/yr. But the claim gives the purchase period as 2029–2058 for all equipment, while the source says non-display doors purchased 2028–2057 and refrigeration systems 2029–2058. The counterpoint's combined INPV change of −$63M to −$42M is not stated: the source gives −$61.2M to −$45.7M for refrigeration systems and −$2.0M to +$3.5M for non-display doors separately, so the combined figure is the checker's own arithmetic.",
+   "note": "Every figure in the claim matches the final rule's synopsis: NPV of $2.00B (7%) to $4.74B (3%) for the stated purchase periods, 1.60 quads full-fuel-cycle savings, 28.82 Mt CO2, and an annualized 3% net benefit of $554.5M/yr with $369.8M in operating-cost savings. The counterpoint's equipment-cost and INPV figures also match. The $554.5M figure reflects the 2021 interim SC-GHG values; the rule also gives $784.5M/yr using the 2023 estimates, which the claim's assumptions caveat covers.",
    "quotes": [
-    "The cumulative net present value (\"NPV\") of total consumer benefits of the standards for walk-ins ranges from $2.00 billion USD (at a 7-percent discount rate) to $4.74 billion USD (at a 3-percent discount rate).",
-    "for walk-in non-display doors purchased during the period 2028-2057 and walk-in refrigeration systems purchased in 2029-2058",
-    "amount to 1.60 quadrillion British thermal units (\"Btu\"), or quads of-full-fuel cycle energy savings"
+    "The cumulative net present value (“NPV”) of total consumer benefits of the standards for walk-ins ranges from $2.00 billion USD (at a 7-percent discount rate) to $4.74 billion USD (at a 3-percent discount rate).",
+    "amount to 1.60 quadrillion British thermal units (“Btu”), or quads of-full-fuel cycle energy savings",
+    "cumulative emission reductions (over the same period as for energy savings) of 28.82 million metric tons"
    ],
    "kind": "outcome",
    "label": "Benefit forgone, per DOE's pre-vote analysis. DOE estimated the standards would have deliv"
   },
-  "f81e2d7780eb806e": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "1f3ad0091146bd58": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The equipment-cost figures ($99.1M/yr at 7%, $101.2M/yr at 3%), the operating-cost savings ($304.4M and $369.8M), the compliance dates (Dec 23, 2027 and Dec 31, 2028) and commercial availability of compliant equipment all match the source. Two things do not: the $42–$63M INPV decline is not stated in the source and only follows from adding the door (−$2.0M to +$3.5M) and refrigeration (−$61.2M to −$45.7M) ranges, and the source says nothing about a repeal removing these costs.",
+   "note": "The rule states the adopted standards' cost as $99.1 million per year at 7% and $101.2 million per year at 3% in increased equipment costs. It gives compliance dates of December 23, 2027 (non-display doors) and December 31, 2028 (refrigeration systems). The counterpoint's operating-cost savings ($304.4M and $369.8M) match, and the existing-equipment point reflects DOE's statement that new equipment or tooling is likely not required for non-display doors.",
    "quotes": [
     "the estimated cost of the standards adopted in this rule is $99.1 million per year in increased equipment costs, while the estimated annual benefits are $304.4 million in reduced operating costs",
     "the estimated cost of the standards is $101.2 million per year in increased equipment costs, while the estimated annual benefits are $369.8 million in reduced equipment operating costs",
-    "the change in INPV for non-display door manufacturers is estimated to range from −0.4 percent to 0.7 percent, which is approximately −$2.0 million to $3.5 million"
+    "Compliance with the amended standards established for walk-in non-display doors in this final rule is required on and after December 23, 2027. Compliance with the amended standards established for walk-in refrigeration systems in this final rule is required on and after December 31, 2028."
    ],
    "kind": "outcome",
-   "label": "Burden lifted, per DOE's pre-vote analysis. The repeal removed the equipment cost increase"
+   "label": "Cost burden projected by DOE in the final rule. DOE estimated that the walk-in cooler and "
   },
-  "1e12f145aa813abb": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "4cb4d069fc48d25d": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The release supports ASAP's statement that blocking the standards would raise costs for restaurants, convenience stores and grocery stores that would be passed on to consumers, and it gives the 1.6-year and 3-year payback figures. But it attributes the $6.5 billion figure to DOE ('DOE estimates'), not ASAP, and says 'up to', not 'about'. The counterpoint about NACS, NGA and FMI and about the sponsors' cost-benefit argument appears nowhere in the cited source, and no other source is named for it.",
+   "note": "The release, dated the day of the Senate vote, contains the quoted passage verbatim, the 1.6-year and 3-year average payback figures, and the DOE estimate of up to $6.5 billion in utility bill savings from products sold over 30 years. The framing of these as projections and the 'associated' grade fit a same-day advocacy forecast.",
    "quotes": [
-    "will raise costs for restaurants, convenience stores, and grocery stores—costs that will be passed on to consumers",
-    "the standards would save businesses up to $6.5 billion on utility bills (from the use of products sold over 30 years), DOE estimates",
-    "bill savings offsetting those costs within 1.6 years on average for non-display doors and 3 years on average for refrigeration systems"
+    "A resolution passed by the U.S. Senate today blocking updated efficiency standards for walk-in coolers and freezers will raise costs for restaurants, convenience stores, and grocery stores—costs that will be passed on to consumers.",
+    "the standards would save businesses up to $6.5 billion on utility bills (from the use of products sold over 30 years), DOE estimates.",
+    "with bill savings offsetting those costs within 1.6 years on average for non-display doors and 3 years on average for refrigeration systems."
    ],
    "kind": "outcome",
    "label": "The Appliance Standards Awareness Project (ASAP), an efficiency advocacy group, said after"
   },
-  "20021cabc0b28271": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "06076b68f2060991": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The Federal Register rule supports the main claim: removal of the October 2024 provisions from 10 CFR parts 429 and 431 because of Pub. L. 119-8, the verbatim 'relieves manufacturers' passage, the September 9, 2025 effective date, and the reversion to the pre-2024 reporting rules. The 'Pub. L. 119-8 caused…' passage is a close paraphrase rather than verbatim, but it keeps the meaning. The counterpoint's quote attributed to the Appliance Standards Awareness Project does not appear in this source, and no ASAP source was provided to check it, so that part is unverified.",
+   "note": "The Federal Register rule says DOE is rescinding the October 9, 2024 rule's provisions in 10 CFR parts 429 and 431 and reverting to the prior text. It cites Pub. L. 119-8 under the CRA as the reason, uses the quoted 'relieves manufacturers' language and gives an effective date of September 9, 2025. Its table of rescinded 2024 reporting changes supports the statement that those changes no longer apply, and the counterpoint states an absence that the source does not contradict.",
    "quotes": [
-    "Pub. L. 119-8 , which, pursuant to the CRA, disapproved and caused DOE's October 9, 2024 final rule to have no force or effect",
-    "As this rule relieves manufacturers from certain certification, compliance, and enforcement requirements",
+    "DOE is rescinding and amending numerous provisions in 10 CFR parts 429 and 431 in order to comply with the requirements of Pub. L. 119-8, which, pursuant to the CRA, disapproved and caused DOE's October 9, 2024 final rule to have no force or effect.",
+    "As this rule relieves manufacturers from certain certification, compliance, and enforcement requirements, DOE finds good cause pursuant to 5 U.S.C. 553(d)(1) to waive the 30-day delay in effective date for this rule.",
     "The effective date of this rule is September 9, 2025."
    ],
    "kind": "outcome",
    "label": "DOE removed the 2024 certification, labeling and enforcement provisions from 10 CFR parts "
   },
-  "c5ea73df36c21cd0": {
+  "ad75d14b033ad674": {
    "result": "partly_supported",
-   "on": "2026-11-07",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The retrieved text breaks off in section III.G, before the Paperwork Reduction Act section (IV.C), so the core figures (2,905 burden hours, $212,065 per year, 35 hours per manufacturer per report, five line items) do not appear and cannot be verified. What can be checked is supported: DOE found no measurable burden change for residential clothes washers, said certification reports provide efficiency information and support enforcement, and pointed to IV.C for costs of new reporting such as for electric pool heaters.",
+   "note": "The core claim matches the source: DOE made a final determination that the amendments would not cause any measurable change in reporting burden or hours for RCWs, and the rule does cover electric pool heaters. The counterpoint's attribution that DOE said certification reports give consumers efficiency information and support effective enforcement does not appear in the excerpts, which speak only of DOE needing information to classify products and to ensure 'appropriate assessment or enforcement testing'.",
    "quotes": [
-    "DOE makes a final determination that these amendments would not cause any measurable change in reporting burden or hours for RCWs.",
-    "Certification reports provide DOE and consumers with comprehensive, up-to-date efficiency information and support effective enforcement.",
-    "Costs associated with the new reporting requirements pertaining to electric pool heaters are discussed in section IV.C of this document."
+    "In this final rule, DOE makes a final determination that these amendments would not cause any measurable change in reporting burden or hours for RCWs.",
+    "the new and amended standards apply to both gas-fired pool heaters and electric pool heaters (excluding electric spa heaters)",
+    "to ensure DOE has the information necessary to determine the appropriate classification of products for the application of standards"
    ],
    "kind": "outcome",
-   "label": "Before the vote, DOE's own paperwork estimate for the rule was about 2,905 burden hours an"
+   "label": "DOE found no measurable change in reporting burden or hours for residential clothes washer"
   },
-  "365efaf90d324e42": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "7d0b28ef6c9a4515": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The main claim matches the source: ASAP said the resolution undoes certification requirements with no effect on efficiency levels, called the fight 'mostly a sideshow', and said enforcement would become harder. The counterpoint cannot be checked against this source. It relies on a House Republican release, Rep. Clyde's statements and a CRS summary, none of which was provided, and this source does not contain those positions.",
+   "note": "The source supports each element: ASAP says the resolution undoes certification-requirement updates with no effect on required efficiency levels, its director calls this \"mostly a sideshow,\" and ASAP says it would make non-compliant products harder for DOE or others to identify. One caveat: ASAP spoke when only the House had passed the resolution, so the word \"nullified\" and the word \"only\" are the claim's own framing, not ASAP's, though neither changes the meaning.",
    "quotes": [
     "would undo technical updates to certification requirements for a range of products subject to energy efficiency standards but has no effect on the efficiency levels those products must meet",
     "doesn’t have an effect in any direction on how efficient products need to be, so this is mostly a sideshow",
-    "would, however, make it more difficult for DOE or other parties to identify products that do not comply with standards"
+    "make it more difficult for DOE or other parties to identify products that do not comply with standards"
    ],
    "kind": "outcome",
    "label": "An efficiency-advocacy group (ASAP) said the nullified requirements concerned certificatio"
   },
-  "9ce8ba4a2e3e1113": {
+  "42a6ab693e88f444": {
    "result": "partly_supported",
-   "on": "2026-11-07",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The notice date, the 'no force or effect' language, the removal of the report-for-every-plan and minimum survey provisions, the restored 'reason to believe' text, and BOEM's statement that the notice is not APA rulemaking all match the source. The restoration of the 'reason to believe' standard is supported by the regulatory text, but the claim attributes it to 'the CRS summary,' which is not cited or quoted here and cannot be verified from this source.",
+   "note": "The source supports the core figures, the facility counts, EPA's inability to quantify or monetize HAP health benefits, the 2020 maximum individual cancer risk of 4-in-1 million, and the 2020 findings of acceptable risk and ample margin of safety. The excerpts do not state a compliance date of about Nov. 2027, and nothing in the source says the rule never took effect, which the claim's 'would have' framing implies.",
+   "quotes": [
+    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
+    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
+    "Although we are unable to quantify the benefits of reducing HAPs from this rulemaking"
+   ],
+   "kind": "outcome",
+   "label": "EPA's pre-vote forecast was that the rule would have cut THC emissions by 104 tons per yea"
+  },
+  "fabaa3c273c53a7a": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Both figures appear verbatim: $13.3 million per year total annualized cost to existing sources, and $2.12 million per year for recordkeeping and reporting, which includes $1.97 million for monitoring systems. The counterpoint's possible overlap with the THC CEMS line in Table 2 is a hedged inference the source does not state, but every fact it rests on is in the source.",
+   "quotes": [
+    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year.",
+    "The annual recordkeeping and reporting costs for all facilities to comply with all of the requirements in the NESHAP is estimated to be $2.12 million per year.",
+    "non-labor capital and operations and maintenance costs of $1.97 million per year for monitoring systems for the final rubber processing amendments"
+   ],
+   "kind": "outcome",
+   "label": "EPA estimated the total annualized cost of the final rule to existing sources in the Rubbe"
+  },
+  "de8226bc92115fd5": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the main claim: the 2024 rule lost legal force on May 23, 2025, EPA's June 22, 2026 final action removes its provisions and reverts to the 2020 text, and the quoted 'no emission limitations' sentence appears in §63.5982(b)(4). However, the counterpoint's statement that the notice allows petitions for review in the D.C. Circuit does not appear in the provided text (Section L is listed only in the table of contents), and the 'major sources' qualifier is not stated in the excerpted passages.",
+   "quotes": [
+    "The CRA joint resolution became law on May 23, 2025, at which point the 2024 Rubber Tire Rule ceased to have any legal force or effect.",
+    "This action removes the 2024 Rubber Tire Rule's changes to 40 CFR part 63, subpart XXXX , and reverts to the regulatory text in effect immediately prior to the effective date of the 2024 Rubber Tire Rule, i.e., the regulatory text in effect pursuant to the 2020 final rule",
+    "There are no emission limitations or other requirements for the rubber processing affected source."
+   ],
+   "kind": "outcome",
+   "label": "The regulatory status changed in the official record. The 2024 rule ceased to have legal e"
+  },
+  "3e891ca2979e0dd3": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The notice supports the withdrawal, the May 9, 2025 signing of the joint resolution of disapproval, and that under the Congressional Review Act the rule 'shall have no force or effect.' It does not say the amended standards 'never took legal effect.' It gives the rule's effective date as May 20, 2025, and withdraws it as of that same date, so 'never' is an inference beyond the source.",
+   "quotes": [
+    "On May 9, 2025, President Trump signed into law a joint resolution of disapproval of the January 2025 Final Rule.",
+    "In accordance with the Congressional Review Act, the January 2025 Final Rule shall have no force or effect.",
+    "The effective date of the January 2025 Final Rule is May 20, 2025."
+   ],
+   "kind": "outcome",
+   "label": "After the resolution became law, DOE withdrew the January 2025 final rule from the Federal"
+  },
+  "2c3d812f514edbcd": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Every figure matches DOE's final rule: consumer NPV of $1.32B (7%) to $3.43B (3%) for 2029–2058 shipments, health benefits of $0.86–2.19B, 1.11 quads of full-fuel-cycle energy saved, 19.7 Mt CO2, and about 91% of purchasers benefiting or unaffected. The claim correctly hedges these as forecasts, and the counterpoint that consumer NPV is positive at both discount rates is stated in the source.",
+   "quotes": [
+    "The cumulative net present value (“NPV”) of total consumer benefits of the standards for CRE ranges from $1.32 billion 2023$ (at a 7-percent discount rate) to $3.43 billion 2023$ (at a 3-percent discount rate).",
+    "TSL 3 would save an estimated 1.11 quads of full fuel cycle energy over 30 years of shipments (2029 to 2058)",
+    "The estimated monetary value of the health benefits from reduced SO 2 and NO X emissions at TSL 3 is $0.86 billion using a 7-percent discount rate and $2.19 billion using a 3-percent discount rate."
+   ],
+   "kind": "outcome",
+   "label": "Benefits forgone, per DOE's pre-vote estimate. Over 2029–2058 shipments the standards were"
+  },
+  "984063bc28c6aa37": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the INPV range, the $3,022.3 million 2023$ baseline, the 91 percent net benefit or unaffected and 9 percent net cost split, the January 22, 2029 compliance date, and the counterpoint that consumer benefits vastly outweigh the manufacturer cost. The rule itself does not say the burden was lifted, and the document is internally inconsistent: the synopsis gives -$77.8M, while section V gives -$78.7M as the upper loss.",
+   "quotes": [
+    "DOE estimates that the INPV for manufacturers of CRE in the case without new and amended standards is $3,022.3 million in 2023$.",
+    "DOE estimates the change in INPV to range from -2.6 percent to -1.7 percent, which is approximately -$77.8 million to -$51.3 million.",
+    "Overall, approximately 91 percent of affected CRE purchasers would experience a net benefit or not be affected at TSL 3."
+   ],
+   "kind": "outcome",
+   "label": "Burden lifted, per DOE's pre-vote estimate. Manufacturers avoided a projected INPV loss of"
+  },
+  "ac52fde98e959328": {
+   "result": "supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The April 14, 2025 BOEM rule states that under the joint resolution and the CRA the rule has no force or effect, and that it changes the CFR to reflect what Congress already accomplished. It names the two voided provisions, restores the \"reason to believe\" text in §550.194 and removes §550.195. The counterpoint's non-APA characterization and the March 14, 2025 signing date both appear in the source.",
    "quotes": [
     "Under the joint resolution and by operation of the Congressional Review Act, the “Protection of Marine Archaeological Resources” rule has no force or effect.",
-    "the replacement of the “reason to believe” standard in the current regulations with the requirement that all proposed exploration or development plans that would disturb the seabed must be accompanied by an archaeological report, and (2) the codification of minimum requirements for any new high resolution geophysical surveys",
-    "If the Regional Director has reason to believe that an archaeological resource may exist in the lease area, the Regional Director will require in writing that your EP, DOCD, or DPP be accompanied by an archaeological report."
+    "This action is not an exercise of BOEM's rulemaking authority under the Administrative Procedure Act because BOEM is not “formulating, amending, or repealing a rule” under 5 U.S.C. 551(5) . Rather, BOEM is effectuating changes to the Code of Federal Regulations to reflect what the congressional action has already accomplished.",
+    "The two major provisions of the rule were (1) the replacement of the “reason to believe” standard in the current regulations with the requirement that all proposed exploration or development plans that would disturb the seabed must be accompanied by an archaeological report, and (2) the codification of minimum requirements for any new high resolution geophysical surveys."
    ],
    "kind": "outcome",
    "label": "BOEM published a Federal Register notice on April 14, 2025 to reflect the nullification in"
   },
-  "7d7140315a8016af": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "7f573636805a6a1b": {
+   "result": "supported",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The cost figures ($5,925,770 at 3%, $4,452,834 at 7%, $398,305 annualized in 2024 dollars at 3%), the 505 burden hours, and BOEM's 'negligible', 'minimal' and 'area will not increase' statements all match the source. The source does not say the rule is void or that operators are relieved of the cost, and the ACRA 'a very small amount' quote to Science and the sponsors' characterisation do not appear in it.",
+   "note": "The source matches every figure in the claim: the 20-year cost increase of $5,925,770 at 3% and $4,452,834 at 7%, the $398,305 annualized cost in 2024 dollars at 3%, and the 505 added annual burden hours. It also supports the counterpoint's points on negligible costs for most revisions, minimal total cost and no increase in surveyed area; the counterpoint's report of no CBO, GAO or court finding is the writer's own research note, not something this source addresses.",
    "quotes": [
     "BOEM estimates that the changes would increase total OCS archaeology survey costs over the next 20 years by $5,925,770, using a 3 percent discount rate, or by $4,452,834, using a 7 percent discount rate.",
     "Annualized Incremental Costs $398,305 2024 3 20 years",
@@ -949,213 +1568,57 @@
    "kind": "outcome",
    "label": "BOEM's own analysis projected the rule would raise total OCS archaeology survey costs by $"
   },
-  "2831a1f7a16a746c": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
+  "51d7b9506d3ff37e": {
+   "result": "grade_too_strong",
+   "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The final rule supports the core claim: BOEM expected the rule to make it more likely that archaeological resources would be located and identified before operators inadvertently damaged them, it listed only qualitative benefits, and it describes the earlier 'reason to believe' standard under which a Regional Director could require a report. The rule does not say that it was voided. Its only industry pushback is that API, NOPC and OOC called it too burdensome and API called its coverage unclear; it does not contain the NOIA or Kennedy statements or OOC's 'far too ambiguous' remark, and Science, which is named for that remark, was not checked. The 'estimated' grade does not fit, because BOEM gave no aggregate figure for the benefit and it is an agency forecast.",
+   "note": "The final rule supports every part of the claim. BOEM expects the rule to make it more likely that resources are found before an OCS operator inadvertently damages them, and it calls its listed benefits qualitative. The counterpoint is also supported: the prior 'reason to believe' standard is described, as are API/NOPC/OOC calling the rule too burdensome and API saying its coverage was unclear. The grade fails because 'reported' is not one of the allowed outcome grades (documented, estimated, associated, none_found).",
    "quotes": [
     "thereby increasing the likelihood that these resources will be located and identified before they can be inadvertently damaged by an OCS operator",
     "The estimated benefits associated with this final rulemaking are qualitative benefits",
-    "Reduces the likelihood of disturbing shipwrecks or other historical sites"
+    "The previous regulations required an archaeological report only if the plan covered an area that a BOEM Regional Director had ''reason to believe'' may have contained an archaeological resource."
    ],
    "kind": "outcome",
    "label": "BOEM expected the rule to increase the likelihood that seabed archaeological resources (su"
   },
-  "490d95b8d8c3dad5": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
-   "by": "claude-opus-5-5",
-   "note": "Most core facts check out against the final rule, the TSD, the GAO report, P.L. 119-7, the Unified Agenda and the sponsor and industry pages. These include the dates, the RIN, the scope (no change for display doors or panels), the NPV of $2.00B–$4.74B, 1.60 quads and 6.3%, 28.82 Mt CO2, the annualized $101.2M/$99.1M costs and $369.8M/$554.5M figures, the INPV range of -$63M to -$42M, the nearly $1 billion cost claim, the Guthrie/Latta and Fedorchak statements, the NACS letter, and the delay and withdrawal citations. Several things fail. (1) The sources say 2023$, not 2022 dollars. (2) The 2029–2058 period covers refrigeration systems only; non-display doors are 2028–2057. (3) The words 'limited consumer choice' come from Chairwoman McClain in Bice's release, not from Bice. (4) The House 203-182 and Senate 51-46/53-42 vote counts could not be verified because congress.gov was unreachable, and P.L. 119-7 gives only the dates. Also, the 7%-case health ($140.9M) and net ($442.7M) figures and the conversion costs ($1.4M and $90.1M) do appear in the rule, so they were not actually missing from it.",
-   "quotes": [
-    "The cumulative net present value (\"NPV\") of total consumer benefits of the standards for walk-ins ranges from $2.00 billion USD (at a 7-percent discount rate) to $4.74 billion USD (at a 3-percent discount rate).",
-    "All monetary values in this document are expressed in 2023 dollars",
-    "Biden's regulations limited consumer choice, raised prices, and put unnecessary financial burdens on American businesses and families. House Republicans continue to reverse this regulatory non-sense and lower costs for businesses and families,\" Chairwoman McClain said."
-   ],
-   "kind": "rule record",
-   "label": "draft-0: what the rule did"
-  },
-  "3b1d6bb4bbd662bb": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
-   "by": "claude-opus-5-5",
-   "note": "Most of the claim checks out against DOE's final rule, Pub. L. 119-8, DOE's CRA revocation rule, the Senate Daily Press, the GOP release and Ballotpedia: the rule's purpose, product list, effective date, agency reasons, RCW burden finding, Ballotpedia's $0 benefit and $212,065 cost, the Senate's party-line 52-46 passage, and the signing and nullification. Several parts could not be verified. Congress.gov was blocked, so the CRS summary, the House vote of 222-203 and the April 29 motion-to-proceed vote are unchecked. The retrieved rule text cuts off before the Paperwork Reduction Act section, so the '35 hours per manufacturer' wording and the five line-item hour and dollar figures are unchecked; the revocation rule says '35 hours per response'. The YourNews page had no article text, so the Husted and Thune quotes are unchecked. No efficiency-advocacy group source is cited for the 'did not change efficiency levels' attribution, though DOE's rule itself says it is not amending the standards. The Clyde wording appears in James Magazine's narration, not inside Clyde's quoted statement.",
-   "quotes": [
-    "DOE is not amending the test procedures or energy conservation standards for CAC/HPs, DWs, RCWs",
-    "these amendments would not cause any measurable change in reporting burden or hours for RCWs",
-    "Estimated cost: $212,065"
-   ],
-   "kind": "rule record",
-   "label": "draft-1: what the rule did"
-  },
-  "d5693077169a9429": {
-   "result": "partly_supported",
-   "on": "2026-11-07",
-   "by": "claude-opus-5-5",
-   "note": "Almost every element checks out against the sources I could read: the FR rule text (requirements, effective date, qualitative benefits, $5,925,770 / $4,452,834 and $398,305 costs, 505 hours, regional small-entity analysis including the '100 percent' Gulf wording, which the claim says could not be confirmed but is in the FR text), $31,457 on omb.report, the BOEM release, Ballotpedia, Kennedy's release, the Hyde-Smith, Ezell, NOIA, Westerman and DOI statements, PL 119-3, and the 54-44 and 221-202 votes. Two things fall short: the CRS summary sentence could not be checked because congress.gov was inaccessible (90 FR 15531 shows BOEM did restore the 'reason to believe' text, but that is not the CRS wording), and the FR table lists four qualitative benefits, not one.",
-   "quotes": [
-    "BOEM estimates that the changes would increase total OCS archaeology survey costs over the next 20 years by $5,925,770, using a 3 percent discount rate, or by $4,452,834, using a 7 percent discount rate.",
-    "Therefore, BOEM estimates that up to 100 percent of the increased Gulf of Mexico compliance cost for survey line spacing of 30 meters would be borne by operators that are small entities.",
-    "Provides regulatory clarity and certainty for operators; and Reduces risk and potential mitigation costs to offshore oil and gas operators."
-   ],
-   "kind": "rule record",
-   "label": "draft-2: what the rule did"
-  },
-  "23673f63a882dd29": {
-   "result": "partly_supported",
+  "23fade914e9edcfc": {
+   "result": "supported",
    "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The source supports the 104 tons/yr THC and 160 lb/yr metal HAP projections, the 15 major sources (12 with rubber processing), EPA's statement that it could not quantify HAP benefits, the 4-in-1 million maximum individual risk, the finding of acceptable risk and an ample margin of safety, and the Nov. 29, 2027 compliance date. It does not say the rule is void or that its reductions are no longer required, and it does not mention any sponsors arguing the benefits were negligible. Those parts need another source.",
-   "quotes": [
-    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
-    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
-    "Although we are unable to quantify the benefits of reducing HAPs from this rulemaking, we are providing a qualitative assessment"
-   ],
-   "kind": "outcome",
-   "label": "EPA's pre-vote forecast was that the rule would have cut THC emissions by 104 tons per yea"
-  },
-  "53c7aa98ba3b6061": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The final rule supports the $13.3 million/yr annualized cost to existing sources and the $2.12 million/yr recordkeeping and reporting estimate. But 'plus' implies the two are additive, while the PRA figure includes $1.97 million for monitoring systems that appear to overlap the CEMS costs in Table 2. The source does not mention the nullification, Politico Pro, the $61 million figure (Table 2 capital items sum to about $61.1 million but give no total), the $20.8 million proposal estimate, or the sponsors' claims. The $2.7–8.1 million CO2/CH4 disbenefit range, which the counterpoint calls unverified, is stated in this source.",
-   "quotes": [
-    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year.",
-    "The annual recordkeeping and reporting costs for all facilities to comply with all of the requirements in the NESHAP is estimated to be $2.12 million per year. This includes labor costs of $149,000 per year and non-labor capital and operations and maintenance costs of $1.97 million per year for monitoring systems",
-    "RTOs (8 new) $25.0 $4.9 ... THC CEMS (97 CEMS) 14.0 4.2 ... New Baghouses (46 mixers) 19.6 2.0 ... BLDS and PM Testing (114 BLDS) 2.54 1.7"
-   ],
-   "kind": "outcome",
-   "label": "The nullification lifted a projected compliance burden on tire makers. EPA estimated $13.3"
-  },
-  "3f46b46a4d6bc6f2": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The main claim matches the source. The 2024 rule lost legal effect on May 23, 2025, and the June 22, 2026 action removes its provisions and restores the 2020 text, under which the rubber processing affected source has no emission limitations or other requirements. The counterpoint's statement that the 2024 rule's 3-year compliance period had not run out, so its limits were never in force for existing sources, is not stated anywhere in this source.",
-   "quotes": [
-    "The CRA joint resolution became law on May 23, 2025, at which point the 2024 Rubber Tire Rule ceased to have any legal force or effect.",
-    "reverts to the regulatory text in effect immediately prior to the effective date of the 2024 Rubber Tire Rule, i.e., the regulatory text in effect pursuant to the 2020 final rule",
-    "There are no emission limitations or other requirements for the rubber processing affected source."
-   ],
-   "kind": "outcome",
-   "label": "The regulatory status changed in the official record. The 2024 rule ceased to have legal e"
-  },
-  "bbe4a3357e3af094": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The source supports the core: after the May 9, 2025 CRA resolution was signed, DOE withdrew the January 2025 final rule, and its amended standards 'shall have no force or effect.' It does not mention a January 22, 2029 compliance date or a DOE regulatory agenda entry, and the counterpoint's secondary-source statement about earlier standards still applying is neither in this source nor attributed to a named one.",
-   "quotes": [
-    "On May 9, 2025, President Trump signed into law a joint resolution of disapproval of the January 2025 Final Rule.",
-    "In accordance with the Congressional Review Act, the January 2025 Final Rule shall have no force or effect.",
-    "As a result, DOE withdraws the January 2025 Final Rule and provides notice that the amended energy conservation standards for commercial refrigerators, freezers, and refrigerator-freezers prescribed in the January 2025 Final Rule shall have no force or effect."
-   ],
-   "kind": "outcome",
-   "label": "After the resolution became law, DOE withdrew the January 2025 final rule from the Federal"
-  },
-  "844634e801f88e7d": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The consumer NPV ($1.32B at 7% to $3.43B at 3%, 2029–2058), health benefits ($0.86–2.19B), 19.7 Mt CO2 and the 91% net-benefit-or-unaffected share all match the rule. Three parts do not hold up: the source describes the 1.11 quads as full-fuel-cycle savings, not \"primary energy\"; the sponsors' claims ($8B burden, 90+ year payback) are not in the source; and the cited CRS report on revocation having no energy-savings impact was not provided, so neither could be checked.",
-   "quotes": [
-    "The cumulative net present value (\"NPV\") of total consumer benefits of the standards for CRE ranges from $1.32 billion 2023$ (at a 7-percent discount rate) to $3.43 billion 2023$ (at a 3-percent discount rate).",
-    "DOE estimated the present value of the health benefits would be $0.86 billion using a 7-percent discount rate, and $2.19 billion using a 3-percent discount rate.",
-    "the standards are projected to result in estimated national energy savings (\"NES\") of 1.11 quad full-fuel-cycle (\"FFC\")"
-   ],
-   "kind": "outcome",
-   "label": "Benefits forgone, per DOE's pre-vote estimate. Over 2029–2058 shipments the standards were"
-  },
-  "55bec3f88fa20325": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The $3,022.3 million baseline, the 1.7–2.6% range, the 91% figure and the 2029 compliance start match the source. But the source gives the loss as about $51.3–77.8 million (or $51–79 million rounded), not $78.7 million. The counterpoint's 'over 16 times' comparison and the sponsors' characterization do not appear in the source, and no other source is named for them.",
-   "quotes": [
-    "DOE estimates that the INPV for manufacturers of CRE in the case without new and amended standards is $3,022.3 million in 2023$.",
-    "DOE estimates the change in INPV to range from -2.6 percent to -1.7 percent, which is approximately -$77.8 million to -$51.3 million.",
-    "For CRE, the change in INPV ranges from -$79 million to -$51 million."
-   ],
-   "kind": "outcome",
-   "label": "Burden lifted, per DOE's pre-vote estimate. Manufacturers avoided a projected INPV loss of"
-  },
-  "d0f5e2a7af01a49e": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The rule's actions, its May 15, 2025 effective date, the January 1, 2025 effective date of the 2024 rule, the OCC's stated reasons and the restored 15-day deemed-approval pathway all match the source. Two parts are not supported: the source never mentions a resolution, so 'about five weeks before the resolution was signed' is unsupported. In the counterpoint, the source shows only that 4 comments were received; it says nothing about a June 16, 2025 letter, its arguments or NYCB/Flagstar. The OCC's statement that it would consider a new policy statement is supported.",
+   "note": "The Federal Register interim final rule supports each element. It rescinds the 2024 Final Rule, restores § 5.33(i) and (j), and removes the appendix. It is effective May 15, 2025, on publication, and the 2024 rule had been effective since January 1, 2025. The stated reasons on burden, uncertainty and confusion, the restored 15-day deemed-approval pathway, and the counterpoint on considering a new policy statement all appear in the rule, which is an official record of the action.",
    "quotes": [
     "The interim final rule rescinds the changes made by the 2024 Final Rule, restoring the expedited review procedures in § 5.33(i) and the streamlined application form in § 5.33(j) and removing the appendix containing the policy statement.",
-    "The interim final rule is effective May 15, 2025.",
-    "The final rule and policy statement became effective on January 1, 2025."
+    "The final rule and policy statement became effective on January 1, 2025.",
+    "The OCC is issuing this interim final rule to reduce the burden and uncertainty that the 2024 Final Rule added to the application process."
    ],
    "kind": "outcome",
    "label": "The OCC adopted an interim final rule that rescinded the 2024 changes. It restored the exp"
   },
-  "85612b77406f5b8d": {
-   "result": "partly_supported",
+  "ed838ac0c62a5989": {
+   "result": "grade_too_strong",
    "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "Several parts match the source: the OCC expected no change in processing time, the only benefit of expedited review was deemed approval on the 15th day after the comment period closed, the 45/60-day targets, and SBA Advocacy's challenge to the RFA certification. Three parts do not. The source never addresses a later removal of the 2024 rule, so 'the burden lifted or harm prevented by the 2024 rule's removal was expected to be small' is the writer's inference. The counterpoint's 2025 OCC statements have no support in this source and no source is named for them. The 'estimated' grade does not fit, because this is a single agency's pre-rule forecast of de minimis impact, not an authoritative aggregate figure.",
+   "note": "The cited Federal Register rule supports every substantive element. It says removing expedited review 'will likely not result in any change to the timing' of processing, and that the only benefit is deemed approval on the 15th day after the comment period closes. It gives the 45-day expedited and 60-day standard target time frames, though these appear in the Regulatory Amendments discussion rather than the RFA section named in the title. It also records that the SBA Office of Advocacy said the proposal's RFA certification lacked a factual basis. The grade 'reported' is not one of the allowed grades, and the document is a pre-implementation forecast rather than a record of outcomes, so the grade is not appropriate.",
    "quotes": [
-    "the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications",
-    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period",
-    "the OCC's current target time frame for licensing decisions on merger applications is 45 days for expedited review and 60 days for standard review"
+    "Second, the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications.",
+    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period unless the OCC takes action to remove the application from expedited review or extends the process.",
+    "the OCC's current target time frame for licensing decisions on merger applications is 45 days for expedited review and 60 days for standard review."
    ],
    "kind": "outcome",
    "label": "In its 2024 analysis of its own rule, the OCC expected that removing expedited review woul"
   },
-  "18a392307c0dd69a": {
-   "result": "partly_supported",
+  "89869a42c879b4c3": {
+   "result": "supported",
    "on": "2026-11-08",
    "by": "claude-opus-5-5",
-   "note": "The article supports the core figures: Ankura's 193 vs. 203 days and S&P's 101 deals as of July 31 vs. 126 for 2024. But it attributes only the FDIC's February decision to the Ankura report; the Congress vote appears in a separate sentence and is not clearly listed as a report factor. The counterpoint's statement that the OCC's 2024 analysis expected no change in processing time is not in the source, and no other source is named for it.",
+   "note": "The article supports every factual element: faster closings under quicker approvals, Ankura's midyear figures (193 days, down from 203), S&P's count (101 deals as of July 31 versus 126 for 2024), the FDIC's February decision as 'one factor', and Congress's May vote to nullify the OCC's 2024 guidance. The counterpoint's scope notes are fair readings of the article, and 'associated' fits news reporting of a pattern.",
    "quotes": [
     "The average time to finalize an M&A transaction this year is 193 days, down from 203 last year, according to a midyear industry outlook report published last month by consulting firm Ankura.",
-    "One factor in the quicker closings, according to the report, is the Federal Deposit Insurance Corp.'s decision in February to supersede a Biden-era rule that resulted in greater scrutiny of bank mergers.",
-    "Congress also voted in May to nullify the Office of the Comptroller of the Currency's 2024 bank merger guidance, which would have eliminated expedited reviews of deals."
+    "As of July 31, 101 deals had been announced versus 126 for all of 2024, according to S&P Global Market Intelligence.",
+    "One factor in the quicker closings, according to the report, is the Federal Deposit Insurance Corp.'s decision in February to supersede a Biden-era rule that resulted in greater scrutiny of bank mergers."
    ],
    "kind": "outcome",
    "label": "American Banker reported that bank M&A deals in 2025 were closing faster under swifter reg"
-  },
-  "7d2799d1246ef243": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "The final rule, Public Law 119-14, the 2026 revocation notice and the Scott and Wicker releases support most of the claim. That includes 15 major sources with 12 doing rubber processing, the THC and fPM surrogates, facility-wide averaging, the 3-year compliance window (the rule text itself gives Nov. 29, 2027), RTOs, 104 tons THC and 160 lb metal HAP, the $13.3M, $2.12M and $20.8M cost figures, the $2.7–8.1M disbenefits, the LEAN rationale, enactment on May 23, 2025, House passage Mar. 5, Senate passage May 6, and the 2026 CFR reversion. Three things do not check out. The 'adverse environmental impact… significant financial burdens… negligible, if any, benefits' wording is from USTMA's CEO, quoted in the Scott release, not from the sponsors. The vote tallies (216-202, 51-43, 55-45), the CRS summary, the Speaker Johnson quote, the Griffith floor remarks, USTMA's post-vote statement and the Politico $61M capital figure could not be checked, because Congress.gov was blocked and Politico was paywalled.",
-   "quotes": [
-    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
-    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
-    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year."
-   ],
-   "kind": "rule record",
-   "label": "draft-2: what the rule did"
-  },
-  "e4ce58d3a011a6e6": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "Most of the rule details check out against the Federal Register and DOE copies: dates, TSL 3, NPV of $1.32B/$3.43B, health benefits of $0.86B/$2.19B, emissions, 91% of purchasers, payback of 0.9–7.0 years, INPV of $3,022.3M, annualized net benefits with INPV, the delay to May 20, the May 9 signing and the withdrawal. Problems: (1) the 1.11 quads are full-fuel-cycle savings in the source, not 'primary energy savings'; (2) the FR and DOE copies give the INPV loss as -$77.8M (the table note says -$79M), and '$78.7 million' does not appear in the text I read; (3) the GAO report also summarizes DOE's cost-benefit, RFA and UMRA analysis, so it does not cover 'only the rule's content and dates'; (4) Goldman's 'cost of living' wording, the op-ed quote, the vote counts and Public Law 119-9 / 139 Stat. 52 could not be checked because Congress.gov and The Hill were unreachable.",
-   "quotes": [
-    "amount to 1.11 quadrillion British thermal units (\"Btu\"), or quads.",
-    "The quantity refers to full-fuel-cycle (\"FFC\") energy savings.",
-    "which is approximately -$77.8 million to -$51.3 million"
-   ],
-   "kind": "rule record",
-   "label": "draft-3: what the rule did"
-  },
-  "dd62f36a7a8e725d": {
-   "result": "partly_supported",
-   "on": "2026-11-08",
-   "by": "claude-opus-5-5",
-   "note": "Most of the claim checks out against the readable sources: the FR text, Bulletin 2024-28, the NPRM overview, the SBA letter, the Barr release, ABA, Latham, the enrolled text and GovInfo. These cover the rule details, dates, the RFA, UMRA and de minimis statements, the OCC's reasons, Barr's statement, the ABA's position, the Senate vote of 52-47, the House passage date of May 20, PL 119-19 and 139 Stat. 70 (approved June 20), and the 'no force or effect' wording. Some parts could not be checked because Congress.gov and the Kennedy release would not load. Those parts are the House vote count of 220-207, the presentation date of 2025-06-10, the OCC interim final rule restoring the old provisions, and two Kennedy statements: the 'red tape'/consumer uncertainty wording and the burden of proof shifting to community banks. Only Kennedy's 'stabilize the banking industry' quote is confirmed, and it comes from the Barr release.",
-   "quotes": [
-    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period",
-    "the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications",
-    "Any business combination subject to a filing is a significant corporate transaction requiring OCC decisioning, which should not be deemed approved solely due to the passage of time."
-   ],
-   "kind": "rule record",
-   "label": "draft-5: what the rule did"
   }
  }
 }
