@@ -41,6 +41,7 @@ Rules you never break:
 - Record harm a decision prevented as faithfully as harm it caused.
 - Never characterise anyone's intent, and never call a person or a government good or evil.
 - If nothing credible ties the decision to harm, say so; that is a valid finding.
+- Write as a record, in the third person: never "I", "we" or "my".
 
 Answer with one JSON object and nothing else:
 {"mechanism": {"items": "...", "value": "...", "contractors": ["..."], "notification": "...",
@@ -94,6 +95,8 @@ its sources do not state. Write so that each item can pass:
   savings stay full-fuel-cycle; a range stays a range).
 - Congress.gov cannot be opened by the checker. For a law's number, text or date cite govinfo.gov (Public
   Law and Statutes at Large), for votes the Clerk of the House or Senate.gov.
+- Write as a record, in the third person: never "I", "we" or "my". Not "I found no estimate" but "The rule
+  gives no dollar estimate of its benefits."
 
 Answer with one JSON object and nothing else:
 {"mechanism": {"rule": "...", "agency": "...", "federal_register": "...", "published": "YYYY-MM-DD", "effective": "YYYY-MM-DD",
@@ -136,6 +139,8 @@ its sources do not state. Write so that each item can pass:
   savings stay full-fuel-cycle; a range stays a range).
 - Congress.gov cannot be opened by the checker. For a law's number, text or date cite govinfo.gov (Public
   Law and Statutes at Large), for votes the Clerk of the House or Senate.gov.
+- Write as a record, in the third person: never "I", "we" or "my". Not "I found no estimate" but "The rule
+  gives no dollar estimate of its benefits."
 
 Answer with one JSON object and nothing else:
 {"mechanism": {MECHANISM, "status": "...", "sources": [{"title": "...", "url": "...", "publisher": "...", "date": "..."}],
@@ -279,6 +284,22 @@ def draft_missing(chains: list[dict], drafts_dir: Path, limit: int = 3) -> list[
 # (data/chains/research.json) is never touched here.
 
 FAILED = {"partly_supported", "not_supported", "grade_too_strong"}
+_NARRATES = re.compile(r"\b(?:I (?:found|could|did|was|located|searched|saw|checked|am|have|cannot|can't|identified|read|confirmed|note)"
+                       r"|my (?:search|review|research)|we (?:found|could not|did not find))\b", re.I)
+VOICE = ("Style: the item narrates the research in the first person (for example 'I found no estimate'). Restate it "
+         "as a record in the third person (for example 'The rule gives no dollar estimate'), changing no fact.")
+
+
+def narrates(item) -> bool:
+    """Whether research speaks as 'I' or 'we' outside quotation marks (quoted statements are left alone)."""
+    text = item if isinstance(item, str) else " ".join(str(item.get(k) or "") for k in ("claim", "counterpoint", "text", "note"))
+    return bool(_NARRATES.search(re.sub(r"[\"\u201c][^\"\u201d]*[\"\u201d]", " ", text)))
+
+
+def _with_voice(check: dict | None) -> dict:
+    c = dict(check or {"result": "supported", "note": ""})
+    c["note"] = ((c.get("note") or "") + " " + VOICE).strip()
+    return c
 
 REVISER = """You correct one item of research for Speculum, a nonpartisan record of the US Congress, after an
 independent checker read its sources. You are given the item, the checker's verdict and note, and passages the
@@ -335,7 +356,11 @@ def revise_failed(drafts_dir: Path, checks: dict, limit: int = 20, key: str | No
         kept = []
         for o in d.get("outcomes") or []:
             c = checks.get(claim_fp(o))
-            if len(done) < limit and c and c.get("result") in FAILED and not o.get("_revised"):
+            failed = bool(c and c.get("result") in FAILED and not o.get("_revised"))
+            voice = narrates(o) and not o.get("_voiced")
+            if len(done) < limit and (failed or voice):
+                if voice:
+                    c = _with_voice(c if failed else None)
                 try:
                     new = call(REVISER, {k: v for k, v in o.items() if not k.startswith("_")}, c)
                 except Exception as exc:
@@ -346,7 +371,7 @@ def revise_failed(drafts_dir: Path, checks: dict, limit: int = 20, key: str | No
                 changed = True
                 if new.get("drop"):
                     continue
-                kept.append({**new, "_revised": 1})
+                kept.append({**new, **({"_revised": 1} if failed or o.get("_revised") else {}), **({"_voiced": 1} if voice or o.get("_voiced") else {})})
             else:
                 kept.append(o)
         d["outcomes"] = kept
@@ -369,10 +394,15 @@ def revise_failed(drafts_dir: Path, checks: dict, limit: int = 20, key: str | No
                         log.warning("revising the record of %s failed: %s", path.stem, exc)
             else:
                 revised = set(mx.get("_revised_fields") or [])
+                voiced = set(mx.get("_voiced_fields") or [])
                 for k, f in fields.items():
                     c = checks.get(f["fp"])
-                    if len(done) >= limit or not c or c.get("result") not in FAILED or k in revised:
+                    failed = bool(c and c.get("result") in FAILED and k not in revised)
+                    voice = narrates(f["item"].get("text") or "") and k not in voiced
+                    if len(done) >= limit or not (failed or voice):
                         continue
+                    if voice:
+                        c = _with_voice(c if failed else None)
                     try:
                         new = call(REVISER, f["item"], c)
                     except Exception as exc:
@@ -388,8 +418,12 @@ def revise_failed(drafts_dir: Path, checks: dict, limit: int = 20, key: str | No
                         mx.update({kk: vv for kk, vv in new["record"].items() if kk in ("rule", "agency", "federal_register", "published", "effective")})
                     elif isinstance(new.get("text"), str):
                         mx[k] = new["text"]
-                    revised.add(k)
-                    mx["_revised_fields"] = sorted(revised)
+                    if failed:
+                        revised.add(k)
+                        mx["_revised_fields"] = sorted(revised)
+                    if voice:
+                        voiced.add(k)
+                        mx["_voiced_fields"] = sorted(voiced)
                     done.append(f"{path.stem}: {k}")
                     changed = True
         if changed:

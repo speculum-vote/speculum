@@ -83,3 +83,23 @@ def test_a_failed_record_field_is_revised_or_dropped(tmp_path):
     assert sorted(done) == ["x: benefits", "x: required"]
     assert "benefits" not in d and d["required"].endswith("refrigeration systems.")
     assert d["_revised_fields"] == ["benefits", "required"]
+
+
+def test_first_person_narration_is_rewritten_once_even_when_it_passed(tmp_path):
+    mx = _record()
+    mx["benefits"] = "The OCC did not publish a dollar estimate; I found none in the preamble."
+    f = chains.record_fields(mx)
+    out = {"grade": "estimated", "claim": 'Sponsors said "we must stop this rule" in a release.', "source": SRC[0]}
+    (tmp_path / "x.json").write_text(json.dumps({"mechanism": mx, "outcomes": [out]}))
+    checks = {f["benefits"]["fp"]: {"result": "supported"}}
+    seen = []
+
+    def fake(system, item, check):
+        seen.append(check["note"])
+        return {**item, "text": "The OCC did not publish a dollar estimate of benefits."}
+    done = interpret.revise_failed(tmp_path, checks, call=fake)
+    assert done == ["x: benefits"]                                  # the quoted "we" in the outcome is left alone
+    assert "third person" in seen[0]
+    d = json.loads((tmp_path / "x.json").read_text())["mechanism"]
+    assert "I found" not in d["benefits"] and d["_voiced_fields"] == ["benefits"]
+    assert interpret.revise_failed(tmp_path, checks, call=fake) == []
