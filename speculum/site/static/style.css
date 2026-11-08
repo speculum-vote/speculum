@@ -358,3 +358,24 @@ h2[id], .step[id], section[id] { scroll-margin-top: 16px; }
 .themes .n { display: block; font: 500 26px/1.1 var(--mono); color: var(--ink); margin-bottom: 4px; }
 .themes span { font-size: 13px; line-height: 1.4; }
 .to-themes { font: 500 12px var(--mono); margin: 8px 0 0; }
+
+/* Said & Done */
+.said-done { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 4px; }
+.said-done > div { background: var(--panel); border: 1px solid var(--line); border-left: 2px solid var(--gold-dim); padding: 14px 18px; }
+.said-done h4 { margin: 0 0 8px; font: 600 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+.said-done p { margin: 0; color: var(--ink-2); }
+.said-done b { color: var(--ink); font-weight: 500; }
+@media (max-width: 640px) { .said-done { grid-template-columns: 1fr; } }
+table.said tr.both td:first-child { box-shadow: inset 2px 0 0 var(--gold-dim); }
+.gold { color: var(--gold); }
+.ballot { border: 1px solid var(--line); background: var(--panel); padding: 6px 18px 12px; margin: 14px 0; }
+.cands { margin: 8px 0; padding-left: 22px; }
+.cands li { padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.cands li:last-child { border-bottom: 0; }
+.cands label { cursor: pointer; }
+.cands .meta { display: block; margin-top: 4px; }
+.ballot button { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; background: transparent; color: var(--gold);
+  border: 1px solid var(--gold-dim); padding: 10px 14px; cursor: pointer; }
+.ballot button:disabled { color: var(--ink-3); border-color: var(--line); cursor: default; }
+ul.rules li { margin: 0 0 10px; color: var(--ink-2); }
+ul.rules b { color: var(--ink); font-weight: 500; }

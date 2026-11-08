@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Said &amp; Done · Speculum{% endblock %}
+{% block body %}
+<h1>Said &amp; Done</h1>
+<p class="lede">What a group says it works on, beside what it does. Each measure sets one kind of public filing against another, by a fixed rule, the same for every bill and every party. It shows a pattern; it does not say why.</p>
+
+{% from "_toc.html" import toc %}{{ toc([("open", "Both sides of the vote"), ("round", "This week's round"), ("past", "Past rounds") if st.closed else none, ("rule", "The rule")]) }}
+
+<h2 id="open">Both sides of the vote</h2>
+<p class="meta">Said: the organization named the bill on its own lobbying reports. Done: it funded members on each side of the final vote. Lobbying reports never say which side an organization took.</p>
+<div class="themes">
+{% for m in opened %}
+<a href="said/{{ m.slug }}.html"><b>{{ m.label }}</b><span class="n">{{ m.n_both|num }} of {{ m.n_funders|num }}</span>
+<span>organizations that lobbied it and funded its voters funded both sides ({{ (m.n_both / m.n_funders)|pct }}).{% if m.title %}<br><span class="muted">{{ m.title|truncate(90) }}</span>{% endif %}</span></a>
+{% endfor %}
+</div>
+
+<h2 id="round">This week's round</h2>
+{% if st.round %}
+<p>Verified reader-checkers choose which bill opens next. This round closes at the end of {{ st.round.closes|longdate }} (Eastern); the bill with the most votes opens the next morning. The shortlist is fixed: the {{ cands|length }} most-lobbied bills that came to a final vote and are not yet open.</p>
+<div class="ballot" id="ballot">
+<ol class="cands">{% for c in cands %}<li data-slug="{{ c.slug }}"><label><input type="radio" name="pick" value="{{ c.slug }}" disabled> <b>{{ c.label }}</b>{% if c.title %} <span class="muted">· {{ c.title|truncate(100) }}</span>{% endif %}
+<span class="meta">{{ c.n_lobbied|num }} organizations lobbied it · {% for v in c.votes %}{{ 'House' if v.chamber == 'house' else 'Senate' }} {{ v.yes }}–{{ v.no }}{{ ', ' if not loop.last }}{% endfor %}</span></label></li>{% endfor %}</ol>
+{% if public %}
+<p class="meta">Voting is open to verified reader-checkers on the readers' site. <a href="join.html">Join the readers →</a></p>
+{% else %}
+<p><button type="button" id="castvote" disabled>Cast my vote</button> <span id="ballotmsg" class="muted">Checking whether you can vote…</span></p>
+{% endif %}
+</div>
+<p class="meta">Each reader-checker has one vote per round and can change it until the round closes. Votes are kept privately and counted after the round closes; only the totals are published. A tie goes to the bill more organizations lobbied. A round with no votes opens nothing.</p>
+{% else %}
+<p class="muted">No round is open: every qualifying bill is already open.</p>
+{% endif %}
+
+{% if st.closed %}
+<h2 id="past">Past rounds</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Round</th><th>Votes</th><th>Opened</th><th>Totals</th></tr></thead>
+<tbody>{% for r in st.closed|reverse %}
+<tr><td class="num">{{ r.opens }} to {{ r.closes }}</td><td class="num">{{ r.votes }}</td>
+<td>{% if r.winner %}<a href="said/{{ r.winner }}.html">{{ labels.get(r.winner, r.winner) }}</a>{% else %}<span class="muted">nothing (no votes)</span>{% endif %}</td>
+<td class="muted">{% for s, n in r.counts.items() %}{{ labels.get(s, s) }} {{ n }}{{ ' · ' if not loop.last }}{% endfor %}</td></tr>
+{% endfor %}</tbody></table></div>
+{% endif %}
+
+<h2 id="rule">The rule</h2>
+<ul class="plain rules">
+<li><b>Lobbied</b>: the organization named the bill on a quarterly lobbying report (LD-2) and files its own reports. Lobbying firms are left out, since a firm works for many clients.</li>
+<li><b>The vote</b>: in each chamber, the last roll call that decided the measure itself: passage, adoption, agreeing to the other chamber's amendment or a conference report, or passage over a veto. Votes on rules, motions, amendments and cloture are not the decision. Simple House and Senate resolutions are left out.</li>
+<li><b>Funded</b>: federal campaign contributions the organization reported on LD-203, by it or its PAC, to a member who voted yea or nay on that vote. Every contribution reported for {{ years }} counts, before or after the vote. Contributions a lobbyist reports as their own are not counted.</li>
+<li><b>Both sides</b>: the organization funded at least one member who voted yes and at least one who voted no.</li>
+<li>A bill qualifies once at least {{ min_funders }} organizations that lobbied it funded members who voted on it.</li>
+</ul>
+<div class="notice">Funding members on both sides of a vote is common and lawful, and has many explanations: an organization may give to the members who lead its committees, to both parties as a matter of policy, or for reasons unrelated to this bill. This page records the pattern and leaves the reading to you.</div>
+{% endblock %}
+{% block scripts %}{% if not public and st.round %}
+<script>
+(function () {
+  var box = document.getElementById('ballot'), btn = document.getElementById('castvote'), msg = document.getElementById('ballotmsg');
+  var radios = box.querySelectorAll('input[name=pick]');
+  function pick() { var r = box.querySelector('input[name=pick]:checked'); return r ? r.value : null; }
+  function mark(slug) { radios.forEach(function (r) { r.checked = r.value === slug; }); }
+  fetch('/api/ballot', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) {
+    if (!j.eligible) { msg.textContent = j.message || 'Voting is not open to this account.'; return; }
+    radios.forEach(function (r) { r.disabled = false; r.addEventListener('change', function () { btn.disabled = !pick(); }); });
+    if (j.mine) { mark(j.mine); msg.textContent = 'Your vote is recorded. You can change it until the round closes.'; }
+    else msg.textContent = 'Choose one bill.';
+    btn.disabled = !pick();
+  }).catch(function () { msg.textContent = 'The ballot could not be reached. Please try again later.'; });
+  btn.addEventListener('click', function () {
+    var s = pick(); if (!s) return;
+    btn.disabled = true; msg.textContent = 'Sending…';
+    fetch('/api/ballot', { method: 'POST', credentials: 'same-origin', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ slug: s }) })
+      .then(function (r) { return r.json(); }).then(function (j) {
+        msg.textContent = j.ok ? 'Your vote is recorded. You can change it until the round closes.' : (j.error || 'Not recorded.');
+        btn.disabled = false;
+      }).catch(function () { msg.textContent = 'Not recorded: the ballot could not be reached.'; btn.disabled = false; });
+  });
+})();
+</script>
+{% endif %}{% endblock %}

@@ -217,6 +217,8 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     history.reverse()
     (prev / "day-zero.html").write_text(E.get_template("dayzero.html").render(
         root="", page="dayzero", meta=_meta_defaults(Snapshot(snapshots_root, DAY_ZERO).read("meta.json", meta) if DAY_ZERO in all_dates(snapshots_root) else meta), history=history, **common), encoding="utf-8")
+    _build_saiddone(E, snapshots_root.parent, prev, spend, votes, members, lobbying,
+                    read_newest(snapshots_root, "billinfo.json", snap.date), common)
     timeline = _build_tide(E, snapshots_root, prev, members, common, public)
     _build_interests(E, prev, members, finance, lobbying, common)
     chains = None
@@ -349,6 +351,31 @@ def _build_bills(E, prev: Path, spend, votes, members, lobbying, info, common) -
     for x in bd["bills"]:
         (prev / "bill" / f"{x['slug']}.html").write_text(tmpl.render(root="../", page="bills", x=x, group_colors=GROUP_COLORS, **common), encoding="utf-8")
     return bd
+
+
+def _build_saiddone(E, data_root: Path, prev: Path, spend, votes, members, lobbying, info, common) -> dict:
+    """Said & Done (see speculum/saiddone.py): the bills the readers have opened, and the current round."""
+    from .. import saiddone as sd_mod
+    sd = sd_mod.build(spend, votes, members, lobbying, info)
+    st = sd_mod.load_state(data_root / "saiddone.json")
+    opened_on = {o["slug"]: o for o in st.get("opened") or []}
+    opened = [sd["by_slug"][o["slug"]] for o in st.get("opened") or [] if o["slug"] in sd["by_slug"]]
+    rnd = st.get("round") or {}
+    cands = [sd["by_slug"][c] for c in rnd.get("candidates") or [] if c in sd["by_slug"]]
+    labels = {m["slug"]: m["label"] for m in sd["bills"]}
+    (prev / "said").mkdir(exist_ok=True)
+    (prev / "saiddone").mkdir(exist_ok=True)
+    (prev / "saiddone.html").write_text(E.get_template("saiddone.html").render(
+        root="", page="saiddone", st=st, opened=opened, cands=cands, labels=labels, years=sd["years"],
+        min_funders=sd["min_funders"], **common), encoding="utf-8")
+    tmpl = E.get_template("said.html")
+    for m in opened:
+        (prev / "said" / f"{m['slug']}.html").write_text(tmpl.render(
+            root="../", page="saiddone", m=m, opened_on=opened_on.get(m["slug"]), years=sd["years"], **common), encoding="utf-8")
+    # Read by functions/api/ballot.js: which bills may be voted for, and until when.
+    (prev / "saiddone" / "ballot.json").write_text(json.dumps(
+        {"round": rnd.get("id"), "closes": rnd.get("closes"), "candidates": [c["slug"] for c in cands]}), encoding="utf-8")
+    return sd
 
 
 def _build_money(E, snapshots_root: Path, date: str, prev: Path, members, finance, lobbying, chains, common) -> dict:

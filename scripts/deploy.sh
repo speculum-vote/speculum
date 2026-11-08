@@ -41,6 +41,11 @@ if [ -n "${CLOUDFLARE_ACCESS_TOKEN:-}" ]; then
   printf '%s' "$(printf '%s' "$CLOUDFLARE_ACCESS_TOKEN" | tr -d '[:space:]')" | npx --yes wrangler@3 pages secret put CF_ACCESS_TOKEN --project-name speculum-public >/dev/null \
     && printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | npx --yes wrangler@3 pages secret put CF_ACCOUNT_ID --project-name speculum-public >/dev/null \
     && echo "early-access approvals enabled" || echo "::warning::Could not enable early-access approvals."
+  # The readers' ballot (functions/api/ballot.js) on early.speculum.vote reads the Access app's audience tag with it,
+  # to check each voter's Access sign-in.
+  printf '%s' "$AT" | npx --yes wrangler@3 pages secret put CF_ACCESS_TOKEN --project-name speculum-preview >/dev/null \
+    && printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | npx --yes wrangler@3 pages secret put CF_ACCOUNT_ID --project-name speculum-preview >/dev/null \
+    && echo "readers' ballot enabled" || echo "::warning::Could not enable the readers' ballot."
 fi
 status=0
 for pair in "dist/public speculum-public" "dist/preview speculum-preview"; do

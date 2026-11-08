@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ m.label }} · Both sides of the vote · Speculum{% endblock %}
+{% block body %}
+<p class="meta"><a href="../saiddone.html">← Said &amp; Done</a></p>
+<h1>{{ m.label }}: both sides of the vote</h1>
+{% if m.title %}<p class="lede">{{ m.title }}</p>{% endif %}
+{% set i = m.info %}
+<p class="meta">{{ m.congress }}th Congress{% if i.sponsor %} · sponsor: {% if i.sponsor_bioguide and i.sponsor_bioguide in member_ids %}<a href="../member/{{ i.sponsor_bioguide }}.html">{{ i.sponsor }}</a>{% else %}{{ i.sponsor }}{% endif %}{% endif %}{% if i.url %} · <a href="{{ i.url }}">Congress.gov</a>{% endif %}{% if m.slug in bill_slugs %} · <a href="../bill/{{ m.slug }}.html">Who lobbied it</a>{% endif %}{% if opened_on %} · opened {{ opened_on.on|shortdate }}{{ ' by the readers’ vote' if opened_on.by != 'first' else '' }}{% endif %}</p>
+
+{% from "_toc.html" import toc %}{{ toc([("vote", "The vote"), ("pattern", "The pattern"), ("orgs", "The organizations"), ("rule", "The rule")]) }}
+
+<h2 id="vote">The vote</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Chamber</th><th>Date</th><th>Question</th><th>Result</th><th class="r">Yes</th><th class="r">No</th></tr></thead>
+<tbody>{% for v in m.votes %}<tr><td>{{ 'House' if v.chamber == 'house' else 'Senate' }}</td><td class="num">{{ v.date }}</td>
+<td>{% if v.url %}<a href="{{ v.url }}">{{ v.question }}</a>{% else %}{{ v.question }}{% endif %}</td><td class="muted">{{ v.result }}</td>
+<td class="r num">{{ v.yes }}</td><td class="r num">{{ v.no }}</td></tr>{% endfor %}</tbody></table></div>
+<p class="meta">The last roll call in each chamber that decided the measure itself. Each member is placed by their own chamber's vote.{% for v in m.votes if v.chamber == 'senate' and v.yes == v.no %} The Senate's tie was decided by the Vice President, who is not a member and is not counted here.{% endfor %}</p>
+
+<h2 id="pattern">The pattern</h2>
+<div class="said-done">
+  <div><h4>Said</h4><p><b class="num">{{ m.n_lobbied|num }}</b> organizations named {{ m.label }} on their lobbying reports, {{ m.quarters|first }} to {{ m.quarters|last }}. <b class="num">{{ m.n_lobbied_own|num }}</b> of them file their own reports.</p></div>
+  <div><h4>Done</h4><p><b class="num">{{ m.n_funders|num }}</b> of those funded members who voted on it. <b class="num">{{ m.n_both|num }}</b> funded members on <em>both</em> sides.</p></div>
+</div>
+<div class="mstats">
+  <div><b class="num">{{ (m.n_both / m.n_funders)|pct }}</b><span>funded both sides ({{ m.n_both|num }} of {{ m.n_funders|num }})</span></div>
+  <div><b class="num">{{ m.n_yes_only|num }}</b><span>funded only members who voted yes</span></div>
+  <div><b class="num">{{ m.n_no_only|num }}</b><span>funded only members who voted no</span></div>
+  <div><b class="num">{{ m.money.yes|money }}</b><span>to members who voted yes</span></div>
+  <div><b class="num">{{ m.money.no|money }}</b><span>to members who voted no</span></div>
+</div>
+<div class="gbar big"><span style="width:{{ 100 * m.n_both / m.n_funders }}%;background:#c9a24a" title="Both sides: {{ m.n_both }}"></span><span style="width:{{ 100 * m.n_yes_only / m.n_funders }}%;background:#9fc3e6" title="Only yes: {{ m.n_yes_only }}"></span><span style="width:{{ 100 * m.n_no_only / m.n_funders }}%;background:#5b5f66" title="Only no: {{ m.n_no_only }}"></span></div>
+<div class="glegend"><span><i style="background:#c9a24a"></i>Both sides {{ m.n_both|num }}</span><span><i style="background:#9fc3e6"></i>Only yes {{ m.n_yes_only|num }}</span><span><i style="background:#5b5f66"></i>Only no {{ m.n_no_only|num }}</span></div>
+<p class="meta">Counts and amounts cover every contribution these organizations reported for {{ years }}, before or after the vote, to members who voted yes or no.</p>
+
+<h2 id="orgs">The organizations</h2>
+<p class="meta">Each organization that lobbied {{ m.label }} and funded members who voted on it, with whom it funded on each side and the LD-203 reports that list the contributions. Organizations that funded both sides come first, then by total given.</p>
+<div class="tbl-wrap"><table class="said">
+<thead><tr><th>Organization</th><th class="r">Members voting yes it funded</th><th class="r">Members voting no it funded</th><th>Reports</th></tr></thead>
+<tbody>{% for o in m.orgs %}
+<tr{% if o.both %} class="both"{% endif %}><td>{{ o.name|org }}<div class="muted gsub">{{ o.sector_name }}{% if o.both %} · <span class="gold">both sides</span>{% endif %}</div></td>
+{% for s in [o.yes, o.no] %}<td class="r num">{% if s.members %}{{ s.members }} · {{ s.amount|money }}<div class="muted gsub">{% for p, n in s.party.items() %}{{ n }} {{ p }}{{ ' · ' if not loop.last }}{% endfor %}</div>{% else %}<span class="muted">—</span>{% endif %}</td>{% endfor %}
+<td class="num">{% for f in o.filings %}<a href="{{ f.url }}" title="{{ f.period }}">{{ loop.index }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_filings > o.filings|length %} <span class="muted">+{{ o.n_filings - o.filings|length }}</span>{% endif %}</td></tr>
+{% endfor %}</tbody></table></div>
+<p class="meta">D, R and I are members' current parties. Each number under Reports opens one LD-203 report at lda.gov.</p>
+
+<h2 id="rule">The rule</h2>
+<p>Lobbied: named the bill on a lobbying report (LD-2) and files its own reports; lobbying firms are left out. The vote: in each chamber, the last roll call that decided the measure itself. Funded: federal campaign contributions the organization or its PAC reported on LD-203 to a member who voted yea or nay, for {{ years }}; contributions a lobbyist reports as their own are not counted. Both sides: at least one member funded on each side. <a href="../saiddone.html#rule">The full rule →</a></p>
+<div class="notice">A lobbying report says an organization worked on a bill, not which side it took. Funding members on both sides is common and lawful and has many explanations. This page records the pattern and leaves the reading to you.</div>
+{% endblock %}

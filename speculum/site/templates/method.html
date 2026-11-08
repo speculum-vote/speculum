@@ -4,7 +4,7 @@
 <h1>Method</h1>
 <p class="lede">Speculum describes; it does not accuse. Every reading below is a rate or a dollar figure computed the same way for every member, compared with the chamber and with the member's own party. Where a rule had to be chosen, the rule is written here.</p>
 
-{% from "_toc.html" import toc %}{{ toc([("readings", "Readings"), ("cycles", "Campaign cycles"), ("counting", "Counting contributions"), ("matching", "Matching names"), ("interests", "Committee givers"), ("senate", "Senate roll calls"), ("dependents", "The Dependents"), ("money", "Where the money goes"), ("bills", "Who lobbies each bill"), ("findings", "Findings"), ("lameduck", "Lame-duck watch"), ("limits", "Known limits"), ("archive", "Archive")]) }}
+{% from "_toc.html" import toc %}{{ toc([("readings", "Readings"), ("cycles", "Campaign cycles"), ("counting", "Counting contributions"), ("matching", "Matching names"), ("interests", "Committee givers"), ("senate", "Senate roll calls"), ("dependents", "The Dependents"), ("money", "Where the money goes"), ("bills", "Who lobbies each bill"), ("saiddone", "Said & Done"), ("findings", "Findings"), ("lameduck", "Lame-duck watch"), ("limits", "Known limits"), ("archive", "Archive")]) }}
 <h2 id="readings">Readings in this version</h2>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Reading</th><th>How it is computed</th><th>Source</th></tr></thead>
@@ -60,6 +60,10 @@
 <div class="tbl-wrap"><table><thead><tr><th>Order</th><th>Sector</th><th>Words</th></tr></thead><tbody>
 {% for k, words in sector_rules %}<tr><td class="num">{{ loop.index }}</td><td>{{ sector_names[k] }} <span class="muted">· {{ sector_groups[k] }}</span></td><td class="muted" style="font-size:13px">{{ words|join(', ') }}</td></tr>{% endfor %}
 </tbody></table></div>
+<h2 id="saiddone">Said &amp; Done</h2>
+<p>Each Said &amp; Done measure sets one kind of filing against another by a fixed rule. The first, Both sides of the vote, takes the organizations that named a bill on their own lobbying reports and shows whom they funded on each side of its final vote. The deciding vote is, in each chamber, the last roll call on the measure itself (passage, adoption, agreeing to the other chamber's amendment or a conference report, or passage over a veto); votes on rules, motions, amendments and cloture are not counted. Contributions are those an organization or its PAC reported on LD-203 for the years read, before or after the vote; contributions a lobbyist reports as their own are left out, and so are lobbying firms. <a href="saiddone.html#rule">The full rule →</a></p>
+<p>Verified reader-checkers choose which bill opens next, from a fixed shortlist (the most-lobbied qualifying bills not yet open). The vote picks the bill, never the result: every bill is measured the same way, and the figures are computed before any round. Votes are private; only totals are published.</p>
+
 <h2 id="findings">Findings</h2>
 <p>The Findings page holds a fixed list of measures, recomputed every night. A measure is added only with a note here, and never dropped because of what it shows.</p>
 <ul class="plain">
