@@ -1000,6 +1000,162 @@
    ],
    "kind": "rule record",
    "label": "draft-2: what the rule did"
+  },
+  "23673f63a882dd29": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the 104 tons/yr THC and 160 lb/yr metal HAP projections, the 15 major sources (12 with rubber processing), EPA's statement that it could not quantify HAP benefits, the 4-in-1 million maximum individual risk, the finding of acceptable risk and an ample margin of safety, and the Nov. 29, 2027 compliance date. It does not say the rule is void or that its reductions are no longer required, and it does not mention any sponsors arguing the benefits were negligible. Those parts need another source.",
+   "quotes": [
+    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
+    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
+    "Although we are unable to quantify the benefits of reducing HAPs from this rulemaking, we are providing a qualitative assessment"
+   ],
+   "kind": "outcome",
+   "label": "EPA's pre-vote forecast was that the rule would have cut THC emissions by 104 tons per yea"
+  },
+  "53c7aa98ba3b6061": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The final rule supports the $13.3 million/yr annualized cost to existing sources and the $2.12 million/yr recordkeeping and reporting estimate. But 'plus' implies the two are additive, while the PRA figure includes $1.97 million for monitoring systems that appear to overlap the CEMS costs in Table 2. The source does not mention the nullification, Politico Pro, the $61 million figure (Table 2 capital items sum to about $61.1 million but give no total), the $20.8 million proposal estimate, or the sponsors' claims. The $2.7–8.1 million CO2/CH4 disbenefit range, which the counterpoint calls unverified, is stated in this source.",
+   "quotes": [
+    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year.",
+    "The annual recordkeeping and reporting costs for all facilities to comply with all of the requirements in the NESHAP is estimated to be $2.12 million per year. This includes labor costs of $149,000 per year and non-labor capital and operations and maintenance costs of $1.97 million per year for monitoring systems",
+    "RTOs (8 new) $25.0 $4.9 ... THC CEMS (97 CEMS) 14.0 4.2 ... New Baghouses (46 mixers) 19.6 2.0 ... BLDS and PM Testing (114 BLDS) 2.54 1.7"
+   ],
+   "kind": "outcome",
+   "label": "The nullification lifted a projected compliance burden on tire makers. EPA estimated $13.3"
+  },
+  "3f46b46a4d6bc6f2": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The main claim matches the source. The 2024 rule lost legal effect on May 23, 2025, and the June 22, 2026 action removes its provisions and restores the 2020 text, under which the rubber processing affected source has no emission limitations or other requirements. The counterpoint's statement that the 2024 rule's 3-year compliance period had not run out, so its limits were never in force for existing sources, is not stated anywhere in this source.",
+   "quotes": [
+    "The CRA joint resolution became law on May 23, 2025, at which point the 2024 Rubber Tire Rule ceased to have any legal force or effect.",
+    "reverts to the regulatory text in effect immediately prior to the effective date of the 2024 Rubber Tire Rule, i.e., the regulatory text in effect pursuant to the 2020 final rule",
+    "There are no emission limitations or other requirements for the rubber processing affected source."
+   ],
+   "kind": "outcome",
+   "label": "The regulatory status changed in the official record. The 2024 rule ceased to have legal e"
+  },
+  "bbe4a3357e3af094": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the core: after the May 9, 2025 CRA resolution was signed, DOE withdrew the January 2025 final rule, and its amended standards 'shall have no force or effect.' It does not mention a January 22, 2029 compliance date or a DOE regulatory agenda entry, and the counterpoint's secondary-source statement about earlier standards still applying is neither in this source nor attributed to a named one.",
+   "quotes": [
+    "On May 9, 2025, President Trump signed into law a joint resolution of disapproval of the January 2025 Final Rule.",
+    "In accordance with the Congressional Review Act, the January 2025 Final Rule shall have no force or effect.",
+    "As a result, DOE withdraws the January 2025 Final Rule and provides notice that the amended energy conservation standards for commercial refrigerators, freezers, and refrigerator-freezers prescribed in the January 2025 Final Rule shall have no force or effect."
+   ],
+   "kind": "outcome",
+   "label": "After the resolution became law, DOE withdrew the January 2025 final rule from the Federal"
+  },
+  "844634e801f88e7d": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The consumer NPV ($1.32B at 7% to $3.43B at 3%, 2029–2058), health benefits ($0.86–2.19B), 19.7 Mt CO2 and the 91% net-benefit-or-unaffected share all match the rule. Three parts do not hold up: the source describes the 1.11 quads as full-fuel-cycle savings, not \"primary energy\"; the sponsors' claims ($8B burden, 90+ year payback) are not in the source; and the cited CRS report on revocation having no energy-savings impact was not provided, so neither could be checked.",
+   "quotes": [
+    "The cumulative net present value (\"NPV\") of total consumer benefits of the standards for CRE ranges from $1.32 billion 2023$ (at a 7-percent discount rate) to $3.43 billion 2023$ (at a 3-percent discount rate).",
+    "DOE estimated the present value of the health benefits would be $0.86 billion using a 7-percent discount rate, and $2.19 billion using a 3-percent discount rate.",
+    "the standards are projected to result in estimated national energy savings (\"NES\") of 1.11 quad full-fuel-cycle (\"FFC\")"
+   ],
+   "kind": "outcome",
+   "label": "Benefits forgone, per DOE's pre-vote estimate. Over 2029–2058 shipments the standards were"
+  },
+  "55bec3f88fa20325": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The $3,022.3 million baseline, the 1.7–2.6% range, the 91% figure and the 2029 compliance start match the source. But the source gives the loss as about $51.3–77.8 million (or $51–79 million rounded), not $78.7 million. The counterpoint's 'over 16 times' comparison and the sponsors' characterization do not appear in the source, and no other source is named for them.",
+   "quotes": [
+    "DOE estimates that the INPV for manufacturers of CRE in the case without new and amended standards is $3,022.3 million in 2023$.",
+    "DOE estimates the change in INPV to range from -2.6 percent to -1.7 percent, which is approximately -$77.8 million to -$51.3 million.",
+    "For CRE, the change in INPV ranges from -$79 million to -$51 million."
+   ],
+   "kind": "outcome",
+   "label": "Burden lifted, per DOE's pre-vote estimate. Manufacturers avoided a projected INPV loss of"
+  },
+  "d0f5e2a7af01a49e": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The rule's actions, its May 15, 2025 effective date, the January 1, 2025 effective date of the 2024 rule, the OCC's stated reasons and the restored 15-day deemed-approval pathway all match the source. Two parts are not supported: the source never mentions a resolution, so 'about five weeks before the resolution was signed' is unsupported. In the counterpoint, the source shows only that 4 comments were received; it says nothing about a June 16, 2025 letter, its arguments or NYCB/Flagstar. The OCC's statement that it would consider a new policy statement is supported.",
+   "quotes": [
+    "The interim final rule rescinds the changes made by the 2024 Final Rule, restoring the expedited review procedures in § 5.33(i) and the streamlined application form in § 5.33(j) and removing the appendix containing the policy statement.",
+    "The interim final rule is effective May 15, 2025.",
+    "The final rule and policy statement became effective on January 1, 2025."
+   ],
+   "kind": "outcome",
+   "label": "The OCC adopted an interim final rule that rescinded the 2024 changes. It restored the exp"
+  },
+  "85612b77406f5b8d": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Several parts match the source: the OCC expected no change in processing time, the only benefit of expedited review was deemed approval on the 15th day after the comment period closed, the 45/60-day targets, and SBA Advocacy's challenge to the RFA certification. Three parts do not. The source never addresses a later removal of the 2024 rule, so 'the burden lifted or harm prevented by the 2024 rule's removal was expected to be small' is the writer's inference. The counterpoint's 2025 OCC statements have no support in this source and no source is named for them. The 'estimated' grade does not fit, because this is a single agency's pre-rule forecast of de minimis impact, not an authoritative aggregate figure.",
+   "quotes": [
+    "the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications",
+    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period",
+    "the OCC's current target time frame for licensing decisions on merger applications is 45 days for expedited review and 60 days for standard review"
+   ],
+   "kind": "outcome",
+   "label": "In its 2024 analysis of its own rule, the OCC expected that removing expedited review woul"
+  },
+  "18a392307c0dd69a": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The article supports the core figures: Ankura's 193 vs. 203 days and S&P's 101 deals as of July 31 vs. 126 for 2024. But it attributes only the FDIC's February decision to the Ankura report; the Congress vote appears in a separate sentence and is not clearly listed as a report factor. The counterpoint's statement that the OCC's 2024 analysis expected no change in processing time is not in the source, and no other source is named for it.",
+   "quotes": [
+    "The average time to finalize an M&A transaction this year is 193 days, down from 203 last year, according to a midyear industry outlook report published last month by consulting firm Ankura.",
+    "One factor in the quicker closings, according to the report, is the Federal Deposit Insurance Corp.'s decision in February to supersede a Biden-era rule that resulted in greater scrutiny of bank mergers.",
+    "Congress also voted in May to nullify the Office of the Comptroller of the Currency's 2024 bank merger guidance, which would have eliminated expedited reviews of deals."
+   ],
+   "kind": "outcome",
+   "label": "American Banker reported that bank M&A deals in 2025 were closing faster under swifter reg"
+  },
+  "7d2799d1246ef243": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "The final rule, Public Law 119-14, the 2026 revocation notice and the Scott and Wicker releases support most of the claim. That includes 15 major sources with 12 doing rubber processing, the THC and fPM surrogates, facility-wide averaging, the 3-year compliance window (the rule text itself gives Nov. 29, 2027), RTOs, 104 tons THC and 160 lb metal HAP, the $13.3M, $2.12M and $20.8M cost figures, the $2.7–8.1M disbenefits, the LEAN rationale, enactment on May 23, 2025, House passage Mar. 5, Senate passage May 6, and the 2026 CFR reversion. Three things do not check out. The 'adverse environmental impact… significant financial burdens… negligible, if any, benefits' wording is from USTMA's CEO, quoted in the Scott release, not from the sponsors. The vote tallies (216-202, 51-43, 55-45), the CRS summary, the Speaker Johnson quote, the Griffith floor remarks, USTMA's post-vote statement and the Politico $61M capital figure could not be checked, because Congress.gov was blocked and Politico was paywalled.",
+   "quotes": [
+    "Among the 15 major sources that are subject to the NESHAP, 12 facilities perform rubber processing",
+    "we estimate that the final rule amendments would reduce THC emissions by 104 tons/yr and metal HAP emissions by 160 lb/yr",
+    "We estimate the total annualized cost of the final rule to existing sources in the Rubber Tire Manufacturing source category to be $13.3 million per year."
+   ],
+   "kind": "rule record",
+   "label": "draft-2: what the rule did"
+  },
+  "e4ce58d3a011a6e6": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the rule details check out against the Federal Register and DOE copies: dates, TSL 3, NPV of $1.32B/$3.43B, health benefits of $0.86B/$2.19B, emissions, 91% of purchasers, payback of 0.9–7.0 years, INPV of $3,022.3M, annualized net benefits with INPV, the delay to May 20, the May 9 signing and the withdrawal. Problems: (1) the 1.11 quads are full-fuel-cycle savings in the source, not 'primary energy savings'; (2) the FR and DOE copies give the INPV loss as -$77.8M (the table note says -$79M), and '$78.7 million' does not appear in the text I read; (3) the GAO report also summarizes DOE's cost-benefit, RFA and UMRA analysis, so it does not cover 'only the rule's content and dates'; (4) Goldman's 'cost of living' wording, the op-ed quote, the vote counts and Public Law 119-9 / 139 Stat. 52 could not be checked because Congress.gov and The Hill were unreachable.",
+   "quotes": [
+    "amount to 1.11 quadrillion British thermal units (\"Btu\"), or quads.",
+    "The quantity refers to full-fuel-cycle (\"FFC\") energy savings.",
+    "which is approximately -$77.8 million to -$51.3 million"
+   ],
+   "kind": "rule record",
+   "label": "draft-3: what the rule did"
+  },
+  "dd62f36a7a8e725d": {
+   "result": "partly_supported",
+   "on": "2026-11-08",
+   "by": "claude-opus-5-5",
+   "note": "Most of the claim checks out against the readable sources: the FR text, Bulletin 2024-28, the NPRM overview, the SBA letter, the Barr release, ABA, Latham, the enrolled text and GovInfo. These cover the rule details, dates, the RFA, UMRA and de minimis statements, the OCC's reasons, Barr's statement, the ABA's position, the Senate vote of 52-47, the House passage date of May 20, PL 119-19 and 139 Stat. 70 (approved June 20), and the 'no force or effect' wording. Some parts could not be checked because Congress.gov and the Kennedy release would not load. Those parts are the House vote count of 220-207, the presentation date of 2025-06-10, the OCC interim final rule restoring the old provisions, and two Kennedy statements: the 'red tape'/consumer uncertainty wording and the burden of proof shifting to community banks. Only Kennedy's 'stabilize the banking industry' quote is confirmed, and it comes from the Barr release.",
+   "quotes": [
+    "The only benefit conferred by the expedited review provisions in § 5.33(i) is that applications are deemed approved as of the 15th day after the close of the comment period",
+    "the removal of the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications",
+    "Any business combination subject to a filing is a significant corporate transaction requiring OCC decisioning, which should not be deemed approved solely due to the passage of time."
+   ],
+   "kind": "rule record",
+   "label": "draft-5: what the rule did"
   }
  }
 }

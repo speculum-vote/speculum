@@ -1,0 +1,147 @@
+{
+ "mechanism": {
+  "rule": "Business Combinations Under the Bank Merger Act (final rule, with a policy statement added as an appendix)",
+  "agency": "Office of the Comptroller of the Currency (OCC), Department of the Treasury",
+  "federal_register": "89 FR 78207 (Doc. 2024-21560)",
+  "published": "2024-09-25",
+  "effective": "2025-01-01",
+  "required": "The rule amended 12 CFR 5.33 by removing the expedited review procedures in § 5.33(i). Under those procedures an application was deemed approved on the 15th day after the comment period closed, unless the OCC said the filing was ineligible or extended the process. It also removed the streamlined application provisions in § 5.33(j) and the definition of 'business reorganization' in § 5.33(d)(3). OCC Bulletin 2024-28 describes this as removing the provisions on expedited review and the use of the streamlined business combination application. It also added, as an appendix, a policy statement summarizing the principles the OCC uses when it reviews proposed bank mergers. The bulletin says the policy statement applies to insured national banks, federal savings associations and federal branches of foreign banks. In practice, applicants that would have qualified for expedited review or the streamlined form had to use the full Interagency Bank Merger Act application and could no longer be deemed approved by the passage of time. The final rule and policy statement became effective on January 1, 2025.",
+  "benefits": "The OCC did not publish a dollar-valued or otherwise quantified estimate of benefits; I found none in the Federal Register preamble. Its stated expected benefit was that eliminating expedited review would more closely align the regulatory framework with the OCC's current practices and promote transparency. In its Regulatory Flexibility Act analysis the OCC also said removing the expedited review process will likely not result in any change to the timing of the OCC's processing of licensing applications. In the same analysis it described the only benefit of expedited review as deemed approval on day 15, and it said it was not aware of any business combination application having been deemed approved by the passage of time under § 5.33(i).",
+  "costs": "The OCC did not quantify compliance costs in dollars. It expected no significant economic impact on any small entities and certified that the rule would not have a significant economic impact on a substantial number of small entities. It concluded the rule would not cause an expenditure of $183 million or more annually by State, local and Tribal governments or the private sector (Unfunded Mandates Reform Act threshold). The OCC described the impact on small entities as de minimis. Official dispute: on the 2024 proposal, the SBA Office of Advocacy's comment letter questioned the OCC's Regulatory Flexibility Act certification and recommended that small entities keep expedited review and a streamlined application process. I found no CBO, GAO or court finding on the rule's costs or benefits.",
+  "agency_reasons": "The OCC's stated view, set out in the 2024 proposal, was that any business combination subject to a filing is a significant corporate transaction requiring OCC decisioning. It said such a filing should not be deemed approved solely because time has passed. It also stated that the policy statement was meant to give financial institutions greater clarity and the public greater transparency. Comments on the rule were mixed. Some commenters who supported ending expedited review said it failed to adequately prevent anti-competitive mergers.",
+  "sponsor_reasons": "Sen. John Kennedy (R-LA), the sponsor, said in his press materials that the rule delays the bank merger approval process by adding more red tape that could lead to consumer uncertainty. He also said Congress should reverse the rule to stabilize the banking industry and protect Americans who depend on strong banks. His materials said the rule shifted the burden of proof to individual banks, particularly community banks. Rep. Andy Barr (R-KY), who introduced the House companion, stated that the rule imposes new regulatory hurdles and vague, subjective criteria that would severely restrict banks of all sizes, particularly community and regional banks, from pursuing mergers. The American Bankers Association supported the resolution. It said the final rule created new standards, including arbitrary asset thresholds, without the clarity and predictability that banks need.",
+  "status": "Enacted. The Senate passed S.J.Res.13 52-47 on 2025-05-07, and the House passed it 220-207 on 2025-05-20. It was presented to the President on 2025-06-10 and signed on 2025-06-20. It became Public Law 119-19, approved June 20, 2025 (139 Stat. 70). The text states that Congress disapproves the rule (89 Fed. Reg. 78207) and that the rule 'shall have no force or effect'. The 2024 rule is therefore void and not in force. Before enactment, the OCC had already restored the pre-2024 provisions administratively by an interim final rule (see outcomes).",
+  "sources": [
+   {
+    "title": "Business Combinations Under the Bank Merger Act (89 FR 78207)",
+    "url": "https://www.federalregister.gov/documents/2024/09/25/2024-21560/business-combinations-under-the-bank-merger-act",
+    "publisher": "Federal Register / OCC",
+    "date": "2024-09-25"
+   },
+   {
+    "title": "OCC Bulletin 2024-28: Business Combinations Under the Bank Merger Act: Final Rule",
+    "url": "https://www.occ.gov/static/rescinded-bulletins/bulletin-2024-28.pdf",
+    "publisher": "OCC",
+    "date": "2024-09-17"
+   },
+   {
+    "title": "S.J.Res.13 - 119th Congress (overview and actions)",
+    "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/13",
+    "publisher": "Congress.gov",
+    "date": "2025-06-20"
+   },
+   {
+    "title": "Public Law 119-19",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ19",
+    "publisher": "GovInfo",
+    "date": "2025-06-20"
+   },
+   {
+    "title": "S.J.Res.13 enrolled text",
+    "url": "https://congress.gov/119/bills/sjres13/BILLS-119sjres13enr.pdf",
+    "publisher": "Congress.gov",
+    "date": "2025-06-20"
+   },
+   {
+    "title": "Comment letter on OCC proposed Business Combinations rule",
+    "url": "https://advocacy.sba.gov/wp-content/uploads/2024/04/Comment-Letter-OCC-Business-Combinations-Under-the-Bank-Merger-Act.pdf",
+    "publisher": "SBA Office of Advocacy",
+    "date": "2024-04"
+   },
+   {
+    "title": "Kennedy introduces resolution to undo Biden admin bureaucracy that leads to consumer uncertainty",
+    "url": "https://www.kennedy.senate.gov/public/press-releases?ID=C5FD5141-8228-4C7B-9E6A-A2256EF177F7",
+    "publisher": "Office of Sen. John Kennedy",
+    "date": "2025-02-04"
+   },
+   {
+    "title": "Rep. Barr & Sen. Kennedy Lead Resolution to Block Harmful OCC Bank Merger Rule",
+    "url": "https://barr.house.gov/press-releases?ID=DEE1C7A4-05FA-45EB-8A8E-12AC133C469F",
+    "publisher": "Office of Rep. Andy Barr",
+    "date": "2025-04"
+   },
+   {
+    "title": "Senate approves resolution to overturn OCC bank merger rule",
+    "url": "https://bankingjournal.aba.com/2025/05/senate-approves-resolution-to-overturn-occ-bank-merger-rule/",
+    "publisher": "ABA Banking Journal",
+    "date": "2025-05-07"
+   },
+   {
+    "title": "FDIC, OCC Finalize Policy on Bank Merger Transactions",
+    "url": "https://www.globalfinregblog.com/2024/10/fdic-occ-finalize-policy-on-bank-merger-transactions/",
+    "publisher": "Latham & Watkins Global Financial Regulatory Blog",
+    "date": "2024-10"
+   },
+   {
+    "title": "Overview of Notice of Proposed Rulemaking for Business Combinations Under the Bank Merger Act",
+    "url": "https://occ.gov/news-issuances/news-releases/2024/nr-occ-2024-7b.pdf",
+    "publisher": "OCC",
+    "date": "2024-01-29"
+   }
+  ]
+ },
+ "outcomes": [
+  {
+   "grade": "documented",
+   "claim": "The OCC adopted an interim final rule that rescinded the 2024 changes. It restored the expedited review procedures in § 5.33(i) and the streamlined application form in § 5.33(j), and removed the appendix containing the policy statement. It took effect on May 15, 2025, on publication in the Federal Register. That was about five weeks before the resolution was signed, and the 2024 rule had been in effect since January 1, 2025. The OCC said it acted to reduce the burden and uncertainty the 2024 rule added to the application process. The OCC also stated that there had been significant confusion in the banking industry and public about the 2024 rule's effect, potentially hampering economically beneficial bank mergers. Applicants who qualify again have access to the 15-day deemed-approval pathway and the streamlined form.",
+   "date": "2025-05-15",
+   "source": {
+    "title": "Business Combinations Under the Bank Merger Act; Rescission (interim final rule, 90 FR 20561)",
+    "url": "https://www.federalregister.gov/documents/2025/05/15/2025-08405/business-combinations-under-the-bank-merger-act-rescission",
+    "publisher": "Federal Register / OCC",
+    "date": "2025-05-15"
+   },
+   "counterpoint": "A comment letter filed in OCC docket OCC-2025-0001 on June 16, 2025 argued that the 2024 rule was an improvement. It also argued that restoring automatic approval 15 days after the comment period risks limited review, and it cited the NYCB/Flagstar approval. I could not identify the letter's author from the text I saw. This is a commenter's view, not an agency finding. The OCC said it would consider issuing a new policy statement after reviewing comments."
+  },
+  {
+   "grade": "estimated",
+   "claim": "In its 2024 analysis of its own rule, the OCC expected that removing expedited review would not change how long it took to process applications. It said the only benefit conferred by expedited review was deemed approval as of the 15th day after the close of the comment period. On that basis the burden lifted or harm prevented by the 2024 rule's removal was expected to be small. The OCC also stated that its target for merger licensing decisions was 45 days for expedited review and 60 days for standard review. This is a forecast made before the vote and is not a record of outcomes.",
+   "date": "2024-09-25",
+   "source": {
+    "title": "Business Combinations Under the Bank Merger Act (89 FR 78207), Regulatory Flexibility Act section",
+    "url": "https://www.federalregister.gov/documents/2024/09/25/2024-21560/business-combinations-under-the-bank-merger-act",
+    "publisher": "Federal Register / OCC",
+    "date": "2024-09-25"
+   },
+   "counterpoint": "The SBA Office of Advocacy questioned the OCC's certification of no significant economic impact on small entities when the rule was proposed. In 2025 the OCC itself said the 2024 rule had added burden and uncertainty and had caused confusion that could hamper mergers. These two positions differ from the OCC's 2024 forecast."
+  },
+  {
+   "grade": "associated",
+   "claim": "American Banker reported that bank M&A deals in 2025 were closing faster under swifter regulatory approvals. It cited Ankura's midyear report: the average time to finalize a deal in 2025 was 193 days, down from 203 in 2024. It also cited S&P Global Market Intelligence: 101 deals had been announced as of July 31, 2025, versus 126 for all of 2024. The report lists several factors. They include the FDIC's February decision to supersede a Biden-era rule and Congress's May vote to nullify the OCC's 2024 bank merger guidance.",
+   "date": "2025-07-31",
+   "source": {
+    "title": "Need for speed: Faster deal timelines may spur more bank M&A",
+    "url": "https://www.americanbanker.com/news/need-for-speed-faster-deal-timelines-may-spur-more-bank-m-a",
+    "publisher": "American Banker",
+    "date": "2025-08"
+   },
+   "counterpoint": "The 10-day difference in average closing time is small, covers all bank deals (not only OCC-reviewed ones), and is attributed to several overlapping changes. The report gives no direct evidence about this resolution or about OCC expedited review. The OCC's own 2024 analysis expected no change in processing time from the rule. The figures are as of mid-2025 and do not show effects on competition, consumers or community banks."
+  }
+ ],
+ "notes": "(1) Timing: the resolution became law on 2025-06-20, after the OCC's interim final rule (effective 2025-05-15) had already restored the pre-2024 provisions. Any observed post-May 2025 change therefore cannot be cleanly attributed to the statute alone rather than the OCC's own action, and the statute's own independent effect is not isolated in the sources I opened. (2) I found no OCC, GAO, inspector general or CBO data after 2025-05-15 on how many applications used the restored expedited or streamlined pathways, on approval times for those pathways, or on any consumer, competition or community-bank outcome. That absence is itself a finding. I did not open the OCC licensing annual report or later merger-activity data, so a record may exist that I did not find. (3) The 2024 rule has no quantified benefit or cost estimate and no regulatory impact analysis. The only official quantitative statements are threshold certifications (small-entity impact and the $183M Unfunded Mandates Reform Act threshold). (4) Sponsor statements, such as the claim that the rule shifted the burden of proof to banks and disproportionately harmed community banks, are sponsors' claims. I did not verify them against the rule text and did not find official data on them. (5) Senate passage dates differ across sources (Congress.gov records the Senate passage vote on 2025-05-07, while the Kennedy press release says May 8). I used Congress.gov. (6) The American Banker article date is approximate; the figures are as of 2025-07-31. (7) Legal effects of the CRA on future 'substantially the same' rules were not verified in a source I opened, and sponsor claims about prohibiting future OCC merger regulation are attributed to Rep. Barr's press release only. (8) The 2024 rule's policy statement was also removed by the OCC's interim final rule. The OCC said it may issue a new one, and I did not check whether it has done so.",
+ "_drafted": {
+  "by": "claude-sonnet-5-5",
+  "on": "2026-11-08",
+  "status": "draft",
+  "usage": {
+   "input_tokens": 146523,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 9228,
+   "output_tokens_details": {
+    "thinking_tokens": 2921
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard",
+   "server_tool_use": {
+    "web_search_requests": 8,
+    "web_fetch_requests": 0
+   }
+  }
+ }
+}
