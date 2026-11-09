@@ -36,3 +36,20 @@ def test_no_new_draft_after_the_time_budget(tmp_path):
     done = interpret.draft_missing(chains(10), tmp_path / "drafts", limit=5, call=slow, today="2026-11-09",
                                    budget_min=30, clock=lambda: t[0])
     assert done == ["c0", "c1"]
+
+
+def test_the_draft_comes_from_the_record_tool():
+    body = {"stop_reason": "tool_use", "content": [{"type": "text", "text": "Done."},
+            {"type": "tool_use", "name": "record_draft", "input": {"outcomes": [{"quote": 'He said "no".'}]}}]}
+    assert interpret.parse_draft(body)["outcomes"][0]["quote"] == 'He said "no".'
+
+
+def test_a_cut_off_answer_says_so():
+    import pytest
+    with pytest.raises(ValueError, match="cut off at the token limit"):
+        interpret.parse_draft({"stop_reason": "max_tokens", "content": [{"type": "text", "text": '{"outcomes": [{"cl'}]})
+
+
+def test_text_json_still_parses_with_trailing_words():
+    body = {"stop_reason": "end_turn", "content": [{"type": "text", "text": 'Here it is: {"a": 1} Hope that helps {x}'}]}
+    assert interpret.parse_draft(body) == {"a": 1}

@@ -214,21 +214,54 @@ def _prompt(chain: dict) -> str:
             f"Recipient: {chain.get('country')}. Rule: {chain['rule_name']}. Draft the mechanism and outcome links.")
 
 
+DRAFT_TOKENS = 16000
+# The drafter hands back its answer through this tool, so it arrives as parsed JSON: a quotation mark inside a
+# quoted source passage can no longer break it.
+RECORD_TOOL = {"name": "record_draft",
+               "description": "Submit the finished draft: the one JSON object the instructions describe. Call it once, at the end.",
+               "input_schema": {"type": "object", "additionalProperties": True}}
+TOOL_NOTE = ("\n\nWhen the research is done, call the record_draft tool once with that JSON object as its input, "
+             "instead of writing the object as text.")
+
+
+def parse_draft(body: dict) -> dict:
+    """The draft from an API answer: the record_draft tool's input, or else a JSON object in the text.
+    An answer cut off at the token limit is reported as such."""
+    blocks = body.get("content") or []
+    for b in blocks:
+        if b.get("type") == "tool_use" and b.get("name") == RECORD_TOOL["name"] and isinstance(b.get("input"), dict) and b["input"]:
+            return b["input"]
+    if body.get("stop_reason") == "max_tokens":
+        raise ValueError(f"drafter's answer was cut off at the token limit (usage {body.get('usage')})")
+    text = "".join(b.get("text", "") for b in blocks if b.get("type") == "text")
+    start = text.find("{")
+    if start < 0:
+        raise ValueError(f"drafter returned no JSON (stop {body.get('stop_reason')}; ends {text[-160:]!r})")
+    try:
+        out, _ = json.JSONDecoder().raw_decode(text[start:])
+    except ValueError as e:
+        raise ValueError(f"drafter's JSON did not parse: {e}") from None
+    return out
+
+
 def draft(chain: dict, key: str, max_searches: int = 8) -> dict:
     theme = chain.get("rule") or "arms-sales"
     system = SYSTEM if theme == "arms-sales" else SYSTEM_RULE if theme == "rules-overturned" else BRIEFS[theme]
-    resp = requests.post(API, timeout=(15, 600), headers={
-        "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}, json={
-        "model": MODEL, "max_tokens": 8000, "system": system,
-        "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}],
-        "messages": [{"role": "user", "content": _prompt(chain) if theme == "arms-sales" else _prompt_rule(chain)}]})
-    resp.raise_for_status()
-    body = resp.json()
-    text = "".join(b.get("text", "") for b in body.get("content", []) if b.get("type") == "text")
-    m = re.search(r"\{.*\}", text, re.S)
-    if not m:
-        raise ValueError("drafter returned no JSON")
-    out = json.loads(m.group(0))
+    messages = [{"role": "user", "content": _prompt(chain) if theme == "arms-sales" else _prompt_rule(chain)}]
+    # A long turn with web searches can come back paused ("pause_turn"); sending it back lets it continue.
+    for _ in range(4):
+        resp = requests.post(API, timeout=(15, 900), headers={
+            "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}, json={
+            "model": MODEL, "max_tokens": DRAFT_TOKENS, "system": system + TOOL_NOTE,
+            "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}, RECORD_TOOL],
+            "messages": messages})
+        resp.raise_for_status()
+        body = resp.json()
+        if body.get("stop_reason") != "pause_turn":
+            break
+        done_so_far = (messages[1]["content"] if len(messages) > 1 else []) + (body.get("content") or [])
+        messages = messages[:1] + [{"role": "assistant", "content": done_so_far}]
+    out = parse_draft(body)
     out["_drafted"] = {"by": body.get("model", MODEL), "on": date.today().isoformat(), "status": "draft",
                        "usage": body.get("usage")}
     return out

@@ -1,0 +1,41 @@
+name: Draft research now
+
+# By hand only: draft research for a few waiting Dependents chains without the nightly fetch, to test the drafter
+# or catch up. The drafts are committed; the next nightly run checks them against their sources.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many chains to try (each attempt counts, whether it succeeds or not)"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m speculum chains --draft --limit "${{ inputs.limit }}"
+      - name: Commit the drafts
+        run: |
+          git config user.name "speculum-bot"
+          git config user.email "speculum-bot@users.noreply.github.com"
+          for f in data/chains/drafts data/chains/draft_failures.json; do [ -e "$f" ] && git add "$f"; done
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Drafts (by hand)"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1
