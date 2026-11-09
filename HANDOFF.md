@@ -52,9 +52,27 @@ Said & Done (added November 8, `speculum/saiddone.py`): sets one kind of filing 
 - The owner votes only if their own email is approved on the sign-up list.
 - Not yet: links to the LD-2 reports that name the bill (the snapshot keeps only counts per organization); more measures (a member's cosponsorship against their vote; Congress's own deadlines against its record).
 
+## Launch and rollback
+
+Before switching (the day before or that morning):
+- The day's nightly run has finished green (GitHub Actions, "Nightly snapshot"). Do not switch while a nightly run is still going: it deploys at its end, and a switch pushed between its build and its deploy would be overwritten until the next push.
+- Approve your own email on speculum.vote/signups, then vote on early.speculum.vote/saiddone.html, change the vote once, and check it shows as yours.
+- `data/lameduck.json`: move any newly called race from `uncalled` to `members` with its source; update the "as of" date. A push to any top-level `data/*.json` file now deploys.
+- If the date moved, change the date on Instagram slide 9 before posting.
+
+Switch: set `"public": "launch"` in `data/site.json` and commit to main (the GitHub web editor is fine). "Deploy site" runs; the first full upload of about 10,000 files takes a few minutes.
+
+Check within 15 minutes, on a phone and a computer:
+- speculum.vote shows the full home page, not the holding page; open The Chamber, one member, one bill, Said & Done, The Money, Method.
+- Join the readers: send a test sign-up, see it at speculum.vote/signups, remove it.
+- early.speculum.vote still asks for sign-in; speculum.vote/robots.txt says Allow.
+- The next morning, after the nightly run, speculum.vote is still the full site.
+
+Roll back: set `"public": "holding"` and commit. The deploy puts the holding page back, and every other address on speculum.vote then shows it too; early.speculum.vote and the sign-up list are untouched. For an immediate rollback, Cloudflare dashboard → Workers & Pages → speculum-public → Deployments → the last holding deployment → Rollback; set `site.json` back as well, or the next deploy relaunches.
+
 ## Next, in order
 
-1. Launch preparation: give the early-access sign-up a home on the public site (the holding page goes away at launch); run a full phone and desktop check of the public build; flip `public` to `launch` on November 11–12.
+1. Launch on November 11–12 by the checklist below. The phone and desktop check of the public build was done on November 9 (no page overflows at 390 px; every internal link resolves; fixes committed). Join the readers (`join.html`) is the sign-up's home after launch.
 2. Donations: undecided. Options are a Stripe payment link now with HCB fiscal sponsorship later, or HCB only. Planned funding rules: refuse money from parties, campaigns, PACs, lobbying registrants and their clients; cap each donor at about $1,000 a year; publish donor names above a small amount and monthly costs on a Funding page.
 3. Requested by early readers: CSV downloads on every table and a Data page; a weekly trend report from The Tide (PDF and CSV); later, an in-browser report writer.
 4. Households and capital: official series (Federal Reserve wealth shares, BEA/BLS labor share and corporate profits, real wages, housing cost burden, health coverage, life expectancy) side by side, with markers for laws the lobbying sectors worked on. Use neutral naming.
