@@ -1620,6 +1620,259 @@
    ],
    "kind": "outcome",
    "label": "BOEM's own analysis projected the rule would raise total OCS archaeology survey costs by $"
+  },
+  "51be361865e7b299": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "Every field matches the source: the rule title, the issuing agency (NHTSA, DOT), the citation 90 FR 6218, the docket NHTSA-2024-0090, publication on January 17, 2025, an effective date of July 16, 2025, and the rule establishing FMVSS Nos. 307 and 308.",
+   "quotes": [
+    "Federal Motor Vehicle Safety Standards; Fuel System Integrity of Hydrogen Vehicles; Compressed Hydrogen Storage System Integrity; Incorporation by Reference A Rule by the National Highway Traffic Safety Administration on 01/17/2025",
+    "Docket No. NHTSA-2024-0090",
+    "Document Citation 90 FR 6218"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: identifying details"
+  },
+  "622046079b29ef9f": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The rule's SUMMARY says it establishes two new FMVSS 'specifying performance requirements for all motor vehicles that use hydrogen as a fuel source.' It describes FMVSS No. 307 as covering fuel system integrity 'during normal vehicle operations and after crashes,' and FMVSS No. 308 as specifying requirements for the compressed hydrogen storage system. The claim restates this closely without adding anything.",
+   "quotes": [
+    "This final rule establishes two new Federal Motor Vehicle Safety Standards (FMVSS) specifying performance requirements for all motor vehicles that use hydrogen as a fuel source.",
+    "FMVSS No. 307, ``Fuel system integrity of hydrogen vehicles,'' specifies requirements for the integrity of the fuel system in hydrogen vehicles during normal vehicle operations and after crashes.",
+    "FMVSS No. 308, ``Compressed hydrogen storage system integrity,'' specifies requirements for the compressed hydrogen storage system to ensure the safe storage of hydrogen onboard vehicles."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: required"
+  },
+  "b7a9feee30e37298": {
+   "result": "not_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The excerpt never states that most of the rule's safety benefits will only be realized when hydrogen vehicles become more prevalent. Its only statement on benefits is the summary's qualitative line that the standards 'will reduce deaths and injuries.' The excerpt stops before the Rulemaking Analyses (E.O. 12866) section, so it also cannot confirm that the full 546,000-character rule gives no dollar or lives-saved figure.",
+   "quotes": [
+    "These two standards will reduce deaths and injuries from fires due to hydrogen fuel leakages and/or explosion of the hydrogen storage system."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: benefits"
+  },
+  "2306aa9c4d02f901": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The E.O. 12866 section states that the rule is nonsignificant and that most manufacturers and vehicle lines in production would be unaffected. It calls compliance costs 'minimal' without giving a dollar figure. The only dollar amount nearby is the UMRA statement that costs will not reach $177 million, which is a threshold, not a cost estimate.",
+   "quotes": [
+    "This final rule is nonsignificant under E.O. 12866 and was not reviewed by the Office of Management and Budget.",
+    "Most manufacturers and vehicle lines currently in production would be unaffected by this rule.",
+    "Of those vehicles that would be covered by today's standards, we expect the compliance cost to be minimal."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: costs"
+  },
+  "7af4b167b8b287c1": {
+   "result": "partly_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the core purpose: the two standards 'will reduce deaths and injuries from fires due to hydrogen fuel leakages and/or explosion of the hydrogen storage system,' and FMVSS 307 covers fuel system integrity 'during normal vehicle operations and after crashes.' But the excerpt does not say the standards 'focus on' compressed-hydrogen fuel system integrity (the summary says vehicles that 'use hydrogen as a fuel source'), and it does not attribute explosions to 'the bursting of pressurized hydrogen containers'. Those phrasings go beyond the quoted text.",
+   "quotes": [
+    "These two standards will reduce deaths and injuries from fires due to hydrogen fuel leakages and/or explosion of the hydrogen storage system.",
+    "FMVSS No. 307, “Fuel system integrity of hydrogen vehicles,” specifies requirements for the integrity of the fuel system in hydrogen vehicles during normal vehicle operations and after crashes.",
+    "This final rule establishes two new Federal Motor Vehicle Safety Standards (FMVSS) specifying performance requirements for all motor vehicles that use hydrogen as a fuel source."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: agency reasons"
+  },
+  "606cac890556d2d6": {
+   "result": "partly_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The sources I could read support Senate passage on May 21, 2025 by 51-46 and tie the resolution to Capito (the Press Gallery calls it the 'Capito Hydrogen Fuel System CRA'). They do not show 'without amendment,' Record Vote 275, the 'Held at the desk' action dated 2025-05-26, or the absence of House action and of a public law. Those details are attributed to Congress.gov, which refused access when I tried to fetch it, so they remain unverified.",
+   "quotes": [
+    "Passed, 51-46: Passage of Cal. #85, S.J.Res.55, Capito Hydrogen Fuel System CRA.",
+    "Passed the Senate May 21, 2025.",
+    "Agreed to, 53-46: Motion to proceed to Cal. #85, S.J.Res.55, Capito Hydrogen Fuel System CRA."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres55: status"
+  },
+  "5f8075579b261338": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The source confirms each part of the record field: the rule title, the agency, docket EPA-R08-OAR-2024-0609, citation 90 FR 41893 at pages 41893-41895, document number 2025-16468, publication on 08/28/2025 and the effective date of 2025-09-29. It also confirms the document type is a final rule.",
+   "quotes": [
+    "Agency/Docket Numbers EPA-R08-OAR-2024-0609 FRL-12596-02-R8",
+    "Document Citation 90 FR 41893 Document Number 2025-16468 Document Type Rule Pages 41893-41895 (3 pages) Publication Date 08/28/2025",
+    "This rule is effective on September 29, 2025."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: identifying details"
+  },
+  "860737b6c5f9c98b": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The final rule approves South Dakota's July 29, 2022 regional haze SIP as satisfying CAA and RHR requirements for the second implementation period, which the rule dates 2018-2028. The proposed rule says EPA agrees that no additional measures are needed at GCC Dacotah and Pete Lien and Sons; strictly, EPA framed this as finding the State reasonably concluded so, which the claim fairly paraphrases.",
+   "quotes": [
+    "The Environmental Protection Agency (EPA) is approving a regional haze state implementation plan (SIP) revision submitted by the State of South Dakota on July 29, 2022 (South Dakota's 2022 SIP submission), as satisfying applicable requirements under the Clean Air Act (CAA) and the EPA's Regional Haze Rule (RHR) for the program's second implementation period.",
+    "to address its regional haze obligations for the second implementation period (2018-2028)",
+    "the EPA finds South Dakota reasonably concluded that no additional measures for GCC Dacotah and Pete Lien and Sons are necessary to make reasonable progress in the second planning period."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: required"
+  },
+  "66411816faf07e36": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The final rule text contains no quantified benefit estimate. Its Statutory and Executive Order Reviews section says the action is not subject to EO 14192 because CAA SIP approvals are exempt from review under EO 12866, which matches the claim.",
+   "quotes": [
+    "Is not subject to Executive Order 14192 ( 90 FR 9065 , February 6, 2025) because State Implementation Plan approvals under the CAA are exempt from review under Executive Order 12866",
+    "this action merely proposes to approve state law as meeting Federal requirements and does not impose additional requirements beyond those imposed by state law"
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: benefits"
+  },
+  "06e48b20eef89e11": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The final rule's text contains no quantified cost estimate; it only certifies no significant economic impact. The proposed rule records GCC Dacotah's updated SNCR estimate of $4,941/ton NOx removed and says no additional measures were required at GCC Dacotah, and the final rule approves that plan.",
+   "quotes": [
+    "Using updated site-specific inputs, GCC Dacotah calculated the revised cost of SNCR as $4,941/ton.",
+    "GCC Dacotah's updated cost estimate, which used site-specific data input values reflective of November 2021 operations, showed that SNCR would cost $4,941/ton NO X removed.",
+    "South Dakota concluded that no additional measures at GCC Dacotah are necessary to make reasonable progress for the second planning period."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: costs"
+  },
+  "189804ee4b0bdf40": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The final rule states that the EPA finds South Dakota submitted a regional haze SIP that meets all of the regional haze requirements for the second implementation period. The claim renders \"finds\" as \"stated,\" which accurately describes the agency's stated reason and does not change its meaning or strength.",
+   "quotes": [
+    "the EPA finds that South Dakota submitted a regional haze SIP that meets all of the regional haze requirements for the second implementation period.",
+    "the EPA concludes that South Dakota's 2022 SIP submission meets the requirements of the CAA and RHR."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: agency reasons"
+  },
+  "c1f60a837b5db092": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "E&E News reports Whitehouse's pre-vote statements on out-of-date controls at three coal-fired plants, pollution blowing toward midwestern and eastern states, and EPA's reading of the Clean Air Act (the claim drops \"blatantly,\" which softens but does not change the meaning). E&E News and the Senate Daily Press both confirm that Rounds spoke against S.J. Res. 86 and defended his state's plan.",
+   "quotes": [
+    "The state plan made no updates “to significantly out-of-date controls” at those plants, with the resulting pollution blowing downwind “toward midwestern and eastern states,” Sen. Sheldon Whitehouse of Rhode Island said before the vote.",
+    "EPA’s approval, he said, “puts forward a reading of the Clean Air Act that is blatantly at odds” with its text",
+    "Sen. Mike Rounds (R-S.D.) on Wednesday defended his state's plan to control haze-forming pollution."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: sponsor reasons"
+  },
+  "306bd3da84ad4e41": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The bill status shows the motion to proceed was rejected 43-50 (Record Vote 4) on 2026-01-07, and the Senate Daily Press confirms the same vote. The status record, updated through 2026-09-08, lists no later action and no Public Law, which supports that the resolution did not become law. The resolution text supplies the 'no force or effect' language, which is a provision of a joint resolution that was not enacted.",
+   "quotes": [
+    "2026-01-07 Senate Motion to proceed to consideration of measure rejected in Senate by Yea-Nay Vote. 43 - 50. Record Vote Number: 4.",
+    "By a party-line vote of 43-50, the Senate did not agree to the motion to proceed to S. J. Res. 86, Whitehouse CRA.",
+    "That Congress disapproves the rule submitted by the Environmental Protection Agency relating to Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (90 Fed. Reg. 41893 (August 28, 2025)), and such rule shall have no force or effect."
+   ],
+   "kind": "record field",
+   "label": "rules-overturned-119-sjres86: status"
+  },
+  "d78c2c10859013c8": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The quoted sentence appears verbatim in the Executive Order 12866 section of the final rule, published January 17, 2025. The counterpoint matches that section's statement that most safety benefits will only be realized when hydrogen vehicles become more prevalent. The grade of estimated fits NHTSA's own regulatory impact assessment.",
+   "quotes": [
+    "Most manufacturers and vehicle lines currently in production would be unaffected by this rule.",
+    "Today, there are only two publicly available vehicle models that may be affected by the final rule, which collectively equal less than 5,000 vehicles sold per model year.",
+    "Furthermore, most of the safety benefits that will accrue to this rule will only be realized when hydrogen vehicles become more prevalent."
+   ],
+   "kind": "outcome",
+   "label": "In the final rule's Executive Order 12866 discussion, NHTSA stated that most manufacturers"
+  },
+  "ffda4c486e3621fd": {
+   "result": "grade_too_strong",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The quoted sentence appears verbatim in the E.O. 12866/13563 section of the January 17, 2025 final rule, and the counterpoint about most manufacturers and vehicle lines being unaffected is stated in the same section. The 'estimated' grade does not fit: that grade requires authoritative aggregate figures, but the source gives none and says NHTSA 'cannot quantify this benefit.'",
+   "quotes": [
+    "Furthermore, most of the safety benefits that will accrue to this rule will only be realized when hydrogen vehicles become more prevalent.",
+    "Most manufacturers and vehicle lines currently in production would be unaffected by this rule.",
+    "we cannot quantify this benefit with any degree of certainty"
+   ],
+   "kind": "outcome",
+   "label": "NHTSA stated in the final rule (January 2025) that most of the rule's safety benefits will"
+  },
+  "444c2e5561fc8ba3": {
+   "result": "grade_too_strong",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The quoted sentence appears verbatim in the Regulatory Flexibility Act section of the January 17, 2025 final rule, and the paraphrase is faithful. The 'estimated' grade does not fit, because the claim reports an official agency statement of unawareness rather than an authoritative aggregate figure.",
+   "quotes": [
+    "NHTSA is unaware of any small entities that currently manufacture or are planning to manufacture hydrogen vehicles.",
+    "I certify that these standards will not have a significant impact on a substantial number of small entities."
+   ],
+   "kind": "outcome",
+   "label": "In its Regulatory Flexibility Act discussion in the final rule (January 2025), NHTSA state"
+  },
+  "73fdd89f9e59b001": {
+   "result": "partly_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The rule did publish on 06/03/2026 (91 FR 33111), and instruction 4 does revise § 571.307 paragraph S6.1.3, as quoted. The source does not support the standard being 'codified as of that date': the rule's effective date is July 6, 2026, FMVSS No. 307 already existed and is only amended, and the FederalRegister.gov page states it is not an official legal edition.",
+   "quotes": [
+    "4. Amend § 571.307 by revising paragraph S6.1.3 to read as follows:",
+    "A Rule by the National Highway Traffic Safety Administration on 06/03/2026",
+    "DATES: Effective Date: July 6, 2026."
+   ],
+   "kind": "outcome",
+   "label": "A NHTSA final rule published in the Federal Register on 2026-06-03 amends 49 CFR § 571.307"
+  },
+  "456e8dea82ce671a": {
+   "result": "supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "Section IV.C.2 of the proposed rule states that, considering the four statutory factors and projected 2028 visibility conditions at Class I areas in and affected by South Dakota, all below the URP, EPA finds South Dakota reasonably concluded no additional measures were needed at GCC Dacotah and Pete Lien and Sons; the quote appears verbatim. The source mentions no vote, so 'pre-vote' is the writer's framing, though calling it a forecast rather than a measured outcome fits a proposed rule based on 2028 modeling projections.",
+   "quotes": [
+    "Considering the four statutory factors and the projected 2028 visibility conditions for Class I areas both in South Dakota and those influenced by emissions from South Dakota sources, which are all below the URP, the EPA finds South Dakota reasonably concluded that no additional measures for GCC Dacotah and Pete Lien and Sons are necessary to make reasonable progress in the second planning period.",
+    "the projected 2028 visibility conditions for Class I areas influenced by emissions from South Dakota sources are all below the URP"
+   ],
+   "kind": "outcome",
+   "label": "In the proposed rule, EPA projected that 2028 visibility conditions at Class I areas affec"
+  },
+  "17fab7284e36ab75": {
+   "result": "partly_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The source supports the $4,941/ton updated SNCR estimate, its basis in site-specific inputs reflecting November 2021 operations, EPA basing its evaluation on that figure (fn. 91), South Dakota's conclusion that SNCR is not cost-effective, and the counterpoint's $2,093/ton 2019 figure. But this is a proposed rule: EPA only proposes to approve the plan, so 'the plan EPA approved does not require it' goes beyond the source. The grade also fails, because a single company's cost estimate cited in an official rulemaking is not an authoritative aggregate figure of the kind 'estimated' requires.",
+   "quotes": [
+    "GCC Dacotah's updated cost estimate, which used site-specific data input values reflective of November 2021 operations, showed that SNCR would cost $4,941/ton NO X removed.",
+    "The EPA is basing its evaluation on GCC Dacotah's updated SNCR cost estimate of $4,941/ton, not on the source's initial cost estimate of $2,093/ton",
+    "South Dakota concluded that adding SNCR at GCC Dacotah is not cost-effective."
+   ],
+   "kind": "outcome",
+   "label": "The proposed rule records GCC Dacotah's updated estimate that adding SNCR at its facility "
+  },
+  "74be04912f561b1c": {
+   "result": "partly_supported",
+   "on": "2026-11-09",
+   "by": "claude-opus-5-5",
+   "note": "The source confirms the date, the 43-50 party-line vote and that the Senate did not agree to the motion to proceed to S.J.Res.86. It does not state that the rule was not nullified through this resolution. It also records at 1:23 p.m. that 'The Senate is now in consideration of S.J. Res. 86,' which sits uneasily with the added claim that the resolution was 'not taken up.'",
+   "quotes": [
+    "By a party-line vote of 43-50, the Senate did not agree to the motion to proceed to S. J. Res. 86, Whitehouse CRA.",
+    "1:23 p.m. The Senate is now in consideration of S.J. Res. 86."
+   ],
+   "kind": "outcome",
+   "label": "On 2026-01-07 the Senate did not agree to the motion to proceed to S.J.Res.86, by a vote o"
   }
  }
 }

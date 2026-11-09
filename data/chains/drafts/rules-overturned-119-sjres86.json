@@ -1,0 +1,151 @@
+{
+ "mechanism": {
+  "rule": "Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (final rule, EPA-R08-OAR-2024-0609)",
+  "agency": "Environmental Protection Agency",
+  "federal_register": "90 FR 41893 (pages 41893-41895), Document 2025-16468",
+  "published": "2025-08-28",
+  "effective": "2025-09-29",
+  "required": "The rule approves a regional haze state implementation plan (SIP) revision that South Dakota submitted on July 29, 2022. EPA found that the revision satisfies the Clean Air Act and Regional Haze Rule requirements for the second implementation period (2018-2028). In the proposed rule, EPA found that no additional emission-control measures were necessary at two sources, GCC Dacotah and Pete Lien and Sons, to make reasonable progress in the second planning period.",
+  "benefits": "The opened portions of the final rule give no quantified estimate of benefits. Its Statutory and Executive Order Reviews section states that it is not subject to Executive Order 14192 because Clean Air Act SIP approvals are exempt from review under Executive Order 12866.",
+  "costs": "The opened portions of the final rule give no quantified estimate of costs. For one source, the proposed rule records GCC Dacotah's updated estimate that selective non-catalytic reduction (SNCR) would cost $4,941/ton of NOx removed. That control was not required by the approved plan (see outcomes).",
+  "agency_reasons": "EPA stated that South Dakota submitted a regional haze SIP that meets all of the regional haze requirements for the second implementation period.",
+  "sponsor_reasons": "Sen. Sheldon Whitehouse (D-RI), the resolution's sponsor, said before the vote that the state plan made no updates to significantly out-of-date controls at three coal-fired industrial plants. He said the pollution blows downwind toward midwestern and eastern states, and that EPA's approval reads the Clean Air Act in a way at odds with its text (as reported by E&E News). Sen. Mike Rounds (R-S.D.) spoke against the resolution and defended the state's plan (E&E News; Senate Daily Press).",
+  "status": "The resolution did not become law and has no Public Law number. On 2026-01-07 the Senate rejected the motion to proceed to S.J.Res.86 by 43-50. The resolution's text would give the rule no force or effect only if enacted, so the resolution did not void the rule.",
+  "sources": [
+   {
+    "title": "Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (final rule)",
+    "url": "https://www.federalregister.gov/documents/2025/08/28/2025-16468/air-plan-approval-south-dakota-regional-haze-plan-for-the-second-implementation-period",
+    "publisher": "Federal Register / Environmental Protection Agency",
+    "date": "2025-08-28"
+   },
+   {
+    "title": "Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (proposed rule)",
+    "url": "https://www.federalregister.gov/documents/2025/05/14/2025-08072/air-plan-approval-south-dakota-regional-haze-plan-for-the-second-implementation-period",
+    "publisher": "Federal Register / Environmental Protection Agency",
+    "date": "2025-05-14"
+   },
+   {
+    "title": "S.J.Res.86 (Placed on Calendar Senate) text",
+    "url": "https://www.govinfo.gov/bulkdata/BILLS/119/1/sjres/BILLS-119sjres86pcs.xml",
+    "publisher": "govinfo.gov",
+    "date": "2025-12-09"
+   },
+   {
+    "title": "Bill status, S.J.Res.86, 119th Congress",
+    "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/sjres/BILLSTATUS-119sjres86.xml",
+    "publisher": "govinfo.gov",
+    "date": "2026-01-08"
+   },
+   {
+    "title": "Wednesday, January 7, 2026",
+    "url": "https://www.dailypress.senate.gov/wednesday-january-7-2026/",
+    "publisher": "U.S. Senate Daily Press",
+    "date": "2026-01-07"
+   },
+   {
+    "title": "Senate upholds EPA approval of South Dakota air pollution plan",
+    "url": "https://www.eenews.net/articles/senate-upholds-epa-approval-of-south-dakota-air-pollution-plan/",
+    "publisher": "E&E News by POLITICO",
+    "date": "2026-01-07"
+   }
+  ],
+  "field_sources": {
+   "rule": [
+    0
+   ],
+   "required": [
+    0,
+    1
+   ],
+   "benefits": [
+    0
+   ],
+   "costs": [
+    0,
+    1
+   ],
+   "agency_reasons": [
+    0
+   ],
+   "sponsor_reasons": [
+    4,
+    5
+   ],
+   "status": [
+    2,
+    3,
+    4
+   ]
+  }
+ },
+ "outcomes": [
+  {
+   "grade": "estimated",
+   "claim": "In the proposed rule, EPA projected that 2028 visibility conditions at Class I areas affected by South Dakota sources are all below the uniform rate of progress (URP). On that basis, and after considering the four statutory factors, it found that South Dakota reasonably concluded no additional measures were necessary at GCC Dacotah and Pete Lien and Sons for reasonable progress in the second planning period. This was a pre-vote agency forecast, not a measured outcome.",
+   "date": "2025-05-14",
+   "quote": "which are all below the URP, the EPA finds South Dakota reasonably concluded that no additional measures",
+   "locator": "Section IV, EPA's Evaluation of South Dakota's Regional Haze Plan (long-term strategy), 90 FR 20425 et seq.",
+   "source": {
+    "title": "Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (proposed rule)",
+    "url": "https://www.federalregister.gov/documents/2025/05/14/2025-08072/air-plan-approval-south-dakota-regional-haze-plan-for-the-second-implementation-period",
+    "publisher": "Federal Register / Environmental Protection Agency",
+    "date": "2025-05-14"
+   },
+   "counterpoint": ""
+  },
+  {
+   "grade": "estimated",
+   "claim": "The proposed rule records GCC Dacotah's updated estimate that adding SNCR at its facility would cost $4,941/ton of NOx removed. The estimate uses site-specific inputs reflecting November 2021 operations. EPA based its evaluation on this figure. South Dakota concluded that SNCR was not cost-effective, so the plan EPA approved does not require it.",
+   "date": "2025-05-14",
+   "quote": "showed that SNCR would cost $4,941/ton NO_X removed.",
+   "locator": "Section IV, GCC Dacotah, 90 FR 20425 et seq.",
+   "source": {
+    "title": "Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period (proposed rule)",
+    "url": "https://www.federalregister.gov/documents/2025/05/14/2025-08072/air-plan-approval-south-dakota-regional-haze-plan-for-the-second-implementation-period",
+    "publisher": "Federal Register / Environmental Protection Agency",
+    "date": "2025-05-14"
+   },
+   "counterpoint": "The same source states that GCC Dacotah's 2019 four-factor analysis had found SNCR would cost $2,093/ton of NOx removed. EPA says it based its evaluation on the updated $4,941/ton figure rather than that initial estimate."
+  },
+  {
+   "grade": "documented",
+   "claim": "On 2026-01-07 the Senate did not agree to the motion to proceed to S.J.Res.86, by a vote of 43-50. The resolution was not taken up, and the rule was not nullified through this resolution.",
+   "date": "2026-01-07",
+   "quote": "By a party-line vote of 43-50",
+   "locator": "Entry for Wednesday, January 7, 2026 (Whitehouse CRA, motion to proceed)",
+   "source": {
+    "title": "Wednesday, January 7, 2026",
+    "url": "https://www.dailypress.senate.gov/wednesday-january-7-2026/",
+    "publisher": "U.S. Senate Daily Press",
+    "date": "2026-01-07"
+   },
+   "counterpoint": ""
+  }
+ ],
+ "notes": "(1) The rule is a SIP approval. Its opened portions give no regulatory impact analysis and no quantified benefits or costs. The sections of the final rule I opened give only the Executive Order status. Any statement of benefits or costs therefore comes from the proposed rule's source-specific analysis, not from a rule-wide estimate. (2) The final rule refers to the proposed rule and the Response to Comments for its reasons. I read only snippets of the final rule, so the proposed rule's findings are treated as the basis for the approval. (3) The sponsor, Sen. Whitehouse, opposed the rule, and Sen. Rounds opposed the resolution. The sponsor's reasons come from E&E News reporting of his floor remarks. The Congressional Record text was only partly visible, so it is not cited. (4) Congress.gov was not cited, because the checker cannot open it. The vote count is supported by the Senate Daily Press. The Senate roll-call page (vote 4, 119th Congress, 2nd session) was not opened. (5) Nothing credible was found recording what happened after the 2025-09-29 effective date. There is no agency or inspector-general data on South Dakota emissions or visibility changes, and no court record of a challenge to this approval. Searches turned up no petition for review of the South Dakota approval. This is a finding of no record, not proof that none exists. (6) No official analysis (CBO, GAO or court) disputing EPA's estimates was found. (7) The status reflects records through the 2026-01-07 vote. No later action was found, and no Public Law number exists.",
+ "_drafted": {
+  "by": "claude-sonnet-5-5",
+  "on": "2026-11-09",
+  "status": "draft",
+  "usage": {
+   "input_tokens": 177564,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 8919,
+   "output_tokens_details": {
+    "thinking_tokens": 4909
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard",
+   "server_tool_use": {
+    "web_search_requests": 8,
+    "web_fetch_requests": 0
+   }
+  }
+ }
+}

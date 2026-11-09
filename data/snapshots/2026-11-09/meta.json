@@ -1,0 +1,62 @@
+{
+ "calls": 5751,
+ "counts": {
+  "finance": 518,
+  "house": 433,
+  "lobbying_items": 175506,
+  "lobbying_unmatched": 500,
+  "members": 533,
+  "senate": 100,
+  "votes": 1591
+ },
+ "date": "2026-11-09",
+ "day_zero": "2026-11-03",
+ "errors": {},
+ "fec_through": "2026-10-22",
+ "files": {
+  "advocacy.json": {
+   "bytes": 499132,
+   "night": "2026-11-09",
+   "sha256": "d8c7c808bee59ff23ad9147b8a461069e51340a34e06c0c62cbec2fbaa43383c"
+  },
+  "billinfo.json": {
+   "bytes": 557669,
+   "night": "2026-11-07",
+   "sha256": "5ec8341ed94b1ba7df9e08c4c3b42a957692a01fad2e3d3fd9dafe587c765d2a"
+  },
+  "committees.json": {
+   "bytes": 583114,
+   "night": "2026-11-04",
+   "sha256": "1ee4b8316e324bc5ad2285523b442a81ecb135952d08540fcdb80e84278f0945"
+  },
+  "finance.json": {
+   "bytes": 4264040,
+   "night": "2026-11-07",
+   "sha256": "7d4c10a4e5c5aa4a95222115a712e6e065d6d4a8cacc386985687d4e41d4e6c7"
+  },
+  "lobbying.json": {
+   "bytes": 76164043,
+   "night": "2026-11-09",
+   "sha256": "1d5bb343f2f88d26a771dc8ea40cdd15ffa4e418d04d71ef6b784a18105b1c13"
+  },
+  "members.json": {
+   "bytes": 261385,
+   "night": "2026-11-03",
+   "sha256": "9234ac2ddfa0f81a608f1096e590c51aad54221fbfb2442a1cd4c27cd916ed62"
+  },
+  "spend.json": {
+   "bytes": 19072086,
+   "night": "2026-11-09",
+   "sha256": "aec2468c77be01e886e4c1de3998605549ea6ad73ffeb7123da2c6501cff5766"
+  },
+  "votes.json.gz": {
+   "bytes": 447235,
+   "night": "2026-11-06",
+   "sha256": "e120c516750f0167a3da2028a9022c2758a239ecf78c99b57b73e3f49a3ccfdf"
+  }
+ },
+ "finance_partial": null,
+ "note": "",
+ "raw_files": 5750,
+ "votes_through": "2026-09-30"
+}
