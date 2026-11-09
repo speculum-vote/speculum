@@ -197,8 +197,18 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     from .. import lameduck as _ld
     leaving = {e["bioguide"]: e for e in _ld.match(chains_mod.load_json(snapshots_root.parent / "lameduck.json", {"members": []}).get("members", []), members) if e["bioguide"]}
     lobby_years = lobbying.get("years_label")
-    # Find your members (Home and The Chamber): a small file the page fetches when a reader picks a state.
-    (prev / "find.json").write_text(json.dumps({"states": {k: v for k, v in STATE_NAMES.items() if any(m["state"] == k for m in members)},
+    # Find your members (Home and The Chamber): a small file the page fetches when a reader picks a state, and,
+    # once the Census file is in data/records, ZIP code areas split by their first two digits (zip/27.json).
+    zf = snapshots_root.parent / "records" / "zcta_cd119.json"
+    has_zip = zf.exists()
+    if has_zip:
+        (prev / "zip").mkdir(exist_ok=True)
+        groups: dict = {}
+        for z, ds in json.loads(zf.read_text(encoding="utf-8"))["zcta"].items():
+            groups.setdefault(z[:2], {})[z] = [x for i, x in enumerate(ds) if i == 0 or x[2] >= 0.01]   # no slivers
+        for k, g in groups.items():
+            (prev / "zip" / f"{k}.json").write_text(json.dumps(g, separators=(",", ":")), encoding="utf-8")
+    (prev / "find.json").write_text(json.dumps({"zip": has_zip, "states": {k: v for k, v in STATE_NAMES.items() if any(m["state"] == k for m in members)},
         "members": [{"b": m["bioguide"], "n": m["name"], "s": m["state"], "c": m["chamber"][0],
                      "d": None if m["chamber"] == "senate" else int(m.get("district") or 0), "p": m["party"],
                      **({"x": 1} if m["bioguide"] in leaving else {})}

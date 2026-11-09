@@ -1,12 +1,16 @@
 {# Find your members: pick a state (and a district), see your senators and representative. Data: find.json. #}
 <section class="find" id="find">
   <h2>{{ find_heading or "Your members of Congress" }}</h2>
+  <div class="find-row" id="find-ziprow" hidden>
+    <label>ZIP code <input id="find-zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="e.g. 27601" aria-label="Your ZIP code"></label>
+    <span id="find-zipmsg" class="meta"></span>
+  </div>
   <div class="find-row">
     <label>State <select id="find-state" aria-label="Your state"><option value="">Choose a state</option></select></label>
     <label id="find-dl" hidden>District <select id="find-dist" aria-label="Your district"></select></label>
   </div>
   <div id="find-out" class="find-out" aria-live="polite"><noscript><p class="meta">Every member is listed on <a href="{{ root }}chamber.html">The Chamber</a>.</p></noscript></div>
-  <p class="meta">Not sure which district? <a href="https://www.house.gov/representatives/find-your-representative" rel="noopener">Look it up by ZIP code at house.gov</a>, then choose it here.</p>
+  <p class="meta" id="find-note">Not sure which district? <a href="https://www.house.gov/representatives/find-your-representative" rel="noopener">Look it up by address at house.gov</a>, then choose it here.</p>
 </section>
 <script>
 (function () {
@@ -28,9 +32,10 @@
         sen = mine.filter(function (m) { return m.c === "s"; }), rep = mine.filter(function (m) { return m.c === "h"; });
     if (rep.length > 1) { dl.hidden = false; } else { dl.hidden = true; d = ""; }
     if (d !== "") rep = rep.filter(function (m) { return String(m.d) === d; });
+    else if (only) rep = rep.filter(function (m) { return only.indexOf(m.d) !== -1; });
     var h = '<div class="find-group"><div class="label">Senate</div><div class="find-cards">' +
       (sen.map(card).join("") || '<p class="muted">No senators on record.</p>') + '</div></div>' +
-      '<div class="find-group"><div class="label">House' + (d === "" && rep.length > 1 ? ' · all ' + rep.length + ' districts' : '') + '</div><div class="find-cards">' +
+      '<div class="find-group"><div class="label">House' + (d === "" && rep.length > 1 ? (only ? ' · the districts this ZIP code touches' : ' · all ' + rep.length + ' districts') : '') + '</div><div class="find-cards">' +
       (rep.map(card).join("") || '<p class="muted">This seat is vacant in the record.</p>') + '</div></div>';
     out.innerHTML = h;
   }
@@ -40,10 +45,37 @@
     ds.innerHTML = '<option value="">All districts</option>' + seen.map(function (n) {
       return '<option value="' + n + '">' + (n === 0 ? "At large" : "District " + n) + '</option>'; }).join("");
   }
-  st.addEventListener("change", function () { store("find-state", st.value); store("find-dist", ""); if (data) districts(); show(); });
-  ds.addEventListener("change", function () { store("find-dist", ds.value); show(); });
+  var zi = document.getElementById("find-zip"), zm = document.getElementById("find-zipmsg"), zipCache = {};
+  var only = null;   // a split ZIP: just its districts, until the reader chooses one
+  function pick(s, d, among) {
+    only = among || null;
+    st.value = s; store("find-state", s); districts();
+    ds.value = d === null ? "" : String(d); store("find-dist", ds.value); show();
+  }
+  function lookup() {
+    var z = zi.value.replace(/\D/g, "");
+    if (z.length !== 5) { zm.textContent = ""; return; }
+    var k = z.slice(0, 2);
+    (zipCache[k] || (zipCache[k] = fetch(root + "zip/" + k + ".json").then(function (r) { return r.ok ? r.json() : {}; })))
+      .then(function (g) {
+        var hit = (g[z] || []).filter(function (x) { return data.states[x[0]]; });
+        if (!hit.length) { zm.textContent = "No Census ZIP code area for " + z + " (P.O. box ZIP codes have none). Choose your state and district below."; return; }
+        if (hit.length === 1) { zm.textContent = ""; pick(hit[0][0], hit[0][1]); return; }
+        pick(hit[0][0], null, hit.filter(function (x) { return x[0] === hit[0][0]; }).map(function (x) { return x[1]; }));
+        zm.innerHTML = z + " is split between districts: " + hit.map(function (x) {
+          return '<a href="#" data-s="' + x[0] + '" data-d="' + x[1] + '">' + (x[1] === 0 ? x[0] + " at large" : x[0] + "-" + x[1]) +
+            '</a> (' + Math.round(x[2] * 100) + '% of its area)'; }).join(", ") + ". Choose yours, or check your address at house.gov.";
+        zm.querySelectorAll("a[data-s]").forEach(function (a) {
+          a.addEventListener("click", function (ev) { ev.preventDefault(); pick(a.dataset.s, +a.dataset.d); });
+        });
+      }).catch(function () { zm.textContent = "Could not look up ZIP codes just now; choose your state and district below."; });
+  }
+  zi.addEventListener("input", lookup);
+  st.addEventListener("change", function () { only = null; store("find-state", st.value); store("find-dist", ""); if (data) districts(); show(); });
+  ds.addEventListener("change", function () { only = null; store("find-dist", ds.value); show(); });
   fetch(root + "find.json").then(function (r) { return r.json(); }).then(function (j) {
     data = j;
+    if (j.zip) document.getElementById("find-ziprow").hidden = false;
     Object.keys(j.states).sort(function (a, b) { return j.states[a] < j.states[b] ? -1 : 1; }).forEach(function (k) {
       var o = document.createElement("option"); o.value = k; o.textContent = j.states[k]; st.appendChild(o);
     });

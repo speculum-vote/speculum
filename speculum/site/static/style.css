@@ -414,3 +414,6 @@ ul.rules b { color: var(--ink); font-weight: 500; }
 .datafile p { margin: 6px 0; color: var(--ink-2); max-width: 80ch; }
 .datahead b { font-weight: 500; }
 .csv-link { margin: 6px 0 0; text-align: right; }
+.find-row input { background: var(--ground); color: var(--ink); border: 1px solid var(--line); padding: 9px 10px; font: 15px var(--sans); width: 120px; letter-spacing: .04em; text-transform: none; }
+#find-ziprow { margin-bottom: 10px; }
+#find-zipmsg { flex: 1; min-width: 200px; }
