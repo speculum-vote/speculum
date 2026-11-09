@@ -6,7 +6,7 @@
 <p class="meta">{{ b.bills|length|num }} bills named by at least {{ b.min_orgs }} organizations, or voted on and lobbied, {{ b.quarters|first }} to {{ b.quarters|last }}. Organizations are placed in sectors by their own description of their business. <a href="method.html#bills">How this is counted →</a></p>
 <div class="glegend">{% for g, c in group_colors.items() %}<span><i style="background:{{ c }}"></i>{{ g }}</span>{% endfor %}</div>
 <form class="billfind" id="billfind" onsubmit="return false"><label>Find a bill <input id="billq" placeholder="e.g. H.R. 1 or S. 2296" autocomplete="off"></label> <span id="billmsg" class="muted"></span></form>
-<div class="tbl-wrap"><table class="bills">
+<div class="tbl-wrap"><table class="bills" data-csv="data/bills.csv">
 <thead><tr><th>Bill</th><th class="r">Organizations</th><th>Who they are</th><th class="r">Former officials lobbying</th><th class="r">Roll calls</th></tr></thead>
 <tbody>
 {% for x in b.bills[:500] %}

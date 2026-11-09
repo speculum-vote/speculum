@@ -408,3 +408,9 @@ ul.rules b { color: var(--ink); font-weight: 500; }
   .js .mast nav a { padding: 13px 2px; border-bottom: 1px solid var(--line-soft); font-size: 13px; }
   .js .preview-flag { order: 4; }
 }
+
+/* Data page and table downloads */
+.datafile { border-bottom: 1px solid var(--line-soft); padding: 14px 0 10px; }
+.datafile p { margin: 6px 0; color: var(--ink-2); max-width: 80ch; }
+.datahead b { font-weight: 500; }
+.csv-link { margin: 6px 0 0; text-align: right; }

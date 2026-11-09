@@ -234,10 +234,10 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     history.reverse()
     (prev / "day-zero.html").write_text(E.get_template("dayzero.html").render(
         root="", page="dayzero", meta=_meta_defaults(Snapshot(snapshots_root, DAY_ZERO).read("meta.json", meta) if DAY_ZERO in all_dates(snapshots_root) else meta), history=history, **common), encoding="utf-8")
-    _build_saiddone(E, snapshots_root.parent, prev, spend, votes, members, lobbying,
-                    read_newest(snapshots_root, "billinfo.json", snap.date), common)
+    sd = _build_saiddone(E, snapshots_root.parent, prev, spend, votes, members, lobbying,
+                         read_newest(snapshots_root, "billinfo.json", snap.date), common)
     timeline = _build_tide(E, snapshots_root, prev, members, common, public)
-    _build_interests(E, prev, members, finance, lobbying, common)
+    interest_rows = _build_interests(E, prev, members, finance, lobbying, common)
     chains = None
     if common["show_dependents"]:
         chains = _build_chains(E, snapshots_root.parent, prev, members, finance, lobbying, votes, common, public)
@@ -263,6 +263,12 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
         sector_names=__import__("speculum.lobbysectors", fromlist=["NAMES"]).NAMES,
         sector_groups=__import__("speculum.lobbysectors", fromlist=["GROUPS"]).GROUPS,
         bill_min_orgs=__import__("speculum.bills", fromlist=["MIN_ORGS_FOR_PAGE"]).MIN_ORGS_FOR_PAGE, **common), encoding="utf-8")
+    from . import data as data_mod
+    from .. import saiddone as sd_mod
+    said_opened = [sd["by_slug"][o["slug"]] for o in sd_mod.load_state(snapshots_root.parent / "saiddone.json").get("opened") or []
+                   if o["slug"] in sd["by_slug"]]
+    files = data_mod.write(prev, members, rows, votes, interest_rows, bd["bills"], said_opened, ld_rows)
+    (prev / "data.html").write_text(E.get_template("data.html").render(root="", page="data", files=files, **common), encoding="utf-8")
     # The readings only: itemized contributions live on each member's page and in the raw archive
     # (with them, this file passed Cloudflare's 25 MB limit on the first full night).
     slim = {bio: {**{k: v for k, v in L.items() if k != "lobbyist_items"}, "lobbyist_count": len(L.get("lobbyist_items") or [])}
@@ -274,7 +280,7 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
 INTERESTS_FIRST = 200
 
 
-def _build_interests(E, prev: Path, members, finance, lobbying, common) -> None:
+def _build_interests(E, prev: Path, members, finance, lobbying, common) -> list:
     all_ = interests_mod.build(members, finance, lobbying)
     by_id = {m["bioguide"]: m for m in members}
     rows = sorted(all_.values(), key=lambda e: -e["total"])
@@ -291,6 +297,7 @@ def _build_interests(E, prev: Path, members, finance, lobbying, common) -> None:
     for slug, e in all_.items():
         (prev / "interest" / f"{slug}.html").write_text(tmpl.render(
             root="../", page="interests", e=e, all=all_, by_id=by_id, seat=seat, party_names=PARTY_NAMES, **common), encoding="utf-8")
+    return rows
 
 
 def public_view(c: dict) -> dict:

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Data · Speculum{% endblock %}
+{% block body %}
+<h1>Data</h1>
+<p class="lede">The record's main tables as CSV files, rebuilt every night with the site. Use them, check them, build on them. They hold the same figures the site shows, at full precision.</p>
+<p class="meta">Snapshot {{ snapshot_date }} · amounts are dollars; shares are fractions from 0 to 1; dates are YYYY-MM-DD · every table on the site also has a "Download CSV" link beneath it</p>
+{% for f in files %}
+<div class="datafile">
+  <div class="datahead"><a href="data/{{ f.file }}" download><b>{{ f.title }}</b></a> <span class="meta">{{ f.file }} · {{ f.rows|num }} rows · {% if f.bytes >= 1048576 %}{{ '%.1f'|format(f.bytes / 1048576) }} MB{% else %}{{ (f.bytes / 1024)|round|int }} KB{% endif %}</span></div>
+  <p>{{ f.about }}</p>
+  <p class="meta">Columns: {{ f.columns|join(', ') }}</p>
+</div>
+{% endfor %}
+<div class="notice">The filings behind these tables are public records: votes from the House Clerk and the Senate (or Voteview when senate.gov refuses), campaign finance from the FEC, lobbying reports from lda.gov, members from the congress-legislators project. How each figure is counted is on the <a href="method.html">Method</a> page. Every night's raw filings are archived as they were fetched. If you find a figure that does not match its filing, please send it to <a href="corrections.html">corrections</a>.</div>
+{% endblock %}
