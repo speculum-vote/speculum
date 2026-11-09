@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-05T09:50:00-05:00",
+ "as_of": "2026-11-09T09:00:00-05:00",
  "members": [
   {
    "name": "Dick Durbin",
@@ -1331,7 +1331,7 @@
    "district": "3",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Independent (left the Republican Party in March 2026); lost to Richard Pan (D) in redrawn CA-6, 58-42, and conceded",
+   "detail": "Independent (left the Republican Party in March 2026); lost to Richard Pan (D) in redrawn CA-6; conceded",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1365,7 +1365,7 @@
    "district": "5",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to J.D. Ford (D), 52-48",
+   "detail": "Lost to J.D. Ford (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1382,7 +1382,7 @@
    "district": "1",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Christina Bohannan (D), 53-44",
+   "detail": "Lost to Christina Bohannan (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1399,7 +1399,7 @@
    "district": "3",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Sarah Trone Garriott (D), 54-46",
+   "detail": "Lost to Sarah Trone Garriott (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1416,7 +1416,7 @@
    "district": "2",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Fred Wellman (D), 51-46",
+   "detail": "Lost to Fred Wellman (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1433,7 +1433,7 @@
    "district": "7",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Rebecca Bennett (D), 57-41",
+   "detail": "Lost to Rebecca Bennett (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1450,7 +1450,7 @@
    "district": "7",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Brian Poindexter (D), 55-45 (redrawn district)",
+   "detail": "Lost to Brian Poindexter (D) (redrawn district)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1467,7 +1467,7 @@
    "district": "15",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Don Leonard (D), 52-45 (redrawn district)",
+   "detail": "Lost to Don Leonard (D) (redrawn district)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1484,7 +1484,7 @@
    "district": "1",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Bob Harvie (D), 52.7-47.3",
+   "detail": "Lost to Bob Harvie (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1501,7 +1501,7 @@
    "district": "7",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Bob Brooks (D), 56-44",
+   "detail": "Lost to Bob Brooks (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1518,7 +1518,7 @@
    "district": "8",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Paige Cognetti (D), 54.4-45.6",
+   "detail": "Lost to Paige Cognetti (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1535,7 +1535,7 @@
    "district": "10",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Janelle Stelson (D), 55-45",
+   "detail": "Lost to Janelle Stelson (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1552,7 +1552,7 @@
    "district": "15",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Bobby Pulido (D), 62-38",
+   "detail": "Lost to Bobby Pulido (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1565,7 +1565,7 @@
    "district": "2",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Elaine Luria (D), 51-46",
+   "detail": "Lost to Elaine Luria (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1582,7 +1582,7 @@
    "district": "1",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Mitchell Berman (D), 52-48",
+   "detail": "Lost to Mitchell Berman (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1599,7 +1599,7 @@
    "district": "3",
    "bioguide": null,
    "reason": "lost_general",
-   "detail": "Lost to Rebecca Cooke (D), 52-46",
+   "detail": "Lost to Rebecca Cooke (D)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1647,6 +1647,123 @@
     "title": "2026 House midterm election results (CBS News live updates, 4 Nov 2026)",
     "url": "https://www.cbsnews.com/live-updates/house-election-results-2026/"
    }
+  },
+  {
+   "name": "Mike Lawler",
+   "state": "NY",
+   "chamber": "house",
+   "district": "17",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Cait Conley (D); conceded",
+   "source": {
+    "title": "Lawler swept out by Conley, on a blue wave (City & State NY, Nov 2026)",
+    "url": "https://www.cityandstateny.com/politics/2026/11/lawler-swept-out-conley-blue-wave/417022/"
+   }
+  },
+  {
+   "name": "Jeff Van Drew",
+   "state": "NJ",
+   "chamber": "house",
+   "district": "2",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Zack Mullock (D); conceded",
+   "source": {
+    "title": "Democrat Zack Mullock upsets four-term GOP U.S. Rep. Jeff Van Drew (Philadelphia Inquirer, 3 Nov 2026)",
+    "url": "https://www.inquirer.com/politics/new-jersey/van-drew-mullock-race-nj-2nd-district-winner-results-20261103.html"
+   }
+  },
+  {
+   "name": "Jeff Crank",
+   "state": "CO",
+   "chamber": "house",
+   "district": "5",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Jessica Killin (D)",
+   "source": {
+    "title": "AP declares Jessica Killin winner in 5th District election (Colorado Politics, 5 Nov 2026)",
+    "url": "https://www.coloradopolitics.com/2026/11/05/ap-declares-jessica-killin-winner-in-5th-district-election/"
+   }
+  },
+  {
+   "name": "Addison McDowell",
+   "state": "NC",
+   "chamber": "house",
+   "district": "6",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Cyril Jefferson (D)",
+   "source": {
+    "title": "How North Carolina Democrats flipped several House seats in historically GOP districts (WUNC/NPR, 5 Nov 2026; AP calls)",
+    "url": "https://www.wunc.org/politics/2026-11-05/how-north-carolina-democrats-flipped-several-house-seats-in-historically-gop-districts"
+   }
+  },
+  {
+   "name": "Richard Hudson",
+   "state": "NC",
+   "chamber": "house",
+   "district": "9",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Richard Ojeda (D)",
+   "source": {
+    "title": "How North Carolina Democrats flipped several House seats in historically GOP districts (WUNC/NPR, 5 Nov 2026; AP calls)",
+    "url": "https://www.wunc.org/politics/2026-11-05/how-north-carolina-democrats-flipped-several-house-seats-in-historically-gop-districts"
+   }
+  },
+  {
+   "name": "Brad Knott",
+   "state": "NC",
+   "chamber": "house",
+   "district": "13",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Paul Barringer (D)",
+   "source": {
+    "title": "How North Carolina Democrats flipped several House seats in historically GOP districts (WUNC/NPR, 5 Nov 2026; AP calls)",
+    "url": "https://www.wunc.org/politics/2026-11-05/how-north-carolina-democrats-flipped-several-house-seats-in-historically-gop-districts"
+   }
+  },
+  {
+   "name": "Tim Moore",
+   "state": "NC",
+   "chamber": "house",
+   "district": "14",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to LaKesha Womack (D)",
+   "source": {
+    "title": "How North Carolina Democrats flipped several House seats in historically GOP districts (WUNC/NPR, 5 Nov 2026; AP calls)",
+    "url": "https://www.wunc.org/politics/2026-11-05/how-north-carolina-democrats-flipped-several-house-seats-in-historically-gop-districts"
+   }
+  },
+  {
+   "name": "Mike Turner",
+   "state": "OH",
+   "chamber": "house",
+   "district": "10",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Kristina Knickerbocker (D)",
+   "source": {
+    "title": "Knickerbocker beats Turner, flipping Ohio's 10th District for Democrats (WYSO, 5 Nov 2026)",
+    "url": "https://www.wyso.org/government-politics-news/2026-11-05/knickerbocker-beats-turner-flipping-ohios-10th-district-for-democrats"
+   }
+  },
+  {
+   "name": "Rob Wittman",
+   "state": "VA",
+   "chamber": "house",
+   "district": "1",
+   "bioguide": null,
+   "reason": "lost_general",
+   "detail": "Lost to Shannon Taylor (D)",
+   "source": {
+    "title": "Shannon Taylor unseats Rob Wittman (Axios Richmond, 5 Nov 2026)",
+    "url": "https://www.axios.com/local/richmond/2026/11/05/shannon-taylor-rob-wittman-election-results-2026-henrico"
+   }
   }
  ],
  "uncalled": [
@@ -1655,7 +1772,7 @@
    "state": "AK",
    "chamber": "senate",
    "district": null,
-   "status": "Uncalled vs. Mary Peltola (D); Peltola led by 637 votes (AP) with nearly a quarter of votes uncounted; ranked-choice results published Nov. 18 (as of Nov. 4 night)",
+   "status": "Uncalled vs. Mary Peltola (D), who led by 637 votes on AP's count; ranked-choice results are published Nov. 18 (as of Nov. 8)",
    "source": {
     "title": "What's delaying the US Senate election results in Mississippi and Alaska? (Al Jazeera, 5 Nov 2026)",
     "url": "https://www.aljazeera.com/news/2026/11/5/whats-delaying-us-midterm-election-calls-in-mississippi-and-alaska"
@@ -1666,7 +1783,7 @@
    "state": "MS",
    "chamber": "senate",
    "district": null,
-   "status": "Uncalled vs. Scott Colom (D); Colom led by 1,138 votes with 96% counted, about 3,600 mail ballots and an unknown number of affidavit ballots outstanding; counties certify by Nov. 13 (as of Nov. 4 night)",
+   "status": "Uncalled vs. Scott Colom (D), who led by 2,574 votes per AP on Nov. 6; counties certify by Nov. 13 (as of Nov. 8)",
    "source": {
     "title": "What's delaying the US Senate election results in Mississippi and Alaska? (Al Jazeera, 5 Nov 2026)",
     "url": "https://www.aljazeera.com/news/2026/11/5/whats-delaying-us-midterm-election-calls-in-mississippi-and-alaska"
@@ -1677,7 +1794,7 @@
    "state": "CA",
    "chamber": "house",
    "district": "40",
-   "status": "Member-vs-member in new CA-40 vs. Rep. Ken Calvert; Calvert led 54-46 with precincts partially reporting; uncalled, no concession (as of Nov. 4 midday)",
+   "status": "Member-vs-member in new CA-40 vs. Rep. Ken Calvert, who leads about 54-46; uncalled, no concession (as of Nov. 8)",
    "source": {
     "title": "Calvert: Result Shows 'Voters Want Proven, Effective Leader' (MyNewsLA, 4 Nov 2026)",
     "url": "https://mynewsla.com/business/2026/11/04/calvert-result-shows-voters-want-proven-effective-leader"
@@ -1688,32 +1805,10 @@
    "state": "CA",
    "chamber": "house",
    "district": "41",
-   "status": "Member-vs-member in new CA-40 vs. Rep. Young Kim; led 54-46 with precincts partially reporting; uncalled (as of Nov. 4 midday)",
+   "status": "Member-vs-member in new CA-40 vs. Rep. Young Kim; leads about 54-46; uncalled (as of Nov. 8)",
    "source": {
     "title": "Calvert: Result Shows 'Voters Want Proven, Effective Leader' (MyNewsLA, 4 Nov 2026)",
     "url": "https://mynewsla.com/business/2026/11/04/calvert-result-shows-voters-want-proven-effective-leader"
-   }
-  },
-  {
-   "name": "Mike Lawler",
-   "state": "NY",
-   "chamber": "house",
-   "district": "17",
-   "status": "Conceded to Cait Conley (D) on election night; NBC News had not projected a winner (as of Nov. 4 afternoon)",
-   "source": {
-    "title": "Which New York and New Jersey races have yet to be called? (NBC New York, updated 4 Nov 2026)",
-    "url": "https://www.nbcnewyork.com/elections/what-new-york-new-jersey-races-yet-to-be-called/6567471/"
-   }
-  },
-  {
-   "name": "Jeff Van Drew",
-   "state": "NJ",
-   "chamber": "house",
-   "district": "2",
-   "status": "Reportedly conceded to Zack Mullock (D), who led 50.8-48.2; NBC News had not projected a winner (as of Nov. 4 afternoon)",
-   "source": {
-    "title": "Which New York and New Jersey races have yet to be called? (NBC New York, updated 4 Nov 2026)",
-    "url": "https://www.nbcnewyork.com/elections/what-new-york-new-jersey-races-yet-to-be-called/6567471/"
    }
   },
   {
@@ -1721,21 +1816,10 @@
    "state": "AZ",
    "chamber": "house",
    "district": "2",
-   "status": "Leads Jonathan Nez (D) 49.5-48.7; lead has changed hands; too close to call (as of 7:42 p.m. MST Nov. 4)",
+   "status": "Leads Jonathan Nez (D) by about 3,900 votes; uncalled (as of Nov. 8)",
    "source": {
     "title": "Arizona Congressional District 2 results (KJZZ, updated 4 Nov 2026)",
     "url": "https://www.kjzz.org/elections/2026-11-03/arizona-congressional-district-2-results-elex"
-   }
-  },
-  {
-   "name": "Jeff Hurd",
-   "state": "CO",
-   "chamber": "house",
-   "district": "3",
-   "status": "Leads Dwayne Romero (D) by 5,396 votes (49.2-47.6); too close to call (as of 7 p.m. MT Nov. 4)",
-   "source": {
-    "title": "Boebert trails in 4th CD, Hurd rallies in 3rd CD (Colorado Springs Gazette, 4 Nov 2026)",
-    "url": "https://gazette.com/2026/11/04/boebert-trails-in-4th-cd-hurd-rallies-in-3rd-cd-for-lone-gop-hope/"
    }
   },
   {
@@ -1743,21 +1827,10 @@
    "state": "CO",
    "chamber": "house",
    "district": "4",
-   "status": "Trails Eileen Laubacher (D) by 3,405 votes (47.9-48.9) with 94% counted; too close to call (as of 7 p.m. MT Nov. 4)",
+   "status": "Trails Eileen Laubacher (D) by about 3,100 votes; uncalled (as of Nov. 8)",
    "source": {
     "title": "Boebert trails in 4th CD, Hurd rallies in 3rd CD (Colorado Springs Gazette, 4 Nov 2026)",
     "url": "https://gazette.com/2026/11/04/boebert-trails-in-4th-cd-hurd-rallies-in-3rd-cd-for-lone-gop-hope/"
-   }
-  },
-  {
-   "name": "Jeff Crank",
-   "state": "CO",
-   "chamber": "house",
-   "district": "5",
-   "status": "Trails Jessica Killin (D) 45-52; 72% counted (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
    }
   },
   {
@@ -1765,7 +1838,7 @@
    "state": "FL",
    "chamber": "house",
    "district": "26",
-   "status": "Leads Nicole Locklin (D) by about 1,770 votes (49.9-49.1) per the Florida Division of Elections and has claimed victory; AP has not called it; certification Nov. 16 (as of Nov. 4 evening)",
+   "status": "Leads Nicole Locklin (D) by 1,772 votes and has claimed victory; AP has not called it; certification Nov. 16 (as of Nov. 8)",
    "source": {
     "title": "FL-26 update: Rep. Mario Diaz-Balart claims victory (WLRN, 4 Nov 2026)",
     "url": "https://www.wlrn.org/government-politics/2026-11-04/fl-26-mario-diaz-balart-nicole-locklin-elections"
@@ -1776,7 +1849,7 @@
    "state": "MN",
    "chamber": "house",
    "district": "1",
-   "status": "Trails Jake Johnson (D) 49.9-50.0 on AP's count; uncalled, recount possible (as of midday Nov. 5)",
+   "status": "Trails Jake Johnson (D) by about 320 votes; uncalled, recount possible; certification Nov. 19 (as of Nov. 8)",
    "source": {
     "title": "2026 US House Election Results (Poliwave, AP counts)",
     "url": "https://www.poliwave.com/us/live/midterms-2026/house"
@@ -1787,62 +1860,7 @@
    "state": "NC",
    "chamber": "house",
    "district": "5",
-   "status": "Trails Chuck Hubbard (D) by 99 votes; recount likely (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
-   }
-  },
-  {
-   "name": "Addison McDowell",
-   "state": "NC",
-   "chamber": "house",
-   "district": "6",
-   "status": "Trails Cyril Jefferson (D) 49-51 (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
-   }
-  },
-  {
-   "name": "Richard Hudson",
-   "state": "NC",
-   "chamber": "house",
-   "district": "9",
-   "status": "Trails Richard Ojeda (D) 49-51 (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
-   }
-  },
-  {
-   "name": "Brad Knott",
-   "state": "NC",
-   "chamber": "house",
-   "district": "13",
-   "status": "Trails Paul Barringer (D) 48-50.5 (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
-   }
-  },
-  {
-   "name": "Tim Moore",
-   "state": "NC",
-   "chamber": "house",
-   "district": "14",
-   "status": "Trails Lakesha Womack (D) 49-51 (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
-   }
-  },
-  {
-   "name": "Mike Turner",
-   "state": "OH",
-   "chamber": "house",
-   "district": "10",
-   "status": "Trails Kristina Knickerbocker (D) by about 4,900 votes (as of 7 a.m. ET Nov. 4)",
+   "status": "Trails Chuck Hubbard (D) by 99 votes; uncalled, recount likely (as of Nov. 8)",
    "source": {
     "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
     "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
@@ -1853,21 +1871,10 @@
    "state": "TN",
    "chamber": "house",
    "district": "4",
-   "status": "Trails Victoria Broderick (D) 48.7-48.9 (under 300 votes); AP has not called it (as of Nov. 4)",
+   "status": "Trails Victoria Broderick (D) by about 280 votes on the Tennessee Secretary of State's count; AP has not called it (as of Nov. 8)",
    "source": {
     "title": "DECISION 2026: Victoria Broderick (D) wins Tennessee U.S. House Dist. 4 (Local 3 News; article states AP has not called the race)",
     "url": "https://www.local3news.com/local-news/decision-2026-victoria-broderick-d-wins-tennessee-u-s-house-dist-4/article_e18ad914-c394-42c5-93f2-09dbe7561963.html"
-   }
-  },
-  {
-   "name": "Rob Wittman",
-   "state": "VA",
-   "chamber": "house",
-   "district": "1",
-   "status": "Trails Shannon Taylor (D) by about 5,000 votes (as of 7 a.m. ET Nov. 4)",
-   "source": {
-    "title": "State Capital Lobbyist: 2026 Midterm Elections: Where Things Stand (AP calls as of 7 a.m. ET Nov. 4)",
-    "url": "https://statecapitallobbyist.com/elections/2026-midterm-elections-where-things-stand/"
    }
   },
   {
@@ -1875,7 +1882,7 @@
    "state": "NC",
    "chamber": "house",
    "district": "3",
-   "status": "Described as a virtual tie with Democratic challenger; uncalled",
+   "status": "Leads his Democratic challenger by about 230 votes; uncalled (as of Nov. 8)",
    "source": {
     "title": "The Morning After: Uncalled House Races (270toWin)",
     "url": "https://www.270towin.com/news/2026/11/04/the-morning-after-uncalled-house-races_1847.html"
@@ -1883,7 +1890,7 @@
   }
  ],
  "_meta": {
-  "status": "draft, awaiting reviewer",
+  "status": "reviewed: each decided entry checked against an AP call or a major outlet on Nov. 9, 2026",
   "compiled_by": "Claude research agent from Ballotpedia, the House Press Gallery and race calls; every entry links its source",
   "note": "A race counts as decided once the Associated Press, a national network or a recognized decision desk has projected it; each entry links the source. Undecided races are listed separately and not shown until decided."
  }
