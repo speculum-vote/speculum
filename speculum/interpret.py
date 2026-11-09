@@ -217,7 +217,7 @@ def _prompt(chain: dict) -> str:
 def draft(chain: dict, key: str, max_searches: int = 8) -> dict:
     theme = chain.get("rule") or "arms-sales"
     system = SYSTEM if theme == "arms-sales" else SYSTEM_RULE if theme == "rules-overturned" else BRIEFS[theme]
-    resp = requests.post(API, timeout=600, headers={
+    resp = requests.post(API, timeout=(15, 600), headers={
         "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}, json={
         "model": MODEL, "max_tokens": 8000, "system": system,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_searches}],
@@ -252,28 +252,61 @@ def check() -> str:
     return f"model={body.get('model')} searches={used} usage={body.get('usage')} reply={text[:200]!r}"
 
 
-def draft_missing(chains: list[dict], drafts_dir: Path, limit: int = 3) -> list[str]:
-    """Draft research for up to `limit` chains that have neither reviewed research nor a draft."""
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
+RETRY_DAYS = 7          # a chain whose draft failed is tried again after this many days
+BUDGET_MIN = 30         # no new draft starts after this many minutes; the step's own timeout is the backstop
+
+
+def draft_missing(chains: list[dict], drafts_dir: Path, limit: int = 3, key: str | None = None, call=None,
+                  failures_path: Path | None = None, today: str | None = None, budget_min: float = BUDGET_MIN,
+                  clock=None) -> list[str]:
+    """Draft research for up to `limit` chains that have neither reviewed research nor a draft.
+
+    `limit` counts attempts, not successes: a draft that fails (an API error, a timeout, an answer with no
+    JSON) uses up its slot, so a run of failures cannot walk the whole list. A failed chain is recorded in
+    `failures_path` and skipped for RETRY_DAYS, so one bad chain cannot hold a slot every night. No new draft
+    starts once `budget_min` minutes have passed. `call` and `clock` are for tests."""
+    import time
+    from datetime import timedelta
+    key = key or os.environ.get("ANTHROPIC_API_KEY")
+    if not key and call is None:
         log.info("no ANTHROPIC_API_KEY; skipping the drafter")
         return []
+    call = call or (lambda ch: draft(ch, key))
+    clock = clock or time.monotonic
+    today = today or date.today().isoformat()
+    failures_path = failures_path or (Path(drafts_dir).parent / "draft_failures.json")
+    failures = json.loads(failures_path.read_text(encoding="utf-8")) if failures_path.exists() else {}
+    retry_from = (date.fromisoformat(today) - timedelta(days=RETRY_DAYS)).isoformat()
     drafts_dir.mkdir(parents=True, exist_ok=True)
-    done = []
+    done, tried, t0 = [], 0, clock()
     # Resolutions that became law first (their rules are void, so what followed is a matter of record), oldest
     # first, since older decisions have the longest record; a fixed order, the same every night.
     for ch in sorted(chains, key=lambda c: (not c.get("enacted"), c.get("date") or "")):
-        if len(done) >= limit:
+        if tried >= limit:
+            break
+        if (clock() - t0) / 60 >= budget_min:
+            log.warning("drafting stopped: the %s-minute budget is used (%d tried)", budget_min, tried)
             break
         path = drafts_dir / f"{ch['id']}.json"
         if ch.get("mechanism") or path.exists():
             continue
+        if (failures.get(ch["id"]) or {}).get("on", "") > retry_from:
+            continue
+        tried += 1
+        started = clock()
         try:
-            path.write_text(json.dumps(draft(ch, key), indent=1, ensure_ascii=False), encoding="utf-8")
+            path.write_text(json.dumps(call(ch), indent=1, ensure_ascii=False), encoding="utf-8")
+            failures.pop(ch["id"], None)
             done.append(ch["id"])
-            log.info("drafted %s", ch["id"])
-        except Exception:
-            log.exception("drafting %s failed", ch["id"])
+            log.info("drafted %s in %.1f min", ch["id"], (clock() - started) / 60)
+        except Exception as exc:
+            prev = failures.get(ch["id"]) or {}
+            failures[ch["id"]] = {"on": today, "error": f"{type(exc).__name__}: {exc}"[:300],
+                                  "times": int(prev.get("times", 0)) + 1}
+            log.exception("drafting %s failed after %.1f min", ch["id"], (clock() - started) / 60)
+    if failures or failures_path.exists():
+        failures_path.write_text(json.dumps(dict(sorted(failures.items())), indent=1, ensure_ascii=False) + "\n",
+                                 encoding="utf-8")
     return done
 
 
