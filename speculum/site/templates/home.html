@@ -7,6 +7,8 @@
   <p class="meta">Day {{ day_number }} of the record, which began November 3, 2026 · {{ n_members|num }} sitting members · {{ n_votes|num }} roll calls · {{ n_bills|num }} lobbied bills · updated {{ snapshot_date|shortdate }}</p>
 </div>
 
+{% include "_find.html" %}
+
 <h2>From tonight's findings</h2>
 <div class="home-findings">
 {% for x in f.findings if x.head is not none %}{% if loop.index <= 4 %}

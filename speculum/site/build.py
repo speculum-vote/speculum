@@ -22,6 +22,16 @@ from .. import chains as chains_mod
 from ..snapshot import DAY_ZERO, Snapshot, all_dates, latest, read_newest
 
 HERE = Path(__file__).parent
+STATE_NAMES = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas", "CA": "California", "CO": "Colorado",
+    "CT": "Connecticut", "DE": "Delaware", "FL": "Florida", "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois",
+    "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
+    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "MO": "Missouri", "MT": "Montana",
+    "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania",
+    "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
+    "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming",
+    "DC": "District of Columbia", "PR": "Puerto Rico", "GU": "Guam", "VI": "U.S. Virgin Islands", "AS": "American Samoa",
+    "MP": "Northern Mariana Islands"}
 PARTY_NAMES = {"D": "Democrat", "R": "Republican", "I": "Independent", "L": "Libertarian", None: "Independent"}
 
 
@@ -187,6 +197,13 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     from .. import lameduck as _ld
     leaving = {e["bioguide"]: e for e in _ld.match(chains_mod.load_json(snapshots_root.parent / "lameduck.json", {"members": []}).get("members", []), members) if e["bioguide"]}
     lobby_years = lobbying.get("years_label")
+    # Find your members (Home and The Chamber): a small file the page fetches when a reader picks a state.
+    (prev / "find.json").write_text(json.dumps({"states": {k: v for k, v in STATE_NAMES.items() if any(m["state"] == k for m in members)},
+        "members": [{"b": m["bioguide"], "n": m["name"], "s": m["state"], "c": m["chamber"][0],
+                     "d": None if m["chamber"] == "senate" else int(m.get("district") or 0), "p": m["party"],
+                     **({"x": 1} if m["bioguide"] in leaving else {})}
+                    for m in sorted(members, key=lambda m: (m["chamber"] != "senate", int(m.get("district") or 0), m.get("sort_name") or m["name"]))]},
+        separators=(",", ":")), encoding="utf-8")
     for m in members:
         bio = m["bioguide"]
         recent = []
@@ -254,13 +271,22 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     return {"members": len(members), "votes": len(vlist)}
 
 
+INTERESTS_FIRST = 200
+
+
 def _build_interests(E, prev: Path, members, finance, lobbying, common) -> None:
     all_ = interests_mod.build(members, finance, lobbying)
     by_id = {m["bioguide"]: m for m in members}
     rows = sorted(all_.values(), key=lambda e: -e["total"])
     (prev / "interest").mkdir(exist_ok=True)
+    # The page carries the largest FIRST_ROWS; the rest load from interests.json when a reader searches, sorts or asks.
     (prev / "interests.html").write_text(E.get_template("interests.html").render(
-        root="", page="interests", rows=rows, **common), encoding="utf-8")
+        root="", page="interests", rows=rows[:INTERESTS_FIRST], n_rows=len(rows), **common), encoding="utf-8")
+    (prev / "interests.json").write_text(json.dumps(
+        [[e["slug"], e["name"], e["type"], e["kind"], round(e["total"], 2), e["members"],
+          round(e["split"].get("D", 0), 4), round(e["split"].get("R", 0), 4), 1 if e.get("linked_slugs") else 0,
+          money(e["total"]), pct(e["split"].get("D", 0)), pct(e["split"].get("R", 0))] for e in rows],
+        separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
     tmpl = E.get_template("interest.html")
     for slug, e in all_.items():
         (prev / "interest" / f"{slug}.html").write_text(tmpl.render(

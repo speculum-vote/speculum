@@ -33,7 +33,8 @@ a:hover { border-bottom-color: var(--cold); }
 .mast .wrap { display: flex; align-items: baseline; gap: 24px; padding-top: 18px; padding-bottom: 14px; flex-wrap: wrap; }
 .wordmark { font: 600 26px/1 var(--serif); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); border: 0; }
 .wordmark span { color: var(--gold); }
-.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; order: 2; width: 100%; }
+.mast .preview-flag { order: 1; }
 .mast nav a { font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); border: 0; }
 .mast nav a:hover, .mast nav a.on { color: var(--gold); }
 .preview-flag { margin-left: auto; font: 500 11px/1 var(--mono); letter-spacing: .1em; color: var(--gold); border: 1px solid var(--gold-dim); padding: 5px 8px; text-transform: uppercase; }
@@ -379,3 +380,31 @@ table.said tr.both td:first-child { box-shadow: inset 2px 0 0 var(--gold-dim); }
 .ballot button:disabled { color: var(--ink-3); border-color: var(--line); cursor: default; }
 ul.rules li { margin: 0 0 10px; color: var(--ink-2); }
 ul.rules b { color: var(--ink); font-weight: 500; }
+
+/* Find your members (Home, The Chamber) */
+.find { border: 1px solid var(--line); background: var(--panel); padding: 16px 18px 6px; margin: 22px 0 8px; }
+.find h2 { margin-top: 0; }
+.find-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.find-row label { font: 12px var(--mono); color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; display: flex; gap: 8px; align-items: center; }
+.find-row select { background: var(--ground); color: var(--ink); border: 1px solid var(--line); padding: 9px 10px; font: 15px var(--sans); min-width: 180px; text-transform: none; letter-spacing: 0; }
+.find-out { margin-top: 12px; }
+.find-group { margin: 10px 0 12px; }
+.find-group .label { font: 11px var(--mono); color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+.find-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.find-card { display: flex; flex-direction: column; gap: 2px; border: 1px solid var(--line); padding: 10px 12px; color: var(--ink-2); font-size: 13px; background: var(--ground); }
+.find-card:hover { border-color: var(--gold-dim); }
+.find-card b { color: var(--ink); font-weight: 500; font-size: 15px; }
+.find-leaving { color: var(--gold); font-size: 12px; }
+@media (max-width: 560px) { .find-row label { width: 100%; justify-content: space-between; } .find-row select { flex: 1; min-width: 0; } }
+
+/* Phone menu: one button instead of three lines of links (only when scripts run; otherwise the links show) */
+.menu-btn { display: none; }
+@media (max-width: 640px) {
+  .js .mast .wrap { align-items: center; gap: 12px; }
+  .js .menu-btn { display: block; margin-left: auto; background: none; color: var(--ink-2); border: 1px solid var(--line);
+    font: 500 12px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; padding: 9px 12px; cursor: pointer; }
+  .js .mast nav { display: none; width: 100%; flex-direction: column; gap: 0; order: 3; border-top: 1px solid var(--line-soft); }
+  .js .mast nav.open { display: flex; }
+  .js .mast nav a { padding: 13px 2px; border-bottom: 1px solid var(--line-soft); font-size: 13px; }
+  .js .preview-flag { order: 4; }
+}

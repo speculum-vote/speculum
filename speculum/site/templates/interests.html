@@ -3,7 +3,7 @@
 {% block body %}
 <h1>Interests</h1>
 <p class="lede">The committees and lobbying organizations that fund members of Congress, read the same way for business, labor, ideological and single-issue groups alike. Open one to see whom it funds and how its money splits by party.</p>
-<p class="meta">{{ rows|length }} interests · committee figures come from the largest itemized gifts collected for each member, so they are a floor, not a full total</p>
+<p class="meta">{{ n_rows|num }} interests · committee figures come from the largest itemized gifts collected for each member, so they are a floor, not a full total</p>
 
 <div class="filters">
   <input id="q" type="search" placeholder="Search by name" aria-label="Search interests">
@@ -33,33 +33,46 @@
 </tr>
 {% endfor %}
 </tbody></table></div>
+<p class="meta" id="more">{% if n_rows > rows|length %}Showing the {{ rows|length }} that gave the most, of {{ n_rows|num }}. Search or sort to reach every interest, or <a href="#" id="show-all">show all {{ n_rows|num }}</a>.{% endif %}</p>
 {% endblock %}
 {% block scripts %}
 <script>
 (function () {
-  var tbody = document.querySelector('#chamber tbody');
-  var rows = Array.prototype.slice.call(tbody.rows);
+  var tbody = document.querySelector('#chamber tbody'), more = document.getElementById('more');
   var q = document.getElementById('q'), fk = document.getElementById('f-kind');
-  function filter() {
-    var t = q.value.trim().toLowerCase();
-    rows.forEach(function (r) {
-      r.style.display = ((!fk.value || r.dataset.kind === fk.value) && (!t || r.dataset.name.toLowerCase().indexOf(t) !== -1)) ? '' : 'none';
-    });
+  var data = null, loading = null, key = 'total', dir = -1, all = false, LIMIT = 500;
+  // Columns in interests.json: slug, name, type, kind, total, members, D share, R share, linked, and the three as shown.
+  var COL = {name: 1, type: 2, total: 4, members: 5, d: 6, r: 7};
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function get() {
+    if (!loading) loading = fetch('interests.json').then(function (r) { return r.json(); }).then(function (j) { data = j; });
+    return loading;
   }
-  [q, fk].forEach(function (el) { el.addEventListener('input', filter); });
-  var dir = {};
+  function render() {
+    var t = q.value.trim().toLowerCase(), c = COL[key], num = key !== 'name' && key !== 'type';
+    var rows = data.filter(function (e) { return (!fk.value || e[3] === fk.value) && (!t || e[1].toLowerCase().indexOf(t) !== -1); });
+    rows.sort(function (a, b) { return num ? dir * (a[c] - b[c]) : dir * String(a[c]).localeCompare(String(b[c])); });
+    var cap = all ? rows.length : Math.min(rows.length, LIMIT);
+    tbody.innerHTML = rows.slice(0, cap).map(function (e) {
+      return '<tr><td><a href="interest/' + e[0] + '.html">' + esc(e[1]) + '</a>' + (e[8] ? ' <span class="muted" title="Linked by PAC name">↔</span>' : '') +
+        '</td><td class="muted">' + esc(e[2]) + '</td><td class="r num">' + e[9] + '</td><td class="r num">' + e[5] +
+        '</td><td class="r num">' + e[10] + '</td><td class="r num">' + e[11] + '</td></tr>';
+    }).join('') || '<tr><td colspan="6" class="muted">No interest matches.</td></tr>';
+    more.innerHTML = cap < rows.length ? 'Showing ' + cap.toLocaleString() + ' of ' + rows.length.toLocaleString() +
+      ' matching. <a href="#" id="show-all">Show all</a>.' : rows.length.toLocaleString() + ' shown.';
+    var sa = document.getElementById('show-all');
+    if (sa) sa.addEventListener('click', function (ev) { ev.preventDefault(); all = true; render(); });
+  }
+  function update() { more.textContent = 'Loading every interest…'; get().then(render).catch(function () { more.textContent = 'Could not load the full list; the largest are shown above.'; }); }
+  [q, fk].forEach(function (el) { el.addEventListener('input', update); });
+  var sa = document.getElementById('show-all');
+  if (sa) sa.addEventListener('click', function (ev) { ev.preventDefault(); all = true; update(); });
   document.querySelectorAll('#chamber th[data-sort]').forEach(function (th) {
     th.addEventListener('click', function () {
-      var key = th.dataset.sort, num = th.hasAttribute('data-num');
-      dir[key] = dir[key] === 'desc' ? 'asc' : 'desc';
-      var d = dir[key] === 'desc' ? -1 : 1;
-      rows.sort(function (a, b) {
-        var x = a.dataset[key], y = b.dataset[key];
-        return num ? d * (parseFloat(x) - parseFloat(y)) : d * x.localeCompare(y);
-      });
-      rows.forEach(function (r) { tbody.appendChild(r); });
+      var k = th.dataset.sort;
+      dir = (k === key) ? -dir : (th.hasAttribute('data-num') ? -1 : 1); key = k;
       document.querySelectorAll('#chamber th').forEach(function (h) { h.classList.remove('sorted'); });
-      th.classList.add('sorted');
+      th.classList.add('sorted'); update();
     });
   });
 })();

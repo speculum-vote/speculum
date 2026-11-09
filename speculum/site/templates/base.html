@@ -9,11 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ root }}static/style.css?v={{ css_v }}">
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
 <header class="mast"><div class="wrap">
   <a class="wordmark" href="{{ root }}index.html">Specul<span>u</span>m</a>
-  <nav>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav id="site-nav">
     <a href="{{ root }}tide.html" {% if page == 'tide' %}class="on"{% endif %}>The Tide</a>
     <a href="{{ root }}findings.html" {% if page == 'findings' %}class="on"{% endif %}>Findings</a>
     <a href="{{ root }}chamber.html" {% if page == 'chamber' %}class="on"{% endif %}>The Chamber</a>
@@ -36,6 +38,14 @@
   Every figure is drawn from public filings and links to its source. Readings describe; they do not accuse.<br>
   <a href="{{ root }}about.html">About</a> · <a href="{{ root }}join.html">Join the readers</a> · <a href="{{ root }}corrections.html">Corrections</a> · <a href="{{ root }}method.html">Method</a> · <a href="{{ root }}glass.html">The Glass</a> · <a href="https://www.instagram.com/speculum.vote/">Instagram</a></div>
 </div></footer>
+<script>
+(function () {
+  var b = document.querySelector(".menu-btn"), n = document.getElementById("site-nav");
+  if (b) b.addEventListener("click", function () {
+    var open = n.classList.toggle("open"); b.setAttribute("aria-expanded", open ? "true" : "false"); b.textContent = open ? "Close" : "Menu";
+  });
+})();
+</script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

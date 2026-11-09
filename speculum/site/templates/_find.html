@@ -1,0 +1,54 @@
+{# Find your members: pick a state (and a district), see your senators and representative. Data: find.json. #}
+<section class="find" id="find">
+  <h2>{{ find_heading or "Your members of Congress" }}</h2>
+  <div class="find-row">
+    <label>State <select id="find-state" aria-label="Your state"><option value="">Choose a state</option></select></label>
+    <label id="find-dl" hidden>District <select id="find-dist" aria-label="Your district"></select></label>
+  </div>
+  <div id="find-out" class="find-out" aria-live="polite"><noscript><p class="meta">Every member is listed on <a href="{{ root }}chamber.html">The Chamber</a>.</p></noscript></div>
+  <p class="meta">Not sure which district? <a href="https://www.house.gov/representatives/find-your-representative" rel="noopener">Look it up by ZIP code at house.gov</a>, then choose it here.</p>
+</section>
+<script>
+(function () {
+  var root = {{ root|tojson }}, P = {D: "Democrat", R: "Republican", I: "Independent", L: "Libertarian"};
+  var st = document.getElementById("find-state"), dl = document.getElementById("find-dl"),
+      ds = document.getElementById("find-dist"), out = document.getElementById("find-out"), data = null;
+  function store(k, v) { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} }
+  function load(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); }
+  function card(m) {
+    var seat = m.c === "s" ? "Senator" : (m.d === 0 ? "Representative, at large" : "Representative, district " + m.d);
+    return '<a class="find-card" href="' + root + 'member/' + m.b + '.html"><b>' + esc(m.n) + '</b><span class="party-' + m.p + '">' +
+      (P[m.p] || m.p) + '</span><span>' + seat + '</span>' + (m.x ? '<span class="find-leaving">Leaving the ' + (m.c === "s" ? "Senate" : "House") + ' in January</span>' : '') + '</a>';
+  }
+  function show() {
+    var s = st.value, d = ds.value;
+    if (!s || !data) { out.innerHTML = ""; dl.hidden = true; return; }
+    var mine = data.members.filter(function (m) { return m.s === s; }),
+        sen = mine.filter(function (m) { return m.c === "s"; }), rep = mine.filter(function (m) { return m.c === "h"; });
+    if (rep.length > 1) { dl.hidden = false; } else { dl.hidden = true; d = ""; }
+    if (d !== "") rep = rep.filter(function (m) { return String(m.d) === d; });
+    var h = '<div class="find-group"><div class="label">Senate</div><div class="find-cards">' +
+      (sen.map(card).join("") || '<p class="muted">No senators on record.</p>') + '</div></div>' +
+      '<div class="find-group"><div class="label">House' + (d === "" && rep.length > 1 ? ' · all ' + rep.length + ' districts' : '') + '</div><div class="find-cards">' +
+      (rep.map(card).join("") || '<p class="muted">This seat is vacant in the record.</p>') + '</div></div>';
+    out.innerHTML = h;
+  }
+  function districts() {
+    var s = st.value, seen = data.members.filter(function (m) { return m.s === s && m.c === "h"; })
+      .map(function (m) { return m.d; }).sort(function (a, b) { return a - b; });
+    ds.innerHTML = '<option value="">All districts</option>' + seen.map(function (n) {
+      return '<option value="' + n + '">' + (n === 0 ? "At large" : "District " + n) + '</option>'; }).join("");
+  }
+  st.addEventListener("change", function () { store("find-state", st.value); store("find-dist", ""); if (data) districts(); show(); });
+  ds.addEventListener("change", function () { store("find-dist", ds.value); show(); });
+  fetch(root + "find.json").then(function (r) { return r.json(); }).then(function (j) {
+    data = j;
+    Object.keys(j.states).sort(function (a, b) { return j.states[a] < j.states[b] ? -1 : 1; }).forEach(function (k) {
+      var o = document.createElement("option"); o.value = k; o.textContent = j.states[k]; st.appendChild(o);
+    });
+    var s = load("find-state");
+    if (s && j.states[s]) { st.value = s; districts(); var d = load("find-dist"); if (d && ds.querySelector('option[value="' + d + '"]')) ds.value = d; show(); }
+  }).catch(function () { out.innerHTML = '<p class="meta">Every member is listed on <a href="' + root + 'chamber.html">The Chamber</a>.</p>'; });
+})();
+</script>

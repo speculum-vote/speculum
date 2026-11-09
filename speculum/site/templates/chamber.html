@@ -3,6 +3,7 @@
 {% block body %}
 <h1>The Chamber</h1>
 <p class="lede">Every sitting member of the House and Senate, read the same way. Sort by any column; open a member to see their full Ledger and the filings behind it.</p>
+{% set find_heading = "Find your members" %}{% include "_find.html" %}
 {% if mb %}
 <section class="home-money">
   <h2>Where the money goes</h2>
