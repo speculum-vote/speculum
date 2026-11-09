@@ -14,6 +14,8 @@ import re
 from datetime import date
 from pathlib import Path
 
+from . import budget
+
 import requests
 
 log = logging.getLogger("speculum.interpret")
@@ -268,6 +270,7 @@ def draft(chain: dict, key: str, max_searches: int = 8) -> dict:
             "messages": messages})
         resp.raise_for_status()
         body = resp.json()
+        budget.record("draft", body.get("model", MODEL), body.get("usage"))
         if body.get("stop_reason") != "pause_turn":
             break
         done_so_far = (messages[1]["content"] if len(messages) > 1 else []) + (body.get("content") or [])
@@ -315,6 +318,7 @@ def draft_missing(chains: list[dict], drafts_dir: Path, limit: int = 3, key: str
     if not key and call is None:
         log.info("no ANTHROPIC_API_KEY; skipping the drafter")
         return []
+    live = call is None
     call = call or (lambda ch: draft(ch, key))
     clock = clock or time.monotonic
     today = today or date.today().isoformat()
@@ -326,7 +330,7 @@ def draft_missing(chains: list[dict], drafts_dir: Path, limit: int = 3, key: str
     # Resolutions that became law first (their rules are void, so what followed is a matter of record), oldest
     # first, since older decisions have the longest record; a fixed order, the same every night.
     for ch in sorted(chains, key=lambda c: (not c.get("enacted"), c.get("date") or "")):
-        if tried >= limit:
+        if tried >= limit or (live and not budget.allow("draft", Path(drafts_dir).parent.parent / "ai_spend.json")):
             break
         if (clock() - t0) / 60 >= budget_min:
             log.warning("drafting stopped: the %s-minute budget is used (%d tried)", budget_min, tried)
@@ -409,6 +413,7 @@ def _revise_call(key: str, system: str, item: dict, check: dict) -> dict:
         "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}, json={
         "model": MODEL, "max_tokens": 6000, "system": system, "messages": [{"role": "user", "content": msg}]})
     resp.raise_for_status()
+    budget.record("revise", resp.json().get("model", MODEL), resp.json().get("usage"))
     text = "".join(b.get("text", "") for b in resp.json().get("content", []) if b.get("type") == "text")
     start = text.find("{")
     if start < 0:
@@ -424,7 +429,11 @@ def revise_failed(drafts_dir: Path, checks: dict, limit: int = 20, key: str | No
     if not key and call is None:
         log.info("no ANTHROPIC_API_KEY; skipping revisions")
         return []
-    call = call or (lambda system, item, check: _revise_call(key, system, item, check))
+    if call is None:
+        def call(system, item, check):
+            if not budget.allow("revise", Path(drafts_dir).parent.parent / "ai_spend.json"):
+                raise RuntimeError("this month's AI budget is used")
+            return _revise_call(key, system, item, check)
     done = []
     for path in sorted(Path(drafts_dir).glob("*.json")) if Path(drafts_dir).exists() else []:
         d = json.loads(path.read_text(encoding="utf-8"))

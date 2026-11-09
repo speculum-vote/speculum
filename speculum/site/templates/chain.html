@@ -210,7 +210,7 @@
     fetch('{{ root }}api/dispute', { method: 'POST', headers: { 'content-type': 'application/json' },
       body: JSON.stringify(Object.fromEntries(new FormData(f))) })
       .then(function (r) { return r.json().then(function (j) { return [r.ok, j]; }); })
-      .then(function (x) { msg.textContent = x[0] ? 'Received. The item will be withdrawn on the next nightly update and re-checked against your source.' : (x[1].error || 'Could not send.'); if (!x[0]) send.disabled = false; })
+      .then(function (x) { msg.textContent = x[0] ? 'Received. The item will be withdrawn on the next nightly update and re-checked against your source in the weekly check, on Sundays.' : (x[1].error || 'Could not send.'); if (!x[0]) send.disabled = false; })
       .catch(function () { msg.textContent = 'Could not send. You can also write to the corrections address.'; send.disabled = false; });
   });
 })();

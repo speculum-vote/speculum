@@ -1,0 +1,14 @@
+{
+ "_how": "Spending on the Anthropic API by month, recorded by the code after each call (speculum/budget.py). November 2026 up to Nov. 9 is from the Console's cost report.",
+ "months": {
+  "2026-11": {
+   "spent": 86.2,
+   "by": {
+    "draft": 46.17,
+    "check": 40.03
+   },
+   "calls": 0,
+   "seeded_from": "Console cost report, Nov. 4-9"
+  }
+ }
+}

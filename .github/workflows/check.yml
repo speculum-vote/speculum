@@ -2,16 +2,15 @@ name: Source check
 
 # Revises drafted claims that failed (once each), checks new, changed and disputed claims in The Dependents
 # against their sources, then rebuilds the site.
-# The nightly run does this too; this workflow also runs it on its own: by hand, and once more each afternoon.
+# The weekly AI pass in the nightly run (Sundays) does this too; this workflow runs it by hand only. Every call
+# counts against the monthly AI budget (speculum/budget.py, data/ai_spend.json).
 on:
   workflow_dispatch:
     inputs:
       limit:
         description: "Most claims to check in this run"
         required: false
-        default: "60"
-  schedule:
-    - cron: "23 18 * * *"   # 18:23 UTC (1:23pm Eastern in winter): picks up disputes sent during the day
+        default: "25"
 
 permissions:
   contents: write
@@ -37,20 +36,20 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m speculum chains --revise --limit 30
+        run: python -m speculum chains --revise --limit 10
 
       - name: Check claims against their sources
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: python -m speculum verify --limit ${{ inputs.limit || '60' }}
+        run: python -m speculum verify --limit ${{ inputs.limit || '25' }}
 
       - name: Commit the results
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          for f in data/chains/checks.json data/chains/disputes.json data/chains/drafts; do [ -e "$f" ] && git add "$f"; done
+          for f in data/chains/checks.json data/chains/disputes.json data/chains/drafts data/ai_spend.json; do [ -e "$f" ] && git add "$f"; done
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "Source check $(date -u +%F)"
           for i in 1 2 3; do

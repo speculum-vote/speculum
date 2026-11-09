@@ -24,7 +24,7 @@ from pathlib import Path
 
 import requests
 
-from . import chains
+from . import budget, chains
 
 log = logging.getLogger("speculum.verify")
 
@@ -156,6 +156,7 @@ def _ask(key: str, prompt: str, fetch_urls: list[str]) -> dict:
     r = requests.post(API, timeout=600, headers=headers, json=body)
     r.raise_for_status()
     out = r.json()
+    budget.record("check", out.get("model", MODEL), out.get("usage"), _LEDGER[0])
     text = "".join(b.get("text", "") for b in out.get("content", []) if b.get("type") == "text")
     start = text.find("{")
     if start < 0:
@@ -201,7 +202,11 @@ def _verdict(res: dict, claim: dict) -> str:
     return res.get("result") or "not_supported"
 
 
+_LEDGER = [None]   # the run's data/ai_spend.json, for _ask
+
+
 def run(data_root: Path, limit: int = 40, key: str | None = None) -> dict:
+    _LEDGER[0] = Path(data_root) / "ai_spend.json"
     key = key or os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         log.info("no ANTHROPIC_API_KEY; skipping the source check (unchecked items stay off the public site)")
@@ -225,6 +230,8 @@ def run(data_root: Path, limit: int = 40, key: str | None = None) -> dict:
             disputes.setdefault("closed", []).append({**d, "closed": today, "outcome": "item changed or removed before the check"})
     done = 0
     for fp, d in queue[:limit]:
+        if not budget.allow("check", data_root / "ai_spend.json"):
+            break
         claim = claims[fp]
         try:
             res = check_claim(key, claim, d)

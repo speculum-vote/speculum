@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          for f in data/chains/drafts data/chains/draft_failures.json; do [ -e "$f" ] && git add "$f"; done
+          for f in data/chains/drafts data/chains/draft_failures.json data/ai_spend.json; do [ -e "$f" ] && git add "$f"; done
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "Drafts (by hand)"
           for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done

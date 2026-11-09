@@ -77,30 +77,38 @@ jobs:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
         run: python -m speculum snapshot ${{ inputs.date && format('--date {0}', inputs.date) || '' }} ${{ inputs.only && format('--only {0}', inputs.only) || '' }}
 
+      # The AI steps run once a week, on Sundays (UTC), within the monthly AI budget (speculum/budget.py).
+      - name: Is this the weekly AI pass?
+        id: weekly
+        run: echo "ai=$([ "$(date -u +%u)" = 7 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
       # The three AI steps each have their own limit, so a slow night still commits, archives and deploys
       # (the job's 340 minutes are mostly the fetch). The drafter also stops starting drafts after 30 minutes.
       - name: Draft research for new consequence chains (only when an Anthropic key is set)
+        if: steps.weekly.outputs.ai == 'true'
         continue-on-error: true
         timeout-minutes: 45
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m speculum chains --draft --limit 3
+        run: python -m speculum chains --draft --limit 2
 
       - name: Revise drafted claims that did not pass last night's source check, once each (only when an Anthropic key is set)
+        if: steps.weekly.outputs.ai == 'true'
         continue-on-error: true
         timeout-minutes: 30
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m speculum chains --revise --limit 30
+        run: python -m speculum chains --revise --limit 10
 
       - name: Check new, changed and disputed claims against their sources (only when an Anthropic key is set)
+        if: steps.weekly.outputs.ai == 'true'
         continue-on-error: true
         timeout-minutes: 45
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: python -m speculum verify --limit 80
+        run: python -m speculum verify --limit 25
 
       - name: "Said & Done: count a closed readers' round and open the winning bill"
         continue-on-error: true
@@ -120,7 +128,7 @@ jobs:
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
           git add data/snapshots
-          for f in data/chains/drafts data/chains/draft_failures.json data/chains/checks.json data/chains/disputes.json data/records data/saiddone.json; do [ -e "$f" ] && git add "$f"; done
+          for f in data/chains/drafts data/chains/draft_failures.json data/chains/checks.json data/chains/disputes.json data/records data/saiddone.json data/ai_spend.json; do [ -e "$f" ] && git add "$f"; done
           # Even with nothing to commit, build from the newest main (a launch switch or a correction pushed during the run).
           if git diff --cached --quiet; then echo "no changes"; git pull --rebase origin main || true; exit 0; fi
           DATE=$(ls data/snapshots | sort | tail -1)
