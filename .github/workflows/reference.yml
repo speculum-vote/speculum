@@ -1,0 +1,35 @@
+name: Fetch reference files
+
+# By hand: fetch reference files that rarely change (now: the Census Bureau's ZIP code area to congressional
+# district file, for Find your members) and commit them to data/records. The nightly run fetches any that are missing.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: ZIP code areas to congressional districts
+        run: python -m speculum zcta
+      - name: Commit
+        run: |
+          git config user.name "speculum-bot"
+          git config user.email "speculum-bot@users.noreply.github.com"
+          git add data/records
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Reference files"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1

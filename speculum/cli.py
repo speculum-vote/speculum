@@ -315,6 +315,17 @@ def said_done_data(snap) -> dict:
                           members, clean(snap.read("lobbying.json", {"by_member": {}}), members), snap.read("billinfo.json"))
 
 
+def cmd_zcta(args) -> int:
+    """Fetch the Census Bureau's ZIP code area to congressional district file into data/records (for Find your members)."""
+    from .sources import zcta
+    path = ROOT / "records" / f"zcta_cd{zcta.CONGRESS}.json"
+    if args.if_missing and path.exists():
+        log.info("ZIP code file already there: %s", path)
+        return 0
+    zcta.fetch(path)
+    return 0
+
+
 def cmd_guard(args) -> int:
     """Check the night's data and the built site before deploying; a failure stops the deploy."""
     from . import guard
@@ -396,6 +407,8 @@ def main(argv=None) -> int:
     r = sub.add_parser("restore", help="rebuild a past night's files from git history, checked by SHA-256")
     r.add_argument("date", help="the night, YYYY-MM-DD")
     r.add_argument("--out", help="folder to write into (default restored/<date>)")
+    z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")
+    z.add_argument("--if-missing", action="store_true")
     g = sub.add_parser("guard", help="check the night's data and the built site before deploying")
     g.add_argument("--out", default="dist")
     g.add_argument("--site-only", action="store_true", help="check only the built site")
@@ -403,7 +416,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta}[args.cmd](args)
 
 
 if __name__ == "__main__":

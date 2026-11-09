@@ -110,6 +110,11 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: python -m speculum saiddone
 
+      - name: Fetch any missing reference files (ZIP code areas to districts)
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python -m speculum zcta --if-missing
+
       - name: Commit the snapshot
         run: |
           git config user.name "speculum-bot"
