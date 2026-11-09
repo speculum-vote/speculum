@@ -29,8 +29,9 @@ def vote_kind(question: str | None) -> str:
 def party_agreement(votes: dict, members: list[dict]) -> dict:
     """For each chamber: roll calls where both parties' majorities took the same side, and where at least 90%
     of each party voted together on opposite sides. Quorum calls and votes where a party cast no yea or nay
-    are left out. Party is the member's party in the record (members' current party; senators' party at the vote)."""
-    party = {m["bioguide"]: m["party"] for m in members}
+    are left out. Independents count with the party they caucus with, as everywhere else on the site; a former
+    member not on the roster counts by their party at the vote."""
+    party = {m["bioguide"]: m.get("caucus") or m["party"] for m in members}
     for k, p in (votes.get("people") or {}).items():
         party.setdefault(k, (p or {}).get("party"))
     positions = votes.get("positions") or {}
