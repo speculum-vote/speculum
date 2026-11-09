@@ -7,7 +7,7 @@
 {% from "_toc.html" import toc %}{{ toc([("open", "Both sides of the vote"), ("round", "This week's round"), ("past", "Past rounds") if st.closed else none, ("rule", "The rule")]) }}
 
 <h2 id="open">Both sides of the vote</h2>
-<p class="meta">Said: the organization named the bill on its own lobbying reports. Done: it funded members on each side of the final vote. Lobbying reports never say which side an organization took.</p>
+<p class="meta">Said: the organization named the bill on a lobbying report, its own or one a firm filed for it, and files its own reports. Done: it funded members on each side of the final vote. Lobbying reports never say which side an organization took.</p>
 <div class="themes">
 {% for m in opened %}
 <a href="said/{{ m.slug }}.html"><b>{{ m.label }}</b><span class="n">{{ m.n_both|num }} of {{ m.n_funders|num }}</span>

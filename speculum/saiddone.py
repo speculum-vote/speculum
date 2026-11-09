@@ -36,6 +36,7 @@ DECISION = re.compile(
     r"|On the Motion to Concur"
     r"|Passage, Objections of the President|On Overriding the Veto|On Passage, Objections)", re.I)
 
+LD2_URL = "https://lda.gov/filings/public/filing/{}/print"
 MIN_FUNDERS = 5          # a bill joins the ballot once this many organizations that lobbied it funded voters
 SELF = {"self", "", "same", "myself"}
 
@@ -96,7 +97,8 @@ def measure(key: tuple[int, str], lobbied_entry: dict, rolls: list[dict], positi
         votes.append({"id": v["id"], "chamber": v["chamber"], "date": (v.get("date") or "")[:10], "question": v.get("question"),
                       "result": v.get("result"), "url": v.get("url"), "yes": y, "no": n})
     orgs, lobbied_own = [], 0
-    for o in lobbied_entry["orgs"].values():
+    files = lobbied_entry.get("files") or {}
+    for okey, o in lobbied_entry["orgs"].items():
         rid = o[2]
         if not rid:
             continue
@@ -124,7 +126,10 @@ def measure(key: tuple[int, str], lobbied_entry: dict, rolls: list[dict], positi
         orgs.append({"name": o[0], "sector": o[1], "sector_name": S.NAMES.get(o[1], o[1]), "registrant": str(rid),
                      "both": bool(to["Y"]) and bool(to["N"]), "yes": part("Y"), "no": part("N"),
                      "filings": [{"url": u, "period": p} for u, p in sorted(filings.items(), key=lambda kv: kv[0])][:8],
-                     "n_filings": len(filings)})
+                     "n_filings": len(filings),
+                     # Said: the LD-2 reports that name the bill (filed by the organization or a firm it hired), oldest first.
+                     "said": [{"url": LD2_URL.format(u), "quarter": q} for q, u in sorted(set(files.get(okey) or []))][:8],
+                     "n_said": len(set(files.get(okey) or []))})
     orgs.sort(key=lambda x: (not x["both"], -(x["yes"]["amount"] + x["no"]["amount"]), (x["name"] or "").lower()))
     both = [o for o in orgs if o["both"]]
     total = lambda rows, s: round(sum(o[s]["amount"] for o in rows), 2)

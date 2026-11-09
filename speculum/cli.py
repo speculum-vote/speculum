@@ -85,8 +85,10 @@ def cmd_snapshot(args) -> int:
 
     def _spend():
         from .sources import lobbyspend
+        bf = ROOT / "records" / "ld2_bill_filings_backfill.json"   # one-time: report links for quarters fetched before Nov. 9
         return lobbyspend.fetch_spend(fetch, keys["lda"], run_date, previous=_latest(snap, "spend.json"),
-                                      deadline=deadline - 150 * 60)   # leave advocacy and finance time
+                                      deadline=deadline - 150 * 60,   # leave advocacy and finance time
+                                      backfill=json.loads(bf.read_text(encoding="utf-8")) if bf.exists() else None)
     spend = step("spend", _spend)
     if spend is not None:
         snap.write("spend.json", spend)

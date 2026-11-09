@@ -154,6 +154,7 @@ def aggregate(filings: list[dict]) -> dict:
     bill_orgs: dict[str, dict] = {}
     bill_reports: dict[str, int] = defaultdict(int)
     bill_lobbyists: dict[str, dict] = {}
+    bill_files: dict[str, dict] = {}                 # bill -> organization -> the reports (filing UUIDs) that name it
     orgs: dict[str, list] = {}
     people: dict[str, list] = {}
     registrants: dict[str, dict] = {}
@@ -189,6 +190,8 @@ def aggregate(filings: list[dict]) -> dict:
         for b in named:
             if okey:
                 bill_orgs.setdefault(b, {})[okey] = 1
+                if f.get("filing_uuid"):
+                    bill_files.setdefault(b, {}).setdefault(okey, []).append(f["filing_uuid"])
             bill_reports[b] += 1
         for a in f.get("lobbying_activities") or []:
             c = a.get("general_issue_code")
@@ -225,13 +228,18 @@ def aggregate(filings: list[dict]) -> dict:
         # people: lobbyist id -> [name, former government post as reported].
         "bills": {b: {"orgs": sorted(o), "reports": bill_reports[b], "former": sorted(bill_lobbyists.get(b, {}))}
                   for b, o in bill_orgs.items()},
+        # The reports behind each bill's organizations, so a reader can open them (lda.gov/filings/public/filing/<uuid>/print).
+        "bill_filings": {b: {k: sorted(v) for k, v in o.items()} for b, o in bill_files.items()},
         "orgs": {k: orgs[k] for k in set().union(*bill_orgs.values()) if k in orgs} if bill_orgs else {},
         "people": {k: v for k, v in people.items()},
     }
 
 
-def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = None, deadline=None) -> dict:
-    """Quarters already fetched and older than REFRESH_DAYS are carried over from the last snapshot."""
+def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = None, deadline=None,
+                backfill: dict | None = None) -> dict:
+    """Quarters already fetched and older than REFRESH_DAYS are carried over from the last snapshot. A carried
+    quarter saved before the reports behind each bill were kept gets them from `backfill` ({quarter: bill_filings},
+    rebuilt from that quarter's archived raw filings by the same `aggregate`)."""
     fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
     today = date.fromisoformat(run_date)
     prev = (previous or {}).get("quarters", {})
@@ -241,6 +249,9 @@ def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = N
         old = prev.get(label)
         fresh = (today - _deadline(y, q)).days <= REFRESH_DAYS
         if old and old.get("complete") and not fresh:
+            if "bill_filings" not in old and (backfill or {}).get(label) is not None:
+                old = {**old, "bill_filings": backfill[label]}
+                log.info("lobbying spend %s: report links added from the archived filings", label)
             out[label] = old
             continue
         filings, complete = _fetch_quarter(fetch, key, y, q, deadline)

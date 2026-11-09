@@ -34,15 +34,16 @@
 <p class="meta">Counts and amounts cover every contribution these organizations reported for {{ years }}, before or after the vote, to members who voted yes or no.</p>
 
 <h2 id="orgs">The organizations</h2>
-<p class="meta">Each organization that lobbied {{ m.label }} and funded members who voted on it, with whom it funded on each side and the LD-203 reports that list the contributions. Organizations that funded both sides come first, then by total given.</p>
+<p class="meta">Each organization that lobbied {{ m.label }} and funded members who voted on it, with whom it funded on each side, the lobbying reports that name the bill and the LD-203 reports that list the contributions. Organizations that funded both sides come first, then by total given.</p>
 <div class="tbl-wrap"><table class="said">
-<thead><tr><th>Organization</th><th class="r">Members voting yes it funded</th><th class="r">Members voting no it funded</th><th>Reports</th></tr></thead>
+<thead><tr><th>Organization</th><th class="r">Members voting yes it funded</th><th class="r">Members voting no it funded</th><th>Said (LD-2)</th><th>Done (LD-203)</th></tr></thead>
 <tbody>{% for o in m.orgs %}
 <tr{% if o.both %} class="both"{% endif %}><td>{{ o.name|org }}<div class="muted gsub">{{ o.sector_name }}{% if o.both %} · <span class="gold">both sides</span>{% endif %}</div></td>
 {% for s in [o.yes, o.no] %}<td class="r num">{% if s.members %}{{ s.members }} · {{ s.amount|money }}<div class="muted gsub">{% for p, n in s.party.items() %}{{ n }} {{ p }}{{ ' · ' if not loop.last }}{% endfor %}</div>{% else %}<span class="muted">—</span>{% endif %}</td>{% endfor %}
+<td class="num">{% for f in o.said %}<a href="{{ f.url }}" title="{{ f.quarter }} lobbying report">{{ f.quarter[2:4] }}Q{{ f.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_said > o.said|length %} <span class="muted">+{{ o.n_said - o.said|length }}</span>{% endif %}{% if not o.said %}<span class="muted">—</span>{% endif %}</td>
 <td class="num">{% for f in o.filings %}<a href="{{ f.url }}" title="{{ f.period }}">{{ loop.index }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_filings > o.filings|length %} <span class="muted">+{{ o.n_filings - o.filings|length }}</span>{% endif %}</td></tr>
 {% endfor %}</tbody></table></div>
-<p class="meta">D, R and I are members' current parties. Each number under Reports opens one LD-203 report at lda.gov.</p>
+<p class="meta">D, R and I are members' current parties. Under Said, each link opens a quarterly lobbying report (LD-2) that names {{ m.label }}, labeled by year and quarter (25Q1 is January–March 2025); it may be the organization's own report or one a firm filed for it. Under Done, each number opens an LD-203 report that lists the contributions. All at lda.gov.</p>
 
 <h2 id="rule">The rule</h2>
 <p>Lobbied: named the bill on a lobbying report (LD-2) and files its own reports; lobbying firms are left out. The vote: in each chamber, the last roll call that decided the measure itself. Funded: federal campaign contributions the organization or its PAC reported on LD-203 to a member who voted yea or nay, for {{ years }}; contributions a lobbyist reports as their own are not counted. Both sides: at least one member funded on each side. <a href="../saiddone.html#rule">The full rule →</a></p>

@@ -60,3 +60,13 @@ def test_rounds_open_first_bill_then_count():
     assert st2["round"]["candidates"] == ["119-a", "119-c"] and st2["round"]["id"] == "2026-11-15"
     st3 = sd.advance(st2, data, "2026-11-22", lambda r: {})
     assert st3["closed"][-1]["winner"] is None and len(st3["opened"]) == 2          # no votes, nothing opens
+
+
+def test_lobbying_report_links_follow_the_bill_through_quarters():
+    from speculum import bills
+    spend = {"quarters": {
+        "2025-Q2": {"bills": {"HR1": {"orgs": ["acme"], "reports": 2}}, "orgs": {"acme": ["Acme", "biz", "9"]},
+                    "bill_filings": {"HR1": {"acme": ["u2", "u1"]}}},
+        "2025-Q3": {"bills": {"HR1": {"orgs": ["acme"], "reports": 1}}, "orgs": {"acme": ["Acme", "biz", "9"]}}}}
+    e = bills.collect(spend)[(119, "HR1")]
+    assert sorted(e["files"]["acme"]) == [("2025-Q2", "u1"), ("2025-Q2", "u2")]

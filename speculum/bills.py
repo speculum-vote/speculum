@@ -51,7 +51,7 @@ def collect(spend: dict | None, info: dict | None = None) -> dict:
             intro = (info.get(f"{cg}-{b}") or {}).get("introduced")
             if intro and intro > qend:
                 continue
-            e = out.setdefault((cg, b), {"orgs": {}, "reports": 0, "quarters": [], "former": {}})
+            e = out.setdefault((cg, b), {"orgs": {}, "reports": 0, "quarters": [], "former": {}, "files": {}})
             for k in v.get("orgs") or []:
                 if k in orgs and k not in e["orgs"]:
                     e["orgs"][k] = orgs[k]
@@ -60,6 +60,8 @@ def collect(spend: dict | None, info: dict | None = None) -> dict:
             for lid in v.get("former") or []:
                 if lid in people and is_post(people[lid][1] if len(people[lid]) > 1 else ""):
                     e["former"][lid] = people[lid]
+            for k, uuids in ((q.get("bill_filings") or {}).get(b) or {}).items():   # the reports themselves, where kept
+                e["files"].setdefault(k, []).extend((label, u) for u in uuids)
             e["reports"] += v.get("reports", 0)
             e["quarters"].append(label)
     return out
