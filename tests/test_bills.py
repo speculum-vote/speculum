@@ -18,7 +18,7 @@ def test_sectors_follow_the_published_order():
 
 
 def _q(bills_, orgs):
-    return {"bills": bills_, "orgs": orgs, "people": {"7": ["Pat Doe", "Former Chief of Staff"]}}
+    return {"bills": bills_, "orgs": orgs, "people": {"7": ["Pat Doe", "Chief of Staff, Rep. Pat Smith"]}}
 
 
 def test_mentions_before_a_bill_was_introduced_are_left_out():
@@ -30,3 +30,13 @@ def test_mentions_before_a_bill_was_introduced_are_left_out():
     c = bills.collect(spend, info)[(119, "HR9")]
     assert list(c["orgs"]) == ["b"] and c["quarters"] == ["2025-Q3"] and "7" in c["former"]
     assert list(bills.collect(spend)[(119, "HR9")]["orgs"]) == ["a", "b"]
+
+
+def test_a_former_post_must_name_a_government_office():
+    from speculum.sources.lobbyspend import is_post
+    for t in ["Chief of Staff, Rep. Pat Smith", "Professional Staff, Senate Appropriations Committee", "Aide to Sens. Inhofe and Tillis",
+              "Deputy CoS - USDOT", "Special Assistant to the President", "LegCorr.SenLautenberg"]:
+        assert is_post(t), t
+    for t in ["None", "N/A", "Director of Government Relations", "Lobbyist", "Vice President of Federal Government Affairs",
+              "Legislative Director", "President", "Represented clients"]:
+        assert not is_post(t), t

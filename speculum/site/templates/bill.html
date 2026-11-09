@@ -39,7 +39,7 @@
 
 {% if x.former %}
 <h2 id="former">Former government officials among its lobbyists</h2>
-<p class="meta">Lobbyists who named this bill on a report and list a covered government post, as they reported it.</p>
+<p class="meta">Lobbyists who named this bill on a report and list a covered government post that names a government office, as they reported it. <a href="{{ root }}method.html#bills">How this is counted →</a></p>
 <details{% if x.former|length <= 20 %} open{% endif %}><summary>{{ x.former|length|num }} lobbyist{{ 's' if x.former|length != 1 }}</summary>
 <ul class="plain former">{% for p in x.former %}<li><b>{{ p.name }}</b> <span class="muted">· {{ p.post }}</span></li>{% endfor %}</ul></details>
 {% endif %}

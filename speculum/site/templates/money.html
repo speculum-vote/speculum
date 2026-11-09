@@ -6,7 +6,7 @@
 <p class="meta">Seats now: {{ d.seats.all.get('D', 0) }} Democrats · {{ d.seats.all.get('R', 0) }} Republicans · {{ d.seats.all.get('I', 0) }} independents · <a href="funders.html">Do the parties share funders? →</a></p>
 
 <h2>1 · Where campaign money comes from</h2>
-<p class="meta">Receipts of each member's principal campaign committee this cycle (FEC), through {{ (d.campaign.values()|map(attribute='through')|max) if d.campaign else '—' }}. Small gifts are individual gifts under $200, which campaigns need not itemize. PACs include every political committee that is not a party. Other is the rest of total receipts, such as transfers from joint fundraising committees (which pass on money raised from individuals and PACs together), loans and refunds.</p>
+<p class="meta">Receipts of each member's principal campaign committee this cycle (FEC), through {{ (d.campaign.values()|map(attribute='through')|max) if d.campaign else '—' }}. Small gifts are individual gifts under $200, which campaigns need not itemize. PACs include every political committee that is not a party. Other is the rest of total receipts, such as transfers from joint fundraising committees (which pass on money raised from individuals and PACs together), loans and refunds. Members with no campaign committee on file this cycle are left out, so a party's member count here can be below its seats.</p>
 <div class="mlegend">
   <span><i style="background:var(--small)"></i>Small individual gifts</span><span><i style="background:var(--large)"></i>Larger individual gifts</span>
   <span><i style="background:var(--pac)"></i>PACs and other committees</span><span><i style="background:var(--party)"></i>Party</span>

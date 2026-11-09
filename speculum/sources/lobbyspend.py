@@ -60,6 +60,29 @@ def no_post(text: str | None) -> bool:
     return (text or "").strip().strip(".").strip().lower() in ("", "none", "n/a", "na", "no", "not applicable", "-", "none listed")
 
 
+# A covered-position entry counts as a government post only when it names a government office or body: a member
+# ("Rep.", "Sen."), a chamber or committee, the White House, a department, agency or court. Entries that name only a
+# job ("Director of Government Relations", "Lobbyist", "Legislative Director") are left out, since filers often put
+# their current private job on this line. A few real posts written without an office are left out with them.
+_GOV_POST = re.compile(
+    r"\b(rep|reps|representative|congress(man|woman|ional)?|cong|sen|sens|senator|senate|house|committee|cmte|comm|subcommittee|subcmte|sbcmte|"
+    r"white house|eop|executive office|nsc|omb|ustr|department|dept|agency|administration|ambassador|embassy|united states|"
+    r"federal (?!affairs|relations|government affairs|government relations|policy|legislative|legislation|advocacy|public)|"
+    r"capitol|caucus|speaker|whip|majority leader|minority leader|leader (mcconnell|schumer|reid|pelosi|mccarthy|hoyer|scalise|jeffries|thune|frist|lott|daschle|boehner|cantor)|"
+    r"professional staff|sergeant at arms|parliamentarian|"
+    r"gao|cbo|crs|fda|epa|dod|doe|doj|dot|dhs|hhs|hud|usda|usdot|usdod|usdoj|usaid|uspto|usps|noaa|nps|blm|ssa|treasury|irs|sec|ftc|fcc|fema|nasa|cms|nih|cdc|nhtsa|faa|fhfa|cftc|cpsc|ferc|nrc|"
+    r"army|navy|air force|marine corps|coast guard|national guard|military|"
+    r"to the president|vice president of the united states|secretary of|assistant secretary|under secretary|deputy secretary|"
+    r"governor|mayor|state of|commission|commissioner|bureau|office of|court|judge|attorney general|justice)\b"
+    r"|\bU\.\s?S\.?(?=\s|$)|\bUS (house|senate|army|navy|department|dept|embassy|government)\b"
+    r"|(?-i:(Rep|Sen)[A-Z][a-z])", re.I)
+
+
+def is_post(text: str | None) -> bool:
+    """A covered-position entry that names a government office (see _GOV_POST)."""
+    return not no_post(text) and bool(_GOV_POST.search(text or ""))
+
+
 def bills_in(text: str | None) -> list[str]:
     """Bill keys named in a description, e.g. ['HR1', 'S2296'], in order, without repeats."""
     out = []
