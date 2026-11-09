@@ -313,6 +313,22 @@ def said_done_data(snap) -> dict:
                           members, clean(snap.read("lobbying.json", {"by_member": {}}), members), snap.read("billinfo.json"))
 
 
+def cmd_guard(args) -> int:
+    """Check the night's data and the built site before deploying; a failure stops the deploy."""
+    from . import guard
+    from .snapshot import latest
+    snap = latest(ROOT / "snapshots")
+    problems = guard.check_data(ROOT / "snapshots") if not args.site_only else []
+    problems += guard.check_site(Path(args.out), len(snap.read("members.json", []) or []) if snap else None)
+    for p in problems:
+        print(f"::error::guard: {p}")
+    if problems:
+        log.error("guard: %d problem(s); not deploying. The last good site stays up. Expected drops go in data/guard.json.", len(problems))
+        return 1
+    log.info("guard: data and site look right")
+    return 0
+
+
 def cmd_saiddone(args) -> int:
     """Bring the readers' rounds up to date: count a closed round, open its winner, start the next round."""
     from . import saiddone
@@ -378,11 +394,14 @@ def main(argv=None) -> int:
     r = sub.add_parser("restore", help="rebuild a past night's files from git history, checked by SHA-256")
     r.add_argument("date", help="the night, YYYY-MM-DD")
     r.add_argument("--out", help="folder to write into (default restored/<date>)")
+    g = sub.add_parser("guard", help="check the night's data and the built site before deploying")
+    g.add_argument("--out", default="dist")
+    g.add_argument("--site-only", action="store_true", help="check only the built site")
     sd = sub.add_parser("saiddone", help="Said & Done: count a closed readers' round and start the next")
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,7 @@ on:
 permissions:
   contents: write
   actions: read
+  issues: write
 
 concurrency:
   group: nightly
@@ -148,6 +149,10 @@ jobs:
       - name: Build the site
         run: python -m speculum build --out dist
 
+      # A night whose data or pages look wrong is saved (committed above) but not published.
+      - name: Check the data and the built site before publishing
+        run: python -m speculum guard --out dist
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -159,3 +164,17 @@ jobs:
           SPECULUM_ADMIN_PASSWORD: ${{ secrets.SPECULUM_ADMIN_PASSWORD }}
           CLOUDFLARE_ACCESS_TOKEN: ${{ secrets.CLOUDFLARE_ACCESS_TOKEN }}
         run: bash scripts/deploy.sh
+
+  # Runs even when the snapshot job fails or hits its time limit.
+  alert:
+    needs: [gate, snapshot]
+    if: always() && needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - name: Open, update or close the "Nightly run failed" issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/alert.sh "${{ needs.snapshot.result }}" "Nightly run failed"
