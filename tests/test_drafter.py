@@ -53,3 +53,11 @@ def test_a_cut_off_answer_says_so():
 def test_text_json_still_parses_with_trailing_words():
     body = {"stop_reason": "end_turn", "content": [{"type": "text", "text": 'Here it is: {"a": 1} Hope that helps {x}'}]}
     assert interpret.parse_draft(body) == {"a": 1}
+
+
+def test_a_wrapped_tool_answer_is_unwrapped():
+    for inp in ({"input": {"mechanism": {}, "outcomes": []}}, {"draft": '{"mechanism": {}, "outcomes": []}'}):
+        body = {"stop_reason": "tool_use", "content": [{"type": "tool_use", "name": "record_draft", "input": inp}]}
+        assert sorted(interpret.parse_draft(body)) == ["mechanism", "outcomes"]
+    one = {"stop_reason": "tool_use", "content": [{"type": "tool_use", "name": "record_draft", "input": {"drop": True}}]}
+    assert interpret.parse_draft(one) == {"drop": True}

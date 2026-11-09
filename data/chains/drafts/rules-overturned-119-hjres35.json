@@ -1,203 +1,201 @@
 {
- "input": {
-  "mechanism": {
-   "rule": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule, RIN 2060-AW02; 40 CFR parts 2, 98 subpart A, and 99)",
-   "agency": "Environmental Protection Agency",
-   "federal_register": "89 FR 91094",
-   "published": "2024-11-18",
-   "effective": "2025-01-17",
-   "required": "Implemented the Clean Air Act methane Waste Emissions Charge (WEC) created by the Inflation Reduction Act. It set a charge on methane emissions from applicable facilities that report more than 25,000 metric tons of CO2 equivalent per year to the Greenhouse Gas Reporting Program, applying only to emissions above the statutory waste emissions thresholds. It allowed netting among WEC-applicable facilities under common ownership or control and set exemptions: regulatory compliance (facilities in compliance with CAA 111(b) and (d) methane requirements), unreasonable permitting delay for gathering or transmission infrastructure, and wells plugged in the previous year.",
-   "benefits": "EPA's Regulatory Impact Analysis lists monetized climate benefits of $2,400 million present value and $230 million equivalent annual value (the same figures under each of the three discount-rate columns), for 2024 to 2035. EPA also projected reductions of 1.2 million metric tons of methane from 2024 to 2035. EPA states its monetized benefits are limited to climate benefits; VOC and HAP reductions are not monetized.",
-   "costs": "EPA's Federal Register table lists total social costs of $460 million present value and $43 million equivalent annual value, with further pairs of $440/$44 million and $380/$48 million, for 2024 through 2035. EPA states costs include engineering costs for methane mitigation and costs from production changes in oil and gas markets. WEC payments are treated separately as transfers. A CRS report notes that CBO's 2022 estimate of emissions subject to the charge in FY2026 is about 75% higher than EPA's estimate.",
-   "agency_reasons": "EPA stated the rule facilitates compliance with the Inflation Reduction Act provisions requiring it to collect an annual WEC on methane emissions above specified levels. EPA also stated that facilities are expected to take methane mitigation actions where the cost is less than the WEC payments avoided.",
-   "sponsor_reasons": "In House floor debate on 2025-02-26, Rep. Griffith, who called up the resolution, urged repeal of what he called the Biden administration's natural gas tax and referred to small and midsize independent petroleum drillers.",
-   "status": "Became law. H.J.Res. 35 passed the House on 2025-02-26 and the Senate on 2025-02-27 (52-47) and was approved on 2025-03-14 as Public Law 119-2 (139 Stat. 7), providing that the rule 'shall have no force or effect'. EPA has stated the rule has no legal force or effect and removed it from the CFR effective 2025-05-19. The rule is void.",
-   "sources": [
-    {
-     "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
-     "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
-     "publisher": "Federal Register",
-     "date": "2024-11-18"
-    },
-    {
-     "title": "Regulatory Impact Analysis of the Waste Emissions Charge (final)",
-     "url": "https://www.epa.gov/system/files/documents/2024-11/wec-ria-final_11-2024.pdf",
-     "publisher": "U.S. EPA",
-     "date": "2024-11"
-    },
-    {
-     "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Final Rule (webinar)",
-     "url": "https://www.epa.gov/system/files/documents/2024-12/webinar_wec_final_rule_nov2024.pdf",
-     "publisher": "U.S. EPA",
-     "date": "2024-12"
-    },
-    {
-     "title": "Public Law 119-2 (H.J. Res. 35)",
-     "url": "https://www.govinfo.gov/bulkdata/PLAW/119/public/PLAW-119publ2.xml",
-     "publisher": "govinfo.gov",
-     "date": "2025-03-14"
-    },
-    {
-     "title": "H.J.Res.35 bill status",
-     "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hjres/BILLSTATUS-119hjres35.xml",
-     "publisher": "govinfo.gov",
-     "date": "2025-03-14"
-    },
-    {
-     "title": "Congressional Review Act Revocation of Waste Emissions Charge for Petroleum and Natural Gas Systems",
-     "url": "https://www.federalregister.gov/documents/2025/05/19/2025-08688/congressional-review-act-revocation-of-waste-emissions-charge-for-petroleum-and-natural-gas-systems",
-     "publisher": "Federal Register",
-     "date": "2025-05-19"
-    },
-    {
-     "title": "Congressional Record, House, H846 (H.J. Res. 35 debate)",
-     "url": "https://govinfo.gov/link/crec/171/h/846",
-     "publisher": "govinfo.gov",
-     "date": "2025-02-26"
-    },
-    {
-     "title": "H.J. Res. 35 cost estimate",
-     "url": "https://cbo.gov/system/files/2025-02/hjres35.pdf",
-     "publisher": "Congressional Budget Office",
-     "date": "2025-02-26"
-    },
-    {
-     "title": "Inflation Reduction Act Methane Emissions Charge: Overview and Developments (R48475)",
-     "url": "https://www.everycrsreport.com/reports/R48475.html",
-     "publisher": "Congressional Research Service",
-     "date": "2025"
-    },
-    {
-     "title": "Fact Sheet: Final Rule: Waste Emissions Charge for Petroleum and Natural Gas Systems",
-     "url": "https://www.epa.gov/system/files/documents/2024-11/wec-final-fact-sheet_11-2024.pdf",
-     "publisher": "U.S. EPA",
-     "date": "2024-11"
-    },
-    {
-     "title": "Regulatory Impact Analysis of the Waste Emissions Charge, executive summary (docket EPA-HQ-OAR-2023-0434-1106)",
-     "url": "https://downloads.regulations.gov/EPA-HQ-OAR-2023-0434-1106/attachment_21.pdf",
-     "publisher": "regulations.gov / U.S. EPA",
-     "date": "2024-11"
-    }
-   ],
-   "field_sources": {
-    "rule": [
-     0
-    ],
-    "required": [
-     2,
-     0
-    ],
-    "benefits": [
-     0,
-     1
-    ],
-    "costs": [
-     0,
-     8
-    ],
-    "agency_reasons": [
-     9,
-     0
-    ],
-    "sponsor_reasons": [
-     6
-    ],
-    "status": [
-     3,
-     4,
-     5
-    ]
-   }
-  },
-  "outcomes": [
+ "mechanism": {
+  "rule": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule, RIN 2060-AW02; 40 CFR parts 2, 98 subpart A, and 99)",
+  "agency": "Environmental Protection Agency",
+  "federal_register": "89 FR 91094",
+  "published": "2024-11-18",
+  "effective": "2025-01-17",
+  "required": "Implemented the Clean Air Act methane Waste Emissions Charge (WEC) created by the Inflation Reduction Act. It set a charge on methane emissions from applicable facilities that report more than 25,000 metric tons of CO2 equivalent per year to the Greenhouse Gas Reporting Program, applying only to emissions above the statutory waste emissions thresholds. It allowed netting among WEC-applicable facilities under common ownership or control and set exemptions: regulatory compliance (facilities in compliance with CAA 111(b) and (d) methane requirements), unreasonable permitting delay for gathering or transmission infrastructure, and wells plugged in the previous year.",
+  "benefits": "EPA's Regulatory Impact Analysis lists monetized climate benefits of $2,400 million present value and $230 million equivalent annual value (the same figures under each of the three discount-rate columns), for 2024 to 2035. EPA also projected reductions of 1.2 million metric tons of methane from 2024 to 2035. EPA states its monetized benefits are limited to climate benefits; VOC and HAP reductions are not monetized.",
+  "costs": "EPA's Federal Register table lists total social costs of $460 million present value and $43 million equivalent annual value, with further pairs of $440/$44 million and $380/$48 million, for 2024 through 2035. EPA states costs include engineering costs for methane mitigation and costs from production changes in oil and gas markets. WEC payments are treated separately as transfers. A CRS report notes that CBO's 2022 estimate of emissions subject to the charge in FY2026 is about 75% higher than EPA's estimate.",
+  "agency_reasons": "EPA stated the rule facilitates compliance with the Inflation Reduction Act provisions requiring it to collect an annual WEC on methane emissions above specified levels. EPA also stated that facilities are expected to take methane mitigation actions where the cost is less than the WEC payments avoided.",
+  "sponsor_reasons": "In House floor debate on 2025-02-26, Rep. Griffith, who called up the resolution, urged repeal of what he called the Biden administration's natural gas tax and referred to small and midsize independent petroleum drillers.",
+  "status": "Became law. H.J.Res. 35 passed the House on 2025-02-26 and the Senate on 2025-02-27 (52-47) and was approved on 2025-03-14 as Public Law 119-2 (139 Stat. 7), providing that the rule 'shall have no force or effect'. EPA has stated the rule has no legal force or effect and removed it from the CFR effective 2025-05-19. The rule is void.",
+  "sources": [
    {
-    "grade": "documented",
-    "claim": "EPA recorded that, under the joint resolution and the Congressional Review Act, the 2024 WEC final rule has no legal force or effect; the action took effect on 2025-05-19.",
-    "date": "2025-05-19",
-    "quote": "Under the joint resolution and by operation of the CRA, the 2024 WEC Final Rule now has no legal force or effect.",
-    "locator": "SUMMARY",
-    "source": {
-     "title": "Congressional Review Act Revocation of Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions",
-     "url": "https://www.federalregister.gov/documents/2025/05/19/2025-08688/congressional-review-act-revocation-of-waste-emissions-charge-for-petroleum-and-natural-gas-systems",
-     "publisher": "Federal Register",
-     "date": "2025-05-19"
-    },
-    "counterpoint": ""
+    "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
+    "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
+    "publisher": "Federal Register",
+    "date": "2024-11-18"
    },
    {
-    "grade": "estimated",
-    "claim": "CBO estimated, before the vote, that H.J.Res. 35 would decrease federal revenues by $7,475 million over fiscal years 2025-2035 (and $6,075 million over 2025-2030).",
-    "date": "2025-02-26",
-    "quote": "Revenues -400 -1,300 -1,400 -1,300 -1,300 -375 -300 -275 -275 -275 -275 -6,075 -7,475",
-    "locator": "Table, 'Estimated revenue effects of H.J. Res. 35' (By Fiscal Year, Millions of Dollars), Decreases in Revenues row",
-    "source": {
-     "title": "H.J. Res. 35 cost estimate",
-     "url": "https://cbo.gov/system/files/2025-02/hjres35.pdf",
-     "publisher": "Congressional Budget Office",
-     "date": "2025-02-26"
-    },
-    "counterpoint": ""
+    "title": "Regulatory Impact Analysis of the Waste Emissions Charge (final)",
+    "url": "https://www.epa.gov/system/files/documents/2024-11/wec-ria-final_11-2024.pdf",
+    "publisher": "U.S. EPA",
+    "date": "2024-11"
    },
    {
-    "grade": "estimated",
-    "claim": "EPA's analysis projected industry WEC transfer payments reaching a maximum of $560 million in 2025 under the rule, a burden the rule's removal lifted.",
-    "date": "2024-11-18",
-    "quote": "At the same time, the final WEC is projected to result in substantial transfer payments by the oil and gas industry to comply with the rule, reaching a maximum of $560 million in 2025.",
-    "locator": "RIA executive summary, benefit-cost discussion",
-    "source": {
-     "title": "Regulatory Impact Analysis of the Waste Emissions Charge, executive summary (docket EPA-HQ-OAR-2023-0434-1106)",
-     "url": "https://downloads.regulations.gov/EPA-HQ-OAR-2023-0434-1106/attachment_21.pdf",
-     "publisher": "regulations.gov / U.S. EPA",
-     "date": "2024-11"
-    },
-    "counterpoint": "The same summary states the emissions reductions projected under the rule are likely to produce climate benefits peaking at $530 million to $890 million in 2027."
+    "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Final Rule (webinar)",
+    "url": "https://www.epa.gov/system/files/documents/2024-12/webinar_wec_final_rule_nov2024.pdf",
+    "publisher": "U.S. EPA",
+    "date": "2024-12"
    },
    {
-    "grade": "estimated",
-    "claim": "EPA's Federal Register table lists the rule's total social costs, 2024 through 2035, as $460 million present value and $43 million equivalent annual value, with further pairs of $440/$44 million and $380/$48 million; the rule's removal lifted these projected costs.",
-    "date": "2024-11-18",
-    "quote": "| Total Social Costs | $460 | $43 | $440 | $44 | $380 | $48 |",
-    "locator": "Impacts of the Final Rule, benefit-cost table",
-    "source": {
-     "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
-     "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
-     "publisher": "Federal Register",
-     "date": "2024-11-18"
-    },
-    "counterpoint": "The same table lists monetized climate benefits of $2,400 million present value and $230 million equivalent annual value."
+    "title": "Public Law 119-2 (H.J. Res. 35)",
+    "url": "https://www.govinfo.gov/bulkdata/PLAW/119/public/PLAW-119publ2.xml",
+    "publisher": "govinfo.gov",
+    "date": "2025-03-14"
    },
    {
-    "grade": "estimated",
-    "claim": "EPA's analysis projected monetized climate benefits of $2,400 million present value and $230 million equivalent annual value from the rule for 2024 to 2035; the rule's removal forgoes these projected benefits.",
-    "date": "2024-11-18",
-    "quote": "| Monetized Climate Benefits^a  | $2,400  | $230  | $2,400  | $230  | $2,400  | $230  |",
-    "locator": "RIA, benefit-cost table (Section 1 / Table 1-4, Section 7)",
-    "source": {
-     "title": "Regulatory Impact Analysis of the Waste Emissions Charge (final)",
-     "url": "https://www.epa.gov/system/files/documents/2024-11/wec-ria-final_11-2024.pdf",
-     "publisher": "U.S. EPA",
-     "date": "2024-11"
-    },
-    "counterpoint": "The same RIA states the monetized benefits of the rule are limited to the estimated climate benefits from projected methane emissions reductions."
+    "title": "H.J.Res.35 bill status",
+    "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hjres/BILLSTATUS-119hjres35.xml",
+    "publisher": "govinfo.gov",
+    "date": "2025-03-14"
    },
    {
-    "grade": "estimated",
-    "claim": "EPA projected climate and ozone health benefits from reducing 1.2 million metric tons of methane from 2024 to 2035 under the rule.",
-    "date": "2024-11-18",
-    "quote": "Climate and ozone health benefits from reducing 1.2 million metric tons of methane from 2024 to 2035",
-    "locator": "Impacts of the Final Rule, benefit-cost table, Non-Monetized Benefits row",
-    "source": {
-     "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
-     "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
-     "publisher": "Federal Register",
-     "date": "2024-11-18"
-    },
-    "counterpoint": "The same document states costs include engineering costs for methane mitigation actions and costs resulting from production changes in oil and gas energy markets."
+    "title": "Congressional Review Act Revocation of Waste Emissions Charge for Petroleum and Natural Gas Systems",
+    "url": "https://www.federalregister.gov/documents/2025/05/19/2025-08688/congressional-review-act-revocation-of-waste-emissions-charge-for-petroleum-and-natural-gas-systems",
+    "publisher": "Federal Register",
+    "date": "2025-05-19"
+   },
+   {
+    "title": "Congressional Record, House, H846 (H.J. Res. 35 debate)",
+    "url": "https://govinfo.gov/link/crec/171/h/846",
+    "publisher": "govinfo.gov",
+    "date": "2025-02-26"
+   },
+   {
+    "title": "H.J. Res. 35 cost estimate",
+    "url": "https://cbo.gov/system/files/2025-02/hjres35.pdf",
+    "publisher": "Congressional Budget Office",
+    "date": "2025-02-26"
+   },
+   {
+    "title": "Inflation Reduction Act Methane Emissions Charge: Overview and Developments (R48475)",
+    "url": "https://www.everycrsreport.com/reports/R48475.html",
+    "publisher": "Congressional Research Service",
+    "date": "2025"
+   },
+   {
+    "title": "Fact Sheet: Final Rule: Waste Emissions Charge for Petroleum and Natural Gas Systems",
+    "url": "https://www.epa.gov/system/files/documents/2024-11/wec-final-fact-sheet_11-2024.pdf",
+    "publisher": "U.S. EPA",
+    "date": "2024-11"
+   },
+   {
+    "title": "Regulatory Impact Analysis of the Waste Emissions Charge, executive summary (docket EPA-HQ-OAR-2023-0434-1106)",
+    "url": "https://downloads.regulations.gov/EPA-HQ-OAR-2023-0434-1106/attachment_21.pdf",
+    "publisher": "regulations.gov / U.S. EPA",
+    "date": "2024-11"
    }
   ],
-  "notes": "No source opened records actual post-repeal methane emissions, WEC payments, or facility behavior, so no 'documented' outcome on real-world effects beyond the legal revocation. All benefit and cost figures are EPA forecasts made before the vote. The Federal Register table (89 FR 91094) was read from search extracts: the benefits row label was cut off, so the benefits figure is cited to the RIA row, and the costs columns are assumed to follow the RIA's stated 2/3/7 percent discount rates. Costs and benefits are in millions of 2019 dollars per the RIA table headings. The $560 million transfer figure comes from the docket copy of the RIA executive summary; its dollar year is not stated in the extract. CBO's table header was garbled in extraction; the 2025-2030 and 2025-2035 totals were checked by summing the annual figures. The sponsor statement is from the House floor record (H846) and was only partly legible in the extract, so it is limited to the natural gas tax characterisation and the reference to independent drillers. Debate statements opposing the resolution were not recorded here. The statutory WEC under the Inflation Reduction Act and any later legislation affecting it were not researched. The House roll-call vote (220-206) was not re-verified against the Clerk's record."
+  "field_sources": {
+   "rule": [
+    0
+   ],
+   "required": [
+    2,
+    0
+   ],
+   "benefits": [
+    0,
+    1
+   ],
+   "costs": [
+    0,
+    8
+   ],
+   "agency_reasons": [
+    9,
+    0
+   ],
+   "sponsor_reasons": [
+    6
+   ],
+   "status": [
+    3,
+    4,
+    5
+   ]
+  }
  },
+ "outcomes": [
+  {
+   "grade": "documented",
+   "claim": "EPA recorded that, under the joint resolution and the Congressional Review Act, the 2024 WEC final rule has no legal force or effect; the action took effect on 2025-05-19.",
+   "date": "2025-05-19",
+   "quote": "Under the joint resolution and by operation of the CRA, the 2024 WEC Final Rule now has no legal force or effect.",
+   "locator": "SUMMARY",
+   "source": {
+    "title": "Congressional Review Act Revocation of Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions",
+    "url": "https://www.federalregister.gov/documents/2025/05/19/2025-08688/congressional-review-act-revocation-of-waste-emissions-charge-for-petroleum-and-natural-gas-systems",
+    "publisher": "Federal Register",
+    "date": "2025-05-19"
+   },
+   "counterpoint": ""
+  },
+  {
+   "grade": "estimated",
+   "claim": "CBO estimated, before the vote, that H.J.Res. 35 would decrease federal revenues by $7,475 million over fiscal years 2025-2035 (and $6,075 million over 2025-2030).",
+   "date": "2025-02-26",
+   "quote": "Revenues -400 -1,300 -1,400 -1,300 -1,300 -375 -300 -275 -275 -275 -275 -6,075 -7,475",
+   "locator": "Table, 'Estimated revenue effects of H.J. Res. 35' (By Fiscal Year, Millions of Dollars), Decreases in Revenues row",
+   "source": {
+    "title": "H.J. Res. 35 cost estimate",
+    "url": "https://cbo.gov/system/files/2025-02/hjres35.pdf",
+    "publisher": "Congressional Budget Office",
+    "date": "2025-02-26"
+   },
+   "counterpoint": ""
+  },
+  {
+   "grade": "estimated",
+   "claim": "EPA's analysis projected industry WEC transfer payments reaching a maximum of $560 million in 2025 under the rule, a burden the rule's removal lifted.",
+   "date": "2024-11-18",
+   "quote": "At the same time, the final WEC is projected to result in substantial transfer payments by the oil and gas industry to comply with the rule, reaching a maximum of $560 million in 2025.",
+   "locator": "RIA executive summary, benefit-cost discussion",
+   "source": {
+    "title": "Regulatory Impact Analysis of the Waste Emissions Charge, executive summary (docket EPA-HQ-OAR-2023-0434-1106)",
+    "url": "https://downloads.regulations.gov/EPA-HQ-OAR-2023-0434-1106/attachment_21.pdf",
+    "publisher": "regulations.gov / U.S. EPA",
+    "date": "2024-11"
+   },
+   "counterpoint": "The same summary states the emissions reductions projected under the rule are likely to produce climate benefits peaking at $530 million to $890 million in 2027."
+  },
+  {
+   "grade": "estimated",
+   "claim": "EPA's Federal Register table lists the rule's total social costs, 2024 through 2035, as $460 million present value and $43 million equivalent annual value, with further pairs of $440/$44 million and $380/$48 million; the rule's removal lifted these projected costs.",
+   "date": "2024-11-18",
+   "quote": "| Total Social Costs | $460 | $43 | $440 | $44 | $380 | $48 |",
+   "locator": "Impacts of the Final Rule, benefit-cost table",
+   "source": {
+    "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
+    "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
+    "publisher": "Federal Register",
+    "date": "2024-11-18"
+   },
+   "counterpoint": "The same table lists monetized climate benefits of $2,400 million present value and $230 million equivalent annual value."
+  },
+  {
+   "grade": "estimated",
+   "claim": "EPA's analysis projected monetized climate benefits of $2,400 million present value and $230 million equivalent annual value from the rule for 2024 to 2035; the rule's removal forgoes these projected benefits.",
+   "date": "2024-11-18",
+   "quote": "| Monetized Climate Benefits^a  | $2,400  | $230  | $2,400  | $230  | $2,400  | $230  |",
+   "locator": "RIA, benefit-cost table (Section 1 / Table 1-4, Section 7)",
+   "source": {
+    "title": "Regulatory Impact Analysis of the Waste Emissions Charge (final)",
+    "url": "https://www.epa.gov/system/files/documents/2024-11/wec-ria-final_11-2024.pdf",
+    "publisher": "U.S. EPA",
+    "date": "2024-11"
+   },
+   "counterpoint": "The same RIA states the monetized benefits of the rule are limited to the estimated climate benefits from projected methane emissions reductions."
+  },
+  {
+   "grade": "estimated",
+   "claim": "EPA projected climate and ozone health benefits from reducing 1.2 million metric tons of methane from 2024 to 2035 under the rule.",
+   "date": "2024-11-18",
+   "quote": "Climate and ozone health benefits from reducing 1.2 million metric tons of methane from 2024 to 2035",
+   "locator": "Impacts of the Final Rule, benefit-cost table, Non-Monetized Benefits row",
+   "source": {
+    "title": "Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions (final rule)",
+    "url": "https://www.federalregister.gov/documents/2024/11/18/2024-26643/waste-emissions-charge-for-petroleum-and-natural-gas-systems-procedures-for-facilitating-compliance",
+    "publisher": "Federal Register",
+    "date": "2024-11-18"
+   },
+   "counterpoint": "The same document states costs include engineering costs for methane mitigation actions and costs resulting from production changes in oil and gas energy markets."
+  }
+ ],
+ "notes": "No source opened records actual post-repeal methane emissions, WEC payments, or facility behavior, so no 'documented' outcome on real-world effects beyond the legal revocation. All benefit and cost figures are EPA forecasts made before the vote. The Federal Register table (89 FR 91094) was read from search extracts: the benefits row label was cut off, so the benefits figure is cited to the RIA row, and the costs columns are assumed to follow the RIA's stated 2/3/7 percent discount rates. Costs and benefits are in millions of 2019 dollars per the RIA table headings. The $560 million transfer figure comes from the docket copy of the RIA executive summary; its dollar year is not stated in the extract. CBO's table header was garbled in extraction; the 2025-2030 and 2025-2035 totals were checked by summing the annual figures. The sponsor statement is from the House floor record (H846) and was only partly legible in the extract, so it is limited to the natural gas tax characterisation and the reference to independent drillers. Debate statements opposing the resolution were not recorded here. The statutory WEC under the Inflation Reduction Act and any later legislation affecting it were not researched. The House roll-call vote (220-206) was not re-verified against the Clerk's record.",
  "_drafted": {
   "by": "claude-sonnet-5-5",
   "on": "2026-11-09",

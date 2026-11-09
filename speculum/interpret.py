@@ -230,7 +230,18 @@ def parse_draft(body: dict) -> dict:
     blocks = body.get("content") or []
     for b in blocks:
         if b.get("type") == "tool_use" and b.get("name") == RECORD_TOOL["name"] and isinstance(b.get("input"), dict) and b["input"]:
-            return b["input"]
+            got = b["input"]
+            # The model sometimes wraps the object once more ({"input": {...}} or {"draft": "<json>"}); unwrap it.
+            if len(got) == 1:
+                inner = next(iter(got.values()))
+                if isinstance(inner, str) and inner.lstrip().startswith("{"):
+                    try:
+                        inner = json.loads(inner)
+                    except ValueError:
+                        pass
+                if isinstance(inner, dict):
+                    got = inner
+            return got
     if body.get("stop_reason") == "max_tokens":
         raise ValueError(f"drafter's answer was cut off at the token limit (usage {body.get('usage')})")
     text = "".join(b.get("text", "") for b in blocks if b.get("type") == "text")
