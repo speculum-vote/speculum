@@ -28,3 +28,10 @@ def test_aggregate_counts_disbursed_loans_once_per_lender():
     assert a["totals"]["loans"] == 2 and a["totals"]["skipped"] == 1
     L = a["lenders"][0]
     assert L["name"] == "Bank A" and L["fees"] == 7_500 and L["second"] == 1 and L["small"] == 1
+
+
+def test_one_lender_across_states_is_one_lender():
+    rows = [{"LoanNumber": str(i), "DateApproved": "04/10/2020", "CurrentApprovalAmount": "10000", "UndisbursedAmount": "0",
+             "OriginatingLender": "Big Bank, N.A.", "OriginatingLenderState": st, "ProcessingMethod": "PPP"} for i, st in enumerate(["IL", "OH", "OH"])]
+    L = ppp.aggregate(rows)["lenders"]
+    assert len(L) == 1 and L[0]["loans"] == 3 and L[0]["state"] == "OH" and L[0]["n_states"] == 2

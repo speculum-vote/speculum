@@ -16,7 +16,7 @@ import csv
 import io
 import json
 import logging
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 
@@ -82,8 +82,10 @@ def aggregate(rows) -> dict:
         when = _date(r.get("DateApproved"))
         f = fee(disbursed, when)
         name = " ".join((r.get("OriginatingLender") or "Not stated").split())
-        key = f'{name}|{(r.get("OriginatingLenderState") or "").strip()}'
+        key = name.upper().rstrip(".,")                 # one lender, whatever office made the loan
         L = lenders[key]
+        L.setdefault("names", Counter())[name] += 1
+        L.setdefault("states", Counter())[(r.get("OriginatingLenderState") or "").strip()] += 1
         L["loans"] += 1
         L["amount"] += disbursed
         L["fees"] += f
@@ -102,7 +104,8 @@ def aggregate(rows) -> dict:
         bands[band]["fees"] += f
     ranked = sorted(lenders.items(), key=lambda kv: -kv[1]["fees"])
     fees_sorted = [v["fees"] for _, v in ranked]
-    out_l = [{"name": k.split("|")[0], "state": k.split("|")[1], **{x: (round(v[x], 2) if isinstance(v[x], float) else v[x]) for x in v}}
+    out_l = [{"name": v["names"].most_common(1)[0][0], "state": v["states"].most_common(1)[0][0], "n_states": len(v["states"]),
+              **{x: (round(v[x], 2) if isinstance(v[x], float) else v[x]) for x in v if x not in ("names", "states")}}
              for k, v in ranked]
     return {
         "totals": {k: (round(v, 2) if isinstance(v, float) else v) for k, v in tot.items()},
