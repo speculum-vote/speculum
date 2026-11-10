@@ -42,3 +42,13 @@ def test_amendment_counted_once_and_latest_amount_kept():
     spend = {}
     P.fold_spend(spend, state["spend"], 2020)
     assert spend["BANK"]["2020"] == {"own": 120000.0, "firms": 0.0}
+
+
+def test_firm_income_kept():
+    f = {"filing_uuid": "x", "dt_posted": "2020-07-20", "filing_type": "Q2", "income": "30000",
+         "registrant": {"id": 9, "name": "Capitol Firm LLC"}, "client": {"id": 3, "name": "Acme Corp"},
+         "lobbying_activities": [{"description": "Taxes"}]}
+    state, spend, firms = {}, {}, {}
+    P.scan([f], {}, "2020-Q2", state)
+    P.fold_spend(spend, state["spend"], 2020, firms)
+    assert spend["ACME"]["2020"]["firms"] == 30000.0 and list(firms.values())[0]["2020"] == 30000.0

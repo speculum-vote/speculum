@@ -72,7 +72,8 @@ def scan(filings, orgs: dict, label: str, state: dict | None = None) -> tuple[in
             dt = f.get("dt_posted") or ""
             if pair not in latest or dt > latest[pair][0]:
                 latest[pair] = (dt, name_key(cli.get("name")), cli.get("name"), own,
-                                _amount(f.get("expenses")) if own else _amount(f.get("income")))
+                                _amount(f.get("expenses")) if own else _amount(f.get("income")),
+                                name_key(reg.get("name")), reg.get("name"))
         descs = [a.get("description") for a in f.get("lobbying_activities") or []]
         acts = [d for d in descs if mentions_ppp(d)]
         if not acts:
@@ -109,16 +110,20 @@ def scan(filings, orgs: dict, label: str, state: dict | None = None) -> tuple[in
     return n, hits, law
 
 
-def fold_spend(spend: dict, latest: dict, year: int) -> None:
+def fold_spend(spend: dict, latest: dict, year: int, firms: dict | None = None) -> None:
     """Each organization's reported lobbying for the year, all issues: what it reported spending on its own reports
     ("own") and what lobbying firms reported being paid for it ("firms"), by name. Both are kept; they overlap when
-    an organization's own report includes what it paid its firms."""
-    for dt, k, name, own, amt in latest.values():
+    an organization's own report includes what it paid its firms. `firms`: each lobbying firm's income, all clients."""
+    firms = {} if firms is None else firms
+    for dt, k, name, own, amt, rk, rname in latest.values():
         if not k or not amt:
             continue
         e = spend.setdefault(k, {"name": name})
         y = e.setdefault(str(year), {"own": 0.0, "firms": 0.0})
         y["own" if own else "firms"] += amt
+        if not own and rk:                     # a lobbying firm: what it was paid, all clients
+            f = firms.setdefault(rk, {"name": rname})
+            f[str(year)] = f.get(str(year), 0.0) + amt
 
 
 def merge(orgs: dict, more: dict) -> None:
@@ -145,6 +150,7 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280, fresh: bo
     if fresh or have.get("rule_version") != RULE_VERSION:
         have = {}
     orgs, quarters, spend = have.get("orgs_by_key", {}), have.get("quarters", {}), have.get("spend_by_key", {})
+    firms = have.get("firms_by_key", {})
     t0 = time.monotonic()
     for y, q in QUARTERS:
         label = f"{y}-Q{q}"
@@ -166,7 +172,7 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280, fresh: bo
             page += 1
         if complete:
             merge(orgs, qorgs)
-            fold_spend(spend, state.get("spend", {}), y)
+            fold_spend(spend, state.get("spend", {}), y, firms)
             quarters[label] = {"reports": n, "ppp_reports": hits, "law_only_reports": law, "complete": True}
             log.info("PPP lobbying %s: %d reports, %d mention the program", label, n, hits)
         else:
@@ -174,7 +180,7 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280, fresh: bo
     done = {k for k, v in quarters.items() if v.get("complete")}
     out = {"source": f"{BASE}/filings/", "rule": __doc__.split("\n\n")[1].strip(), "built": date.today().isoformat(),
            "rule_version": RULE_VERSION, "quarters": quarters, "complete": len(done) == len(QUARTERS),
-           "orgs_by_key": orgs, "spend_by_key": spend}
+           "orgs_by_key": orgs, "spend_by_key": spend, "firms_by_key": firms}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return out
