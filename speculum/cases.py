@@ -74,6 +74,9 @@ def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: 
 
 
 LDA_FILING = "https://lda.gov/filings/public/filing/{}/print/"
+# Words that name the fees the SBA paid lenders (or agents), as opposed to other fees in a long list of issues.
+LENDER_FEE = re.compile(r"loans?\W+processing\W+fees?|lenders?'?\W+(processing\W+)?fees?|agents?'?\W+fees?|\bPPP\W+(loan\W+)?fees?|"
+                        r"fees?\W+(paid\W+)?to\W+(the\W+)?(originating\W+)?(lender|bank|agent)s?", re.I)
 
 
 def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
@@ -90,6 +93,8 @@ def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
         m["quarters"] |= set(o.get("quarters") or [])
         m["n_reports"] += o.get("n_reports", 0)
         m["fee"] += o.get("fee", 0)
+        if o.get("fee_said") and not m.get("fee_said"):
+            m["fee_said"], m["fee_report"] = o["fee_said"], o.get("fee_report")
         for r in o.get("reports") or []:
             if len(m["reports"]) < 4 and r["quarter"] not in {x["quarter"] for x in m["reports"]}:   # one link per quarter
                 m["reports"].append({"quarter": r["quarter"], "url": LDA_FILING.format(r["uuid"])})
@@ -127,7 +132,9 @@ def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
             "n_read": sum(v.get("reports", 0) for v in q.values()),
             "law_only": sum(v.get("law_only_reports", 0) for v in q.values()) if any("law_only_reports" in v for v in q.values()) else None,
             "quarters": [{"label": k, **v} for k, v in sorted(q.items())], "sectors": sectors,
-            "fee_orgs": sorted([m for m in orgs if m["fee"]], key=lambda m: (-m["fee"], m["name"])),
+            "fee_orgs": sorted([m for m in orgs if m.get("fee_said") and LENDER_FEE.search(m["fee_said"])],
+                               key=lambda m: m["name"]),
+            "n_fee_any": sum(1 for m in orgs if m["fee"]),
             "lenders": lenders_out, "rule": lob.get("rule"), "rule_version": lob.get("rule_version")}
 
 
@@ -182,6 +189,7 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
             t = d["totals"]
             for L in d["lenders"]:
                 L["rate"] = round(L["fees"] / L["amount"], 4) if L["amount"] else None
+                L["name"] = re.sub(r",?\s+a division of\s*$", "", L["name"], flags=re.I)   # cut short in the SBA's file
             extra["ppp"] = {**d, "lenders": d["lenders"][:25], "fee_rate": round(t["fees"] / t["amount"], 4),
                             "forgiven_share": round(t["forgiven"] / t["amount"], 4)}
             extra["ppp"]["today"] = ppp_today(d["lenders"][:25], spend, lobbying, members)

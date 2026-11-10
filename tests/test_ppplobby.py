@@ -58,3 +58,23 @@ def test_firm_income_kept():
 def test_fee_words_kept():
     w = P.fee_window("Paycheck Protection Program: lender processing fees and agent fees for loans under $350,000", 30)
     assert "processing fees" in w
+
+
+def test_history_merges_names_and_keeps_only_lender_fees():
+    from speculum.cases import ppp_history
+    rep = lambda q, u: {"quarter": q, "uuid": u}
+    lob = {"complete": True, "rule_version": 2, "quarters": {"2020-Q2": {"reports": 10, "ppp_reports": 3, "law_only_reports": 1}},
+           "orgs_by_key": {
+               "WELLS FARGO AND": {"name": "WELLS FARGO & COMPANY", "sector": "banks", "own": True, "quarters": ["2020-Q2"],
+                                   "reports": [rep("2020-Q2", "a")], "n_reports": 1, "fee": 1, "registrants": [],
+                                   "fee_said": "payment of PPP fees to the originating bank"},
+               "WELLS FARGO BANK": {"name": "Wells Fargo Bank, N.A.", "sector": "banks", "own": True, "quarters": ["2020-Q2"],
+                                    "reports": [rep("2020-Q2", "b")], "n_reports": 1, "fee": 0, "registrants": []},
+               "GROCERS": {"name": "National Grocers Association", "sector": "agriculture", "own": True, "quarters": ["2020-Q2"],
+                           "reports": [rep("2020-Q2", "c")], "n_reports": 1, "fee": 1, "registrants": [],
+                           "fee_said": "Merchant Credit Card Fee Increases Paycheck Protection Program"}}}
+    h = ppp_history(lob, [{"name": "Wells Fargo Bank, National Association", "fees": 1.0}, {"name": "Itria Ventures LLC", "fees": 1.0}])
+    assert h["n_orgs"] == 2 and h["n_fee_any"] == 2 and [o["name"] for o in h["fee_orgs"]] == ["WELLS FARGO & COMPANY"]
+    w = h["lenders"][0]
+    assert w["lobbied"] and w["n_reports"] == 2 and len(w["reports"]) == 1 and w["bank"]     # one link per quarter
+    assert not h["lenders"][1]["lobbied"] and not h["lenders"][1]["bank"]

@@ -37,7 +37,7 @@
 <h3 id="then">Who lobbied on it while it ran, 2020–21</h3>
 <div class="said-done"><div><b class="num">{{ H.n_reports|num }}</b><p>quarterly lobbying reports named the program, of the {{ H.n_read|num }} reports and amendments filed for 2020 and 2021</p></div>
 <div><b class="num">{{ H.n_orgs|num }}</b><p>organizations lobbied on it, for themselves or through a firm</p></div>
-<div><b class="num">{{ H.fee_orgs|length }}</b><p>of them mentioned fees alongside the program</p></div></div>
+<div><b class="num">{{ H.fee_orgs|length }}</b><p>of them named the fees the SBA paid lenders</p></div></div>
 <p>By sector: {% for x in H.sectors[:8] %}{{ x.name|lower }} {{ x.n }}{{ ', ' if not loop.last else '.' }}{% endfor %} A report says what an organization lobbied on, not which side it took.</p>
 {% set lb = H.lenders|selectattr('lobbied')|list %}
 {% set banks_only = lb|rejectattr('bank')|list|length == 0 %}{% set nonbank = H.lenders|rejectattr('bank')|list %}
@@ -49,8 +49,8 @@
 <td class="r num">{{ L.spent['2020']|money if L.spent and L.spent['2020'] else '—' }}</td><td class="r num">{{ L.spent['2021']|money if L.spent and L.spent['2021'] else '—' }}</td></tr>{% endfor %}
 </tbody></table></div>
 {% if H.fee_orgs %}
-<h3>Those that mentioned fees</h3>
-<p class="meta">Reports that mention a fee within a few lines of the program, in the filer's own words. A fee here can be the lenders' processing fee, an agent's fee, or another fee the filer raised.</p>
+<h3>Those that named the lenders' fees</h3>
+<p class="meta">{{ H.n_fee_any }} organizations' reports mention a fee within a few lines of the program. The words around each one's first such mention were read. These name the processing fees paid to lenders; the rest were about other fees in a list of issues, such as FDA user fees, card fees or the physician fee schedule.</p>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Organization</th><th>Sector</th><th>From the report</th></tr></thead><tbody>
 {% for o in H.fee_orgs %}<tr><td>{{ o.name|org }}{% if not o.own %} <span class="muted">· through {{ o.firms|map('org')|join(', ') }}</span>{% endif %}</td><td class="muted">{{ o.sector_name }}</td>
