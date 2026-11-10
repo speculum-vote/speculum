@@ -138,6 +138,55 @@ def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
             "lenders": lenders_out, "rule": lob.get("rule"), "rule_version": lob.get("rule_version")}
 
 
+SBA_LOAN = "https://data.sba.gov/dataset/ppp-foia"
+BIG_LOBBY, FEW_JOBS = 250_000, 20
+
+
+def ppp_borrowers(d: dict) -> dict | None:
+    """Organizations on 2020-21 lobbying reports that took PPP loans (data/records/ppp_borrowers.json), after two
+    checks: a client named as "X (on behalf of Y)" is dropped, and so is a match where the organization reported more
+    than $250,000 a year in its own lobbying but the borrower is a small company (fewer than 20 jobs, a corporation or
+    LLC outside the membership-organization industry codes, 813): a gas station that shares a name with an oil company.
+    Trade associations with small staffs and large lobbying budgets are kept."""
+    if not d or not d.get("matches"):
+        return None
+    keep, dropped = [], []
+    for k, e in d["matches"].items():
+        own = max((e["lobbying"].get(y) or {}).get("own", 0.0) for y in ("2020", "2021"))
+        jobs = max(l.get("jobs") or 0 for l in e["loans"])
+        company = all(l.get("type", "").startswith(("Corporation", "Subchapter S", "Limited  Liability Company", "Limited Liability Company"))
+                      and not str(l.get("naics", "")).startswith("813") for l in e["loans"])
+        if "BEHALF OF" in e["name"].upper() or (e["kind"] != "firm" and own > BIG_LOBBY and jobs < FEW_JOBS and company):
+            dropped.append(e["name"])
+            continue
+        L = e["loans"]
+        lob = {y: round(sum((e["lobbying"].get(y) or {}).values()), 2) for y in ("2020", "2021")}
+        types = {l["type"] for l in L}
+        keep.append({"name": e["name"], "kind": e["kind"], "loans": sorted(L, key=lambda l: l["approved"] or ""),
+                     "amount": round(sum(l["amount"] for l in L), 2), "forgiven": round(sum(l["forgiven"] for l in L), 2),
+                     "c6": any(t.startswith("501(c)6") for t in types),
+                     "own": {y: (e["lobbying"].get(y) or {}).get("own", 0.0) for y in ("2020", "2021")},
+                     "firm_income": {y: (e["lobbying"].get(y) or {}).get("firm_income", 0.0) for y in ("2020", "2021")},
+                     "lobbying": lob})
+    keep.sort(key=lambda x: -x["amount"])
+    # Firms registered to lobby for others whose SBA industry code is legal (5411), consulting (5416) or public
+    # relations and advertising (5418) services: a hospital that once registered for a client is not a lobbying firm.
+    code = lambda x, pre: any(str(l.get("naics", "")).startswith(pre) for l in x["loans"])
+    firms = [x for x in keep if "firm" in x["kind"] and code(x, ("5411", "5416", "5418"))]
+    law = [x for x in firms if code(x, "5411")]
+    lobby = sorted([x for x in firms if not code(x, "5411")], key=lambda x: -(x["firm_income"]["2020"] or x["firm_income"]["2021"]))
+    c6 = sorted([x for x in keep if x["c6"]], key=lambda x: -max(x["own"].values()))
+    over = [x for x in c6 if any(v > 1_000_000 for v in x["own"].values())]
+    return {"n": len(keep), "n_loans": sum(len(x["loans"]) for x in keep), "amount": sum(x["amount"] for x in keep),
+            "forgiven": sum(x["forgiven"] for x in keep), "top": keep[:15], "n_firms": len(firms),
+            "law": law[:10], "n_law": len(law), "law_amount": sum(x["amount"] for x in law),
+            "lobby": lobby[:20], "n_lobby": len(lobby), "lobby_amount": sum(x["amount"] for x in lobby),
+            "lobby_forgiven": sum(x["forgiven"] for x in lobby),
+            "lobby_early": sum(1 for x in lobby[:20] if (x["loans"][0]["approved"] or "")[:7] in ("2020-04", "2020-05")), "c6": c6[:15], "n_c6": len(c6),
+            "c6_amount": sum(x["amount"] for x in c6), "c6_over": over, "dropped": sorted(dropped),
+            "release": d.get("release"), "source": d.get("source") or SBA_LOAN}
+
+
 def load(data_root: Path) -> list[dict]:
     d = Path(data_root) / "cases"
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(d.glob("*.json"))] if d.exists() else []
@@ -197,6 +246,10 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
             hp = Path(data_root or ".") / "records" / "ppp_lobbying.json"
             if hp.exists():
                 extra["ppp"]["history"] = ppp_history(json.loads(hp.read_text(encoding="utf-8")), d["lenders"][:25])
+            bp = Path(data_root or ".") / "records" / "ppp_borrowers.json"
+            if bp.exists():
+                extra["ppp"]["borrowers"] = ppp_borrowers(json.loads(bp.read_text(encoding="utf-8")))
+                extra["ppp"]["borrowers_public"] = bool(case.get("borrowers_public"))
     return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}

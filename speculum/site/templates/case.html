@@ -5,7 +5,7 @@
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
 {% set m = c.measure %}
-{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("borrowed", "Lobbied, and borrowed") if c.ppp and c.ppp.borrowers and (not public or c.ppp.borrowers_public) else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
 
 <h2 id="record">What happened</h2>
@@ -63,6 +63,37 @@
 <td class="num">{% for r in o.reports %}<a href="{{ r.url }}">{{ r.quarter[2:4] }}Q{{ r.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_reports > o.reports|length %} <span class="muted">· {{ o.n_reports }} reports</span>{% endif %}</td></tr>{% endfor %}
 </tbody></table></div></details>
 <p class="meta">Every quarterly lobbying report filed for 2020 and 2021 ({{ H.n_read|num }}) was read once. A report counts when it names the Paycheck Protection Program, or "PPP" with words about loans, lenders, the SBA, small business or forgiveness. "Paycheck Protection Act" bills about union dues and firefighters' pay don't count. Naming only the law that refilled the program in April 2020 (the Paycheck Protection Program and Health Care Enhancement Act, which also funded hospitals and testing) doesn't count either{% if H.law_only %}: {{ H.law_only|num }} reports did only that{% endif %}. A report amended in the same quarter counts once. Organizations are merged by name. "All lobbying reported" is what a lender's own reports gave for every issue that year.</p>
+{% endif %}
+{% set Bw = P.borrowers %}{% if Bw and (not public or P.borrowers_public) %}
+<h3 id="borrowed">Lobbied, and borrowed</h3>
+<div class="said-done"><div><b class="num">{{ Bw.n|num }}</b><p>organizations on 2020–21 lobbying reports, as clients or as lobbying firms, took PPP loans</p></div>
+<div><b class="num">{{ Bw.amount|money }}</b><p>in {{ Bw.n_loans|num }} loans</p></div>
+<div><b class="num">{{ Bw.forgiven|money }}</b><p>forgiven</p></div></div>
+<p>The program's rules shut out businesses "primarily engaged in political or lobbying activities" (13 CFR 120.110(r)), applied to PPP from April 2020. From December 27, 2020, the Economic Aid Act let trade associations and other 501(c)(6) organizations borrow if lobbying was no more than 15% of their receipts and of their activities, and their lobbying cost no more than $1 million in the most recent tax year. The SBA said that cost could be the figure reported under the Lobbying Disclosure Act. This page lists what each organization reported and what it borrowed. It does not decide whether any loan met the rules: the 15% tests can't be checked from these records, and a tax year may not be the calendar year.</p>
+<h4>Trade associations (501(c)(6))</h4>
+<p>{{ Bw.n_c6 }} borrowers that described themselves to the SBA as 501(c)(6) membership organizations borrowed {{ Bw.c6_amount|money }}. {% if Bw.c6_over %}{{ Bw.c6_over|length }} reported more than $1 million a year in lobbying on their own reports: {% for x in Bw.c6_over %}{{ x.name|org }} ({{ x.own['2020']|money }} in 2020, {{ x.own['2021']|money }} in 2021){{ ', ' if not loop.last else '.' }}{% endfor %}{% endif %}</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th>Loan</th><th class="r">Amount</th><th class="r">Forgiven</th><th class="r">Own lobbying, 2020</th><th class="r">2021</th></tr></thead><tbody>
+{% for x in Bw.c6 %}<tr><td>{{ x.name|org }}</td><td class="muted">{% for l in x.loans %}{{ l.approved }} ({{ l.draw }}){{ '; ' if not loop.last }}{% endfor %}</td><td class="r num">{{ x.amount|money }}</td><td class="r num">{{ x.forgiven|money }}</td><td class="r num">{{ x.own['2020']|money if x.own['2020'] else '—' }}</td><td class="r num">{{ x.own['2021']|money if x.own['2021'] else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+<h4>Lobbying and public affairs firms</h4>
+<p>{{ Bw.n_lobby }} firms registered to lobby for clients, in the SBA's codes for consulting or public relations services, took {{ Bw.lobby_amount|money }}; {{ Bw.lobby_forgiven|money }} has been forgiven. These are the {{ Bw.lobby|length }} that reported the most lobbying income in 2020; {{ Bw.lobby_early }} of them first borrowed in April or May 2020, the program's first two months.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Firm</th><th>Loan</th><th class="r">Borrowed</th><th class="r">Forgiven</th><th class="r">Lobbying income, 2020</th><th class="r">2021</th></tr></thead><tbody>
+{% for x in Bw.lobby %}<tr><td>{{ x.name|org }} <span class="muted">{{ x.loans[0].city }}, {{ x.loans[0].state }}</span></td><td class="muted">{% for l in x.loans %}{{ l.approved }}{{ '; ' if not loop.last }}{% endfor %}</td><td class="r num">{{ x.amount|money }}</td><td class="r num">{{ x.forgiven|money }}</td><td class="r num">{{ x.firm_income['2020']|money if x.firm_income['2020'] else '—' }}</td><td class="r num">{{ x.firm_income['2021']|money if x.firm_income['2021'] else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+<h4>Law firms with lobbying practices</h4>
+<p>{{ Bw.n_law }} law firms registered to lobby for clients took {{ Bw.law_amount|money }}. The ten that borrowed the most:</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Firm</th><th class="r">Borrowed</th><th class="r">Forgiven</th><th class="r">Lobbying income, 2020</th><th class="r">2021</th></tr></thead><tbody>
+{% for x in Bw.law %}<tr><td>{{ x.name|org }} <span class="muted">{{ x.loans[0].city }}, {{ x.loans[0].state }}</span></td><td class="r num">{{ x.amount|money }}</td><td class="r num">{{ x.forgiven|money }}</td><td class="r num">{{ x.firm_income['2020']|money if x.firm_income['2020'] else '—' }}</td><td class="r num">{{ x.firm_income['2021']|money if x.firm_income['2021'] else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+<h4>The largest borrowers</h4>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th>SBA business type</th><th class="r">Borrowed</th><th class="r">Lobbying reported, 2020</th><th class="r">2021</th></tr></thead><tbody>
+{% for x in Bw.top %}<tr><td>{{ x.name|org }} <span class="muted">{{ x.loans[0].city }}, {{ x.loans[0].state }}</span></td><td class="muted">{{ x.loans[0].type|replace('\ufffd', '–')|replace('  ', ' ') }}</td><td class="r num">{{ x.amount|money }}</td><td class="r num">{{ x.lobbying['2020']|money if x.lobbying['2020'] else '—' }}</td><td class="r num">{{ x.lobbying['2021']|money if x.lobbying['2021'] else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">From the SBA's loan-level PPP data (<a href="{{ Bw.source }}">data.sba.gov</a>), matched to every client and lobbying firm on a 2020 or 2021 lobbying report: same name, with legal endings set aside, and same state. Loans to sole proprietors, self-employed people and independent contractors are left out. A client named "on behalf of" another is left out, and so is a match where an organization reporting more than $250,000 a year in its own lobbying is matched to a small company outside the membership-organization industry codes (a gas station that shares a name with an oil company); {{ Bw.dropped|length }} were left out this way. A hand check of 45 random matches found one doubtful. A name match is not proof the borrower is the same organization. "Lobbying reported" is what the organization's own reports gave, plus what lobbying firms reported being paid by it. The two can overlap.</p>
 {% endif %}
 {% if P.today %}{% set lob = P.today|selectattr('own')|list %}
 <h3 id="today">The same lenders today</h3>
