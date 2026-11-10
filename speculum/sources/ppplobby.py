@@ -73,7 +73,7 @@ def scan(filings, orgs: dict, label: str, state: dict | None = None) -> tuple[in
             if pair not in latest or dt > latest[pair][0]:
                 latest[pair] = (dt, name_key(cli.get("name")), cli.get("name"), own,
                                 _amount(f.get("expenses")) if own else _amount(f.get("income")),
-                                name_key(reg.get("name")), reg.get("name"))
+                                name_key(reg.get("name")), reg.get("name"), cli.get("state"), reg.get("state"))
         descs = [a.get("description") for a in f.get("lobbying_activities") or []]
         acts = [d for d in descs if mentions_ppp(d)]
         if not acts:
@@ -115,14 +115,18 @@ def fold_spend(spend: dict, latest: dict, year: int, firms: dict | None = None) 
     ("own") and what lobbying firms reported being paid for it ("firms"), by name. Both are kept; they overlap when
     an organization's own report includes what it paid its firms. `firms`: each lobbying firm's income, all clients."""
     firms = {} if firms is None else firms
-    for dt, k, name, own, amt, rk, rname in latest.values():
+    for dt, k, name, own, amt, rk, rname, cst, rst in latest.values():
         if not k or not amt:
             continue
         e = spend.setdefault(k, {"name": name})
+        if cst and cst not in e.setdefault("states", []):
+            e["states"].append(cst)
         y = e.setdefault(str(year), {"own": 0.0, "firms": 0.0})
         y["own" if own else "firms"] += amt
         if not own and rk:                     # a lobbying firm: what it was paid, all clients
             f = firms.setdefault(rk, {"name": rname})
+            if rst and rst not in f.setdefault("states", []):
+                f["states"].append(rst)
             f[str(year)] = f.get(str(year), 0.0) + amt
 
 
