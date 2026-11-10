@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "fetch (read every report) or spot (re-read a sample of matches for checking)"
+        description: "fetch (read every report), spot (re-read a sample of matches) or borrowers (match PPP loans to lobbying)"
         default: fetch
       names:
         description: "spot only: organization keys to add, separated by |"
@@ -30,7 +30,7 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Read 2020-21 lobbying reports
-        if: inputs.mode != 'spot'
+        if: inputs.mode == 'fetch' || inputs.mode == ''
         env:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
         run: python -m speculum ppplobby --minutes 270
@@ -40,12 +40,15 @@ jobs:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
           NAMES: ${{ inputs.names }}
         run: python -m speculum pppspot --n 40 --names "$NAMES"
+      - name: Match PPP loans to lobbying clients and firms
+        if: inputs.mode == 'borrowers'
+        run: python -m speculum pppborrowers
       - name: Commit
         if: always()
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          git add data/records/ppp_lobbying.json data/records/ppp_spot.json 2>/dev/null || git add data/records/ppp_lobbying.json || true
+          for f in ppp_lobbying ppp_spot ppp_borrowers; do [ -f data/records/$f.json ] && git add data/records/$f.json; done; true
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "PPP lobbying 2020-21 (${{ inputs.mode }})"
           for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done

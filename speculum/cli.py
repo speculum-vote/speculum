@@ -339,6 +339,13 @@ def cmd_pppspot(args) -> int:
     return 0
 
 
+def cmd_pppborrowers(args) -> int:
+    """Match the SBA's PPP loans to 2020-21 lobbying clients and firms (data/records/ppp_borrowers.json)."""
+    from .sources import pppborrowers
+    pppborrowers.fetch(ROOT / "records" / "ppp_lobbying.json", ROOT / "records" / "ppp_borrowers.json")
+    return 0
+
+
 def cmd_ppp(args) -> int:
     """Fetch the SBA's PPP loan data and save per-lender totals with estimated processing fees (data/records)."""
     from .sources import ppp
@@ -447,6 +454,7 @@ def main(argv=None) -> int:
     ps = sub.add_parser("pppspot", help="re-read a sample of the 2020-21 PPP matches for checking by hand")
     ps.add_argument("--n", type=int, default=40)
     ps.add_argument("--names", help="organization keys to add, separated by |")
+    sub.add_parser("pppborrowers", help="match PPP loans to 2020-21 lobbying clients and firms")
     pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
     pp.add_argument("--if-missing", action="store_true")
     z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")
@@ -458,7 +466,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -116,23 +116,26 @@ def aggregate(rows) -> dict:
     }
 
 
-def fetch(path: Path, get=None) -> dict:
-    """Stream every file, aggregate, save. About 11 million rows; only totals are kept."""
+def stream_rows():
+    """Every row of the 13 SBA files, as dicts with the SBA's column names."""
     import requests
 
-    def rows():
-        for name in FILES:
-            url = BASE + name
-            log.info("PPP: reading %s", url)
-            with requests.get(url, stream=True, timeout=(30, 600), headers={"User-Agent": "speculum.vote (public record of Congress)"}) as r:
-                r.raise_for_status()
-                lines = (line.decode("utf-8", errors="replace") for line in r.iter_lines())
-                n = 0
-                for row in csv.DictReader(lines):
-                    n += 1
-                    yield row
-                log.info("PPP: %s rows from %s", f"{n:,}", name)
-    data = aggregate(rows())
+    for name in FILES:
+        url = BASE + name
+        log.info("PPP: reading %s", url)
+        with requests.get(url, stream=True, timeout=(30, 600), headers={"User-Agent": "speculum.vote (public record of Congress)"}) as r:
+            r.raise_for_status()
+            lines = (line.decode("utf-8", errors="replace") for line in r.iter_lines())
+            n = 0
+            for row in csv.DictReader(lines):
+                n += 1
+                yield row
+            log.info("PPP: %s rows from %s", f"{n:,}", name)
+
+
+def fetch(path: Path, get=None) -> dict:
+    """Stream every file, aggregate, save. About 11 million rows; only totals are kept."""
+    data = aggregate(stream_rows())
     if data["totals"]["loans"] < 10_000_000:
         raise ValueError(f"only {data['totals']['loans']:,} loans read; expected about 11 million")
     data.update({"source": DATASET, "release": RELEASE, "files": [BASE + f for f in FILES], "built": date.today().isoformat()})
