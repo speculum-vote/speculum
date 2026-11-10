@@ -403,14 +403,14 @@ def _build_bills(E, prev: Path, spend, votes, members, lobbying, info, common) -
 def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying, common) -> dict:
     """Cases (speculum/cases.py): one decision followed through the record. Returns {bill slug: case} for links."""
     from .. import cases as cases_mod
-    done = [cases_mod.compute(c, spend, votes, members, lobbying) for c in cases_mod.load(data_root)]
+    done = [cases_mod.compute(c, spend, votes, members, lobbying, data_root) for c in cases_mod.load(data_root)]
     (prev / "case").mkdir(exist_ok=True)
     for c in done:
         (prev / "case" / f"{c['slug']}.html").write_text(E.get_template("case.html").render(
             root="../", page="cases", c=c, **common), encoding="utf-8")
     (prev / "cases.html").write_text(E.get_template("cases.html").render(root="", page="cases", cases=done, **common),
                                      encoding="utf-8")
-    return {f"{c['congress']}-{b.lower()}": c for c in done for b in c["bills"]}
+    return {f"{c['congress']}-{b.lower()}": c for c in done for b in c["bills"] or []}
 
 
 def _build_saiddone(E, data_root: Path, prev: Path, spend, votes, members, lobbying, info, common) -> dict:

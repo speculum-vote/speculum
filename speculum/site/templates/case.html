@@ -5,7 +5,7 @@
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
 {% set m = c.measure %}
-{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("lobbied", "Who lobbied it"), ("funded", "Whom they funded") if m else none,
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
 
 <h2 id="record">What happened</h2>
@@ -17,6 +17,26 @@
 {% endfor %}
 </ol>
 
+{% if c.ppp %}{% set P = c.ppp %}{% set t = P.totals %}
+<h2 id="paid">What the lenders were paid</h2>
+<div class="said-done"><div><b class="num">{{ t.loans|num }}</b><p>loans disbursed, by {{ P.n_lenders|num }} lenders</p></div>
+<div><b class="num">{{ t.amount|money }}</b><p>lent, guaranteed in full by the SBA</p></div>
+<div><b class="num">{{ t.fees|money }}</b><p>in processing fees to the lenders, estimated: {{ P.fee_rate|pct }} of what they lent</p></div>
+<div><b class="num">{{ P.forgiven_share|pct }}</b><p>of what was lent has been forgiven ({{ t.forgiven|money }})</p></div></div>
+<p>The ten lenders paid the most received {{ P.top_shares['10']|pct }} of the fees; the hundred paid the most, {{ P.top_shares['100']|pct }}. Small loans paid best: a $20,000 loan made in 2021 earned its lender $2,500, an eighth of the loan.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Loan size</th><th class="r">Loans</th><th class="r">Lent</th><th class="r">Fees (est.)</th><th class="r">Fee as share of loan</th></tr></thead><tbody>
+{% for b in P.bands %}<tr><td>{{ b.band }}</td><td class="r num">{{ b.loans|num }}</td><td class="r num">{{ b.amount|money }}</td><td class="r num">{{ b.fees|money }}</td><td class="r num">{{ (b.fees / b.amount)|pct if b.amount else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+<h3>The 25 lenders paid the most</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Lender</th><th class="r">Loans</th><th class="r">Lent</th><th class="r">Fees (est.)</th><th class="r">Fee rate</th><th class="r">Second loans</th></tr></thead><tbody>
+{% for L in P.lenders %}<tr><td>{{ L.name|org }} <span class="muted">{{ L.state }}</span></td><td class="r num">{{ L.loans|num }}</td><td class="r num">{{ L.amount|money }}</td><td class="r num">{{ L.fees|money }}</td><td class="r num">{{ L.rate|pct }}</td><td class="r num">{{ L.second|num }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">From the SBA's loan-level PPP data (<a href="{{ P.source }}">data.sba.gov</a>, release of {{ P.release[2:4] }}/{{ P.release[4:6] }}/20{{ P.release[:2] }}): every disbursed loan, its lender (the one that made it) and amount; {{ t.skipped|num }} loans with nothing disbursed are left out. The SBA does not publish what it paid each lender, so each fee is estimated from its published schedule on the amount disbursed. No borrower is named here.</p>
+{% endif %}
+
+{% if c.n_orgs %}
 <h2 id="lobbied">Who lobbied it</h2>
 <div class="said-done"><div><b class="num">{{ c.n_orgs }}</b><p>organizations named {{ c.bills|map('billname')|join(' or ') }} on quarterly lobbying reports, in {{ c.reports|num }} reports</p></div>
 {% for g in c.groups %}<div><b class="num">{{ g.n }}</b><p>{{ g.name|lower }}</p></div>{% endfor %}</div>
@@ -29,6 +49,7 @@
 {% elif o.own %}<td class="r muted">none</td><td class="r muted">none</td>{% else %}<td class="r muted" colspan="2">files no reports of its own</td>{% endif %}</tr>
 {% endfor %}</tbody></table></div>
 
+{% endif %}
 {% if m %}
 <h2 id="funded">Whom they funded</h2>
 <p>{{ m.n_lobbied_own }} of the {{ c.n_orgs }} file their own lobbying reports, so their contributions can be read. <b>{{ m.n_funders }}</b> of them gave to members who voted on the final {{ c.vehicle|billname }} votes{% if m.n_funders %}, and <b>{{ m.n_both }}</b> of those {{ m.n_funders }} gave to members on both sides{% endif %}. The other {{ m.n_lobbied_own - m.n_funders }} report no contributions to those members.</p>
@@ -46,7 +67,7 @@
 <h2 id="rules">How this page is counted</h2>
 <ul class="rules">
 <li>Every dated fact above links its source: the official roll call, the law as printed, or the agency's announcement.</li>
-<li>Who lobbied: organizations that named {{ c.bills|map('billname')|join(' or ') }} on a quarterly lobbying report (LD-2). Sectors follow the site's word rules (<a href="../method.html#bills">Method</a>).</li>
+{% if c.n_orgs %}<li>Who lobbied: organizations that named {{ c.bills|map('billname')|join(' or ') }} on a quarterly lobbying report (LD-2). Sectors follow the site's word rules (<a href="../method.html#bills">Method</a>).</li>{% endif %}
 {% if c.not_yet %}<li>Not yet counted: {{ c.not_yet }}</li>{% endif %}
 <li>A case is chosen to show how one decision moved through the record; every case is counted by the same rules, and a case is never dropped because of what it shows.</li>
 </ul>

@@ -1,0 +1,25 @@
+{
+ "slug": "ppp",
+ "title": "The Paycheck Protection Program",
+ "dek": "Nearly $800 billion in forgivable loans to small businesses in 2020 and 2021, made by private lenders, guaranteed in full by the government, with a fee paid to the lender on every loan.",
+ "congress": 116,
+ "bills": [],
+ "vehicle": null,
+ "dataset": "ppp",
+ "facts": [
+  {"date": "2020-03-25", "text": "The Senate passes the CARES Act, 96 to 0.",
+   "source": {"title": "NPR, Mar. 27, 2020", "url": "https://www.npr.org/2020/03/27/822062909/house-aims-to-send-2-trillion-rescue-package-to-president-to-stem-coronavirus-cr"}},
+  {"date": "2020-03-27", "text": "The House passes it by voice vote, so no member's vote on it is recorded, and the President signs it: Public Law 116-136. It creates the Paycheck Protection Program: loans made by private lenders, guaranteed in full by the Small Business Administration, and forgiven when spent on payroll and certain other costs.",
+   "source": {"title": "Public Law 116-136, Congress.gov", "url": "https://www.congress.gov/116/plaws/publ136/PLAW-116publ136.htm"},
+   "source2": {"title": "Congressional Research Service, R46397", "url": "https://www.everycrsreport.com/reports/R46397.html"}},
+  {"date": "2020-04-24", "text": "Congress adds $310 billion after the first round runs out in two weeks (Public Law 116-139).",
+   "source": {"title": "Congressional Research Service, R46397", "url": "https://www.everycrsreport.com/reports/R46397.html"}},
+  {"date": "2020-05-21", "text": "The SBA sets out how it pays lenders: a processing fee on each fully disbursed loan, 5% on loans up to $350,000, 3% up to $2 million, 1% above. Borrowers are not charged.",
+   "source": {"title": "SBA Procedural Notice 5000-20036", "url": "https://www.sba.gov/sites/default/files/2021-03/5000-20036-508.pdf"}},
+  {"date": "2020-12-27", "text": "The Economic Aid Act (in Public Law 116-260) reopens the program and adds second loans. On loans up to $50,000 made from then on, the fee becomes 50% of the loan or $2,500, whichever is less.",
+   "source": {"title": "ABA Banking Journal, Feb. 8, 2021 (on the SBA's notice)", "url": "https://bankingjournal.aba.com/2021/02/sba-issues-updates-on-ppp-processing-fees-eidl-advance-reconciliation-payments/"}},
+  {"date": "2021-05-31", "text": "The program stops taking applications, having approved over 11.8 million loans totaling nearly $800 billion.",
+   "source": {"title": "Congressional Research Service, R46397", "url": "https://www.everycrsreport.com/reports/R46397.html"}}
+ ],
+ "not_yet": "Lobbying on the program in 2020 and 2021, and the lenders' campaign contributions then, are before Speculum's record begins (January 2025) and are not on this page."
+}

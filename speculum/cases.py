@@ -25,7 +25,7 @@ def load(data_root: Path) -> list[dict]:
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(d.glob("*.json"))] if d.exists() else []
 
 
-def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lobbying: dict) -> dict:
+def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lobbying: dict, data_root: Path | None = None) -> dict:
     cg = int(case["congress"])
     lobbied = collect(spend, None)
     merged = {"orgs": {}, "files": defaultdict(list), "former": {}, "former_for": defaultdict(set), "reports": 0}
@@ -45,7 +45,7 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
     party = {m["bioguide"]: m["party"] for m in members}
     for k, p in (votes.get("people") or {}).items():
         party.setdefault(k, (p or {}).get("party"))
-    rolls = [v for v in votes.get("votes") or [] if int(v.get("congress") or 0) == cg and v.get("bill")
+    rolls = [v for v in votes.get("votes") or [] if case.get("vehicle") and int(v.get("congress") or 0) == cg and v.get("bill")
              and norm(v["bill"]) == case["vehicle"] and v.get("type") != "Quorum" and not simple_resolution(v["bill"])]
     m = measure((cg, case["vehicle"]), merged, rolls, votes.get("positions") or {}, org_giving(lobbying), party) if rolls else None
     funded = {o["name"]: o for o in (m or {}).get("orgs", [])}
@@ -63,6 +63,16 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
                      for lid, p in merged["former"].items() if rx.search(p[1] if len(p) > 1 else "")), key=lambda x: x["name"])
     vote_by_id = {v["id"]: v for v in (m or {}).get("votes", [])}
     facts = [{**f, "roll": vote_by_id.get(f.get("vote"))} for f in case.get("facts") or []]
-    return {**{k: case[k] for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts,
+    extra = {}
+    if case.get("dataset") == "ppp":                    # SBA loan data, per lender (speculum/sources/ppp.py)
+        p = Path(data_root or ".") / "records" / "ppp_lenders.json"
+        if p.exists():
+            d = json.loads(p.read_text(encoding="utf-8"))
+            t = d["totals"]
+            for L in d["lenders"]:
+                L["rate"] = round(L["fees"] / L["amount"], 4) if L["amount"] else None
+            extra["ppp"] = {**d, "lenders": d["lenders"][:25], "fee_rate": round(t["fees"] / t["amount"], 4),
+                            "forgiven_share": round(t["forgiven"] / t["amount"], 4)}
+    return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}

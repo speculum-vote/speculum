@@ -6,7 +6,7 @@
 {% for c in cases %}{% set m = c.measure %}
 <div class="datafile"><div class="datahead"><a href="case/{{ c.slug }}.html"><b>{{ c.title }}</b></a></div>
 <p>{{ c.dek }}</p>
-<p class="meta">{{ c.n_orgs }} organizations lobbied it{% if m %} · {{ m.n_funders }} funded members who voted, {{ m.n_both }} of them on both sides{% endif %}{% if c.former %} · {{ c.former|length }} lobbyist{{ 's' if c.former|length != 1 }} from a financial regulator or banking committee{% endif %}</p></div>
+<p class="meta">{% if c.ppp %}{{ c.ppp.totals.loans|num }} loans · {{ c.ppp.totals.fees|money }} in estimated fees to {{ c.ppp.n_lenders|num }} lenders{% else %}{{ c.n_orgs }} organizations lobbied it{% if m %} · {{ m.n_funders }} funded members who voted, {{ m.n_both }} of them on both sides{% endif %}{% if c.former %} · {{ c.former|length }} lobbyist{{ 's' if c.former|length != 1 }} from a financial regulator or banking committee{% endif %}{% endif %}</p></div>
 {% endfor %}
 <div class="notice">How a case is counted is on its page and on the <a href="method.html#cases">Method</a> page.</div>
 {% endblock %}
