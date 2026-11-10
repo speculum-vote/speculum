@@ -315,6 +315,18 @@ def said_done_data(snap) -> dict:
                           members, clean(snap.read("lobbying.json", {"by_member": {}}), members), snap.read("billinfo.json"))
 
 
+def cmd_ppplobby(args) -> int:
+    """One-time read of 2020-21 lobbying reports for the PPP case (data/records/ppp_lobbying.json); resumable."""
+    from .http import Fetcher
+    from .sources import ppplobby
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    out = ppplobby.fetch(ROOT / "records" / "ppp_lobbying.json", fetch, os.environ.get("LDA_API_KEY"), budget_min=args.minutes)
+    log.info("PPP lobbying: %d of %d quarters complete, %d organizations", sum(1 for q in out["quarters"].values() if q.get("complete")),
+             len(ppplobby.QUARTERS), len(out["orgs_by_key"]))
+    return 0
+
+
 def cmd_ppp(args) -> int:
     """Fetch the SBA's PPP loan data and save per-lender totals with estimated processing fees (data/records)."""
     from .sources import ppp
@@ -418,6 +430,8 @@ def main(argv=None) -> int:
     r = sub.add_parser("restore", help="rebuild a past night's files from git history, checked by SHA-256")
     r.add_argument("date", help="the night, YYYY-MM-DD")
     r.add_argument("--out", help="folder to write into (default restored/<date>)")
+    pl = sub.add_parser("ppplobby", help="one-time read of 2020-21 lobbying reports on the PPP")
+    pl.add_argument("--minutes", type=float, default=280)
     pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
     pp.add_argument("--if-missing", action="store_true")
     z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")
@@ -429,7 +443,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby}[args.cmd](args)
 
 
 if __name__ == "__main__":

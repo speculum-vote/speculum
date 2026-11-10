@@ -1,0 +1,38 @@
+name: PPP lobbying 2020-21 (one-time)
+
+# By hand: reads every 2020 and 2021 quarterly lobbying report (about 8,000 pages) for the PPP case and commits
+# data/records/ppp_lobbying.json. Resumable: run it again if a run stops for time; finished quarters are kept.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Read 2020-21 lobbying reports
+        env:
+          LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
+        run: python -m speculum ppplobby --minutes 270
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "speculum-bot"
+          git config user.email "speculum-bot@users.noreply.github.com"
+          git add data/records/ppp_lobbying.json || true
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "PPP lobbying 2020-21"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1
