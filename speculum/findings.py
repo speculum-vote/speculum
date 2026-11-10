@@ -65,7 +65,8 @@ def _pct(a, b):
     return a / b if b else 0.0
 
 
-def build(members: list[dict], votes: dict, money: dict, chains: list[dict] | None, bills: dict | None = None) -> dict:
+def build(members: list[dict], votes: dict, money: dict, chains: list[dict] | None, bills: dict | None = None,
+          gatekeepers: dict | None = None) -> dict:
     F = []
 
     # How they vote
@@ -133,6 +134,16 @@ def build(members: list[dict], votes: dict, money: dict, chains: list[dict] | No
                   "sub": f"It gave to {o['members']} members: {_pct(o['D'], dr):.0%} of the money to Democrats, {_pct(o['R'], dr):.0%} to Republicans.",
                   "scope": f"LD-203, {money.get('lda_years') or ''}.",
                   "link": "funders.html", "link_label": "The 100 largest"})
+
+    gl = (gatekeepers or {}).get("lead")
+    if gl and gl.get("ratio"):
+        F.append({"id": "gatekeepers", "group": "Where the money comes from", "head": gl["money_share"], "fmt": "pct",
+                  "text": f"of what banks, finance and insurance gave House members went to the {gl['n_on']} members of the "
+                          f"Financial Services Committee, who hold {gl['seat_share']:.0%} of House seats.",
+                  "sub": f"Per member, {gl['ratio']:.1f} times what the rest of the House received from those industries; "
+                         f"from every other sector, {gl['other_ratio']:.1f} times.",
+                  "scope": f"LD-203, {gatekeepers.get('years') or ''}; current committee seats.",
+                  "link": "gatekeepers.html", "link_label": "Every industry and its committee"})
 
     # Who lobbies
     if money.get("spend_total"):

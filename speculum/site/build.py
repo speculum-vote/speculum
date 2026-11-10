@@ -257,8 +257,13 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
         chains = _build_chains(E, snapshots_root.parent, prev, members, finance, lobbying, votes, common, public)
     money_data = _build_money(E, snapshots_root, snap.date, prev, members, finance, lobbying, chains, common)
     _build_glass(E, prev, snapshots_root, snap, meta, timeline, chains, votes, common)
+    from .. import gatekeepers as gk_mod
+    gk = gk_mod.build(members, lobbying, spend, read_newest(snapshots_root, "committees.json", snap.date))
+    if gk:
+        (prev / "gatekeepers.html").write_text(E.get_template("gatekeepers.html").render(
+            root="", page="gatekeepers", g=gk, **common), encoding="utf-8")
     from .. import findings as findings_mod
-    fd = findings_mod.build(members, votes, money_data, chains, bd)
+    fd = findings_mod.build(members, votes, money_data, chains, bd, gatekeepers=gk)
     (prev / "findings.html").write_text(E.get_template("findings.html").render(root="", page="findings", f=fd, **common), encoding="utf-8")
     # The front page: what Speculum is, a few of the night's findings, where to go, and the latest stories.
     (prev / "index.html").write_text(E.get_template("home.html").render(

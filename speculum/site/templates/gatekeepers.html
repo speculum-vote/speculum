@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}The gatekeepers · Speculum{% endblock %}
+{% block body %}
+<h1>The gatekeepers</h1>
+<p class="lede">Most bills that organizations lobby on never reach a vote. Committees decide which bills move. This page compares what organizations in an industry gave to members of the committee that writes that industry's laws with what they gave to every other member of the same chamber.</p>
+{% set L = g.lead %}
+{% if L %}<div class="mstats">
+  <div><b class="num">{{ L.seat_share|pct }}</b><span>of House seats are on Financial Services</span></div>
+  <div><b class="num">{{ L.money_share|pct }}</b><span>of what banks, finance and insurance gave House members went to those seats</span></div>
+  <div><b class="num">{{ L.ratio|round(1) }}×</b><span>as much per member as the rest of the House</span></div>
+  <div><b class="num">{{ L.other_ratio|round(1) }}×</b><span>for money from every other sector, the control</span></div>
+</div>{% endif %}
+<p class="meta">Federal campaign contributions reported by organizations that lobby, their PACs and their lobbyists (LD-203, {{ g.years }}), to sitting members. How to read the last two columns: if a committee's members draw more money from everyone, both numbers rise together. When the industry figure is far above the control, the money follows the seat.</p>
+
+{% for grp in g.groups %}
+<h2>{{ grp.industry }}</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Committee</th><th class="r">Share of seats</th><th class="r">Share of the industry's money</th><th class="r">Per member, on the committee</th><th class="r">Per member, everyone else</th><th class="r">Industry money</th><th class="r">Other money (control)</th></tr></thead>
+<tbody>
+{% for r in grp.rows %}
+<tr><td>{{ r.chamber_name }} {{ r.committee }} <span class="muted">· {{ r.n_on }} of {{ r.n_all }}</span></td>
+<td class="r num">{{ r.seat_share|pct }}</td><td class="r num"><b>{{ r.money_share|pct }}</b></td>
+<td class="r num">{{ r.avg_on|money }}</td><td class="r num">{{ r.avg_off|money }}</td>
+<td class="r num"><b>{{ r.ratio|round(1) }}×</b></td><td class="r num">{{ r.other_ratio|round(1) }}×</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% for r in grp.rows %}
+<details class="gk"><summary>{{ r.chamber_name }} {{ r.committee }}: the {{ r.top|length }} members who received the most from {{ grp.industry|lower }}</summary>
+<ol class="gk-list">{% for m in r.top %}
+<li><a href="member/{{ m.bioguide }}.html">{{ m.name }}</a> <span class="party-{{ m.party }}">({{ m.party }})</span>{% if m.title %} <span class="muted">· {{ m.title }}</span>{% endif %} <span class="num">{{ m.amount|money }}</span></li>
+{% endfor %}</ol></details>
+{% endfor %}
+{% endfor %}
+
+<h2>What this shows, and what it doesn't</h2>
+<ul class="meta">
+  <li>It shows where an industry's money goes. It doesn't show a vote bought or a motive. Members often seek the committee that matters to their district: farm-state members sit on Agriculture, and the money of their home industry may have come first.</li>
+  <li>Labor unions are the exception. Their gifts to the committees over labor law are close to their gifts to everyone else, because unions give broadly across their own side.</li>
+  <li>Sectors are read from each organization's own description of its business, the rule used on the <a href="bills.html">Bills</a> page. Lobbying firms serve many industries, so their gifts count only as other money. {{ g.known_share|pct }} of the {{ g.total|money }} reported could be placed in a sector.</li>
+  <li>Committee seats are current membership (public-domain data from congress-legislators). A member who changed committees during the two years is counted where they sit now. Gifts made in a member's honor, such as to an event or a leadership PAC, are counted as LD-203 reports them.</li>
+</ul>
+<p class="meta"><a href="money.html">← Where the money goes</a> · <a href="method.html#gatekeepers">Method</a></p>
+{% endblock %}
