@@ -1,7 +1,7 @@
 name: Fetch reference files
 
 # By hand: fetch reference files that rarely change (now: the Census Bureau's ZIP code area to congressional
-# district file, for Find your members) and commit them to data/records. The nightly run fetches any that are missing.
+# district file, for Find your members; the SBA's PPP loan data, for the PPP case) and commit them to data/records. The nightly run fetches any that are missing.
 on:
   workflow_dispatch:
 
@@ -15,7 +15,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,7 +23,9 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: ZIP code areas to congressional districts
-        run: python -m speculum zcta
+        run: python -m speculum zcta --if-missing
+      - name: PPP loans, per lender, with estimated processing fees (about 11 million rows; only totals are kept)
+        run: python -m speculum ppp --if-missing
       - name: Commit
         run: |
           git config user.name "speculum-bot"

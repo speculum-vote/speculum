@@ -315,6 +315,17 @@ def said_done_data(snap) -> dict:
                           members, clean(snap.read("lobbying.json", {"by_member": {}}), members), snap.read("billinfo.json"))
 
 
+def cmd_ppp(args) -> int:
+    """Fetch the SBA's PPP loan data and save per-lender totals with estimated processing fees (data/records)."""
+    from .sources import ppp
+    path = ROOT / "records" / "ppp_lenders.json"
+    if args.if_missing and path.exists():
+        log.info("PPP file already there: %s", path)
+        return 0
+    ppp.fetch(path)
+    return 0
+
+
 def cmd_zcta(args) -> int:
     """Fetch the Census Bureau's ZIP code area to congressional district file into data/records (for Find your members)."""
     from .sources import zcta
@@ -407,6 +418,8 @@ def main(argv=None) -> int:
     r = sub.add_parser("restore", help="rebuild a past night's files from git history, checked by SHA-256")
     r.add_argument("date", help="the night, YYYY-MM-DD")
     r.add_argument("--out", help="folder to write into (default restored/<date>)")
+    pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
+    pp.add_argument("--if-missing", action="store_true")
     z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")
     z.add_argument("--if-missing", action="store_true")
     g = sub.add_parser("guard", help="check the night's data and the built site before deploying")
@@ -416,7 +429,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp}[args.cmd](args)
 
 
 if __name__ == "__main__":
