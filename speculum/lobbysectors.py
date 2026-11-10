@@ -32,6 +32,7 @@ RULES = [
     ("insurance", ["insurance", "insurer*", "reinsur*", "underwrit*"]),
     ("finance", ["financial", "fintech", "payment*", "securities", "broker*", "stock exchange*", "securities exchange*",
                  "credit card*", "accounting", "accountant*", "tax prepar*", "crypto*", "digital asset*", "blockchain"]),
+    ("advocacy", ["taxpayer*"]),                       # "National Taxpayers Union" is not a labor union
     ("labor", ["labor union*", "labor organization*", "trade union*", "union representing", "union of", "afl-cio",
                "brotherhood", "teamsters", "federation of teachers", "workers union", "employees union",
                "international union", "labor federation", "union"]),
@@ -98,10 +99,28 @@ def _rx(words):
 _RULES = [(k, _rx(words)) for k, words in RULES]
 
 
+# A client whose description states a public mission is placed with advocacy groups and nonprofits before any
+# industry word in it is read ("social justice in financial marketplaces" is not a financial firm), unless it says it
+# is an association or represents members or an industry. Being a nonprofit alone is not enough: a nonprofit
+# hospital is still a hospital.
+_NONPROFIT = re.compile(r"(?<![a-z0-9])(?:social justice|economic justice|civil rights|human rights|public interest|"
+                        r"consumer advoca[a-z]*|consumer protection|on behalf of consumers|education on|educating consumers)(?![a-z0-9])")
+# With no description, the name is read; a name that says what it stands for ("Center for ...", "Americans for ...")
+# is read as an advocacy group's before any industry word in it ("Center for Responsible Lending" is not a lender).
+_ADVOCACY_NAME = re.compile(r"(?<![a-z0-9])(?:center for|centre for|americans for|citizens for|campaign for|people for|"
+                            r"friends of)(?![a-z0-9])")   # not "alliance for", "coalition for": industries use them too
+_REPRESENTS = re.compile(r"(?<![a-z0-9])(?:association[a-z]*|assn|represent[a-z]*|members?|membership|trade|industry|companies)(?![a-z0-9])")
+
+
 def sector(description: str | None, name: str | None = None, government: bool = False) -> str:
     if government:
         return "government"
-    for text in ((description or "").strip().lower(), (name or "").strip().lower()):
+    d = (description or "").strip().lower()
+    if d and _NONPROFIT.search(d) and not _REPRESENTS.search(d):
+        return "advocacy"
+    if not d and _ADVOCACY_NAME.search((name or "").lower()):
+        return "advocacy"
+    for text in (d, (name or "").strip().lower()):
         if not text:
             continue
         for key, rx in _RULES:

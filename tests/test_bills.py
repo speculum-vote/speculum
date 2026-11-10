@@ -40,3 +40,13 @@ def test_a_former_post_must_name_a_government_office():
     for t in ["None", "N/A", "Director of Government Relations", "Lobbyist", "Vice President of Federal Government Affairs",
               "Legislative Director", "President", "Represented clients"]:
         assert not is_post(t), t
+
+
+def test_nonprofits_and_mission_groups_are_not_read_as_their_subject():
+    s = lobbysectors.sector
+    assert s("Non-profit focused on education on financial products and lending practices") == "advocacy"
+    assert s("Working toward social justice in financial marketplaces on behalf of responsible lending") == "advocacy"
+    assert s("", "CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP") == "advocacy"
+    assert s("", "NATIONAL TAXPAYERS UNION") == "advocacy" and s("", "AMERICANS FOR TAX REFORM") == "advocacy"
+    assert s("Non-profit trade association representing community banks") == "banks"   # an industry's association
+    assert s("", "AMERICAN BANKERS ASSOCIATION") == "banks"

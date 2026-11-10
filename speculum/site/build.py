@@ -15,6 +15,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from ..sources import lobbyspend
 from .. import ledger as ledger_mod
 from .. import tide as tide_mod
 from .. import interests as interests_mod
@@ -180,8 +181,11 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
         })
     rows.sort(key=lambda r: r["sort_name"])
     from .. import money as money_mod
-    spend = read_newest(snapshots_root, "spend.json", snap.date)
+    spend = lobbyspend.with_backfill(read_newest(snapshots_root, "spend.json", snap.date),
+                                     snapshots_root.parent / "records" / "ld2_backfill.json")
     mb = money_mod.build(members, finance, lobbying, spend, set_aside=_set_aside(snapshots_root))
+    common["case_for"] = {k: {"slug": c["slug"], "title": c["title"]} for k, c in
+                          _build_cases(E, snapshots_root.parent, prev, spend, votes, members, lobbying, common).items()}
     bd = _build_bills(E, prev, spend, votes, members, lobbying, read_newest(snapshots_root, "billinfo.json", snap.date), common)
     (prev / "chamber.html").write_text(E.get_template("chamber.html").render(
         root="", page="chamber", rows=rows, members=members, mb=mb,
@@ -394,6 +398,19 @@ def _build_bills(E, prev: Path, spend, votes, members, lobbying, info, common) -
     for x in bd["bills"]:
         (prev / "bill" / f"{x['slug']}.html").write_text(tmpl.render(root="../", page="bills", x=x, group_colors=GROUP_COLORS, **common), encoding="utf-8")
     return bd
+
+
+def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying, common) -> dict:
+    """Cases (speculum/cases.py): one decision followed through the record. Returns {bill slug: case} for links."""
+    from .. import cases as cases_mod
+    done = [cases_mod.compute(c, spend, votes, members, lobbying) for c in cases_mod.load(data_root)]
+    (prev / "case").mkdir(exist_ok=True)
+    for c in done:
+        (prev / "case" / f"{c['slug']}.html").write_text(E.get_template("case.html").render(
+            root="../", page="cases", c=c, **common), encoding="utf-8")
+    (prev / "cases.html").write_text(E.get_template("cases.html").render(root="", page="cases", cases=done, **common),
+                                     encoding="utf-8")
+    return {f"{c['congress']}-{b.lower()}": c for c in done for b in c["bills"]}
 
 
 def _build_saiddone(E, data_root: Path, prev: Path, spend, votes, members, lobbying, info, common) -> dict:

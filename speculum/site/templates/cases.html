@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Cases · Speculum{% endblock %}
+{% block body %}
+<h1>Cases</h1>
+<p class="lede">One decision followed through the public record from start to finish: what it would have done, who lobbied on it, whom they funded among the members who voted, and who had worked for the regulators before lobbying. The same rules for every case. No verdicts.</p>
+{% for c in cases %}{% set m = c.measure %}
+<div class="datafile"><div class="datahead"><a href="case/{{ c.slug }}.html"><b>{{ c.title }}</b></a></div>
+<p>{{ c.dek }}</p>
+<p class="meta">{{ c.n_orgs }} organizations lobbied it{% if m %} · {{ m.n_funders }} funded members who voted, {{ m.n_both }} of them on both sides{% endif %}{% if c.former %} · {{ c.former|length }} lobbyist{{ 's' if c.former|length != 1 }} from a financial regulator or banking committee{% endif %}</p></div>
+{% endfor %}
+<div class="notice">How a case is counted is on its page and on the <a href="method.html#cases">Method</a> page.</div>
+{% endblock %}

@@ -25,7 +25,7 @@ MAX_FILES = 19_500            # Cloudflare Pages allows 20,000
 MAX_BYTES = 25 * 1024 * 1024  # and 25 MiB a file
 PAGES = {"index.html": 4_000, "chamber.html": 50_000, "findings.html": 5_000, "money.html": 5_000,
          "bills.html": 20_000, "method.html": 10_000, "saiddone.html": 3_000, "lameduck.html": 3_000,
-         "tide.html": 2_000, "data.html": 2_000, "dependents.html": 3_000, "join.html": 1_000, "about.html": 1_000}
+         "tide.html": 2_000, "data.html": 2_000, "cases.html": 1_000, "dependents.html": 3_000, "join.html": 1_000, "about.html": 1_000}
 JUNK = re.compile(r"Traceback \(most recent|\{\{|\{%|\bundefined\b|\bNaN\b")
 
 

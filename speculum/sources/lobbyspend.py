@@ -16,6 +16,8 @@ Counting rules (published on the Method page):
 """
 from __future__ import annotations
 
+import json
+
 import logging
 import re
 from collections import defaultdict
@@ -154,6 +156,7 @@ def aggregate(filings: list[dict]) -> dict:
     bill_orgs: dict[str, dict] = {}
     bill_reports: dict[str, int] = defaultdict(int)
     bill_lobbyists: dict[str, dict] = {}
+    lob_clients: dict[str, dict] = {}                # bill -> lobbyist with a former post -> organizations they lobbied for
     bill_files: dict[str, dict] = {}                 # bill -> organization -> the reports (filing UUIDs) that name it
     orgs: dict[str, list] = {}
     people: dict[str, list] = {}
@@ -184,6 +187,8 @@ def aggregate(filings: list[dict]) -> dict:
                     lid = (l.get("lobbyist") or {}).get("id")
                     if pos and lid and not no_post(pos):
                         bill_lobbyists.setdefault(b, {})[str(lid)] = 1
+                        if okey:                                  # whom they lobbied for, so a reader sees which side
+                            lob_clients.setdefault(b, {}).setdefault(str(lid), set()).add(okey)
                         if str(lid) not in people:
                             p = l["lobbyist"]
                             people[str(lid)] = [" ".join(x for x in (p.get("first_name"), p.get("last_name")) if x).title(), pos[:200]]
@@ -230,6 +235,7 @@ def aggregate(filings: list[dict]) -> dict:
                   for b, o in bill_orgs.items()},
         # The reports behind each bill's organizations, so a reader can open them (lda.gov/filings/public/filing/<uuid>/print).
         "bill_filings": {b: {k: sorted(v) for k, v in o.items()} for b, o in bill_files.items()},
+        "lobbyist_clients": {b: {lid: sorted(c) for lid, c in o.items()} for b, o in lob_clients.items()},
         "orgs": {k: orgs[k] for k in set().union(*bill_orgs.values()) if k in orgs} if bill_orgs else {},
         "people": {k: v for k, v in people.items()},
     }
@@ -249,9 +255,10 @@ def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = N
         old = prev.get(label)
         fresh = (today - _deadline(y, q)).days <= REFRESH_DAYS
         if old and old.get("complete") and not fresh:
-            if "bill_filings" not in old and (backfill or {}).get(label) is not None:
-                old = {**old, "bill_filings": backfill[label]}
-                log.info("lobbying spend %s: report links added from the archived filings", label)
+            for field, by_q in (backfill or {}).items():         # fields added after the quarter was fetched
+                if field not in old and by_q.get(label) is not None:
+                    old = {**old, field: by_q[label]}
+                    log.info("lobbying spend %s: %s added from the archived filings", label, field)
             out[label] = old
             continue
         filings, complete = _fetch_quarter(fetch, key, y, q, deadline)
@@ -263,3 +270,19 @@ def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = N
         out[label] = agg
         log.info("lobbying spend %s: %d reports, $%.0f%s", label, agg["reports"], agg["total"], "" if complete else " (partial)")
     return {"quarters": out, "source": f"{BASE}/filings/"}
+
+
+def with_backfill(spend: dict | None, path) -> dict | None:
+    """The spend data with any one-time backfill fields filled in (as the next nightly run will save them), so the
+    site shows them from the next build."""
+    from pathlib import Path as _P
+    p = _P(path)
+    if not spend or not p.exists():
+        return spend
+    bf = json.loads(p.read_text(encoding="utf-8"))
+    for field, by_q in bf.items():
+        for label, v in by_q.items():
+            q = spend.get("quarters", {}).get(label)
+            if q is not None and field not in q:
+                q[field] = v
+    return spend

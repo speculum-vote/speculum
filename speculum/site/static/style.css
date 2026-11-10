@@ -417,3 +417,11 @@ ul.rules b { color: var(--ink); font-weight: 500; }
 .find-row input { background: var(--ground); color: var(--ink); border: 1px solid var(--line); padding: 9px 10px; font: 15px var(--sans); width: 120px; letter-spacing: .04em; text-transform: none; }
 #find-ziprow { margin-bottom: 10px; }
 #find-zipmsg { flex: 1; min-width: 200px; }
+
+/* Cases */
+ol.case-time { list-style: none; padding: 0; margin: 10px 0 18px; border-left: 1px solid var(--line); }
+ol.case-time li { display: grid; grid-template-columns: 110px 1fr; gap: 14px; padding: 8px 0 8px 16px; }
+ol.case-time li > span { color: var(--gold); font: 13px var(--mono); padding-top: 3px; }
+ol.case-time p { margin: 0; }
+ol.case-time p .meta { display: block; margin-top: 4px; }
+@media (max-width: 560px) { ol.case-time li { grid-template-columns: 1fr; gap: 2px; } }

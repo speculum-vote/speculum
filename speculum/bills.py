@@ -43,6 +43,13 @@ def collect(spend: dict | None, info: dict | None = None) -> dict:
     same number, so it is left out (when the introduction date is known)."""
     out: dict = {}
     info = (info or {}).get("bills", {})
+    # An organization's sector is the one most of its quarters give it (its descriptions can differ from report to
+    # report); a tie goes to the earliest quarter's.
+    votes: dict = {}
+    for _, q in sorted((spend or {}).get("quarters", {}).items()):
+        resorted = q.get("org_sectors") or {}         # older quarters re-sorted under the current rules
+        for k, o in (q.get("orgs") or {}).items():
+            votes.setdefault(k, Counter())[resorted.get(k, o[1])] += 1
     for label, q in sorted((spend or {}).get("quarters", {}).items()):
         cg = _congress(label)
         qend = f"{label[:4]}-{QUARTER_END[int(label[-1])]}"
@@ -51,19 +58,25 @@ def collect(spend: dict | None, info: dict | None = None) -> dict:
             intro = (info.get(f"{cg}-{b}") or {}).get("introduced")
             if intro and intro > qend:
                 continue
-            e = out.setdefault((cg, b), {"orgs": {}, "reports": 0, "quarters": [], "former": {}, "files": {}})
+            e = out.setdefault((cg, b), {"orgs": {}, "reports": 0, "quarters": [], "former": {}, "files": {}, "former_for": {}})
             for k in v.get("orgs") or []:
                 if k in orgs and k not in e["orgs"]:
-                    e["orgs"][k] = orgs[k]
+                    e["orgs"][k] = list(orgs[k])
                 elif k in orgs and orgs[k][2] and not e["orgs"][k][2]:
-                    e["orgs"][k] = orgs[k]
+                    e["orgs"][k] = [orgs[k][0], e["orgs"][k][1], orgs[k][2]]
             for lid in v.get("former") or []:
                 if lid in people and is_post(people[lid][1] if len(people[lid]) > 1 else ""):
                     e["former"][lid] = people[lid]
+            for lid, ks in ((q.get("lobbyist_clients") or {}).get(b) or {}).items():   # whom each lobbied for, where kept
+                e["former_for"].setdefault(lid, set()).update(ks)
             for k, uuids in ((q.get("bill_filings") or {}).get(b) or {}).items():   # the reports themselves, where kept
                 e["files"].setdefault(k, []).extend((label, u) for u in uuids)
             e["reports"] += v.get("reports", 0)
             e["quarters"].append(label)
+    for e in out.values():
+        for k, o in e["orgs"].items():
+            if k in votes:
+                o[1] = votes[k].most_common(1)[0][0]
     return out
 
 
@@ -147,7 +160,9 @@ def build(spend: dict | None, votes: dict, members: list[dict], lobbying: dict, 
             "sectors": [{"key": s, "name": S.NAMES[s], "group": S.GROUPS[s], "n": sec[s]} for s in S.ORDER if sec.get(s)],
             "groups": [{"name": g, "n": grp[g]} for g in S.GROUP_ORDER if grp.get(g)],
             "business_share": round(grp.get("Business", 0) / n, 4) if n else None,
-            "orgs": orgs, "former": sorted(({"name": p[0], "post": p[1]} for p in e["former"].values()), key=lambda x: x["name"]),
+            "orgs": orgs, "former": sorted(({"name": p[0], "post": p[1],
+                                 "for": sorted({e["orgs"][k][0] for k in e["former_for"].get(lid, ()) if k in e["orgs"]})}
+                                for lid, p in e["former"].items()), key=lambda x: x["name"]),
             "rolls": rolls, "money_orgs": len(regs),
         })
     pages.sort(key=lambda p: (-p["n_orgs"], p["congress"], p["bill"]))   # ties in a fixed order, whatever order the file lists them in

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ c.title }} · Cases · Speculum{% endblock %}
+{% block body %}
+<p class="meta"><a href="../cases.html">← Cases</a></p>
+<h1>{{ c.title }}</h1>
+<p class="lede">{{ c.dek }}</p>
+{% set m = c.measure %}
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("lobbied", "Who lobbied it"), ("funded", "Whom they funded") if m else none,
+  ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
+
+<h2 id="record">What happened</h2>
+<ol class="case-time">
+{% for f in c.facts %}
+<li><span class="num">{{ f.date|shortdate }}</span><p>{{ f.text }}
+{% if f.roll %}<span class="meta"><a href="{{ f.roll.url }}">Roll call</a>: {{ f.roll.yes }} yes, {{ f.roll.no }} no.</span>{% endif %}
+{% if f.source %}<span class="meta">Source: <a href="{{ f.source.url }}">{{ f.source.title }}</a>{% if f.source2 %}; <a href="{{ f.source2.url }}">{{ f.source2.title }}</a>{% endif %}.</span>{% endif %}</p></li>
+{% endfor %}
+</ol>
+
+<h2 id="lobbied">Who lobbied it</h2>
+<div class="said-done"><div><b class="num">{{ c.n_orgs }}</b><p>organizations named {{ c.bills|map('billname')|join(' or ') }} on quarterly lobbying reports, in {{ c.reports|num }} reports</p></div>
+{% for g in c.groups %}<div><b class="num">{{ g.n }}</b><p>{{ g.name|lower }}</p></div>{% endfor %}</div>
+<p class="meta">A lobbying report says what an organization lobbied on, not which side it took. The organizations below are listed by sector, never by side.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th>Sector</th><th>Lobbying reports naming it</th><th class="r">Funded members voting yes</th><th class="r">… voting no</th></tr></thead><tbody>
+{% for o in c.orgs %}<tr><td>{{ o.name|org }}</td><td class="muted">{{ o.sector_name }}</td>
+<td class="num">{% for r in o.reports %}<a href="{{ r.url }}">{{ r.quarter[2:4] }}Q{{ r.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_reports > o.reports|length %} <span class="muted">+{{ o.n_reports - o.reports|length }}</span>{% endif %}{% if not o.reports %}<span class="muted">—</span>{% endif %}</td>
+{% if o.funding %}<td class="r num">{{ o.funding.yes.members }} · {{ o.funding.yes.amount|money }}</td><td class="r num">{{ o.funding.no.members }} · {{ o.funding.no.amount|money }}</td>
+{% elif o.own %}<td class="r muted">none</td><td class="r muted">none</td>{% else %}<td class="r muted" colspan="2">files no reports of its own</td>{% endif %}</tr>
+{% endfor %}</tbody></table></div>
+
+{% if m %}
+<h2 id="funded">Whom they funded</h2>
+<p>{{ m.n_lobbied_own }} of the {{ c.n_orgs }} file their own lobbying reports, so their contributions can be read. <b>{{ m.n_funders }}</b> of them gave to members who voted on the final {{ c.vehicle|billname }} votes{% if m.n_funders %}, and <b>{{ m.n_both }}</b> of those {{ m.n_funders }} gave to members on both sides{% endif %}. The other {{ m.n_lobbied_own - m.n_funders }} report no contributions to those members.</p>
+<div class="said-done"><div><b class="num">{{ m.money.yes|money }}</b><p>to members who voted yes</p></div><div><b class="num">{{ m.money.no|money }}</b><p>to members who voted no</p></div>
+{% for v in m.votes %}<div><b class="num">{{ v.yes }}–{{ v.no }}</b><p><a href="{{ v.url }}">{{ v.chamber|title }}, {{ v.date|shortdate }}</a></p></div>{% endfor %}</div>
+<p class="meta">Contributions by the organization or its PAC reported on LD-203, {{ years or "2025–26" }}, before or after the vote; lobbyists' own contributions are left out. The same rule as <a href="../saiddone.html">Said &amp; Done</a>.</p>
+{% endif %}
+
+{% if c.former %}
+<h2 id="former">From the regulators to the lobby</h2>
+<p>Lobbyists must list government posts they held in the past 20 years. Of the {{ c.n_former }} lobbyists on these reports who list one, {{ c.former|length }} list a post at a financial regulator or on a congressional banking committee:</p>
+<ul class="rules">{% for f in c.former %}<li><b>{{ f.name }}</b>{% if f.for %}, lobbying for {{ f.for|map("org")|join(", ") }}{% endif %}. As reported: “{{ f.post }}”</li>{% endfor %}</ul>
+{% endif %}
+
+<h2 id="rules">How this page is counted</h2>
+<ul class="rules">
+<li>Every dated fact above links its source: the official roll call, the law as printed, or the agency's announcement.</li>
+<li>Who lobbied: organizations that named {{ c.bills|map('billname')|join(' or ') }} on a quarterly lobbying report (LD-2). Sectors follow the site's word rules (<a href="../method.html#bills">Method</a>).</li>
+{% if c.not_yet %}<li>Not yet counted: {{ c.not_yet }}</li>{% endif %}
+<li>A case is chosen to show how one decision moved through the record; every case is counted by the same rules, and a case is never dropped because of what it shows.</li>
+</ul>
+{% endblock %}
