@@ -91,7 +91,7 @@ def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
         m["n_reports"] += o.get("n_reports", 0)
         m["fee"] += o.get("fee", 0)
         for r in o.get("reports") or []:
-            if len(m["reports"]) < 4:
+            if len(m["reports"]) < 4 and r["quarter"] not in {x["quarter"] for x in m["reports"]}:   # one link per quarter
                 m["reports"].append({"quarter": r["quarter"], "url": LDA_FILING.format(r["uuid"])})
             m["said"] = m["said"] or r.get("said")
         m["registrants"] += [x for x in o.get("registrants") or [] if x not in m["registrants"]]
@@ -118,6 +118,7 @@ def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
         c = core_name(L["name"])
         m = merged.get(c)
         lenders_out.append({"name": L["name"], "fees": L["fees"], "lobbied": bool(m), "own": bool(m and m["own"]),
+                            "bank": bool(re.search(r"BANK\b|\bTRUST\b", L["name"].upper())),
                             "n_reports": m["n_reports"] if m else 0, "quarters": m["quarters"] if m else [],
                             "reports": m["reports"] if m else [], "firms": m["firms"] if m else [],
                             "spent": {y: round(v, 2) for y, v in spend_core[c].items()} if c in spend_core else None})

@@ -5,7 +5,7 @@
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
 {% set m = c.measure %}
-{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
 
 <h2 id="record">What happened</h2>
@@ -33,6 +33,37 @@
 <thead><tr><th>Lender</th><th class="r">Loans</th><th class="r">Lent</th><th class="r">Fees (est.)</th><th class="r">Fee rate</th><th class="r">Second loans</th></tr></thead><tbody>
 {% for L in P.lenders %}<tr><td>{{ L.name|org }} <span class="muted">{{ L.state }}</span></td><td class="r num">{{ L.loans|num }}</td><td class="r num">{{ L.amount|money }}</td><td class="r num">{{ L.fees|money }}</td><td class="r num">{{ L.rate|pct }}</td><td class="r num">{{ L.second|num }}</td></tr>{% endfor %}
 </tbody></table></div>
+{% set H = P.history %}{% if H and H.rule_version %}
+<h3 id="then">Who lobbied on it while it ran, 2020–21</h3>
+<div class="said-done"><div><b class="num">{{ H.n_reports|num }}</b><p>quarterly lobbying reports named the program, of the {{ H.n_read|num }} reports and amendments filed for 2020 and 2021</p></div>
+<div><b class="num">{{ H.n_orgs|num }}</b><p>organizations lobbied on it, for themselves or through a firm</p></div>
+<div><b class="num">{{ H.fee_orgs|length }}</b><p>of them mentioned fees alongside the program</p></div></div>
+<p>By sector: {% for x in H.sectors[:8] %}{{ x.name|lower }} {{ x.n }}{{ ', ' if not loop.last else '.' }}{% endfor %} A report says what an organization lobbied on, not which side it took.</p>
+{% set lb = H.lenders|selectattr('lobbied')|list %}
+{% set banks_only = lb|rejectattr('bank')|list|length == 0 %}{% set nonbank = H.lenders|rejectattr('bank')|list %}
+<p>Of the 25 lenders paid the most, {{ lb|length }} lobbied on the program while it ran{% if banks_only and lb %}, all of them banks{% endif %}{% if lb|rejectattr('own')|list %} ({{ lb|rejectattr('own')|map(attribute='name')|map('org')|join(', ') }} through a lobbying firm){% endif %}. The other {{ H.lenders|rejectattr('lobbied')|list|length }} did not{% if nonbank and not nonbank|selectattr('lobbied')|list %}, among them all {{ nonbank|length }} lenders on the list that are not banks{% endif %}.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Lender</th><th class="r">PPP fees (est.)</th><th>Reports naming the program</th><th class="r">All lobbying reported, 2020</th><th class="r">2021</th></tr></thead><tbody>
+{% for L in H.lenders %}<tr><td>{{ L.name|org }}</td><td class="r num">{{ L.fees|money }}</td>
+<td class="num">{% if L.lobbied %}{% for r in L.reports %}<a href="{{ r.url }}">{{ r.quarter[2:4] }}Q{{ r.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if L.n_reports > L.reports|length %} <span class="muted">· {{ L.n_reports }} reports</span>{% endif %}{% if not L.own %} <span class="muted">through {{ L.firms|map('org')|join(', ') }}</span>{% endif %}{% else %}<span class="muted">none</span>{% endif %}</td>
+<td class="r num">{{ L.spent['2020']|money if L.spent and L.spent['2020'] else '—' }}</td><td class="r num">{{ L.spent['2021']|money if L.spent and L.spent['2021'] else '—' }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% if H.fee_orgs %}
+<h3>Those that mentioned fees</h3>
+<p class="meta">Reports that mention a fee within a few lines of the program, in the filer's own words. A fee here can be the lenders' processing fee, an agent's fee, or another fee the filer raised.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th>Sector</th><th>From the report</th></tr></thead><tbody>
+{% for o in H.fee_orgs %}<tr><td>{{ o.name|org }}{% if not o.own %} <span class="muted">· through {{ o.firms|map('org')|join(', ') }}</span>{% endif %}</td><td class="muted">{{ o.sector_name }}</td>
+<td style="font-size:13px">{% if o.fee_said %}“{{ o.fee_said }}”{% if o.fee_report %} <a href="https://lda.gov/filings/public/filing/{{ o.fee_report.uuid }}/print/">{{ o.fee_report.quarter[2:4] }}Q{{ o.fee_report.quarter[-1] }}</a>{% endif %}{% else %}<span class="muted">—</span>{% endif %}</td></tr>{% endfor %}
+</tbody></table></div>{% endif %}
+<details class="gk"><summary>Every organization that lobbied on the program, 2020–21 ({{ H.n_orgs|num }})</summary>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th>Sector</th><th>Reports</th></tr></thead><tbody>
+{% for o in H.orgs %}<tr><td>{{ o.name|org }}{% if not o.own %} <span class="muted">· through {{ o.firms|map('org')|join(', ') }}</span>{% endif %}</td><td class="muted">{{ o.sector_name }}</td>
+<td class="num">{% for r in o.reports %}<a href="{{ r.url }}">{{ r.quarter[2:4] }}Q{{ r.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_reports > o.reports|length %} <span class="muted">· {{ o.n_reports }} reports</span>{% endif %}</td></tr>{% endfor %}
+</tbody></table></div></details>
+<p class="meta">Every quarterly lobbying report filed for 2020 and 2021 ({{ H.n_read|num }}) was read once. A report counts when it names the Paycheck Protection Program, or "PPP" with words about loans, lenders, the SBA, small business or forgiveness. "Paycheck Protection Act" bills about union dues and firefighters' pay don't count. Naming only the law that refilled the program in April 2020 (the Paycheck Protection Program and Health Care Enhancement Act, which also funded hospitals and testing) doesn't count either{% if H.law_only %}: {{ H.law_only|num }} reports did only that{% endif %}. A report amended in the same quarter counts once. Organizations are merged by name. "All lobbying reported" is what a lender's own reports gave for every issue that year.</p>
+{% endif %}
 {% if P.today %}{% set lob = P.today|selectattr('own')|list %}
 <h3 id="today">The same lenders today</h3>
 <p>Of these 25 lenders, {{ lob|length }} file their own lobbying reports in 2025–26: together they reported {{ lob|sum(attribute='spend')|money }} in lobbying and gave {{ lob|sum(attribute='gave_total')|money }} to sitting members. {% set rest = P.today|rejectattr('own')|list %}The other {{ rest|length }} file none of their own.</p>
