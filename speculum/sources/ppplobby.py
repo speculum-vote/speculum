@@ -4,7 +4,10 @@ filed for 2020 and 2021, before Speculum's record begins.
 A report counts when one of its lobbying activities says "Paycheck Protection Program", or says "PPP" (or "paycheck
 protection") together with words about loans (loan, lender, SBA, small business, forgiveness): "PPP" alone also means
 public-private partnership, and other bills are named "Paycheck Protection Act" (union dues, firefighters' pay).
-A report about PPP that also mentions a fee is marked, because the lenders' processing fees were set by these rules.
+The name of the law "Paycheck Protection Program and Health Care Enhancement Act" (H.R. 266, April 2020) does not count
+by itself: it also funded hospitals and testing, and many filers list it among the COVID-19 laws they lobbied on.
+Those reports are counted per quarter but no organization is listed for them. A report about PPP that mentions a fee
+within 300 characters of the program is marked, because the lenders' processing fees were set by these rules.
 A report says what an organization lobbied on, not which side it took. Kept: per organization, its sector, whether it
 files its own reports, the quarters, and up to eight of the reports themselves; per quarter, how many reports were read
 and how many mention the program. Saved to data/records/ppp_lobbying.json."""
@@ -18,33 +21,69 @@ from datetime import date
 from pathlib import Path
 
 from ..lobbysectors import sector as sector_of
-from .lobbyspend import BASE, PERIODS, name_key
+from .lobbyspend import BASE, PERIODS, REGISTRATIONS, _amount, name_key
 
 log = logging.getLogger(__name__)
 
 QUARTERS = [(y, q) for y in (2020, 2021) for q in (1, 2, 3, 4)]
+RULE_VERSION = 2     # 2: H.R. 266's name alone does not count; fee within 300 characters; matched words kept;
+                     #    amendments counted once; every organization's 2020-21 lobbying amounts kept
 _PPP = re.compile(r"paycheck\s+protection\s+program", re.I)
 # Other bills are called "Paycheck Protection Act" (union dues, firefighters' pay): those words alone never count.
 _PPP_ABBR = re.compile(r"\bPPP\b|paycheck\s+protection(?!\s+(?:act|program))", re.I)
 _LOANISH = re.compile(r"\b(loans?|lenders?|lending|SBA|small business(es)?|forgiv\w*)\b", re.I)
 _FEE = re.compile(r"\bfees?\b", re.I)
+_LAW = re.compile(r"paycheck\s+protection\s+program\s+and\s+health\s*care\s+enhancement\s+act", re.I)
+
+
+def _strip(text: str | None) -> str:
+    return _LAW.sub(lambda m: " " * len(m.group(0)), text or "")      # same length, so positions still line up
 
 
 def mentions_ppp(text: str | None) -> bool:
-    t = text or ""
+    t = _strip(text)
     return bool(_PPP.search(t) or (_PPP_ABBR.search(t) and _LOANISH.search(t)))
 
 
-def scan(filings, orgs: dict, label: str) -> tuple[int, int]:
-    """Add one quarter's filings to `orgs`; returns (reports read, reports mentioning PPP)."""
-    n = hits = 0
+def law_only(text: str | None) -> bool:
+    """Names H.R. 266 and nothing else about the program."""
+    return bool(_LAW.search(text or "")) and not mentions_ppp(text)
+
+
+def fee_near(text: str | None, reach: int = 300) -> bool:
+    t = _strip(text)
+    spots = [m.start() for m in list(_PPP.finditer(t)) + list(_PPP_ABBR.finditer(t))]
+    return any(abs(f.start() - p) <= reach for f in _FEE.finditer(t) for p in spots)
+
+
+def scan(filings, orgs: dict, label: str, state: dict | None = None) -> tuple[int, int, int]:
+    """Add one quarter's filings to `orgs`; returns (reports read, reports mentioning PPP, reports naming only H.R. 266).
+    A report amended in the same quarter is counted once (by registrant and client). `state` carries, across a quarter's
+    pages, which reports were seen and the latest version's lobbying amount for every report."""
+    state = {} if state is None else state
+    seen, law_seen, latest = state.setdefault("seen", set()), state.setdefault("law", set()), state.setdefault("spend", {})
+    n = hits = law = 0
     for f in filings:
         n += 1
-        acts = [a for a in f.get("lobbying_activities") or [] if mentions_ppp(a.get("description"))]
-        if not acts:
-            continue
-        hits += 1
         reg, cli = f.get("registrant") or {}, f.get("client") or {}
+        pair = (reg.get("id"), cli.get("id"))
+        own = bool(cli.get("client_self_select"))
+        if pair[0] and pair[1] and (f.get("filing_type") or "") not in REGISTRATIONS:
+            dt = f.get("dt_posted") or ""
+            if pair not in latest or dt > latest[pair][0]:
+                latest[pair] = (dt, name_key(cli.get("name")), cli.get("name"), own,
+                                _amount(f.get("expenses")) if own else _amount(f.get("income")))
+        descs = [a.get("description") for a in f.get("lobbying_activities") or []]
+        acts = [d for d in descs if mentions_ppp(d)]
+        if not acts:
+            if any(law_only(d) for d in descs) and pair not in law_seen:
+                law_seen.add(pair)
+                law += 1
+            continue
+        if pair in seen:
+            continue
+        seen.add(pair)
+        hits += 1
         own = bool(cli.get("client_self_select"))
         k = name_key(cli.get("name"))
         if not k:
@@ -57,13 +96,29 @@ def scan(filings, orgs: dict, label: str) -> tuple[int, int]:
         if label not in o["quarters"]:
             o["quarters"].append(label)
         o["n_reports"] += 1
-        o["fee"] += any(_FEE.search(a.get("description") or "") for a in acts)
+        o["fee"] += any(fee_near(d) for d in acts)
         if len(o["reports"]) < 8 and f.get("filing_uuid"):
-            o["reports"].append({"quarter": label, "uuid": f["filing_uuid"]})
+            r = {"quarter": label, "uuid": f["filing_uuid"]}
+            if len(o["reports"]) < 2:
+                w = _windows(acts[0], 110)
+                r["said"] = w[0] if w else None
+            o["reports"].append(r)
         rn = reg.get("name")
         if rn and rn not in o["registrants"] and len(o["registrants"]) < 6:
             o["registrants"].append(rn)
-    return n, hits
+    return n, hits, law
+
+
+def fold_spend(spend: dict, latest: dict, year: int) -> None:
+    """Each organization's reported lobbying for the year, all issues: what it reported spending on its own reports
+    ("own") and what lobbying firms reported being paid for it ("firms"), by name. Both are kept; they overlap when
+    an organization's own report includes what it paid its firms."""
+    for dt, k, name, own, amt in latest.values():
+        if not k or not amt:
+            continue
+        e = spend.setdefault(k, {"name": name})
+        y = e.setdefault(str(year), {"own": 0.0, "firms": 0.0})
+        y["own" if own else "firms"] += amt
 
 
 def merge(orgs: dict, more: dict) -> None:
@@ -81,19 +136,21 @@ def merge(orgs: dict, more: dict) -> None:
         m["registrants"] += [r for r in o["registrants"] if r not in m["registrants"]][: max(0, 6 - len(m["registrants"]))]
 
 
-def fetch(path: Path, fetch, key: str | None, budget_min: float = 280) -> dict:
+def fetch(path: Path, fetch, key: str | None, budget_min: float = 280, fresh: bool = False) -> dict:
     """Pages through each quarter (about 1,000 pages of 25 reports each); resumable: a quarter already complete in
     `path` is kept."""
     fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
     headers = {"Authorization": f"Token {key}"} if key else None
     have = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    orgs, quarters = have.get("orgs_by_key", {}), have.get("quarters", {})
+    if fresh or have.get("rule_version") != RULE_VERSION:
+        have = {}
+    orgs, quarters, spend = have.get("orgs_by_key", {}), have.get("quarters", {}), have.get("spend_by_key", {})
     t0 = time.monotonic()
     for y, q in QUARTERS:
         label = f"{y}-Q{q}"
         if (quarters.get(label) or {}).get("complete"):
             continue
-        page, n, hits, complete, qorgs = 1, 0, 0, False, {}
+        page, n, hits, law, complete, qorgs, state = 1, 0, 0, 0, False, {}, {}
         while True:
             if (time.monotonic() - t0) / 60 > budget_min:
                 log.warning("PPP lobbying %s: stopped at page %d for time; run again to finish", label, page)
@@ -101,22 +158,23 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280) -> dict:
             data = fetch.get_json("lda", f"ppp_{y}_q{q}_p{page:04d}.json", f"{BASE}/filings/",
                                   params={"filing_year": y, "filing_period": PERIODS[q], "page": page, "page_size": 25},
                                   headers=headers)
-            a, b = scan(data.get("results", []), qorgs, label)
-            n, hits = n + a, hits + b
+            a, b, c = scan(data.get("results", []), qorgs, label, state)
+            n, hits, law = n + a, hits + b, law + c
             if not data.get("next"):
                 complete = True
                 break
             page += 1
         if complete:
             merge(orgs, qorgs)
-            quarters[label] = {"reports": n, "ppp_reports": hits, "complete": True}
+            fold_spend(spend, state.get("spend", {}), y)
+            quarters[label] = {"reports": n, "ppp_reports": hits, "law_only_reports": law, "complete": True}
             log.info("PPP lobbying %s: %d reports, %d mention the program", label, n, hits)
         else:
             break                                   # a partial quarter is dropped whole; the next run starts it again
     done = {k for k, v in quarters.items() if v.get("complete")}
     out = {"source": f"{BASE}/filings/", "rule": __doc__.split("\n\n")[1].strip(), "built": date.today().isoformat(),
-           "quarters": quarters, "complete": len(done) == len(QUARTERS),
-           "orgs_by_key": orgs}
+           "rule_version": RULE_VERSION, "quarters": quarters, "complete": len(done) == len(QUARTERS),
+           "orgs_by_key": orgs, "spend_by_key": spend}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return out
@@ -124,8 +182,9 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280) -> dict:
 
 def _windows(text: str, width: int = 160) -> list[str]:
     t = re.sub(r"\s+", " ", text or "")
+    st = _strip(t)
     out = []
-    for m in list(_PPP.finditer(t)) + list(_PPP_ABBR.finditer(t)):
+    for m in list(_PPP.finditer(st)) + list(_PPP_ABBR.finditer(st)):
         a, b = max(0, m.start() - width), min(len(t), m.end() + width)
         w = t[a:b]
         if not any(w in o or o in w for o in out):
