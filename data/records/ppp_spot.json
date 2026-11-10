@@ -1,520 +1,562 @@
 {
  "seed": 2020,
- "n": 56,
+ "n": 47,
  "rows": [
   {
-   "key": "NATIONAL COUNCIL FOR BEHAVIORAL HEALTH",
-   "quarter": "2020-Q2",
-   "uuid": "650513b6-6519-4752-bd4c-e69f9e960a0f",
-   "client": "NATIONAL COUNCIL FOR BEHAVIORAL HEALTH",
+   "key": "SANTA CLARA VALLEY WATER DISTRICT",
+   "quarter": "2020-Q3",
+   "uuid": "76a99b66-efe7-486e-8d8c-e7d2741472db",
+   "client": "SANTA CLARA VALLEY WATER DISTRICT",
    "description": null,
-   "sector": "health",
+   "sector": "government",
    "matched": [
-    "oronavirus Aid, Relief, and Economic Security (CARES) Act (H.R. 748), all provisions related to relief funding in response to the novel, COVID-19 pandemic. The Paycheck Protection Program and Health Care Enhancement Act (H.R. 266), all provisions related to funding in response to the novel, COVID-19 pandemic. The Heroes Act (H.R. 6800), all prov"
+    "t; the FUTURE Drought Resiliency Act (H.R. XXXX, Huffman); H.R. 6800, the Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act; H.R. 7010, the Paycheck Protection Program Flexibility Act; H.R. XXXX, the Coronavirus Stimulus Act Phase 4; H.R. 2, the Investing in a New Vision for the Environment and Surface Transportation in Ameri"
    ],
    "still_matches": true
   },
   {
-   "key": "ASSOCIATION OF WOODWORKING AND FURNISHING SUPPLIERS",
+   "key": "CALISTA",
    "quarter": "2020-Q2",
-   "uuid": "5a305225-f402-4128-abd0-b9d25747b024",
-   "client": "ASSOCIATION OF WOODWORKING AND FURNISHING SUPPLIERS",
-   "description": "Advance building awareness for woodworking industry.",
-   "sector": "trade",
-   "matched": [
-    "Additional flexibility for PPP recipients. Additional assistance for small businesses."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NCR VOYIX",
-   "quarter": "2020-Q2",
-   "uuid": "4259769d-ae5f-4cf5-91aa-5fe7eb9c61ca",
-   "client": "NCR VOYIX CORPORATION (FKA NCR CORPORATION)",
-   "description": "Technology company",
-   "sector": "tech",
-   "matched": [
-    "Provisions related to HR 748, the CARES Act, Paycheck Protection Program and small business loans"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "REGIONS FINANCIAL",
-   "quarter": "2020-Q1",
-   "uuid": "d773dd05-d794-412f-ae2a-582fb2e323da",
-   "client": "REGIONS FINANCIAL CORP.",
-   "description": "Regional community banking.",
-   "sector": "banks",
-   "matched": [
-    " standard (CECL); BSA/AML Reform; LIBOR migration; and corona virus relief legislation, phases I, II, and III, issues impacting regional lenders, including the PPP small business loan facility, other SBA programs, the Fed 13(3) Main Street lending authority, and other programs."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "INTUIT",
-   "quarter": "2020-Q2",
-   "uuid": "664b3b35-63f5-459b-8d9d-6a465b9d75b7",
-   "client": "INTUIT, INC.",
-   "description": "Personal finance management for small businesses and accounting professionals.",
-   "sector": "finance",
-   "matched": [
-    "nd sharing economy financial literacy. H.R. 6800, HEROS Act; Implementation of CARES Act (PL 116-136); S. 4116, To extend the authority for commitments for the paycheck protection program and separate amounts authorized for other loans under section 7(a) of the Small Business Act, and for other purposes."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "INSIGHTS ASSOCIATION",
-   "quarter": "2020-Q2",
-   "uuid": "7eaf5364-01cd-4a5c-987a-7e88013a126b",
-   "client": "INSIGHTS ASSOCIATION (FKA: MARKETING RESEARCH ASSOCIATION)",
-   "description": null,
-   "sector": "advocacy",
-   "matched": [
-    "d forgivable loans for small businesses impacted by COVID-19 crisis. Support for PPP loan program in the CARES Act, replenishment of funds for it, and then the Paycheck Protection Program Flexibility Act. Requesting the easing of the affiliation rules for the PPP loan program so that marketing research companies with minority VC/PE investment ca",
-    "Support for emergency loans and forgivable loans for small businesses impacted by COVID-19 crisis. Support for PPP loan program in the CARES Act, replenishment of funds for it, and then the Paycheck Protection Program Flexibility Act. Requesting the easing of the affiliatio"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "JOB CREATORS NETWORK",
-   "quarter": "2020-Q1",
-   "uuid": "8ad0e36f-a799-4909-9c6d-5050a95df3ca",
-   "client": "JOB CREATORS NETWORK",
-   "description": "Creating an environment in which small businesses can thrive",
+   "uuid": "b6fb091f-68ae-4f04-82b7-aafe718f8f50",
+   "client": "CALISTA CORPORATION",
+   "description": "Alaska Native Regional Corporation",
    "sector": "industry",
    "matched": [
-    "Small business and employee assistance during the COVID-19 pandemic. PL116-139/HR266, the Paycheck Protection Program and Health Care Enhancement Act. PL116-137/HR 748, the CARES Act.",
-    "Small business and employee assistance during the COVID-19 pandemic. PL116-139/HR266, the Paycheck Protection Program and Health Care Enhancement Act. PL116-137/HR 748, the CARES Act.",
-    "Small business and employee assistance during the COVID-19 pandemic. PL116-139/HR266, the Paycheck Protection Program and Health Care Enhancement Act. PL116-137/HR 748, the CARES Act."
+    "Act; S.2302, America's Transportation Infrastructure Act of 2019; H.R.266, Paycheck Protection Program and Health Care Enhancement Act (P.L.116-139); H.R.7010, Paycheck Protection Program Flexibility Act of 2020 (P.L.116-142); H.R.6431, Made in America Emergency Preparedness Act; S.3590, Drinking Water Infrastructure Act of 2020."
    ],
    "still_matches": true
   },
   {
-   "key": "GENALYTE",
+   "key": "TEXAS LAND TITLE ASSOCIATION",
    "quarter": "2020-Q2",
-   "uuid": "badb18d5-569e-4b7c-b3cc-49523f3bd8a8",
-   "client": "GENALYTE",
-   "description": "Develops and markets high-quality, mobile diagnostic tests",
-   "sector": "health",
+   "uuid": "8c215d7c-3529-495d-8811-b0c62cd88151",
+   "client": "TEXAS LAND TITLE ASSOCIATION",
+   "description": "Association in support of the title industry in Texas",
+   "sector": "trade",
    "matched": [
-    ". 6201, Families First Coronavirus Response Act- Implementation H.R. 748, Coronavirus Aid, Relief, and Economic Security (CARES) Act - Implementation H.R. 266, Paycheck Protection Program and Health Care Enhancement Act H.R. 6800, HEROES Act"
+    "Monitor issues related to the land title industry; CFPB TRID request for information; monitor GSE reform, simultaneous issue and remote online notary, and the Paycheck Protection Program (PPP)."
    ],
    "still_matches": true
   },
   {
-   "key": "YOUTHBUILD GLOBAL",
-   "quarter": "2020-Q3",
-   "uuid": "44e8649b-6fee-4b84-b44e-3d2840d3db4b",
-   "client": "YOUTHBUILD GLOBAL, INC.",
-   "description": "Non-profit youth organization; Rebuilding communities through education and employment",
+   "key": "NATIONAL ASSOCIATION OF DEVELOPMENT COMPANIES",
+   "quarter": "2020-Q2",
+   "uuid": "e3d1fa34-fe09-491b-8d01-5d32148a18ac",
+   "client": "NATIONAL ASSOCIATION OF DEVELOPMENT COMPANIES",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "TH AND ECONOMIC RECOVERY OMNIBUS EMERGENCY SOLUTIONS ACT - HEROES Act PAYCHECK PROTECTION PROGRAM AND HEALTH CARE ENHANCEMENT ACT - (PL 116-139) April 24, 2020 PAYCHECK PROTECTION PROGRAM Flexibility Act FY 2021 FSGG Appropriations"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "MYSTIC SEAPORT MUSEUM",
+   "quarter": "2020-Q2",
+   "uuid": "637e096e-6c09-43ab-a7fa-e98781ae2f3f",
+   "client": "MYSTIC SEAPORT MUSEUM",
+   "description": "A museum of America's sea history.",
    "sector": "education",
    "matched": [
-    " Public Law 116-127, Families First Coronavirus Response Act Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act Public Law 116-139, Paycheck Protection Program and Health Care Enhancement Act H.R.6800, Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act Health and Economic Recovery Omnibus Emergency "
+    "al Endowment for the Arts (NEA). Support 100% reimbursement of unemployment obligations for self-insured nonprofits. Support the extension and expansion of the Paycheck Protection Program at the Small Business Administration.",
+    "al Endowment for the Arts (NEA). Support 100% reimbursement of unemployment obligations for self-insured nonprofits. Support the extension and expansion of the Paycheck Protection Program at the Small Business Administration.",
+    "al Endowment for the Arts (NEA). Support 100% reimbursement of unemployment obligations for self-insured nonprofits. Support the extension and expansion of the Paycheck Protection Program at the Small Business Administration."
    ],
    "still_matches": true
   },
   {
-   "key": "HSBC TECHNOLOGY AND SERVICES",
-   "quarter": "2020-Q3",
-   "uuid": "cc9b544d-4aeb-4f79-abbc-0408d432706d",
-   "client": "HSBC TECHNOLOGY & SERVICES (USA) INC",
-   "description": "Financial services and banking",
-   "sector": "banks",
-   "matched": [
-    "Discussions regarding implementation of P.L.116-136, CARES Act (Title I. Keeping American Workers Paid and Employed Act, Sec.1102 Paycheck Protection Program) H.R.6800, The Heroes Act (Division A, Title III. Financial Services and General Government) Monitored S.4117, Paycheck Protection Small Business Forgiveness A",
-    "ness Act Monitored H.R.8265, To amend the Small Business Act and the CARES Act to establish a program for second draw loans and make other modifications to the paycheck protection program, and for other purposes. Monitored draft COVID-19 pandemic proposals"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "MICROSOFT",
-   "quarter": "2020-Q3",
-   "uuid": "fb3ee6bb-25a5-4e6b-b97a-123e5eac44b4",
-   "client": "MICROSOFT CORPORATION",
-   "description": "Develops, markets, distributes, and licenses computer software and hardware",
-   "sector": "tech",
-   "matched": [
-    " Public Law 116-127, Families First Coronavirus Response Act Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act Public Law 116-139, Paycheck Protection Program and Health Care Enhancement Act H.R.6800, Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act Health and Economic Recovery Omnibus Emergency "
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "ASSOCIATED EQUIPMENT DISTRIBUTORS",
-   "quarter": "2020-Q2",
-   "uuid": "81e252e6-3cc7-43c6-bb69-58485c97b0ba",
-   "client": "ASSOCIATED EQUIPMENT DISTRIBUTORS",
-   "description": null,
-   "sector": "trade",
-   "matched": [
-    "Advocated for changes to the Paycheck Protection Program to allow greater flexibility and allow more businesses to benefit from the program. Supported increased funding for the Paycheck Protection Program (H.R. 7010/",
-    "nges to the Paycheck Protection Program to allow greater flexibility and allow more businesses to benefit from the program. Supported increased funding for the Paycheck Protection Program (H.R. 7010/Paycheck Protection Program Flexibility Act of 2020)."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL CORN GROWERS ASSN",
-   "quarter": "2020-Q2",
-   "uuid": "e52af06e-3518-40a1-b9ff-afd343243131",
-   "client": "NATIONAL CORN GROWERS ASSN",
-   "description": null,
-   "sector": "trade",
-   "matched": [
-    "Issues related to the Paycheck Protection Program (PPP) Issues related to the Economic Injury Disaster Loan program (EIDL)"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "AMERICAN HOTEL AND LODGING ASSOCIATION",
-   "quarter": "2020-Q2",
-   "uuid": "6cb24dcb-1ec0-4b7b-895f-11e872dbb285",
-   "client": "AMERICAN HOTEL & LODGING ASSOCIATION",
-   "description": "Industry trade group representing organizations of hotel owners",
-   "sector": "industry",
-   "matched": [
-    "Issues related to implementation of Coronavirus Aid, Relief, and Economic Security (CARES) Act (Public Law No. 116-136); Paycheck Protection Program and Health Care Enhancement Act (Public Law No. 116-139), H.R. 6800, the Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act",
-    "/HR2495, Stop Online Booking Scams Act (SOBSA) of 2017. Issues concerning congressional response to COVID-19, CARES Act - S 3548 / HR 748 (Public Law 116-136), Paycheck Protection Program and Health Care Enhancement Act (Public Law No. 116-139), H.R. 6800, the Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "INTERNATIONAL PIZZA HUT FRANCHISE HOLDERS ASSOCIATION",
-   "quarter": "2020-Q4",
-   "uuid": "e3becd34-3475-4fd4-be17-2a9f14dffb8b",
-   "client": "INTERNATIONAL PIZZA HUT FRANCHISE HOLDERS ASSOCIATION",
-   "description": "A trade association of Pizza Hut franchise companies",
-   "sector": "industry",
-   "matched": [
-    "Deductibility of PPP loans on taxes",
-    "H.R. 133, Consolidated Appropriations Act, 2021, especially portions relating to the Paycheck Protection Program (PPP)."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "SCULLY ROSKEY AND MISSMAR ON BEHALF OF ENCOMPASS HEALTH",
-   "quarter": "2020-Q2",
-   "uuid": "b7502c3d-04dc-4906-b29f-014ee4061f49",
-   "client": "SCULLY ROSKEY AND MISSMAR ON BEHALF OF ENCOMPASS HEALTH",
-   "description": "Law Firm",
-   "sector": "professional",
-   "matched": [
-    "t System (PPS) rule and the Patient-Driven Groupings Model Outreach on the implementation of the Improving Medicare Post-Acute Transformation Act (IMPACT Act). Paycheck Protection Program and Healthcare Enhancement Act (CARES Act 2.0) (H.R. 266)"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "CIGNA",
-   "quarter": "2020-Q2",
-   "uuid": "da1c6259-feb1-428f-83ee-374a56a541b2",
-   "client": "CIGNA CORPORATION",
-   "description": "Employee benefits company.",
-   "sector": "industry",
-   "matched": [
-    "e, including Families First Coronavirus Response Act (Public Law No. 116-127), Coronavirus Aid, Relief, and Economic Security (CARES) Act (Public Law 116-136), Paycheck Protection Program and Health Care Enhancement Act (Public Law No. 116-139), and H.R. 6800 Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "WEATHER GROUP TELEVISION",
-   "quarter": "2020-Q2",
-   "uuid": "e2383ffe-3b91-4257-86cc-3262feb68ff0",
-   "client": "WEATHER GROUP TELEVISION, LLC",
-   "description": "Television Network",
-   "sector": "industry",
-   "matched": [
-    "- Coronavirus Aid, Relief, and Economic Security Act or the CARES Act, H.R. 6800 - Health and Economic Recovery Omnibus Emergency Solutions Act(HEROES Act) and Paycheck Protection Program for broadcast television."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "BUSINESS SOFTWARE ALLIANCE",
+   "key": "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS",
    "quarter": "2020-Q1",
-   "uuid": "b82dca9b-8f9b-4446-b4d8-a0f7b0ffd74d",
-   "client": "BUSINESS SOFTWARE ALLIANCE",
+   "uuid": "4828b4bc-57a6-4e31-8fde-17af241ded06",
+   "client": "NATIONAL ASSOCIATION OF PROFESSIONAL EMPLOYER ORGANIZATIONS",
    "description": null,
-   "sector": "tech",
+   "sector": "trade",
    "matched": [
-    "dvance (DATA) Privacy Act (S. 583), Creating Advanced Streamlined Electronic Services for Constituents (CASES) Act (H.R. 1079 | S. 435) Issue pertaining to the paycheck protection loan (PPL) program in section 1106(a)(4) of the CARES Act (H.R. 748) to include payments made by a PPL borrower under licensing or leasing agreements for busin"
+    "Protection Plan Loans: NAPEO lobbied Congress and the Administration for the following - * To allow PEOs to apply on behalf of their small business clients for PPP loans. * To make sure that PEO client employees were not counsolidated with other PEO clients and made ineligible for PPP loans. * To make sure that PEO client",
+    "f of their small business clients for PPP loans. * To make sure that PEO client employees were not counsolidated with other PEO clients and made ineligible for PPP loans. * To make sure that PEO clients were not required to use Form 941 to prove payroll when applying for PPP loans."
    ],
    "still_matches": true
   },
   {
-   "key": "HIGHMARK WHOLECARE",
+   "key": "ION MEDIA NETWORKS",
    "quarter": "2020-Q2",
-   "uuid": "be477dd4-fe4c-4717-b505-db5671e21d78",
-   "client": "HIGHMARK WHOLECARE (FORMERLY GATEWAY HEALTH PLAN, LP.)",
-   "description": "A Medicare approved Special Needs Plan in Pennsylvania",
+   "uuid": "fda4a2a4-e4bf-43b8-abbb-ea766b3f6175",
+   "client": "ION MEDIA NETWORKS, INC.",
+   "description": "Network television broadcasting.",
+   "sector": "tech",
+   "matched": [
+    "Federal Communications Commission Must Carry rules. Issues related to regional broadcast requirements. Issues related to the Paycheck Protection Program"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+   "quarter": "2020-Q1",
+   "uuid": "504eacd9-4b3c-4fcc-a165-a230dcff885d",
+   "client": "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+   "description": "Trade association for medical device manufacturers",
    "sector": "health",
-   "matched": [
-    " Act (P.L. 116-136); Families First Coronvirus Reponse Act (P.L. 116-127); Coronvirus Preparedness and Response Supplemental Appropriations Act (P.L. 116-123); Paycheck Protection Program and Health Care Enhancement Act (P.L. 116-139)",
-    " Act (P.L. 116-136); Families First Coronvirus Reponse Act (P.L. 116-127); Coronvirus Preparedness and Response Supplemental Appropriations Act (P.L. 116-123); Paycheck Protection Program and Health Care Enhancement Act (P.L. 116-139)",
-    " Act (P.L. 116-136); Families First Coronvirus Reponse Act (P.L. 116-127); Coronvirus Preparedness and Response Supplemental Appropriations Act (P.L. 116-123); Paycheck Protection Program and Health Care Enhancement Act (P.L. 116-139)"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "BSA SOFTWARE ALLIANCE",
-   "quarter": "2020-Q1",
-   "uuid": "495c9a00-d84a-480f-a284-c5c3dc6a7ba5",
-   "client": "BSA THE SOFTWARE ALLIANCE (FORMERLY BSA BUSINESS SOFTWARE ALLIANCE INC)",
-   "description": "Technology Association",
-   "sector": "tech",
-   "matched": [
-    "Monitor issues related to information technology, copyright, cyber-security regulations, patent reform, privacy and trade; Issue pertaining to the paycheck protection loan (PPL) program in section 1106(a)(4) of the CARES Act (H.R. 748) to include payments made by a PPL borrower under licensing or leasing agreements for busin"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL ASSOCIATION OF SOCIAL WORKERS",
-   "quarter": "2020-Q2",
-   "uuid": "0f4f1354-ba04-4e84-8ab0-f50d45e3dc05",
-   "client": "NATIONAL ASSOCIATION OF SOCIAL WORKERS",
-   "description": "Promote, develop and protect the practice of social work and social workers",
-   "sector": "trade",
-   "matched": [
-    "Paycheck Protection Program issues Support for Section 501(c)(6) associations, including direct support and creation of pandemic risk insurance program"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "ARCTIC SLOPE REGIONAL",
-   "quarter": "2020-Q1",
-   "uuid": "ab585a82-255b-44da-921a-af708f8283c1",
-   "client": "ARCTIC SLOPE REGIONAL CORPORATION",
-   "description": null,
-   "sector": "industry",
-   "matched": [
-    "Issues related to CARES Act - Paycheck Protection Program, issues related to 7(a) lending."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "JEWISH FEDERATION OF METROPOLITAN CHICAGO",
-   "quarter": "2020-Q2",
-   "uuid": "2d4fec95-2293-4e7c-9cfe-b0a51afdde71",
-   "client": "JEWISH FEDERATION OF METROPOLITAN CHICAGO (JFMC)",
-   "description": null,
-   "sector": "trade",
-   "matched": [
-    "CARES ACT and related COVID-19 relief legislation for nonprofits under the SBA Paycheck Protection Program"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
-   "quarter": "2020-Q3",
-   "uuid": "9b345ba2-d7c7-4d1e-830e-dbade019ac89",
-   "client": "INTERNATIONAL FOODSERVICE DISTRIBUTORS ASSOCIATION",
-   "description": null,
-   "sector": "agriculture",
-   "matched": [
-    "Advocacy on the Paycheck Protection Program"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "AMERICAN OCCUPATIONAL THERAPY ASSOCIATION",
-   "quarter": "2020-Q1",
-   "uuid": "24099b2b-7519-4a8b-8637-c3b7a9ddc0ce",
-   "client": "AMERICAN OCCUPATIONAL THERAPY ASSOCIATION",
-   "description": null,
-   "sector": "trade",
    "matched": [
     "The Paycheck Protection Program in H.R. 748, the CARES Act."
    ],
    "still_matches": true
   },
   {
-   "key": "ONESPAWORLD",
-   "quarter": "2020-Q1",
-   "uuid": "a993426a-8699-4850-b9c9-6f566f9d7bc3",
-   "client": "ONESPAWORLD",
-   "description": "Provides spa services for hotels and cruises",
-   "sector": "industry",
-   "matched": [
-    "CARES Act, PPP loan"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "ASSOCIATION FOR ENTERPRISE OPPORTUNITY",
-   "quarter": "2021-Q1",
-   "uuid": "9ee6ace9-1b1d-45c7-9c1f-e010fb61d0d3",
-   "client": "ASSOCIATION FOR ENTERPRISE OPPORTUNITY",
-   "description": "Association dealing with innovation in microfinance and microbusiness in the United States",
+   "key": "NEWS MEDIA ALLIANCE",
+   "quarter": "2020-Q2",
+   "uuid": "3cf42c73-f694-4880-a5f6-fd92e02db28a",
+   "client": "NEWS MEDIA ALLIANCE",
+   "description": "Alliance of news content organizations.",
    "sector": "trade",
    "matched": [
-    "Prison to Proprietorship Act of 2021 Minority Business Resiliency Act of 2021 Presidential nominations for the Small Business Administration Paycheck Protection Program implementation Economic Injury Disaster Loan program PRIME programs SBA microloan programs"
+    "H.R. 748. Paycheck Protection Program."
    ],
    "still_matches": true
   },
   {
-   "key": "KIPP FOUNDATION",
-   "quarter": "2020-Q3",
-   "uuid": "0976a1fd-b5d8-420f-9a11-f309c23a1d75",
-   "client": "KIPP FOUNDATION",
-   "description": "A non-profit; trains and develops outstanding educators to lead KIPP public schools",
-   "sector": "education",
+   "key": "BORSETTA",
+   "quarter": "2020-Q1",
+   "uuid": "80aa744b-5a6b-4eb9-880c-6e44581cb344",
+   "client": "BORSETTA",
+   "description": "Semiconductor company",
+   "sector": "tech",
    "matched": [
-    " Public Law 116-127, Families First Coronavirus Response Act Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act Public Law 116-139, Paycheck Protection Program and Health Care Enhancement Act H.R.6800, Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act Health and Economic Recovery Omnibus Emergency "
+    "Issues related to PPP and SBA loans, and related COVID-19 legislation"
    ],
    "still_matches": true
   },
   {
-   "key": "TRINET GROUP",
-   "quarter": "2020-Q2",
-   "uuid": "e9db2a05-25c6-4d24-839f-23ab75eea233",
-   "client": "TRINET GROUP, INC.",
-   "description": "Professional employer organization",
-   "sector": "industry",
-   "matched": [
-    "Paycheck Protection Program."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL COUNCIL OF HIGHER EDUCATION RESOURCES",
-   "quarter": "2020-Q3",
-   "uuid": "94ffca23-e4cf-4aac-98f2-57a19e979cf7",
-   "client": "NATIONAL COUNCIL OF HIGHER EDUCATION RESOURCES (NCHER)",
-   "description": "Administration of federal, state and private education loan programs",
-   "sector": "education",
-   "matched": [
-    " Public Law 116-127, Families First Coronavirus Response Act Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act Public Law 116-139, Paycheck Protection Program and Health Care Enhancement Act H.R.6800, Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act Health and Economic Recovery Omnibus Emergency "
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "MERCEDES BENZ USA FKA DAIMLER MERCEDES BENZ USA",
-   "quarter": "2020-Q2",
-   "uuid": "94706b63-de3a-467b-bcdc-394f5a8947d1",
-   "client": "MERCEDES-BENZ USA (FKA DAIMLER/MERCEDES-BENZ USA",
+   "key": "RSM US",
+   "quarter": "2020-Q1",
+   "uuid": "219f2c58-77c2-4e7c-860b-0b9854d89a3f",
+   "client": "RSM US LLP",
    "description": null,
    "sector": "finance",
    "matched": [
-    "PPP loans; CARES Act funding mechanisms"
+    "duals, and businesses. DIVISION A--KEEPING WORKERS PAID AND EMPLOYED, HEALTH CARE SYSTEM ENHANCEMENTS, AND ECONOMIC STABILIZATION This division establishes the Paycheck Protection Program to provide eight weeks of cash flow assistance to small businesses through federally guaranteed loans to employers who maintain their payroll. Such assistance "
    ],
    "still_matches": true
   },
   {
-   "key": "PRIMERICA LIFE INSURANCE",
+   "key": "AMERICAN RENTAL ASSOCIATION",
+   "quarter": "2020-Q2",
+   "uuid": "73a27cb1-a9f5-48cc-b7f3-87eaa7e6b466",
+   "client": "AMERICAN RENTAL ASSOCIATION",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "CARES Act HEROES Act H.R. 6800 H.R. 7010 Paycheck Protection Program implementation and rule-makings"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL ASSOCIATION OF CHEMICAL DISTRIBUTORS",
    "quarter": "2020-Q1",
-   "uuid": "ea01e1b4-250c-4c56-8ba0-0cb59b94e8bf",
-   "client": "PRIMERICA LIFE INSURANCE COMPANY",
+   "uuid": "6a354c68-101c-4c8c-8fe4-e77314a6d653",
+   "client": "NATIONAL ASSOCIATION OF CHEMICAL DISTRIBUTORS",
+   "description": null,
+   "sector": "industry",
+   "matched": [
+    "onavirus response package, or CARES, NACD again lobbied for tariff relief and other business support measures. NACD was supportive of the implementation of the Paycheck Protection Program. NACD lobbied against the inclusion of HR 397, otherwise known as the Butch-Lewis Act, in the final bill as the bill does not address the underlying structural",
+    " for paid sick and family medical leave time. CARES Act - In the third Coronavirus response package, or CARES, NACD was supportive of the implementation of the Paycheck Protection Program.",
+    "onavirus response package, or CARES, NACD again lobbied for tariff relief and other business support measures. NACD was supportive of the implementation of the Paycheck Protection Program. NACD lobbied against the inclusion of HR 397, otherwise known as the Butch-Lewis Act, in the final bill as the bill does not address the underlying structural"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "DAYTON DEVELOPMENT COALITION",
+   "quarter": "2020-Q2",
+   "uuid": "ed20453b-145c-4fcd-b6fd-2a13a5555a1a",
+   "client": "DAYTON DEVELOPMENT COALITION",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "ase the space missions of the National Air and Space Intelligence Center; supporting allowing (501)(c)(6) organizations to be eligible for participating in the Paycheck Protection Program created under the CARES Act; urging the Air Force to accept the nomination from the Dayton region to host the permanent headquarters of the United States Space"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "COLORADO RIVER COMMISSION OF NEVADA",
+   "quarter": "2020-Q2",
+   "uuid": "f66f38c1-8a79-4d86-908e-3e7be8884379",
+   "client": "COLORADO RIVER COMMISSION OF NEVADA",
+   "description": "Early disease detection/proper medication dosage",
+   "sector": "government",
+   "matched": [
+    "rus Preparedness and Response Supplemental Appropriations Act PL 116-123 H.R. 266 - the Paycheck Protection Program and Health Care Enhancement Act H.R. 7010 - Paycheck Protection Program Flexibility Act of 2020 H.R. 6800 - The Heroes Act"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "MANAGMENT IMPACT SOLUTIONS CONSULTING",
+   "quarter": "2020-Q1",
+   "uuid": "7226bee7-0190-4f8a-bfba-02bd3b36336d",
+   "client": "MANAGMENT IMPACT SOLUTIONS CONSULTING",
+   "description": null,
+   "sector": "professional",
+   "matched": [
+    "IRS tax breaks for hiring; development of PPP, business bank loans, and Fed monetary policy and cash injections to support the US and foreign economies. Application of DPA to supply and restock PPE and ess",
+    "PSAs and event notices for personal sanitation guidelines from CDC, SBA loan programs, and community support services, including PPP program, food banks, exercise, transportation.",
+    "Designed and implemented individual, SBA PPP and other businesses related relief loans for national, regional, and local banks, credit unions etc."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "COCA COLA",
+   "quarter": "2020-Q2",
+   "uuid": "4e1103c1-e905-447d-9a36-ee7b50bb0776",
+   "client": "COCA-COLA COMPANY",
+   "description": null,
+   "sector": "industry",
+   "matched": [
+    "H.R.7010 The Paycheck Protection Program Flexibility Act of 2020, Supporting areas identified as critical by customers, including extension of loan maturity, period of coverage, and minimum spend on p",
+    "areas identified as critical by customers, including extension of loan maturity, period of coverage, and minimum spend on payroll. CARES Act: Implementation of Paycheck Protection Program, and determination of eligibility for loans and for loan forgiveness."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "RBC CAPITAL MARKETS",
+   "quarter": "2020-Q2",
+   "uuid": "0aaecdd7-faa1-4ca7-982d-f135ac9b2405",
+   "client": "RBC CAPITAL MARKETS, LLC",
+   "description": null,
+   "sector": "finance",
+   "matched": [
+    "ted to the Community Reinvestment Act. Issues related to the Coronavirus Aid, Relief, and Economic Security Act (Public Law No: 116-136). Issues related to the Paycheck Protection Program Flexibility Act of 2020 (Public Law No: 116-142)."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "BLOCK",
+   "quarter": "2020-Q2",
+   "uuid": "0048fa99-121a-4f67-808b-91701282690b",
+   "client": "BLOCK INC.",
+   "description": null,
+   "sector": "finance",
+   "matched": [
+    "CARES Act: H.R. 748 and S. 3548 (Public Law. 116-136). Paycheck Protection Program Flexibility Act: H.R. 7010 (Public Law. 116-142). Issues related to fintech and small business lending."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL ASSOCIATION OF MANUFACTURERS",
+   "quarter": "2020-Q2",
+   "uuid": "ae4d8c25-9eef-4256-b637-cee073639199",
+   "client": "NATIONAL ASSOCIATION OF MANUFACTURERS",
+   "description": null,
+   "sector": "industry",
+   "matched": [
+    "H.R. 6201, Families First Coronavirus Response Act H.R. 7010, PPP Flexibility Act H.R. 748, CARES Act Main Street Lending Program Paycheck Protection Program S. 3814, RESTART Act"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL ASSOCIATION FOR ADVANCEMENT OF COLORED PEOPLE",
+   "quarter": "2020-Q2",
+   "uuid": "e46bb8a7-95c7-490e-8737-84cf68583bd6",
+   "client": "NATIONAL ASSOCIATION FOR THE ADVANCEMENT OF COLORED PEOPLE",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "e Medical Debt Relief Act (S1581 / HR 6470 Porter) in future covid-19 relief legislation Support the Treasury directing the SBA to designate returned corporate PPP funds to CDFIs and MDIs to ensure that small businesses of color can access the funds. Support the inclusion of the credit reporting protections in the HEROES ",
+    "e Medical Debt Relief Act (S1581 / HR 6470 Porter) in future covid-19 relief legislation Support the Treasury directing the SBA to designate returned corporate PPP funds to CDFIs and MDIs to ensure that small businesses of color can access the funds. Support the inclusion of the credit reporting protections in the HEROES ",
+    "re providers. Support the Paycheck Protection Flexibility Act, which modifies provisions related to the forgiveness of loans made to small businesses under the Paycheck Protection Program"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "AMERICAN TRUCKING ASSOCIATIONS",
+   "quarter": "2020-Q2",
+   "uuid": "5d3aa028-e3f7-4eb0-bbf1-857bd7917b61",
+   "client": "AMERICAN TRUCKING ASSOCIATIONS",
+   "description": "Trade association representing the trucking industry",
+   "sector": "transport",
+   "matched": [
+    " the affiliation rules contained in the applicable Small Business Administration regulations for an array of entities. Updates to Small Business Administration Paycheck Protection Program (PPP) Frequently Asked Questions to extend the safe harbor deadline to avoid liability for the attestations in the PPP loan application from May 7, 2020 to May",
+    "ned in the applicable Small Business Administration regulations for an array of entities. Updates to Small Business Administration Paycheck Protection Program (PPP) Frequently Asked Questions to extend the safe harbor deadline to avoid liability for the attestations in the PPP loan application from May 7, 2020 to May 14, "
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "VERIZON COMMUNICATIONS",
+   "quarter": "2020-Q2",
+   "uuid": "d51c6869-6cf7-46c7-a87e-dc19de2d3408",
+   "client": "VERIZON COMMUNICATIONS INC.",
+   "description": "Provider of telecommunications products and services.",
+   "sector": "tech",
+   "matched": [
+    " Consent, Spectrum Policy, Privacy, Broadband Funding, Rural Broadband, 5G Supply Chain, International Litigation, S. 4049- National Defense Authorization Act, PPP Loan Conditions"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "BRICK INDUSTRY ASSOCIATION",
+   "quarter": "2020-Q2",
+   "uuid": "9cef29a0-0162-4fa5-94f0-39d3a04539c5",
+   "client": "THE BRICK INDUSTRY ASSOCIATION",
+   "description": "&#226;€‹National Trade Association",
+   "sector": "trade",
+   "matched": [
+    "Supporting the expansion of federal coronavirus assistance to small businesses and non-profits. Additional flexibility for PPP recipients. Additional assistance for small businesses."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL COTTON COUNCIL",
+   "quarter": "2020-Q2",
+   "uuid": "3594b829-8758-4c2c-8638-964dde7b8c2c",
+   "client": "NATIONAL COTTON COUNCIL",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "as a result of COVID. Joined a letter with other national organizations to House and Senate leadership requesting that they authorize additional funding of the Paycheck Protection Program. Joined a letter with the Pesticide Policy Coalition to the Federal Motor Carrier Safety Administration regarding Hours of Service regulations. Joined 37 other",
+    "ration regarding Hours of Service regulations. Joined 37 other agriculture groups and businesses on a letter to congressional leaders requesting changes to the Paycheck Protection Program. Joined 151 agricultural and business associations on a letter to the chairmen of the Senate Finance Committee and the House Ways and Means Committee regarding"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "SAVE ALLIANCE",
+   "quarter": "2020-Q2",
+   "uuid": "a9aa9a81-7f02-4d63-8b29-4145c8eda6cb",
+   "client": "SAVE ALLIANCE",
+   "description": "Affiliation of live event venues",
+   "sector": "trade",
+   "matched": [
+    "Issues related to reopening sports facilities. H.R.748 CARES Act, division A regarding the Paycheck Protection Program and other federal assistance programs. H.R. 6800 HEROES Act, including provisions relating to public venues."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NEBRASKA FARM BUREAU FEDERATION",
+   "quarter": "2020-Q2",
+   "uuid": "39ac1a78-2180-4135-a802-18984c4005b4",
+   "client": "NEBRASKA FARM BUREAU FEDERATION",
+   "description": null,
+   "sector": "agriculture",
+   "matched": [
+    " needed in all segments of the livestock industry. We supported legislation which would provide additional funding for the Small Business Administrations (SBA) Paycheck Protection Program (PPP). Outside of simply adding more funds to the program, we also supported the following changes be made to the program: NEFB asked Congress to ensure that s",
+    "e livestock industry. We supported legislation which would provide additional funding for the Small Business Administrations (SBA) Paycheck Protection Program (PPP). Outside of simply adding more funds to the program, we also supported the following changes be made to the program: NEFB asked Congress to ensure that sole p"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL ASSOCIATION OF PROFESSIONAL INSURANCE AGENTS",
+   "quarter": "2020-Q2",
+   "uuid": "4933007e-9302-44d1-a90a-844d737805d7",
+   "client": "NATIONAL ASSOCIATION OF PROFESSIONAL INSURANCE AGENTS",
    "description": null,
    "sector": "insurance",
    "matched": [
-    " workers entrepreneurial freedom (Sec. 4(a)(2)). Public Law No: 116-136, the Coronavirus Aid, Relief, and Economic Security Act; Sec. 2202-2203, Sec. 1102, the Paycheck Protection Program; Secs.2102 & 2104, provisions relating to unemployment benefits; other provisions related to employee and worker benefits. Public Law No: 116-127, the Families"
+    "9); Jumpstarting Our Businesses Success Credit (JOBS Credit) Act of 2020 (H.R. 6776); Small Business Expense Protection Act (S. 3612/H.R. 6821); Protecting the Paycheck Protection Program Act (H.R. 6754); IRS Notice 2020-15 regarding the creation of the Paycheck Protection Program.",
+    "erruption insurance and COVID-19; Small Business Comeback Act (not yet introduced); Paycheck Protection Program and Health Care Enhancement Act (H.R. 266); the Paycheck Protection Program Flexibility Act (H.R. 7010); the Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act (H.R.6800); reforms to the Paycheck Protection Program; ",
+    "e Paycheck Protection Program Flexibility Act (H.R. 7010); the Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act (H.R.6800); reforms to the Paycheck Protection Program; A bill to extend the authority for commitments for the paycheck protection program and separate amounts authorized for other loans under section 7(a) of the S"
    ],
    "still_matches": true
   },
   {
-   "key": "JOHNS HOPKINS UNIVERSITY",
+   "key": "AMERICAN ASSOCIATION OF MUSEUMS",
    "quarter": "2020-Q2",
-   "uuid": "7f5a097e-b3ae-4a46-98a5-48cfd14fece5",
-   "client": "JOHNS HOPKINS UNIVERSITY",
+   "uuid": "55197a39-f539-41a0-a856-52b79c88fc60",
+   "client": "AMERICAN ASSOCIATION OF MUSEUMS",
    "description": null,
    "sector": "education",
    "matched": [
-    "P.L. 116-136 Coronavirus Aid, Relief and Economic Security Act; P.L. 449-139 Paycheck Protection Program and Health Care Enhancement Act; H.R. 6800 Health and Economic Recovery Omnibus Emergency Solutions Act; Licensing; Telehealth; National Institutes of Health.",
-    "Centers; National Institutes of Health; Materials in Extreme Dynamic Environments; P.L. 116-136 Coronavirus Aid, Relief and Economic Security Act; P.L. 449-139 Paycheck Protection Program and Health Care Enhancement Act; H.R. 6800 Health and Economic Recovery Omnibus Emergency Solutions Act."
+    "o increase charitable giving (and S. 4032/H.R. 7324) and include nonprofits, including museums, in SBA and other loan and loan forgiveness programs. Supporting Paycheck Protection Flexibility Act (H.R. 7010) plus S. 4116 PPP application extension. Supporting Protecting Nonprofits from Catastrophic Cash Flow Strain Act (S.4209)."
    ],
    "still_matches": true
   },
   {
-   "key": "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION",
-   "quarter": "2020-Q2",
-   "uuid": "b7f662e2-7baf-4fd7-88bd-0ef979955465",
-   "client": "SECURITIES INDUSTRY AND FINANCIAL MARKETS ASSOCIATION (SIFMA)",
-   "description": "trade association representing the U.S. securities industry",
-   "sector": "finance",
+   "key": "AMERICAN BUS ASSOCIATION",
+   "quarter": "2020-Q1",
+   "uuid": "3b958755-a51d-4daf-9949-c8f83b9ea9a5",
+   "client": "AMERICAN BUS ASSOCIATION",
+   "description": null,
+   "sector": "trade",
    "matched": [
-    " of 2019). H.R.6201, Families First Coronavirus Response Act (P.L.116-127). H.R.748, CARES Act (P.L.116-136) implementation. H.R.6800, The Heroes Act. H.R.266, Paycheck Protection Program and Health Care Enhancement Act (P.L.116-139). H.R.7010, Paycheck Protection Program Flexibility Act of 2020 (P.L.116-142)."
+    "Issues related to COVID-19 stimulus packages, specifically disaster loans and Paycheck Protection Program, from H.R. 6074 and H.R. 748."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "INDIAN GAMING ASSOCIATION",
+   "quarter": "2020-Q1",
+   "uuid": "0ebfbe62-2095-4953-9e38-388ed87a8573",
+   "client": "INDIAN GAMING ASSOCIATION (FKA NATIONAL INDIAN GAMING ASSOCIATION)",
+   "description": "Trade association",
+   "sector": "trade",
+   "matched": [
+    "Monitor legislation and regulations related to gaming Implementation of SBA PPP"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "CONFERENCE OF PROVINCIALS OF NORTH AMERICA",
+   "quarter": "2020-Q3",
+   "uuid": "a7909917-558f-4812-8122-39d66f3e1d5d",
+   "client": "CONFERENCE OF PROVINCIALS OF NORTH AMERICA",
+   "description": null,
+   "sector": "other",
+   "matched": [
+    "Financial assistance and loans for non-profits during COVID-19. Improvements to Paycheck Protection Plan. Provide full unemployment benefits and funding for community support grants. Strengthen charitable giving incentive."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "ARTBA",
+   "quarter": "2020-Q2",
+   "uuid": "ef3dde5f-f12f-496f-a12f-1878fc7d6ae6",
+   "client": "ARTBA",
+   "description": null,
+   "sector": "transport",
+   "matched": [
+    "ARTBA urged congress to clarify that business expenses related to the Small Business Administration's Paycheck Protection Program are tax-deductible. ARTBA urged congress to increase the amount of Paycheck Protection Program funds which could be used for non-payroll expenses. ARTBA urged ",
+    "business expenses related to the Small Business Administration's Paycheck Protection Program are tax-deductible. ARTBA urged congress to increase the amount of Paycheck Protection Program funds which could be used for non-payroll expenses. ARTBA urged Congress to extend the eight-week duration of Paycheck Protection Program loans. ARTBA urged co"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "NATIONAL VENTURE CAPITAL ASSOCIATION",
+   "quarter": "2020-Q1",
+   "uuid": "2b102a7c-3a2d-4653-827f-9132d87d8873",
+   "client": "NATIONAL VENTURE CAPITAL ASSOCIATION",
+   "description": "Trade association representing US venture capital industry",
+   "sector": "investment",
+   "matched": [
+    "CARES Act (Paycheck Protection Program)"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "U S CHAMBER INSTITUTE FOR LEGAL REFORM",
+   "quarter": "2020-Q2",
+   "uuid": "31134495-b4a8-4181-b1e8-3e4aac7d1e4a",
+   "client": "U S CHAMBER INSTITUTE FOR LEGAL REFORM",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "s faced by business due to COVID-19; revisions to Public Readiness and Emergency Preparedness Act (P.L. 109-148, Division C); enforcement issues related to the Paycheck Protection Program and the CARES Act (P.L. 116-136"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "AMERICAN SHARE INSURANCE",
+   "quarter": "2020-Q2",
+   "uuid": "5bc7da56-9b70-46b1-9efb-ebf1bbdc5d88",
+   "client": "AMERICAN SHARE INSURANCE",
+   "description": "Deposit Insurance for Credit Unions",
+   "sector": "banks",
+   "matched": [
+    "Monitor issues related to private deposit insurance for credit unions. Monitor Paycheck Protection Program to include privately insured credit unions."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "RENEWABLE FUELS ASSOCIATION",
+   "quarter": "2020-Q1",
+   "uuid": "af947cd4-0488-4ea9-9b09-63a6c2d2bb8d",
+   "client": "RENEWABLE FUELS ASSOCIATION",
+   "description": null,
+   "sector": "trade",
+   "matched": [
+    "CARES Act; Paycheck Protection Program"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "ENVELOPE MANUFACTURERS ASSOCIATION",
+   "quarter": "2020-Q2",
+   "uuid": "662e23cc-7389-4b00-8fbb-a1a03b439e8f",
+   "client": "ENVELOPE MANUFACTURERS ASSOCIATION",
+   "description": "Association of envelope manufacturing and paper-based communications industry",
+   "sector": "industry",
+   "matched": [
+    "Issues related to the Coronavirus: H.R. 748 CARES Act; CARES Act Implementation with Paycheck Protection Program/Small Business Administration; CISA Essential Worker Guidelines"
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "BMO FINANCIAL",
+   "quarter": "2021-Q1",
+   "uuid": "aefbf3f9-327b-4308-96a6-743111afd343",
+   "client": "BMO FINANCIAL CORP",
+   "description": "Bank holding company.",
+   "sector": "banks",
+   "matched": [
+    " for financial institutions with foreign parent companies. Issues related to the Federal Deposit Insurance Corporation brokered deposits rulemaking. H.R. 1799, Paycheck Protection Program (PPP) Extension Act of 2020, provisions affecting banks and their customers."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "AMAZONCOM SERVICES",
+   "quarter": "2020-Q3",
+   "uuid": "1c54ad52-6bd7-4474-aeb4-c2ebaaa907c7",
+   "client": "AMAZON.COM SERVICES LLC",
+   "description": null,
+   "sector": "industry",
+   "matched": [
+    "Issues related to e-commerce opportunities for small businesses and government procurement, and issues related to the implementation of the Paycheck Protection Program as part of the CARES Act (Public Law 116-136)."
+   ],
+   "still_matches": true
+  },
+  {
+   "key": "CIGNA GROUP AND SUBSIDIARIES",
+   "quarter": "2020-Q3",
+   "uuid": "3ef71516-7fb0-4dc4-b2e3-4bba7da7990f",
+   "client": "THE CIGNA GROUP AND SUBSIDIARIES (FORMERLY CIGNA CORPORATION AND SUBSIDIARIES)",
+   "description": null,
+   "sector": "health",
+   "matched": [
+    "luding S. 4317 the Safe to Work Act; S. 4318, the American Workers, Families, And Employers Assistance Act; S. 4321, the Continuing Small Business Recovery And Paycheck Protection Program Act; S. 4322, the Safely Back To School And Back To Work Act; and S. 4323, Time to Rescue United States Trusts Act of 2020 (TRUST Act). -Issues related to H.R."
    ],
    "still_matches": true
   },
   {
    "key": "AMERICAN ACADEMY OF FAMILY PHYSICIANS",
-   "quarter": "2020-Q2",
-   "uuid": "441c8fa3-4477-45e1-880b-3c5179204962",
+   "quarter": "2020-Q4",
+   "uuid": "740e33b5-73ed-4028-b842-0815e801b052",
    "client": "AMERICAN ACADEMY OF FAMILY PHYSICIANS",
-   "description": "Association of family physicians",
+   "description": null,
    "sector": "health",
    "matched": [
-    "s Act, 2020; P.L. 116-127, Families First Coronavirus Response Act; P.L. 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act; P.L. 116-139, the Paycheck Protection Program and Health Care Enhancement Act."
+    "uate supplies, finances to serve their patients, are eligible for Small Business loans, payment for telehealth services. No Bill No. - Tax treatment of PRF and PPP funds: Ensure HHS Provider Relief and Payroll Protection Program funds are non-taxable & providers receiving these funds maintain tax deductions"
    ],
    "still_matches": true
   },
   {
-   "key": "AMERICAN ASSOCIATION OF INDEPENDENT MUSIC",
+   "key": "AMERICAN DENTAL ASSOCIATION",
    "quarter": "2020-Q2",
-   "uuid": "deca7fc5-91bf-493e-ab4f-ca5220225b47",
-   "client": "AMERICAN ASSOCIATION OF INDEPENDENT MUSIC",
-   "description": "Trade association that represents independent record labels in the United States",
-   "sector": "trade",
-   "matched": [
-    "Implementation of Paycheck Protection Program for musicians and recording artists."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "SIX IDEAS BEFORE BREAKFAST",
-   "quarter": "2020-Q2",
-   "uuid": "9446bc8a-2928-4844-ac0b-57516cf1ae3f",
-   "client": "SIX IDEAS BEFORE BREAKFAST, LLC",
-   "description": "Public Affairs Consulting",
-   "sector": "professional",
-   "matched": [
-    "All matters pertaining to tax treatment of Paycheck Protection Program Loans"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "WASC SENIOR COLLEGE AND UNIVERSITY COMMISSION",
-   "quarter": "2020-Q3",
-   "uuid": "6b1d74e5-197a-499a-9e5c-0cd389282dde",
-   "client": "WASC SENIOR COLLEGE & UNIVERSITY COMMISSION",
-   "description": "Regional College Accrediting Commission",
-   "sector": "education",
-   "matched": [
-    " Public Law 116-127, Families First Coronavirus Response Act Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act Public Law 116-139, Paycheck Protection Program and Health Care Enhancement Act H.R.6800, Health and Economic Recovery Omnibus Emergency Solutions (HEROES) Act Health and Economic Recovery Omnibus Emergency "
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "FARMERS EDUCATIONAL COOPERATIVE UNION OF AMERICA",
-   "quarter": "2020-Q2",
-   "uuid": "7b964266-b8f8-4dcd-a40f-d8eb309cbb01",
-   "client": "FARMERS EDUCATIONAL COOPERATIVE UNION OF AMERICA",
+   "uuid": "c21a0a76-e0d4-42bc-8f85-66235d853b48",
+   "client": "AMERICAN DENTAL ASSOCIATION",
    "description": null,
-   "sector": "agriculture",
+   "sector": "health",
    "matched": [
-    " Grows Act of 2019 H.R. 748 - Coronavirus Aid, Relief, and Economic Security Act (CARES Act) H.R. 6067 - Securing All Livestock Equitably (SALE) Act H.R. 266 - Paycheck Protection Program and Health Care Enhancement Act H.R. 6956 - Farming Support to States Act of 2020 H.R. 7175 - Paycheck Protection for Producers Act H.R. 6800 - Health and Econ",
-    "stock Equitably (SALE) Act H.R. 266 - Paycheck Protection Program and Health Care Enhancement Act H.R. 6956 - Farming Support to States Act of 2020 H.R. 7175 - Paycheck Protection for Producers Act H.R. 6800 - Health and Economic Recovery Omnibus Economic Stimulus Act (HEROES Act) S. 935 - Opportunities for Fairness in Farming Act of 201",
-    "H.R. 748 - Coronavirus Aid, Relief, and Economic Security Act (CARES Act) H.R. 266 - Paycheck Protection Program and Health Care Enhancement Act Emergency economic assistance for farmers and ranchers Funding for USDA programs Appropriations and budget requests for USDA/ot"
+    "e Additions and Increases to Sustain Employee Health Benefits Act of 2019 (RAISE ACT) (health savings accounts, flexible spending accounts) H.R. 6886/H.R. 7001 Paycheck Protection Program Flexibility Act. S. 3833 Paycheck Protection Program Extension Act H.R. 7216 Small Business Personal Protective Equipment (PPE) Tax Credit Act S. 3716 Main Str",
+    "Benefits Act of 2019 (RAISE ACT) (health savings accounts, flexible spending accounts) H.R. 6886/H.R. 7001 Paycheck Protection Program Flexibility Act. S. 3833 Paycheck Protection Program Extension Act H.R. 7216 Small Business Personal Protective Equipment (PPE) Tax Credit Act S. 3716 Main Street Enhancement and Safety Act Deductibility of expen",
+    "lief, and Economic Security Act or the CARES Act Implementation H.R. 6201 Families First Coronavirus Response Act. Implementation Increased flexibility for the Paycheck Protection Programs loans Access to Paycheck Protection Program loans for 501(c)(6) small business organizations Increased funding for small business loan programs H.R. 6494, Bus"
    ],
    "still_matches": true
   },
   {
-   "key": "INTERNATIONAL FRANCHISE ASSOCIATION",
+   "key": "INTERNATIONAL HEALTH RACQUET AND SPORTS CLUB ASSOCIATION",
    "quarter": "2020-Q1",
-   "uuid": "6cf0ebb3-2fde-48b3-92a5-0fe52d94d644",
-   "client": "INTERNATIONAL FRANCHISE ASSOCIATION (IFA)",
-   "description": "nonprofit trade association",
-   "sector": "advocacy",
+   "uuid": "e1c98c29-b8d8-41ac-ac2f-b730b80901ce",
+   "client": "INTERNATIONAL HEALTH, RACQUET, AND SPORTS CLUB ASSOCIATION",
+   "description": "Association to promote health club issues",
+   "sector": "health",
    "matched": [
-    "16-123), H.R.6201, Families First Coronavirus Response Act (P.L.116-127), and H.R.748, CARES Act (P.L.116-136). Issues related to assistance for franchises and Paycheck Protection Program; H.R.748, CARES Act (P.L.116-136)."
+    "Public Law 116-136, Coronavirus Aid, Relief, and Economic Security (CARES) Act, Paycheck Protection Program Business Interruption Insurance"
    ],
    "still_matches": true
   },
   {
-   "key": "KABBAGE",
-   "quarter": "2020-Q1",
-   "uuid": "7a8f287b-01bc-4698-9f9c-9a30cde40106",
-   "client": "KABBAGE, INC.",
-   "description": "Marketplace/ balance sheet financial technology (FinTech) platform lending solutions.",
+   "key": "AMERICAN BANKERS ASSOCIATION",
+   "quarter": "2020-Q2",
+   "uuid": "0bce5b36-f55a-4ec3-95b6-0127a3d30628",
+   "client": "AMERICAN BANKERS ASSOCIATION",
+   "description": null,
    "sector": "banks",
    "matched": [
-    "Educate Members on FinTech (non-bank/ other lender) provisions in COVID-19 Legislation, including HR 748, the CARES Act and discuss ideas around the Paycheck Protection Program (PPP)."
+    "PPP Loan Forgiveness - De Minimis Threshold H.R. 7010, Paycheck Protection Flexibility Act S. 3833, Paycheck Protection Program Extension Act H.R. 266, Paycheck Protection Program and Health Care Enhancement Act"
    ],
    "still_matches": true
   },
@@ -532,42 +574,6 @@
    "still_matches": true
   },
   {
-   "key": "SOCIETY FOR AMERICAN ARCHAEOLOGY",
-   "quarter": "2020-Q1",
-   "uuid": "bded84ea-5253-4a35-a4a9-5bde39cb8ace",
-   "client": "SOCIETY FOR AMERICAN ARCHAEOLOGY",
-   "description": null,
-   "sector": "trade",
-   "matched": [
-    "g for cultural resources preservation programs in FY2021 appropriations cycle. House and Senate: support for funding for cultural resources small businesses in Paycheck Protection Program."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "PAYPAL",
-   "quarter": "2020-Q2",
-   "uuid": "d6f01167-d026-4934-bc52-831deb13144d",
-   "client": "PAYPAL",
-   "description": "PayPal is a technology company that enables digital and mobile payments",
-   "sector": "finance",
-   "matched": [
-    "financial technology policy; small business and consumer protection issue; S.4117 that would allow for automatic conversion to grants for PPP loans under $150,000."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "AMERICAN BANKERS ASSOCIATION",
-   "quarter": "2020-Q2",
-   "uuid": "0bce5b36-f55a-4ec3-95b6-0127a3d30628",
-   "client": "AMERICAN BANKERS ASSOCIATION",
-   "description": null,
-   "sector": "banks",
-   "matched": [
-    "PPP Loan Forgiveness - De Minimis Threshold H.R. 7010, Paycheck Protection Flexibility Act S. 3833, Paycheck Protection Program Extension Act H.R. 266, Paycheck Protection Program and Health Care Enhancement Act"
-   ],
-   "still_matches": true
-  },
-  {
    "key": "CROSS RIVER BANK",
    "quarter": "2020-Q2",
    "uuid": "412f485a-a5a7-4e93-93bb-93fec0d66550",
@@ -576,122 +582,6 @@
    "sector": "banks",
    "matched": [
     "S.4117, Paycheck Protection Small Business Forgiveness Act, All provisions of the bill providing for automatic forgiveness of a paycheck protection loan that is not more than $150,000 if "
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS",
-   "quarter": "2020-Q2",
-   "uuid": "45522781-9e8d-416a-9248-86d8686db29b",
-   "client": "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS",
-   "description": null,
-   "sector": "advocacy",
-   "matched": [
-    "Paycheck Protection Program"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "GIFFORDS",
-   "quarter": "2020-Q3",
-   "uuid": "73f1dd06-8047-45e6-9a1f-2e8b48918a70",
-   "client": "GIFFORDS",
-   "description": null,
-   "sector": "advocacy",
-   "matched": [
-    "rne Memorial Justice Assistance Grant (JAG) Program; Criminal Justice Response Program/Grants to Encourage Arrest and Enforcement of Protection Orders Program; Paycheck Protection Program; H.R. 648, Consolidated Appropriations Act, 2019; H.R. 1236, Extreme Risk Protection Order Act of 2019; S. 506, Extreme Risk Protection Order Act of 2019; H.R."
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL RIGHT LIFE COMMITTEE",
-   "quarter": "2021-Q1",
-   "uuid": "ceb6b691-6c0c-47b4-b7dc-ea6631752e53",
-   "client": "NATIONAL RIGHT LIFE COMMITTEE",
-   "description": null,
-   "sector": "other",
-   "matched": [
-    "abortion, with certain exceptions. Contacts regarding legislation (not introduced) to ensure affiliate rules in law are applied to abortion providers receiving Paycheck Protection Program (PPP) loans in violation of the law. Consultations regarding various bills to restrict abortion; no specific legislation endorsed during this quarter. Contacts",
-    "ions. Contacts regarding legislation (not introduced) to ensure affiliate rules in law are applied to abortion providers receiving Paycheck Protection Program (PPP) loans in violation of the law. Consultations regarding various bills to restrict abortion; no specific legislation endorsed during this quarter. Contacts rega"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "CONSUMER BANKERS ASSOCIATION",
-   "quarter": "2020-Q1",
-   "uuid": "c87a9418-0114-488f-912c-cd8a01cfaad0",
-   "client": "CONSUMER BANKERS ASSOCIATION",
-   "description": null,
-   "sector": "banks",
-   "matched": [
-    " Forced Arbitration Injustice Repeal Act Issues related to COVID-19 pandemic H.R. 748, Coronavirus Aid, Relief, and Economic Security Act Issues related to the Paycheck Protection Program Issues related to stimulus payments from Treasury to Americans Issues related to Student Loans Issues related to the reauthorization of the Higher Education Ac"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL AFFORDABLE HOUSING MANAGEMENT ASSOCIATION",
-   "quarter": "2020-Q2",
-   "uuid": "0cd9a036-a27d-46b1-bd48-90b69c5ca2d9",
-   "client": "NATIONAL AFFORDABLE HOUSING MANAGEMENT ASSOCIATION (NAHMA)",
-   "description": null,
-   "sector": "realestate",
-   "matched": [
-    "e Unrelated Business Income Tax (UBIT). All policies relating to the Low Income Housing Tax Credit in response to the Coronavirus. All policies relating to the Paycheck Protection Program (PPP).",
-    "virus disease 2019) outbreak and its impact on the economy, public health, state and local governments, individuals, and businesses. DIVISION A establishes the Paycheck Protection Program to provide eight weeks of cash flow assistance to small businesses through federally guaranteed loans to employers who maintain their payroll. (Sec. 4024) Tena",
-    "iations for the Department of Housing and Urban Development (HUD). H.R.6697 Local Chamber, Tourism, and 501(c)(6) Protection Act of 2020 This bill modifies the Paycheck Protection Program implemented by the Small Business Administration in response to COVID-19 (i.e., coronavirus disease 2019) to include certain entities and exclude certain indiv"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "CENCORA",
-   "quarter": "2020-Q2",
-   "uuid": "b19b860b-89de-4559-9b03-1a77e3297a25",
-   "client": "CENCORA, INC.",
-   "description": null,
-   "sector": "health",
-   "matched": [
-    "d to drug shortages. Coronavirus Aid, Relief and Economic Security Act (CARES Act). Recognizing pharmacists as providers within Medicare for COVID-19 response. Paycheck Protection Program Flexibility Act of 2020. Paycheck Protection Program and Health Care Enhancement Act",
-    " in Medicare Part B. Coronavirus Aid, Relief and Economic Security Act (CARES Act). Recognizing pharmacists as providers within Medicare for COVID-19 response. Paycheck Protection Program Flexibility Act of 2020. Paycheck Protection Program and Health Care Enhancement Act"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "CENTER FOR RESPONSIBLE LENDING A SUPPORTING OF CTR FOR COMMUNITY SELF HELP",
-   "quarter": "2020-Q2",
-   "uuid": "7f596f6f-38b0-49de-887f-f6a558df9f11",
-   "client": "CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP",
-   "description": null,
-   "sector": "advocacy",
-   "matched": [
-    "d for other purposes. H.R. 6800Health and Economic Recovery Omnibus Emergency Solutions Act (HEROES Act). Among other things, the bill modifies and expands the Paycheck Protection Program, which provides loans and grants to small businesses and nonprofit organizations; extends and expands the moratorium on certain evictions and foreclosures S. 3"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL SEAFOOD ASSOCIATION F K A NATIONAL FISHERIES INSTITUTE",
-   "quarter": "2020-Q3",
-   "uuid": "6231d223-223d-44d3-905e-c1d9a2f02cba",
-   "client": "NATIONAL SEAFOOD ASSOCIATION, F/K/A NATIONAL FISHERIES INSTITUTE",
-   "description": null,
-   "sector": "agriculture",
-   "matched": [
-    " expanding domestic aquaculture; FY21 Appropriations; CARES Act implementation; HEROES ACt; COVID-19 Pandemic Relief bills; Seafood Executive Order; HEALS ACt, Paycheck Protection Program; RESTART ACt; RESTAURANTS ACt",
-    "Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES Act implementation; COVID-19 Pandemic Relief bills; Paycheck Protection Program, HEALS Act, HEROES ACt",
-    "ighly processed plant-based alternative seafood products; FY21 Appropriations; CARES Act implementation; HEROES ACt; COVID-19 Pandemic Relief bills; HEALS Act; Paycheck Protection Program"
-   ],
-   "still_matches": true
-  },
-  {
-   "key": "NATIONAL ASSOCIATION OF COLLEGE STORES",
-   "quarter": "2020-Q1",
-   "uuid": "d12e9af6-33c0-4993-a04b-6017a274c1ed",
-   "client": "NATIONAL ASSOCIATION OF COLLEGE STORES",
-   "description": null,
-   "sector": "trade",
-   "matched": [
-    "-H.R. 748 CARES Act of 2020 -SBA Paycheck Protection Program -loan eligibility for non-profits.",
-    "and Consumer Protection Act, Subtitle G, Sec. 1075 of HR 4173 (as enacted). Reasonable fees and rules for payment card transactions. H.R. 748 - CARES Act --SBA Paycheck Protection Program loans.",
-    "Work Study, Open Educational Resources pilot/Fund for the Improvement of Post Secondary Education. -S. 3548 CARES Act - COVID-19 emergency aid legislation -SBA Paycheck Protection Program, higher education emergency funding. -H.R. 748 - CARES Act --SBA Paycheck Protection Program, higher education emergency funding."
    ],
    "still_matches": true
   }
