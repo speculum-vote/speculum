@@ -38,7 +38,7 @@ RULES = [
                "international union", "labor federation", "union"]),
     ("defense", ["defense", "defence", "aerospace", "military", "munition*", "weapon*", "shipbuild*", "national security",
                  "armed forces"]),
-    ("health", ["pharmaceut*", "biopharm*", "biotech*", "medical", "medicine*", "health*", "hospital*", "physician*",
+    ("health", ["pharmaceut*", "biopharm*", "biotech*", "medical", "medicine*", "health*", "hospital", "hospitals", "hospitalist*", "physician*",
                 "clinic*", "drug*", "nursing", "nurses", "dental", "dentist*", "therapeut*", "diagnostic*", "life science*", "patient*", "dermatolog*",
                 "surgeon*", "surgical", "oncolog*", "cardiolog*", "radiolog*", "anesthesi*", "pediatric*", "psychiatr*",
                 "kidney", "cancer", "disease*", "pharmac*", "laborator*", "rehabilitat*", "inpatient", "emergency medic*"]),

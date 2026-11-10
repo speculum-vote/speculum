@@ -6167,7 +6167,7 @@
   },
   "EASTERN STATES HOSPITALITY": {
    "name": "EASTERN STATES HOSPITALITY CORPORATION",
-   "sector": "health",
+   "sector": "industry",
    "own": false,
    "quarters": [
     "2020-Q2",
@@ -17160,7 +17160,7 @@
   },
   "HILTON WORLDWIDE": {
    "name": "HILTON WORLDWIDE",
-   "sector": "health",
+   "sector": "industry",
    "own": true,
    "quarters": [
     "2020-Q2",
@@ -17700,7 +17700,7 @@
   },
   "SCHULTE HOSPITALITY GROUP": {
    "name": "SCHULTE HOSPITALITY GROUP",
-   "sector": "health",
+   "sector": "industry",
    "own": false,
    "quarters": [
     "2020-Q2"
@@ -22497,7 +22497,7 @@
   },
   "ASIAN AMERICAN HOTEL OWNERS ASSOCIATION": {
    "name": "ASIAN AMERICAN HOTEL OWNERS ASSOCIATION",
-   "sector": "health",
+   "sector": "industry",
    "own": true,
    "quarters": [
     "2020-Q3",
@@ -234020,5 +234020,6 @@
    ],
    "2021": 8750.0
   }
- }
+ },
+ "sector_fixes": "2026-11-10: re-sorted from health to other business after the rule stopped reading 'hospitality' as 'hospital': EASTERN STATES HOSPITALITY CORPORATION; SCHULTE HOSPITALITY GROUP; ASIAN AMERICAN HOTEL OWNERS ASSOCIATION; HILTON WORLDWIDE"
 }

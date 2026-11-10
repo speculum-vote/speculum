@@ -59,6 +59,14 @@
    "wrong": "Some nonprofits were placed in the industry they work on: the Center for Responsible Lending as a lender, Consumer Reports as a business, the ACLU Foundation and the Brennan Center under education or law firms, and the National Taxpayers Union as a labor union. An organization whose descriptions differed from report to report (the Bank Policy Institute) took whichever came first.",
    "changed": "Two rules now come first: a description stating a public mission is placed with advocacy groups unless the organization says it represents an industry, and with no description a name such as \"Center for\" or \"Americans for\" is read the same way. \"Taxpayer\" groups are advocacy groups. An organization's sector is the one most of its quarters give it. Earlier quarters were re-read from the archived filings with the same rules: 22 organizations changed sector.",
    "scope": "Affected: sector shares on bill pages, Said & Done, Interests and Cases. Most shares move by less than a point (H.R. 1's business share stays at 74%)."
+  },
+  {
+   "date": "2026-11-10",
+   "prelaunch": true,
+   "area": "Lobbying sectors",
+   "wrong": "The word rule for hospitals also matched \"hospitality\", so hotel, casino and restaurant companies that describe themselves that way (Hilton, the American Hotel & Lodging Association, MGM, Boyd Gaming, Red Rock Resorts, Landry's and others) were placed with health.",
+   "changed": "The rule now matches \"hospital\" and \"hospitals\" only. Earlier quarters were re-read from the archived filings: 10 organizations moved, 9 to other business and 1 to agriculture and food. Four organizations in the 2020–21 PPP lobbying record were corrected the same way.",
+   "scope": "Affected: sector shares on bill pages, the gatekeepers page, Said & Done, Interests and Cases, by less than a point."
   }
  ]
 }
