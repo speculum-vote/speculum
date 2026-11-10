@@ -53,3 +53,8 @@ def test_firm_income_kept():
     P.fold_spend(spend, state["spend"], 2020, firms)
     assert spend["ACME"]["2020"]["firms"] == 30000.0 and list(firms.values())[0]["2020"] == 30000.0
     assert spend["ACME"]["states"] == ["OH"] and list(firms.values())[0]["states"] == ["DC"]
+
+
+def test_fee_words_kept():
+    w = P.fee_window("Paycheck Protection Program: lender processing fees and agent fees for loans under $350,000", 30)
+    assert "processing fees" in w

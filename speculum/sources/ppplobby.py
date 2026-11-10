@@ -50,6 +50,18 @@ def law_only(text: str | None) -> bool:
     return bool(_LAW.search(text or "")) and not mentions_ppp(text)
 
 
+def fee_window(text: str | None, width: int = 140) -> str:
+    """The words around the first fee mentioned near the program."""
+    t = re.sub(r"\s+", " ", text or "")
+    st = _strip(t)
+    spots = [m.start() for m in list(_PPP.finditer(st)) + list(_PPP_ABBR.finditer(st))]
+    for f in _FEE.finditer(st):
+        if any(abs(f.start() - p) <= 300 for p in spots):
+            a, b = max(0, f.start() - width), min(len(t), f.end() + width)
+            return ("…" if a else "") + t[a:b].strip() + ("…" if b < len(t) else "")
+    return ""
+
+
 def fee_near(text: str | None, reach: int = 300) -> bool:
     t = _strip(text)
     spots = [m.start() for m in list(_PPP.finditer(t)) + list(_PPP_ABBR.finditer(t))]
@@ -97,7 +109,11 @@ def scan(filings, orgs: dict, label: str, state: dict | None = None) -> tuple[in
         if label not in o["quarters"]:
             o["quarters"].append(label)
         o["n_reports"] += 1
-        o["fee"] += any(fee_near(d) for d in acts)
+        fees = [d for d in acts if fee_near(d)]
+        o["fee"] += bool(fees)
+        if fees and not o.get("fee_said"):
+            o["fee_said"] = fee_window(fees[0])
+            o["fee_report"] = {"quarter": label, "uuid": f.get("filing_uuid")}
         if len(o["reports"]) < 8 and f.get("filing_uuid"):
             r = {"quarter": label, "uuid": f["filing_uuid"]}
             if len(o["reports"]) < 2:
@@ -141,6 +157,8 @@ def merge(orgs: dict, more: dict) -> None:
         m["quarters"] += [q for q in o["quarters"] if q not in m["quarters"]]
         m["n_reports"] += o["n_reports"]
         m["fee"] += o["fee"]
+        if o.get("fee_said") and not m.get("fee_said"):
+            m["fee_said"], m["fee_report"] = o["fee_said"], o.get("fee_report")
         m["reports"] = (m["reports"] + o["reports"])[:8]
         m["registrants"] += [r for r in o["registrants"] if r not in m["registrants"]][: max(0, 6 - len(m["registrants"]))]
 

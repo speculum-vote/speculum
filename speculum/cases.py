@@ -73,6 +73,63 @@ def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: 
     return out
 
 
+LDA_FILING = "https://lda.gov/filings/public/filing/{}/print/"
+
+
+def ppp_history(lob: dict, lenders: list[dict]) -> dict | None:
+    """Who lobbied on the program while it ran (data/records/ppp_lobbying.json, read once): organizations merged by
+    core name, by sector; those whose reports mention fees; and which of the 25 lenders paid the most lobbied on it."""
+    if not lob or not lob.get("complete"):
+        return None
+    merged: dict[str, dict] = {}
+    for k, o in (lob.get("orgs_by_key") or {}).items():
+        c = core_name(o["name"]) or k
+        m = merged.setdefault(c, {"name": o["name"], "sector": o.get("sector") or "other", "own": False, "quarters": set(),
+                                  "reports": [], "n_reports": 0, "fee": 0, "registrants": [], "said": None})
+        m["own"] = m["own"] or o.get("own")
+        m["quarters"] |= set(o.get("quarters") or [])
+        m["n_reports"] += o.get("n_reports", 0)
+        m["fee"] += o.get("fee", 0)
+        for r in o.get("reports") or []:
+            if len(m["reports"]) < 4:
+                m["reports"].append({"quarter": r["quarter"], "url": LDA_FILING.format(r["uuid"])})
+            m["said"] = m["said"] or r.get("said")
+        m["registrants"] += [x for x in o.get("registrants") or [] if x not in m["registrants"]]
+    orgs = []
+    for c, m in merged.items():
+        m["quarters"] = sorted(m["quarters"])
+        m["reports"].sort(key=lambda r: r["quarter"])
+        m["sector_name"] = S.NAMES.get(m["sector"], m["sector"])
+        m["firms"] = [] if m["own"] else m["registrants"][:3]
+        orgs.append(m)
+    orgs.sort(key=lambda m: (-m["n_reports"], m["name"]))
+    by_sector = defaultdict(int)
+    for m in orgs:
+        by_sector[m["sector"]] += 1
+    sectors = [{"key": k, "name": S.NAMES.get(k, k), "group": S.GROUPS.get(k, ""), "n": n}
+               for k, n in sorted(by_sector.items(), key=lambda kv: -kv[1])]
+    spend = lob.get("spend_by_key") or {}
+    spend_core = defaultdict(lambda: {"2020": 0.0, "2021": 0.0})
+    for k, e in spend.items():
+        for y in ("2020", "2021"):
+            spend_core[core_name(e.get("name") or k)][y] += (e.get(y) or {}).get("own", 0.0)
+    lenders_out = []
+    for L in lenders:
+        c = core_name(L["name"])
+        m = merged.get(c)
+        lenders_out.append({"name": L["name"], "fees": L["fees"], "lobbied": bool(m), "own": bool(m and m["own"]),
+                            "n_reports": m["n_reports"] if m else 0, "quarters": m["quarters"] if m else [],
+                            "reports": m["reports"] if m else [], "firms": m["firms"] if m else [],
+                            "spent": {y: round(v, 2) for y, v in spend_core[c].items()} if c in spend_core else None})
+    q = lob.get("quarters") or {}
+    return {"orgs": orgs, "n_orgs": len(orgs), "n_reports": sum(v.get("ppp_reports", 0) for v in q.values()),
+            "n_read": sum(v.get("reports", 0) for v in q.values()),
+            "law_only": sum(v.get("law_only_reports", 0) for v in q.values()) if any("law_only_reports" in v for v in q.values()) else None,
+            "quarters": [{"label": k, **v} for k, v in sorted(q.items())], "sectors": sectors,
+            "fee_orgs": sorted([m for m in orgs if m["fee"]], key=lambda m: (-m["fee"], m["name"])),
+            "lenders": lenders_out, "rule": lob.get("rule"), "rule_version": lob.get("rule_version")}
+
+
 def load(data_root: Path) -> list[dict]:
     d = Path(data_root) / "cases"
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(d.glob("*.json"))] if d.exists() else []
@@ -128,6 +185,9 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
                             "forgiven_share": round(t["forgiven"] / t["amount"], 4)}
             extra["ppp"]["today"] = ppp_today(d["lenders"][:25], spend, lobbying, members)
             extra["ppp"]["years"] = lobbying.get("years_label")
+            hp = Path(data_root or ".") / "records" / "ppp_lobbying.json"
+            if hp.exists():
+                extra["ppp"]["history"] = ppp_history(json.loads(hp.read_text(encoding="utf-8")), d["lenders"][:25])
     return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}
