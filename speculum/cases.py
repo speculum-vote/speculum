@@ -20,6 +20,59 @@ from .bills import collect, norm
 from .saiddone import measure, org_giving, simple_resolution
 
 
+# PPP lenders matched to today's lobbying filers by core name (legal endings and words like "Bank, N.A.", "Holdings",
+# "Financial", "Bancorp" set aside), plus a bank whose parent company files under another name, listed here.
+_FORMS = re.compile(r"\b(THE|INC|INCORPORATED|LLC|L L C|LLP|LP|CORP|CORPORATION|CO|COMPANY|LTD|PLC|NATIONAL ASSOCIATION|N A|NA|"
+                    r"A DIVISION OF|HOLDINGS?|GROUP|FINANCIAL|SERVICES|BANCORPORATION|BANCORP|DBA .*)\b")
+PARENTS = {"KEYBANK": "KEYCORP", "MANUFACTURERS AND TRADERS TRUST": "M AND T", "HUNTINGTON NATIONAL": "HUNTINGTON BANCSHARES"}
+
+
+def core_name(n: str | None) -> str:
+    s = (n or "").upper().replace("&", " AND ")
+    s = re.sub(r"\(.*?\)", " ", s).replace(".", "").replace("'", "")
+    s = " ".join(_FORMS.sub(" ", re.sub(r"[^A-Z0-9 ]", " ", s)).split())
+    s = re.sub(r"\s+AND$", "", s)
+    s = re.sub(r"\s+BANK$", "", s)
+    return PARENTS.get(s, s)
+
+
+def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: list[dict]) -> list[dict]:
+    """For each lender: whether it (or its parent) files its own lobbying reports in 2025-26, what it reported spending,
+    how many bills it named, and what it gave sitting members (LD-203), by party."""
+    regs: dict = {}
+    clients: dict = defaultdict(set)
+    for q, v in (spend or {}).get("quarters", {}).items():
+        for rid, r in (v.get("registrants") or {}).items():
+            if r.get("own"):
+                e = regs.setdefault(core_name(r["name"]), {"names": set(), "spend": 0.0, "rids": set()})
+                e["names"].add(r["name"])
+                e["spend"] += sum((r.get("issues") or {}).values())
+                e["rids"].add(str(rid))
+        for k, o in (v.get("orgs") or {}).items():
+            clients[core_name(o[0])].add(k)
+    named = defaultdict(set)
+    for (cg, b), e in collect(spend, None).items():
+        for k in e["orgs"]:
+            named[k].add(b)
+    giving = org_giving(lobbying)
+    party = {m["bioguide"]: m["party"] for m in members}
+    out = []
+    for L in lenders:
+        c = core_name(L["name"])
+        R = regs.get(c)
+        bills_named = set().union(*(named[k] for k in clients.get(c, ()))) if clients.get(c) else set()
+        g = defaultdict(float)
+        for rid in (R or {}).get("rids", ()):
+            for bio, rows in (giving.get(rid) or {}).items():
+                for row in rows:
+                    g[party.get(bio) or "I"] += float(row["amount"])
+        out.append({"name": L["name"], "fees": L["fees"], "rate": L.get("rate"), "own": bool(R),
+                    "as": sorted(R["names"]) if R else [], "spend": round(R["spend"], 2) if R else 0.0,
+                    "bills": len(bills_named), "gave": {p: round(x, 2) for p, x in g.items() if x},
+                    "gave_total": round(sum(g.values()), 2)})
+    return out
+
+
 def load(data_root: Path) -> list[dict]:
     d = Path(data_root) / "cases"
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(d.glob("*.json"))] if d.exists() else []
@@ -73,6 +126,8 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
                 L["rate"] = round(L["fees"] / L["amount"], 4) if L["amount"] else None
             extra["ppp"] = {**d, "lenders": d["lenders"][:25], "fee_rate": round(t["fees"] / t["amount"], 4),
                             "forgiven_share": round(t["forgiven"] / t["amount"], 4)}
+            extra["ppp"]["today"] = ppp_today(d["lenders"][:25], spend, lobbying, members)
+            extra["ppp"]["years"] = lobbying.get("years_label")
     return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}

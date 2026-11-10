@@ -5,7 +5,7 @@
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
 {% set m = c.measure %}
-{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
 
 <h2 id="record">What happened</h2>
@@ -33,6 +33,19 @@
 <thead><tr><th>Lender</th><th class="r">Loans</th><th class="r">Lent</th><th class="r">Fees (est.)</th><th class="r">Fee rate</th><th class="r">Second loans</th></tr></thead><tbody>
 {% for L in P.lenders %}<tr><td>{{ L.name|org }} <span class="muted">{{ L.state }}</span></td><td class="r num">{{ L.loans|num }}</td><td class="r num">{{ L.amount|money }}</td><td class="r num">{{ L.fees|money }}</td><td class="r num">{{ L.rate|pct }}</td><td class="r num">{{ L.second|num }}</td></tr>{% endfor %}
 </tbody></table></div>
+{% if P.today %}{% set lob = P.today|selectattr('own')|list %}
+<h3 id="today">The same lenders today</h3>
+<p>Of these 25 lenders, {{ lob|length }} file their own lobbying reports in 2025–26: together they reported {{ lob|sum(attribute='spend')|money }} in lobbying and gave {{ lob|sum(attribute='gave_total')|money }} to sitting members. {% set rest = P.today|rejectattr('own')|list %}The other {{ rest|length }} file none of their own.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Lender</th><th class="r">PPP fees (est.)</th><th>Lobbies today as</th><th class="r">Lobbying reported, 2025–26</th><th class="r">Bills named</th><th class="r">Gave sitting members</th><th class="r">D / R</th></tr></thead><tbody>
+{% for L in P.today %}<tr><td>{{ L.name|org }}</td><td class="r num">{{ L.fees|money }}</td>
+<td class="muted">{% if L.own %}{{ L.as|map('org')|join('; ') }}{% elif L.bills %}through a lobbying firm{% else %}—{% endif %}</td>
+<td class="r num">{{ L.spend|money if L.own else '—' }}</td><td class="r num">{{ L.bills or '—' }}</td>
+<td class="r num">{{ L.gave_total|money if L.gave_total else '—' }}</td>
+<td class="r num">{% if L.gave_total %}{{ (L.gave.get('D', 0) / L.gave_total)|pct }} / {{ (L.gave.get('R', 0) / L.gave_total)|pct }}{% else %}—{% endif %}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">Matched by name, with legal endings and words like "Bank, N.A.", "Holdings" and "Financial Corp." set aside; three banks are matched to parent companies that file under other names (KeyBank to KeyCorp, M&amp;T Bank to M&amp;T Bank Corporation, The Huntington National Bank to Huntington Bancshares). Lobbying is what the organization reported on its own quarterly reports for all issues, January 2025 to September 2026; contributions are those it or its PAC reported on LD-203 for {{ P.years or "2025–26" }}. Neither is about PPP, which ended in 2021.</p>
+{% endif %}
 <p class="meta">From the SBA's loan-level PPP data (<a href="{{ P.source }}">data.sba.gov</a>, release of {{ P.release[2:4] }}/{{ P.release[4:6] }}/20{{ P.release[:2] }}): every disbursed loan, its lender (the one that made it) and amount; {{ t.skipped|num }} loans with nothing disbursed are left out. The SBA does not publish what it paid each lender, so each fee is estimated from its published schedule on the amount disbursed. No borrower is named here.</p>
 {% endif %}
 
