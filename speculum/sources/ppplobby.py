@@ -120,3 +120,37 @@ def fetch(path: Path, fetch, key: str | None, budget_min: float = 280) -> dict:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return out
+
+
+def _windows(text: str, width: int = 160) -> list[str]:
+    t = re.sub(r"\s+", " ", text or "")
+    out = []
+    for m in list(_PPP.finditer(t)) + list(_PPP_ABBR.finditer(t)):
+        a, b = max(0, m.start() - width), min(len(t), m.end() + width)
+        w = t[a:b]
+        if not any(w in o or o in w for o in out):
+            out.append(w)
+    return out[:2]
+
+
+def spot(path: Path, out: Path, fetch, key: str | None, n: int = 40, seed: int = 2020, names: list[str] = ()) -> dict:
+    """Re-read a sample of the matched reports and keep the words that matched, for checking by hand: a fixed-seed
+    random sample of organizations plus any named ones. Saved to data/records/ppp_spot.json."""
+    import random
+    fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
+    headers = {"Authorization": f"Token {key}"} if key else None
+    orgs = json.loads(path.read_text(encoding="utf-8"))["orgs_by_key"]
+    keys = sorted(orgs)
+    pick = random.Random(seed).sample(keys, min(n, len(keys))) + [k for k in names if k in orgs]
+    rows = []
+    for k in dict.fromkeys(pick):
+        r = orgs[k]["reports"][0]
+        f = fetch.get_json("lda", f"ppp_spot_{r['uuid']}.json", f"{BASE}/filings/{r['uuid']}/", headers=headers)
+        cli = f.get("client") or {}
+        acts = [a for a in f.get("lobbying_activities") or [] if mentions_ppp(a.get("description"))]
+        rows.append({"key": k, "quarter": r["quarter"], "uuid": r["uuid"], "client": cli.get("name"),
+                     "description": cli.get("general_description"), "sector": orgs[k]["sector"],
+                     "matched": [w for a in acts for w in _windows(a.get("description"))][:3], "still_matches": bool(acts)})
+    res = {"seed": seed, "n": len(rows), "rows": rows}
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res

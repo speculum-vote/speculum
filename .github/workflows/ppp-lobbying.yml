@@ -4,6 +4,13 @@ name: PPP lobbying 2020-21 (one-time)
 # data/records/ppp_lobbying.json. Resumable: run it again if a run stops for time; finished quarters are kept.
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "fetch (read every report) or spot (re-read a sample of matches for checking)"
+        default: fetch
+      names:
+        description: "spot only: organization keys to add, separated by |"
+        default: ""
 
 permissions:
   contents: write
@@ -23,16 +30,23 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: Read 2020-21 lobbying reports
+        if: inputs.mode != 'spot'
         env:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
         run: python -m speculum ppplobby --minutes 270
+      - name: Re-read a sample of matches
+        if: inputs.mode == 'spot'
+        env:
+          LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
+          NAMES: ${{ inputs.names }}
+        run: python -m speculum pppspot --n 40 --names "$NAMES"
       - name: Commit
         if: always()
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          git add data/records/ppp_lobbying.json || true
+          git add data/records/ppp_lobbying.json data/records/ppp_spot.json 2>/dev/null || git add data/records/ppp_lobbying.json || true
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
-          git commit -m "PPP lobbying 2020-21"
+          git commit -m "PPP lobbying 2020-21 (${{ inputs.mode }})"
           for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
           exit 1
