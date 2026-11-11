@@ -106,3 +106,7 @@ Roll back: set `"public": "holding"` and commit. The deploy puts the holding pag
 - Still open: FEC committee totals on member pages and in arms-sale chains are campaign-cycle totals, so after the switch to the 2028 cycle the arms chains' PAC column would show 2027-28 money beside 2025-26 votes. The money verdicts use LD-203 only, but the PAC column should be frozen the same way (a finance record per Congress).
 - Bills list and lobbied-bill ranking break ties by bill number, so the order a file lists bills in never changes a page.
 - Adding a Dependents theme: a rule in `RULES` (title test from the statute, subject parser, area, `page` block, `why` with verified sources) and a drafter brief in `BRIEFS`.
+
+## Before anything goes public
+
+Every post, caption, image or new case page gets the pre-publish check (the `prepublish-check` skill): a numbered claims table; every number recomputed from the filings (`ppp-lobbying.yml` mode `check` pulls named clients' LD-2 filings by year into data/records/ppp_check.json; LD-203 rows listed one by one with `reported_by`); outside facts from primary sources, current bill status including hearings; superlatives tested against the whole population; labels spot-checked; images viewed; a verdict per claim. A mismatch with the site is fixed at the root, backfilled, logged in corrections, and already-published posts rechecked.
