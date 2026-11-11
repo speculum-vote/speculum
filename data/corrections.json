@@ -67,6 +67,14 @@
    "wrong": "The word rule for hospitals also matched \"hospitality\", so hotel, casino and restaurant companies that describe themselves that way (Hilton, the American Hotel & Lodging Association, MGM, Boyd Gaming, Red Rock Resorts, Landry's and others) were placed with health.",
    "changed": "The rule now matches \"hospital\" and \"hospitals\" only. Earlier quarters were re-read from the archived filings: 10 organizations moved, 9 to other business and 1 to agriculture and food. Four organizations in the 2020–21 PPP lobbying record were corrected the same way.",
    "scope": "Affected: sector shares on bill pages, the gatekeepers page, Said & Done, Interests and Cases, by less than a point."
+  },
+  {
+   "date": "2026-11-11",
+   "prelaunch": true,
+   "area": "Lobbied bills",
+   "wrong": "Lobbying reports sometimes name a bill from an earlier Congress by its old number (\"H.R. 1822/S. 1789 - PLUS for Veterans Act of 2023\", \"S. 1199 in the 118th Congress\"). Those mentions were read as this Congress's bill of the same number, attaching organizations to unrelated bills.",
+   "changed": "A mention is now left out when the filer gives the bill its own name with a year before 2025, or says it is from an earlier Congress. About 2 to 7 percent of bill-organization links in each quarter came from such mentions. The site lists 2,972 bills lobbied by five or more organizations instead of 3,038, and 3,142 bill pages instead of 3,210. The share of those bills with no recorded vote stays at 92 percent (2,734 of 2,972). A mention of an old number without a year or Congress still can't be told apart.",
+   "scope": "Affected: bill pages, the Bills list, Said & Done and findings that count lobbied bills."
   }
  ]
 }

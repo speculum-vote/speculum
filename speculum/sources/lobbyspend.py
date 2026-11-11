@@ -28,6 +28,7 @@ log = logging.getLogger("speculum.lobbyspend")
 BASE = "https://lda.gov/api/v1"
 PERIODS = {1: "first_quarter", 2: "second_quarter", 3: "third_quarter", 4: "fourth_quarter"}
 FIRST_YEAR = 2025                    # the record covers the 119th Congress
+BILLS_RULE = 2      # 2: mentions of bills from earlier Congresses left out (see _earlier_congress)
 REFRESH_DAYS = 120                   # quarters this recent are fetched again (late filings, amendments)
 
 
@@ -85,13 +86,43 @@ def is_post(text: str | None) -> bool:
     return not no_post(text) and bool(_GOV_POST.search(text or ""))
 
 
+# Filers often name a bill from an earlier Congress by its old number ("H.R. 1822/S. 1789 - PLUS for Veterans Act of
+# 2023", "S. 1199 (118th Congress)"). Read as the 119th Congress's bill of that number, it lands on an unrelated bill.
+# A mention is left out when the words right after it (or after the group "H.R. 1/S. 2" it belongs to) give the bill
+# its own name with a year before 2025, or say it is from an earlier Congress. A year that belongs to a law being
+# amended ("to amend the Family and Medical Leave Act of 1993") does not count. A label "118th Congress:" applies to
+# the bill after it, not the one before.
+_OLD_YEAR = r"(19\d\d|20(0\d|1\d|2[0-4]))"
+_OWN_TITLE = re.compile(r"^[\s,:;\-\u2013\u2014(\"\u201c]{0,4}(the\s+)?(?P<t>[^;.()]{0,110}?)\bAct\s+of\s+" + _OLD_YEAR + r"\b", re.I)
+_OLD_CONGRESS = re.compile(r"(\b(10\d|11[0-8])(th)?\s+Congress\b|\(\s*(10\d|11[0-8])(th)?\s*\))(?!\s*:)", re.I)
+_NOT_OWN = re.compile(r"\b(amend|amending|under|pursuant|section|sec\.|title|implementation|reauthoriz)", re.I)
+_JOIN = re.compile(r"\s*(/|,|and|&|or)\s*", re.I)
+_OLD_LABEL = re.compile(r"\b(10\d|11[0-8])(th)?\s+Congress\s*:\s*$", re.I)      # "118th Congress: H.R. 3734"
+
+
+def _earlier_congress(seg: str) -> bool:
+    if _OLD_CONGRESS.search(seg[:90]):
+        return True
+    m = _OWN_TITLE.match(seg)
+    return bool(m and not _NOT_OWN.search(m.group("t")))
+
+
 def bills_in(text: str | None) -> list[str]:
-    """Bill keys named in a description, e.g. ['HR1', 'S2296'], in order, without repeats."""
+    """Bill keys named in a description, e.g. ['HR1', 'S2296'], in order, without repeats; mentions of a bill from an
+    earlier Congress (see _earlier_congress) are left out."""
+    d = re.sub(r"\s+", " ", text or "")
+    ms = list(_BILL.finditer(d))
     out = []
-    for m in _BILL.finditer(text or ""):
+    for i, m in enumerate(ms):
         t = re.sub(r"[^A-Z]", "", m.group(1).upper())
         k = f"{t}{int(m.group(2))}"
-        if t in _BILL_TYPES and int(m.group(2)) > 0 and k not in out:
+        if t not in _BILL_TYPES or int(m.group(2)) <= 0 or k in out:
+            continue
+        j = i + 1
+        while j < len(ms) and _JOIN.fullmatch(d[ms[j - 1].end():ms[j].start()]):
+            j += 1
+        seg = d[ms[j - 1].end():ms[j].start() if j < len(ms) else len(d)][:200]
+        if not _earlier_congress(seg) and not _OLD_LABEL.search(d[max(0, m.start() - 30):m.start()]):
             out.append(k)
     return out
 
@@ -223,6 +254,7 @@ def aggregate(filings: list[dict]) -> dict:
             r["issues"][c] += w / len(codes)
     top = sorted(clients.items(), key=lambda kv: -kv[1]["amount"])[:400]
     return {
+        "bills_rule": BILLS_RULE,
         "total": round(total, 2), "reports": len(reports), "reports_with_amount": counted,
         "issues": {c: {**v, "amount": round(v["amount"], 2)} for c, v in issues.items()},
         "top_clients": [{"id": k, "name": v["name"], "amount": round(v["amount"], 2), "self": v["self"],
@@ -255,10 +287,7 @@ def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = N
         old = prev.get(label)
         fresh = (today - _deadline(y, q)).days <= REFRESH_DAYS
         if old and old.get("complete") and not fresh:
-            for field, by_q in (backfill or {}).items():         # fields added after the quarter was fetched
-                if field not in old and by_q.get(label) is not None:
-                    old = {**old, field: by_q[label]}
-                    log.info("lobbying spend %s: %s added from the archived filings", label, field)
+            old = apply_backfill(old, label, backfill)
             out[label] = old
             continue
         filings, complete = _fetch_quarter(fetch, key, y, q, deadline)
@@ -272,6 +301,25 @@ def fetch_spend(fetch, key: str | None, run_date: str, previous: dict | None = N
     return {"quarters": out, "source": f"{BASE}/filings/"}
 
 
+def apply_backfill(q: dict, label: str, backfill: dict | None) -> dict:
+    """A carried quarter with one-time fields from the archived filings: fields it lacks, and (when the backfill's
+    `_rule` is newer than the quarter's `bills_rule`) the fields in `_replace`, rebuilt under the current bill rule."""
+    bf = backfill or {}
+    rule, replace = bf.get("_rule"), set(bf.get("_replace") or [])
+    redo = bool(replace) and rule is not None and (q.get("bills_rule") or 1) < rule
+    changed = False
+    for field, by_q in bf.items():
+        if field.startswith("_") or by_q.get(label) is None:
+            continue
+        if field not in q or (redo and field in replace):
+            q = {**q, field: by_q[label]}
+            changed = True
+            log.info("lobbying spend %s: %s from the archived filings", label, field)
+    if redo and changed:
+        q = {**q, "bills_rule": rule}
+    return q
+
+
 def with_backfill(spend: dict | None, path) -> dict | None:
     """The spend data with any one-time backfill fields filled in (as the next nightly run will save them), so the
     site shows them from the next build."""
@@ -280,9 +328,6 @@ def with_backfill(spend: dict | None, path) -> dict | None:
     if not spend or not p.exists():
         return spend
     bf = json.loads(p.read_text(encoding="utf-8"))
-    for field, by_q in bf.items():
-        for label, v in by_q.items():
-            q = spend.get("quarters", {}).get(label)
-            if q is not None and field not in q:
-                q[field] = v
+    for label, q in list(spend.get("quarters", {}).items()):
+        spend["quarters"][label] = apply_backfill(q, label, bf)
     return spend
