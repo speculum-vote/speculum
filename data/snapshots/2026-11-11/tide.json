@@ -1,0 +1,126 @@
+{
+ "date": "2026-11-11",
+ "first": false,
+ "more": 0,
+ "roll_calls": 6,
+ "since": "2026-11-10",
+ "stories": [
+  {
+   "date": "2026-11-10T19:37:00",
+   "dek": "In the Senate, 16 Democrats, 1 Republican voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Motion to Proceed.",
+    "Result: Motion to Proceed Agreed to, 62 to 21.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "17 members voted against their party on Motion to Proceed to H.R. 2347",
+   "id": "2026-11-11-01",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Richard Blumenthal (D-CT)",
+    "Christopher A. Coons (D-DE)",
+    "John Fetterman (D-PA)",
+    "Ruben Gallego (D-AZ)",
+    "Kirsten E. Gillibrand (D-NY)",
+    "Martin Heinrich (D-NM)",
+    "Andy Kim (D-NJ)",
+    "Angus S. King, Jr. (I-ME)",
+    "Amy Klobuchar (D-MN)",
+    "Jon Ossoff (D-GA)",
+    "Jack Reed (D-RI)",
+    "Mike Rounds (R-SD)",
+    "Brian Schatz (D-HI)",
+    "Charles E. Schumer (D-NY)",
+    "Elissa Slotkin (D-MI)",
+    "Raphael G. Warnock (D-GA)",
+    "Sheldon Whitehouse (D-RI)"
+   ],
+   "members": [
+    "B001277",
+    "C001088",
+    "F000479",
+    "G000555",
+    "G000574",
+    "H001046",
+    "K000367",
+    "K000383",
+    "K000394",
+    "O000174",
+    "R000122",
+    "R000605",
+    "S000148",
+    "S001194",
+    "S001208",
+    "W000790",
+    "W000802"
+   ],
+   "score": 44,
+   "sources": [
+    {
+     "label": "Senate roll call 258",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00258.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-258"
+  },
+  {
+   "date": null,
+   "dek": "Registered lobbyists and their organizations file twice-yearly reports of contributions to federal officeholders.",
+   "facts": [
+    "Brian J. Mast (R-FL): $14,000",
+    "Zachary Nunn (R-IA): $7,000",
+    "Ashley Hinson (R-IA): $4,500",
+    "4 contributions in newly posted reports."
+   ],
+   "headline": "New lobbyist contribution reports list $25,500 to 3 members",
+   "id": "2026-11-11-02",
+   "kind": "Lobbyist money",
+   "member_names": [],
+   "members": [
+    "M001199",
+    "N000193",
+    "H001091"
+   ],
+   "score": 12,
+   "sources": [
+    {
+     "label": "LD-203 reports, lda.gov",
+     "url": "https://lda.gov/system/public/"
+    }
+   ],
+   "status": "draft"
+  },
+  {
+   "date": "2026-11-10T18:02:00-05:00",
+   "dek": "In the House, 1 Republican voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On Motion to Refer.",
+    "Result: Passed, 211 to 204.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "1 member voted against their party on HRES 1655",
+   "id": "2026-11-11-03",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Thomas Massie (R-KY)"
+   ],
+   "members": [
+    "M001184"
+   ],
+   "score": 12,
+   "sources": [
+    {
+     "label": "House roll call 317",
+     "url": "https://clerk.house.gov/evs/2026/roll317.xml"
+    },
+    {
+     "label": "HRES 1655",
+     "url": "https://www.congress.gov/bill/119/house-resolution/1655"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "h-119-2-317"
+  }
+ ]
+}
