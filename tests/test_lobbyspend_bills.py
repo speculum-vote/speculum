@@ -21,3 +21,11 @@ def test_backfill_replaces_bill_fields_once_under_a_newer_rule():
     assert q2["bills"] == {} and q2["bills_rule"] == 2 and "bill_filings" in q2
     q2["bills"] = {"KEEP": {}}
     assert apply_backfill(q2, "2025-Q1", bf)["bills"] == {"KEEP": {}}     # already under rule 2: left alone
+
+
+def test_company_never_advocacy():
+    from speculum.lobbysectors import sector
+    assert sector("Service that guides Veterans through the disability claims process.", "JOSHCO GROUP, LLC D/B/A VETERAN BENEFITS GUIDE") != "advocacy"
+    assert sector("government relations", "Capitol Advocacy, LLC") != "advocacy"
+    assert sector(None, "Capitol Advocacy, LLC") == "professional"
+    assert sector("veterans service organization", "Disabled American Veterans") == "advocacy"

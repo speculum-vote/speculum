@@ -234021,5 +234021,5 @@
    "2021": 8750.0
   }
  },
- "sector_fixes": "2026-11-10: re-sorted from health to other business after the rule stopped reading 'hospitality' as 'hospital': EASTERN STATES HOSPITALITY CORPORATION; SCHULTE HOSPITALITY GROUP; ASIAN AMERICAN HOTEL OWNERS ASSOCIATION; HILTON WORLDWIDE"
+ "sector_fixes": "2026-11-10: re-sorted from health to other business after the rule stopped reading 'hospitality' as 'hospital': EASTERN STATES HOSPITALITY CORPORATION; SCHULTE HOSPITALITY GROUP; ASIAN AMERICAN HOTEL OWNERS ASSOCIATION; HILTON WORLDWIDE; 2026-11-11: companies with a for-profit legal form (LLC, LLP, LP) moved out of advocacy: "
 }

@@ -5,7 +5,7 @@
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
 {% set m = c.measure %}
-{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("borrowed", "Lobbied, and borrowed") if c.ppp and c.ppp.borrowers and (not public or c.ppp.borrowers_public) else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
+{% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("spend", "The lobbying, side by side") if c.compare else none, ("gifts", "Whose campaigns it funded") if c.compare else none, ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("borrowed", "Lobbied, and borrowed") if c.ppp and c.ppp.borrowers and (not public or c.ppp.borrowers_public) else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}
 
 <h2 id="record">What happened</h2>
@@ -17,6 +17,25 @@
 {% endfor %}
 </ol>
 
+{% if c.compare %}{% set K = c.compare %}
+<h2 id="spend">The lobbying, side by side</h2>
+<div class="said-done"><div><b class="num">{{ K.focus_total|money }}</b><p>reported by {{ K.focus|map(attribute='name')|map('org')|join(', ') }} on its own lobbying reports</p></div>
+<div><b class="num">{{ K.others_total|money }}</b><p>by the {{ K.others|length }} largest traditional veterans groups together, the same way</p></div>
+<div><b class="num">{{ (K.focus_total / K.issue_total)|pct if K.issue_total else '—' }}</b><p>of all lobbying reported on {{ K.issue_label }} came from {{ K.focus|map(attribute='name')|map('org')|join(', ') }}</p></div></div>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Organization</th><th class="r">Lobbying reported, {{ K.quarters[0][:4] }} Q{{ K.quarters[0][-1] }} – {{ K.quarters[-1][:4] }} Q{{ K.quarters[-1][-1] }}</th></tr></thead><tbody>
+{% for r in K.focus %}<tr><td><b>{{ r.name|org }}</b></td><td class="r num"><b>{{ r.amount|money }}</b></td></tr>{% endfor %}
+{% for r in K.others %}<tr><td>{{ r.name|org }}</td><td class="r num">{{ r.amount|money }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">What each organization reported spending on all its lobbying, on its own quarterly reports (an organization's total includes what it paid outside firms). The veterans groups' totals cover every issue they lobbied on. The company's reports listed only veterans issues. "All lobbying on {{ K.issue_label }}" splits each report's amount evenly across the issues it lists.</p>
+<h2 id="gifts">Whose campaigns it funded</h2>
+<p>{{ K.focus|map(attribute='name')|map('org')|join(', ') }}, its PAC and its lobbyists reported ${{ '{:,.0f}'.format(K.gifts_total) }} in campaign contributions to {{ K.gifts|length }} sitting members{% if K.gifts_committee %}, ${{ '{:,.0f}'.format(K.gifts_committee) }} of it to members of the House and Senate veterans' committees{% endif %}. The {{ K.others|length }} veterans groups reported ${{ '{:,.0f}'.format(K.others_gave) }}.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Member</th><th>Veterans' committee</th><th class="r">Reported</th></tr></thead><tbody>
+{% for g in K.gifts %}<tr><td><a href="../member/{{ g.bioguide }}.html">{{ g.name }}</a> <span class="party-{{ g.party }}">({{ g.party }}-{{ g.state }})</span></td><td class="muted">{% for x in g.seats %}{{ x.name|replace('Committee on ', '') }}{% if x.title %}, {{ x.title|lower }}{% endif %}{% endfor %}</td><td class="r num">${{ '{:,.0f}'.format(g.amount) }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">Contributions as reported on LD-203 filings, January 2025 onward, to members sitting now. A contribution is not evidence of a vote or a position.{% if K.unvoted|length == c.bills|length %} None of the bills on this page has had a recorded vote.{% endif %}</p>
+{% endif %}
 {% if c.ppp %}{% set P = c.ppp %}{% set t = P.totals %}
 <h2 id="paid">What the lenders were paid</h2>
 <div class="said-done"><div><b class="num">{{ t.loans|num }}</b><p>loans disbursed, by {{ P.n_lenders|num }} lenders</p></div>
@@ -118,11 +137,11 @@
 {% for g in c.groups %}<div><b class="num">{{ g.n }}</b><p>{{ g.name|lower }}</p></div>{% endfor %}</div>
 <p class="meta">A lobbying report says what an organization lobbied on, not which side it took. The organizations below are listed by sector, never by side.</p>
 <div class="tbl-wrap"><table>
-<thead><tr><th>Organization</th><th>Sector</th><th>Lobbying reports naming it</th><th class="r">Funded members voting yes</th><th class="r">… voting no</th></tr></thead><tbody>
-{% for o in c.orgs %}<tr><td>{{ o.name|org }}</td><td class="muted">{{ o.sector_name }}</td>
+<thead><tr><th>Organization</th><th>Sector</th><th>Lobbying reports naming it</th>{% if m %}<th class="r">Funded members voting yes</th><th class="r">… voting no</th>{% endif %}</tr></thead><tbody>
+{% for o in c.orgs %}<tr><td>{{ o.name|org }}</td><td class="muted">{{ o.sector_name }}{% if o.fixed %}*{% endif %}</td>
 <td class="num">{% for r in o.reports %}<a href="{{ r.url }}">{{ r.quarter[2:4] }}Q{{ r.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_reports > o.reports|length %} <span class="muted">+{{ o.n_reports - o.reports|length }}</span>{% endif %}{% if not o.reports %}<span class="muted">—</span>{% endif %}</td>
-{% if o.funding %}<td class="r num">{{ o.funding.yes.members }} · {{ o.funding.yes.amount|money }}</td><td class="r num">{{ o.funding.no.members }} · {{ o.funding.no.amount|money }}</td>
-{% elif o.own %}<td class="r muted">none</td><td class="r muted">none</td>{% else %}<td class="r muted" colspan="2">files no reports of its own</td>{% endif %}</tr>
+{% if m %}{% if o.funding %}<td class="r num">{{ o.funding.yes.members }} · {{ o.funding.yes.amount|money }}</td><td class="r num">{{ o.funding.no.members }} · {{ o.funding.no.amount|money }}</td>
+{% elif o.own %}<td class="r muted">none</td><td class="r muted">none</td>{% else %}<td class="r muted" colspan="2">files no reports of its own</td>{% endif %}{% endif %}</tr>
 {% endfor %}</tbody></table></div>
 
 {% endif %}
@@ -144,6 +163,7 @@
 <ul class="rules">
 <li>Every dated fact above links its source: the official roll call, the law as printed, or the agency's announcement.</li>
 {% if c.n_orgs %}<li>Who lobbied: organizations that named {{ c.bills|map('billname')|join(' or ') }} on a quarterly lobbying report (LD-2). Sectors follow the site's word rules (<a href="../method.html#bills">Method</a>).</li>{% endif %}
+{% for o in c.orgs if o.fixed %}<li>* Sector set by hand for {{ o.name|org }}: {{ o.fixed }}</li>{% endfor %}
 {% if c.not_yet %}<li>Not yet counted: {{ c.not_yet }}</li>{% endif %}
 <li>A case is chosen to show how one decision moved through the record; every case is counted by the same rules, and a case is never dropped because of what it shows.</li>
 </ul>

@@ -112,18 +112,30 @@ _ADVOCACY_NAME = re.compile(r"(?<![a-z0-9])(?:center for|centre for|americans fo
 _REPRESENTS = re.compile(r"(?<![a-z0-9])(?:association[a-z]*|assn|represent[a-z]*|members?|membership|trade|industry|companies)(?![a-z0-9])")
 
 
+# A name with a for-profit legal form (LLC, LLP, LP) is a company's, so it is never placed with advocacy groups and
+# nonprofits, even when its description mentions veterans or advocacy ("Service that guides Veterans through the
+# disability claims process", "Capitol Advocacy, LLC"). If no other rule places it, it goes with law, lobbying and
+# consulting firms, which is what nearly all of them are.
+_COMPANY_FORM = re.compile(r"(?<![a-z0-9])(?:llc|l\.l\.c|llp|l\.l\.p|lp|l\.p)(?![a-z0-9])")
+
+
 def sector(description: str | None, name: str | None = None, government: bool = False) -> str:
     if government:
         return "government"
     d = (description or "").strip().lower()
-    if d and _NONPROFIT.search(d) and not _REPRESENTS.search(d):
+    company = bool(_COMPANY_FORM.search((name or "").lower()))
+    if d and _NONPROFIT.search(d) and not _REPRESENTS.search(d) and not company:
         return "advocacy"
-    if not d and _ADVOCACY_NAME.search((name or "").lower()):
+    if not d and _ADVOCACY_NAME.search((name or "").lower()) and not company:
         return "advocacy"
+    held = False
     for text in (d, (name or "").strip().lower()):
         if not text:
             continue
         for key, rx in _RULES:
             if rx.search(text):
+                if key == "advocacy" and company:
+                    held = True
+                    continue
                 return key
-    return "other"
+    return "professional" if held else "other"

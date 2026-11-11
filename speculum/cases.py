@@ -187,6 +187,53 @@ def ppp_borrowers(d: dict) -> dict | None:
             "release": d.get("release"), "source": d.get("source") or SBA_LOAN}
 
 
+def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[dict], votes: dict, cg: int,
+                  bills: list[str], data_root: Path | None) -> dict:
+    """Lobbying reported on their own reports by named organizations, side by side; the share of all lobbying on an
+    issue; campaign gifts (LD-203) from the focus organizations to sitting members, with veterans-committee seats; and
+    whether any of the case's bills has had a recorded vote."""
+    up = lambda x: (x or "").upper().strip()
+    names = {up(n) for n in cfg.get("focus", []) + cfg.get("others", [])}
+    tot = defaultdict(float)
+    issue_total = 0.0
+    quarters = sorted(((spend or {}).get("quarters") or {}).items())
+    for label, q in quarters:
+        issue_total += ((q.get("issues") or {}).get(cfg.get("issue") or "", {}) or {}).get("amount", 0.0)
+        for r in (q.get("registrants") or {}).values():
+            if r.get("own") and up(r.get("name")) in names:
+                tot[up(r["name"])] += sum((r.get("issues") or {}).values())
+    row = lambda n, label=None: {"name": label or n, "amount": round(tot.get(up(n), 0.0), 2)}
+    focus = [row(n) for n in cfg.get("focus", [])]
+    others = sorted([row(n) for n in cfg.get("others", [])], key=lambda r: -r["amount"])
+    seats = {}
+    snaps = sorted((Path(data_root or ".") / "snapshots").glob("*/committees.json"))
+    if snaps:
+        for b, v in (json.loads(snaps[-1].read_text(encoding="utf-8")).get("seats") or {}).items():
+            seats[b] = [{"code": x["code"], "name": x.get("name"), "title": x.get("title")} for x in v
+                        if x["code"] in set(cfg.get("committees") or [])]
+    by_id = {m["bioguide"]: m for m in members}
+    rids = {rid for rid, r in (lobbying.get("registrants") or {}).items() if up(r.get("name")) in {up(n) for n in cfg.get("focus", [])}}
+    gifts = defaultdict(lambda: {"amount": 0.0, "n": 0})
+    for bio, gs in (lobbying.get("by_member") or {}).items():
+        for g in gs:
+            if str(g.get("registrant_id")) in rids:
+                gifts[bio]["amount"] += float(g.get("amount") or 0)
+                gifts[bio]["n"] += 1
+    grows = sorted([{"bioguide": b, "name": by_id.get(b, {}).get("name", b), "party": by_id.get(b, {}).get("party"),
+                     "state": by_id.get(b, {}).get("state"), "amount": round(v["amount"], 2), "n": v["n"],
+                     "seats": seats.get(b, [])} for b, v in gifts.items()], key=lambda r: -r["amount"])
+    voted = {norm(v["bill"]) for v in votes.get("votes") or [] if v.get("bill") and int(v.get("congress") or 0) == cg}
+    return {"focus": focus, "others": others, "others_total": round(sum(r["amount"] for r in others), 2),
+            "focus_total": round(sum(r["amount"] for r in focus), 2), "issue": cfg.get("issue"),
+            "issue_label": cfg.get("issue_label"), "issue_total": round(issue_total, 2),
+            "quarters": [q[0] for q in quarters], "gifts": grows, "gifts_total": round(sum(r["amount"] for r in grows), 2),
+            "gifts_committee": round(sum(r["amount"] for r in grows if r["seats"]), 2),
+            "others_gave": round(sum(float(g.get("amount") or 0) for gs in (lobbying.get("by_member") or {}).values() for g in gs
+                                     if up((lobbying.get("registrants") or {}).get(str(g.get("registrant_id")), {}).get("name"))
+                                     in {up(n) for n in cfg.get("others", [])}), 2),
+            "unvoted": [b for b in bills if b not in voted], "labels": cfg.get("labels") or {}}
+
+
 def load(data_root: Path) -> list[dict]:
     d = Path(data_root) / "cases"
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted(d.glob("*.json"))] if d.exists() else []
@@ -217,9 +264,12 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
     m = measure((cg, case["vehicle"]), merged, rolls, votes.get("positions") or {}, org_giving(lobbying), party) if rolls else None
     funded = {o["name"]: o for o in (m or {}).get("orgs", [])}
     orgs = []
+    fixes = {k.upper(): v for k, v in (case.get("sector_fixes") or {}).items()}     # set by hand, shown on the page
     for k, o in merged["orgs"].items():
         files = sorted(set(merged["files"].get(k) or []))
-        orgs.append({"name": o[0], "sector": o[1], "sector_name": S.NAMES.get(o[1], o[1]), "group": S.GROUPS.get(o[1], "Not described"),
+        sec = fixes.get(k.upper(), {}).get("sector") or o[1]
+        orgs.append({"name": o[0], "sector": sec, "sector_name": S.NAMES.get(sec, sec), "group": S.GROUPS.get(sec, "Not described"),
+                     "fixed": fixes.get(k.upper(), {}).get("why"),
                      "own": bool(o[2]), "reports": [{"quarter": q, "url": f"https://lda.gov/filings/public/filing/{u}/print"} for q, u in files][:8],
                      "n_reports": len(files), "funding": funded.get(o[0])})
     orgs.sort(key=lambda o: (S.GROUP_ORDER.index(o["group"]) if o["group"] in S.GROUP_ORDER else 99, -o["n_reports"], o["name"]))
@@ -231,6 +281,8 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
     vote_by_id = {v["id"]: v for v in (m or {}).get("votes", [])}
     facts = [{**f, "roll": vote_by_id.get(f.get("vote"))} for f in case.get("facts") or []]
     extra = {}
+    if case.get("dataset") == "spend_compare":
+        extra["compare"] = spend_compare(case.get("compare") or {}, spend, lobbying, members, votes, cg, case["bills"], data_root)
     if case.get("dataset") == "ppp":                    # SBA loan data, per lender (speculum/sources/ppp.py)
         p = Path(data_root or ".") / "records" / "ppp_lenders.json"
         if p.exists():

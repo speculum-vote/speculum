@@ -1,0 +1,123 @@
+{
+ "slug": "veterans-claims",
+ "title": "Paid help with veterans' claims",
+ "dek": "A company that charges veterans for help with disability claims, the veterans groups that give that help for free, and the bills that would decide between them. None has had a vote.",
+ "congress": 119,
+ "bills": [
+  "HR1732",
+  "HR1656",
+  "HR9105",
+  "S4646"
+ ],
+ "vehicle": null,
+ "dataset": "spend_compare",
+ "compare": {
+  "focus": [
+   "VETERANS GUARDIAN VA CLAIM CONSULTING LLC"
+  ],
+  "others": [
+   "THE AMERICAN LEGION",
+   "VETERANS OF FOREIGN WARS OF THE UNITED STATES",
+   "DISABLED AMERICAN VETERANS",
+   "PARALYZED VETERANS OF AMERICA",
+   "VIETNAM VETERANS OF AMERICA",
+   "AMVETS/AMERICAN VETERANS",
+   "IRAQ AND AFGHANISTAN VETERANS OF AMERICA, INC."
+  ],
+  "issue": "VET",
+  "issue_label": "veterans issues",
+  "committees": [
+   "HSVR",
+   "SSVA"
+  ]
+ },
+ "facts": [
+  {
+   "date": "2006",
+   "text": "A change in federal law leaves charging veterans for help with a VA claim, without VA accreditation, against the law but with no criminal penalty.",
+   "source": {
+    "title": "IVN, Nov. 26, 2025",
+    "url": "https://ivn.us/posts/inside-battle-stop-companies-profiting-veterans-benefits-2025-11-26"
+   },
+   "source2": {
+    "title": "Stateline, Dec. 6, 2024",
+    "url": "https://stateline.org/2024/12/06/states-go-after-claim-sharks-that-charge-vets-for-help-with-disability-claims/"
+   }
+  },
+  {
+   "date": "2025-02-27",
+   "text": "Reps. Chris Pappas, Brian Fitzpatrick and Jeff Van Drew reintroduce the GUARD VA Benefits Act (H.R. 1732), which would reinstate criminal penalties for unaccredited representatives who charge unauthorized fees for help with a VA disability claim. DAV and the VFW back it.",
+   "source": {
+    "title": "Rep. Pappas, press release, Feb. 27, 2025",
+    "url": "https://pappas.house.gov/media/press-releases/pappas-fitzpatrick-van-drew-introduce-bipartisan-legislation-to-protect-veterans-benefits-from-predatory-claim-sharks"
+   }
+  },
+  {
+   "date": "2025-02-27",
+   "text": "Rep. Jack Bergman introduces the PLUS for Veterans Act (H.R. 1656), which would let companies like Veterans Guardian become accredited and charge capped fees.",
+   "source": {
+    "title": "H.R. 1656, text as introduced",
+    "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1656ih/html/BILLS-119hr1656ih.htm"
+   },
+   "source2": {
+    "title": "IVN, Nov. 26, 2025",
+    "url": "https://ivn.us/posts/inside-battle-stop-companies-profiting-veterans-benefits-2025-11-26"
+   }
+  },
+  {
+   "date": "2025-03-05",
+   "text": "The American Legion tells Congress it supports H.R. 1732 and opposes H.R. 1656. The Military Officers Association also backs the GUARD Act.",
+   "source": {
+    "title": "The American Legion, statement for the record",
+    "url": "https://legion.org/getmedia/84348daa-66aa-4b4e-81f8-b600fee9ffff/TAL-SFR-Final-March-5.pdf"
+   },
+   "source2": {
+    "title": "MOAA",
+    "url": "https://www.moaa.org/vaclaimpower"
+   }
+  },
+  {
+   "date": "2025-03-27",
+   "text": "H.R. 1732 is referred to the Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs, its last recorded action.",
+   "source": {
+    "title": "BillTrack50, H.R. 1732",
+    "url": "https://www.billtrack50.com/billdetail/1850139"
+   }
+  },
+  {
+   "date": "2026-05-20",
+   "text": "In a class action, the federal district court for the Middle District of North Carolina finds the evidence undisputed that Veterans Guardian acted as an unaccredited agent. The VA had sent the company cease-and-desist letters in 2019 and 2024. The company disputes this and says its work is consulting, not representation.",
+   "source": {
+    "title": "MOAA, Sept. 22, 2026",
+    "url": "https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/court-ruling-exposes-vas-limited-power-to-stop-predatory-claims-companies/"
+   }
+  },
+  {
+   "date": "2026-06-02",
+   "text": "Reps. Janelle Bynum, Chris Pappas, Don Bacon and Mike Lawler introduce the SAFEGUARD Veterans Act (H.R. 9105), and Sen. Richard Blumenthal a Senate companion (S. 4646), to restore criminal penalties for unaccredited representatives who charge veterans.",
+   "source": {
+    "title": "American Legion Department of California, June 9, 2026",
+    "url": "https://calegion.org/federal-legislation-introduced-to-crack-down-on-claim-sharks-targeting-veterans/"
+   },
+   "source2": {
+    "title": "MOAA",
+    "url": "https://www.moaa.org/vaclaimpower"
+   }
+  },
+  {
+   "date": "2026-08-03",
+   "text": "In the same case, the court finds Veterans Guardian committed unfair trade practices under North Carolina law during much of the class period.",
+   "source": {
+    "title": "MOAA, Sept. 22, 2026",
+    "url": "https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/court-ruling-exposes-vas-limited-power-to-stop-predatory-claims-companies/"
+   }
+  }
+ ],
+ "not_yet": "Contributions by the company's executives as individuals (in FEC records, not lobbying reports) and lobbying in state legislatures are not on this page.",
+ "sector_fixes": {
+  "TRAJECTOR MEDICAL": {
+   "sector": "industry",
+   "why": "a for-profit company (Trajector, Inc.) that testified before House Veterans' Affairs subcommittees as an unaccredited claims preparation company (CCK Law's summary of the hearing: cck-law.com). Its description mentions veterans, which the word rules read as advocacy."
+  }
+ }
+}
