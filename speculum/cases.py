@@ -193,7 +193,7 @@ def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[d
     issue; campaign gifts (LD-203) from the focus organizations to sitting members, with veterans-committee seats; and
     whether any of the case's bills has had a recorded vote."""
     up = lambda x: (x or "").upper().strip()
-    names = {up(n) for n in cfg.get("focus", []) + cfg.get("others", [])}
+    names = {up(n) for n in cfg.get("focus", []) + cfg.get("others", []) + cfg.get("context", [])}
     tot = defaultdict(float)
     issue_total = 0.0
     quarters = sorted(((spend or {}).get("quarters") or {}).items())
@@ -205,6 +205,7 @@ def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[d
     row = lambda n, label=None: {"name": label or n, "amount": round(tot.get(up(n), 0.0), 2)}
     focus = [row(n) for n in cfg.get("focus", [])]
     others = sorted([row(n) for n in cfg.get("others", [])], key=lambda r: -r["amount"])
+    context = sorted([row(n) for n in cfg.get("context", [])], key=lambda r: -r["amount"])
     seats = {}
     snaps = sorted((Path(data_root or ".") / "snapshots").glob("*/committees.json"))
     if snaps:
@@ -223,7 +224,7 @@ def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[d
                      "state": by_id.get(b, {}).get("state"), "amount": round(v["amount"], 2), "n": v["n"],
                      "seats": seats.get(b, [])} for b, v in gifts.items()], key=lambda r: -r["amount"])
     voted = {norm(v["bill"]) for v in votes.get("votes") or [] if v.get("bill") and int(v.get("congress") or 0) == cg}
-    return {"focus": focus, "others": others, "others_total": round(sum(r["amount"] for r in others), 2),
+    return {"focus": focus, "others": others, "context": context, "others_total": round(sum(r["amount"] for r in others), 2),
             "focus_total": round(sum(r["amount"] for r in focus), 2), "issue": cfg.get("issue"),
             "issue_label": cfg.get("issue_label"), "issue_total": round(issue_total, 2),
             "quarters": [q[0] for q in quarters], "gifts": grows, "gifts_total": round(sum(r["amount"] for r in grows), 2),

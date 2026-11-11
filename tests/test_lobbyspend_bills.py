@@ -29,3 +29,12 @@ def test_company_never_advocacy():
     assert sector("government relations", "Capitol Advocacy, LLC") != "advocacy"
     assert sector(None, "Capitol Advocacy, LLC") == "professional"
     assert sector("veterans service organization", "Disabled American Veterans") == "advocacy"
+
+
+def test_own_amount_counts_reports_without_issues():
+    from speculum.sources.lobbyspend import aggregate
+    f = lambda uuid, exp, acts: {"filing_uuid": uuid, "filing_type": "Q1", "dt_posted": "2026-04-20", "expenses": exp, "income": None,
+                                 "registrant": {"id": 7, "name": "VFW"}, "client": {"id": 8, "name": "VFW", "client_self_select": True},
+                                 "lobbying_activities": acts}
+    a = aggregate([f("a", "40000.00", [])])
+    assert a["registrants"]["7"]["own_amount"] == 40000.0 and a["registrants"]["7"]["issues"] == {}

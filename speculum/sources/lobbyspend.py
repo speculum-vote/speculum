@@ -263,6 +263,7 @@ def aggregate(filings: list[dict]) -> dict:
         "top_clients": [{"id": k, "name": v["name"], "amount": round(v["amount"], 2), "self": v["self"],
                          "issues": {c: round(a, 2) for c, a in v["issues"].items()}} for k, v in top],
         "registrants": {k: {"name": v["name"], "own": v["own"], "for_clients": v["for_clients"],
+                            "own_amount": round(v["own_amount"], 2),
                             "issues": {c: round(a, 2) for c, a in v["issues"].items()}} for k, v in registrants.items()},
         # Bills named in this quarter's reports. orgs: name key -> [name, sector, registrant id if it files for itself];
         # people: lobbyist id -> [name, former government post as reported].

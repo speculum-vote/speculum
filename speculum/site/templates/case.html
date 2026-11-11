@@ -20,16 +20,18 @@
 {% if c.compare %}{% set K = c.compare %}
 <h2 id="spend">The lobbying, side by side</h2>
 <div class="said-done"><div><b class="num">{{ K.focus_total|money }}</b><p>reported by {{ K.focus|map(attribute='name')|map('org')|join(', ') }} on its own lobbying reports</p></div>
-<div><b class="num">{{ K.others_total|money }}</b><p>by the {{ K.others|length }} largest traditional veterans groups together, the same way</p></div>
+<div><b class="num">{{ K.others_total|money }}</b><p>by {{ K.others|length }} major veterans service organizations together, the same way</p></div>
 <div><b class="num">{{ (K.focus_total / K.issue_total)|pct if K.issue_total else '—' }}</b><p>of all lobbying reported on {{ K.issue_label }} came from {{ K.focus|map(attribute='name')|map('org')|join(', ') }}</p></div></div>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Organization</th><th class="r">Lobbying reported, {{ K.quarters[0][:4] }} Q{{ K.quarters[0][-1] }} – {{ K.quarters[-1][:4] }} Q{{ K.quarters[-1][-1] }}</th></tr></thead><tbody>
 {% for r in K.focus %}<tr><td><b>{{ r.name|org }}</b></td><td class="r num"><b>{{ r.amount|money }}</b></td></tr>{% endfor %}
 {% for r in K.others %}<tr><td>{{ r.name|org }}</td><td class="r num">{{ r.amount|money }}</td></tr>{% endfor %}
+{% if K.context %}<tr><td colspan="2" class="muted" style="padding-top:14px">Also lobbying on veterans issues, not counted in the {{ K.others|length }}:</td></tr>
+{% for r in K.context %}<tr><td>{{ r.name|org }}</td><td class="r num">{{ r.amount|money }}</td></tr>{% endfor %}{% endif %}
 </tbody></table></div>
 <p class="meta">What each organization reported spending on all its lobbying, on its own quarterly reports (an organization's total includes what it paid outside firms). The veterans groups' totals cover every issue they lobbied on. The company's reports listed only veterans issues. "All lobbying on {{ K.issue_label }}" splits each report's amount evenly across the issues it lists.</p>
 <h2 id="gifts">Whose campaigns it funded</h2>
-<p>{{ K.focus|map(attribute='name')|map('org')|join(', ') }}, its PAC and its lobbyists reported ${{ '{:,.0f}'.format(K.gifts_total) }} in campaign contributions to {{ K.gifts|length }} sitting members{% if K.gifts_committee %}, ${{ '{:,.0f}'.format(K.gifts_committee) }} of it to members of the House and Senate veterans' committees{% endif %}. The {{ K.others|length }} veterans groups reported ${{ '{:,.0f}'.format(K.others_gave) }}.</p>
+<p>{{ K.focus|map(attribute='name')|map('org')|join(', ') }}, its PAC and its lobbyists reported ${{ '{:,.0f}'.format(K.gifts_total) }} in campaign contributions to {{ K.gifts|length }} sitting members{% if K.gifts_committee %}, ${{ '{:,.0f}'.format(K.gifts_committee) }} of it to members of the House and Senate veterans' committees{% endif %}. The {{ K.others|length }} veterans service organizations reported ${{ '{:,.0f}'.format(K.others_gave) }}.</p>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Member</th><th>Veterans' committee</th><th class="r">Reported</th></tr></thead><tbody>
 {% for g in K.gifts %}<tr><td><a href="../member/{{ g.bioguide }}.html">{{ g.name }}</a> <span class="party-{{ g.party }}">({{ g.party }}-{{ g.state }})</span></td><td class="muted">{% for x in g.seats %}{{ x.name|replace('Committee on ', '') }}{% if x.title %}, {{ x.title|lower }}{% endif %}{% endfor %}</td><td class="r num">${{ '{:,.0f}'.format(g.amount) }}</td></tr>{% endfor %}
