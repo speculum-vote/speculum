@@ -40,6 +40,12 @@ jobs:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
           NAMES: ${{ inputs.names }}
         run: python -m speculum pppspot --n 40 --names "$NAMES"
+      - name: Every 2019-21 report naming the given clients
+        if: inputs.mode == 'check'
+        env:
+          LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
+          NAMES: ${{ inputs.names }}
+        run: python -m speculum pppcheck --names "$NAMES"
       - name: Match PPP loans to lobbying clients and firms
         if: inputs.mode == 'borrowers'
         run: python -m speculum pppborrowers
@@ -48,7 +54,7 @@ jobs:
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          for f in ppp_lobbying ppp_spot ppp_borrowers; do [ -f data/records/$f.json ] && git add data/records/$f.json; done; true
+          for f in ppp_lobbying ppp_spot ppp_borrowers ppp_check; do [ -f data/records/$f.json ] && git add data/records/$f.json; done; true
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "PPP lobbying 2020-21 (${{ inputs.mode }})"
           for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done

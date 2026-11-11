@@ -19,6 +19,7 @@ import re
 import time
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 from ..lobbysectors import sector as sector_of
 from .lobbyspend import BASE, PERIODS, REGISTRATIONS, _amount, name_key
@@ -239,5 +240,33 @@ def spot(path: Path, out: Path, fetch, key: str | None, n: int = 40, seed: int =
                      "description": cli.get("general_description"), "sector": orgs[k]["sector"],
                      "matched": [w for a in acts for w in _windows(a.get("description"))][:3], "still_matches": bool(acts)})
     res = {"seed": seed, "n": len(rows), "rows": rows}
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res
+
+
+def client_filings(out: Path, fetch, key: str | None, names: list[str], years=(2019, 2020, 2021)) -> dict:
+    """Every report naming each client, by year, with the amounts as filed: for checking a figure by hand.
+    Saved to data/records/ppp_check.json."""
+    fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
+    headers = {"Authorization": f"Token {key}"} if key else None
+    res = {}
+    for name in names:
+        rows = []
+        for y in years:
+            page = 1
+            while True:
+                data = fetch.get_json("lda", f"check_{name_key(name)}_{y}_p{page}.json",
+                                      f"{BASE}/filings/?client_name={quote(name)}&filing_year={y}&page={page}&page_size=25",
+                                      headers=headers)
+                for f in data.get("results", []):
+                    cli, reg = f.get("client") or {}, f.get("registrant") or {}
+                    rows.append({"year": f.get("filing_year"), "period": f.get("filing_period"), "type": f.get("filing_type"),
+                                 "registrant": reg.get("name"), "client": cli.get("name"), "own": cli.get("client_self_select"),
+                                 "income": f.get("income"), "expenses": f.get("expenses"), "posted": f.get("dt_posted"),
+                                 "uuid": f.get("filing_uuid")})
+                if not data.get("next"):
+                    break
+                page += 1
+        res[name] = sorted(rows, key=lambda r: (r["year"] or 0, r["period"] or "", r["posted"] or ""))
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res

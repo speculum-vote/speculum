@@ -339,6 +339,18 @@ def cmd_pppspot(args) -> int:
     return 0
 
 
+def cmd_pppcheck(args) -> int:
+    """Every 2019-21 report naming each client, with amounts as filed (data/records/ppp_check.json)."""
+    from .http import Fetcher
+    from .sources import ppplobby
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    res = ppplobby.client_filings(ROOT / "records" / "ppp_check.json", fetch, os.environ.get("LDA_API_KEY"),
+                                  [x.strip() for x in (args.names or "").split("|") if x.strip()])
+    log.info("PPP check: %s", {k: len(v) for k, v in res.items()})
+    return 0
+
+
 def cmd_pppborrowers(args) -> int:
     """Match the SBA's PPP loans to 2020-21 lobbying clients and firms (data/records/ppp_borrowers.json)."""
     from .sources import pppborrowers
@@ -455,6 +467,8 @@ def main(argv=None) -> int:
     ps.add_argument("--n", type=int, default=40)
     ps.add_argument("--names", help="organization keys to add, separated by |")
     sub.add_parser("pppborrowers", help="match PPP loans to 2020-21 lobbying clients and firms")
+    pk = sub.add_parser("pppcheck", help="every 2019-21 report naming each client, with amounts as filed")
+    pk.add_argument("--names", help="client names, separated by |")
     pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
     pp.add_argument("--if-missing", action="store_true")
     z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")
@@ -466,7 +480,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck}[args.cmd](args)
 
 
 if __name__ == "__main__":
