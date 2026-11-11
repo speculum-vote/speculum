@@ -61,5 +61,35 @@
   }
  ],
  "not_yet": "The lenders' campaign contributions in 2020 and 2021 are before Speculum's record of contributions begins (January 2025) and are not on this page.",
- "borrowers_public": false
+ "borrowers_public": true,
+ "borrower_notes": [
+  {
+   "name": "Council of Insurance Agents and Brokers",
+   "note": "Its own reports give more than $1 million in lobbying in every 12-month span from 2019 through 2021. The lowest, July 2020 to June 2021, is $1.28 million. Its loan was approved March 24, 2021.",
+   "links": [
+    [
+     "Jan–Mar 2020 report ($460,000)",
+     "https://lda.gov/filings/public/filing/e19b1cb5-2405-431f-bbad-72d060f8dbb4/print/"
+    ],
+    [
+     "Jul–Sep 2020 ($315,000)",
+     "https://lda.gov/filings/public/filing/6d6777a7-e39a-491d-aab6-e517b725a144/print/"
+    ]
+   ]
+  },
+  {
+   "name": "Auto Care Association",
+   "note": "Its own reports give $1.82 million for calendar 2020, $1.05 million of it in January to March. For April 2020 to March 2021 they total $862,000. Whether it was over the limit depends on its tax year, which these records don't show. Its loan was approved February 3, 2021.",
+   "links": [
+    [
+     "Jan–Mar 2020 report ($1,050,000)",
+     "https://lda.gov/filings/public/filing/ea2e87b1-220b-4207-b676-3d6e7dd6ecc7/print/"
+    ],
+    [
+     "Apr–Jun 2020 ($547,000)",
+     "https://lda.gov/filings/public/filing/f11eee6d-8495-406d-a07d-233f5206db12/print/"
+    ]
+   ]
+  }
+ ]
 }

@@ -250,6 +250,7 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
             if bp.exists():
                 extra["ppp"]["borrowers"] = ppp_borrowers(json.loads(bp.read_text(encoding="utf-8")))
                 extra["ppp"]["borrowers_public"] = bool(case.get("borrowers_public"))
+                extra["ppp"]["borrower_notes"] = case.get("borrower_notes") or []
     return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}
