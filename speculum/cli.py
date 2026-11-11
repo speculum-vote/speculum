@@ -351,6 +351,22 @@ def cmd_pppcheck(args) -> int:
     return 0
 
 
+def cmd_pppfees(args) -> int:
+    """Re-read in full every 2020-21 report of the named clients for fees near the program (data/records/ppp_fees.json)."""
+    from .http import Fetcher
+    from .sources import ppplobby
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    names = [x.strip() for x in (args.names or "").split("|") if x.strip()]
+    if not names:
+        lob = json.loads((ROOT / "records" / "ppp_lobbying.json").read_text(encoding="utf-8"))
+        names = sorted(v["name"] for v in lob["orgs_by_key"].values() if v.get("fee"))
+    res = ppplobby.fee_reread(ROOT / "records" / "ppp_fees.json", fetch, os.environ.get("LDA_API_KEY"), names)
+    log.info("PPP fees: %d clients, %d reports, %d fee mentions", len(res), sum(v["reports_read"] for v in res.values()),
+             sum(len(v["fee_mentions"]) for v in res.values()))
+    return 0
+
+
 def cmd_pppborrowers(args) -> int:
     """Match the SBA's PPP loans to 2020-21 lobbying clients and firms (data/records/ppp_borrowers.json)."""
     from .sources import pppborrowers
@@ -467,6 +483,8 @@ def main(argv=None) -> int:
     ps.add_argument("--n", type=int, default=40)
     ps.add_argument("--names", help="organization keys to add, separated by |")
     sub.add_parser("pppborrowers", help="match PPP loans to 2020-21 lobbying clients and firms")
+    pf = sub.add_parser("pppfees", help="re-read every 2020-21 report of the clients that mention fees near PPP")
+    pf.add_argument("--names", help="client names, separated by |; default: every client flagged")
     pk = sub.add_parser("pppcheck", help="every 2019-21 report naming each client, with amounts as filed")
     pk.add_argument("--names", help="client names, separated by |")
     pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
@@ -480,7 +498,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees}[args.cmd](args)
 
 
 if __name__ == "__main__":

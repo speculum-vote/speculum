@@ -270,3 +270,42 @@ def client_filings(out: Path, fetch, key: str | None, names: list[str], years=(2
         res[name] = sorted(rows, key=lambda r: (r["year"] or 0, r["period"] or "", r["posted"] or ""))
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res
+
+
+def fee_reread(out: Path, fetch, key: str | None, names: list[str], years=(2020, 2021)) -> dict:
+    """Every 2020-21 report for each named client, read in full: each fee mentioned within 300 characters of the
+    program, with its words. For checking which organizations named the fees paid to lenders.
+    Saved to data/records/ppp_fees.json."""
+    fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
+    headers = {"Authorization": f"Token {key}"} if key else None
+    res = {}
+    for name in names:
+        rows, seen = [], set()
+        for y in years:
+            page = 1
+            while True:
+                data = fetch.get_json("lda", f"fees_{name_key(name)}_{y}_p{page}.json",
+                                      f"{BASE}/filings/?client_name={quote(name)}&filing_year={y}&page={page}&page_size=25",
+                                      headers=headers)
+                for f in data.get("results", []):
+                    if f.get("filing_uuid") in seen:
+                        continue
+                    seen.add(f.get("filing_uuid"))
+                    for a in f.get("lobbying_activities") or []:
+                        d = a.get("description") or ""
+                        if not mentions_ppp(d):
+                            continue
+                        t = re.sub(r"\s+", " ", d)
+                        st = _strip(t)
+                        spots = [m.start() for m in list(_PPP.finditer(st)) + list(_PPP_ABBR.finditer(st))]
+                        for fm in _FEE.finditer(st):
+                            if any(abs(fm.start() - p) <= 300 for p in spots):
+                                a0, b0 = max(0, fm.start() - 140), min(len(t), fm.end() + 140)
+                                rows.append({"year": f.get("filing_year"), "period": f.get("filing_period"),
+                                             "uuid": f.get("filing_uuid"), "words": t[a0:b0]})
+                if not data.get("next"):
+                    break
+                page += 1
+        res[name] = {"reports_read": len(seen), "fee_mentions": rows}
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res
