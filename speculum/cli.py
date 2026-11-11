@@ -345,8 +345,9 @@ def cmd_pppcheck(args) -> int:
     from .sources import ppplobby
     run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
     fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    years = tuple(int(y) for y in (args.years or "2019,2020,2021").split(","))
     res = ppplobby.client_filings(ROOT / "records" / "ppp_check.json", fetch, os.environ.get("LDA_API_KEY"),
-                                  [x.strip() for x in (args.names or "").split("|") if x.strip()])
+                                  [x.strip() for x in (args.names or "").split("|") if x.strip()], years=years)
     log.info("PPP check: %s", {k: len(v) for k, v in res.items()})
     return 0
 
@@ -487,6 +488,7 @@ def main(argv=None) -> int:
     pf.add_argument("--names", help="client names, separated by |; default: every client flagged")
     pk = sub.add_parser("pppcheck", help="every 2019-21 report naming each client, with amounts as filed")
     pk.add_argument("--names", help="client names, separated by |")
+    pk.add_argument("--years", help="filing years, comma-separated (default 2019,2020,2021)")
     pp = sub.add_parser("ppp", help="fetch the SBA's PPP loan data into per-lender totals")
     pp.add_argument("--if-missing", action="store_true")
     z = sub.add_parser("zcta", help="fetch the ZIP code area to congressional district file")

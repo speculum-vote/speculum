@@ -11,6 +11,9 @@ on:
       names:
         description: "spot only: organization keys to add, separated by |"
         default: ""
+      years:
+        description: "check only: filing years, comma-separated"
+        default: ""
 
 permissions:
   contents: write
@@ -45,7 +48,8 @@ jobs:
         env:
           LDA_API_KEY: ${{ secrets.LDA_API_KEY }}
           NAMES: ${{ inputs.names }}
-        run: python -m speculum pppcheck --names "$NAMES"
+          YEARS: ${{ inputs.years }}
+        run: python -m speculum pppcheck --names "$NAMES" --years "${YEARS:-2019,2020,2021}"
       - name: Re-read the fee mentions in full
         if: inputs.mode == 'fees'
         env:
