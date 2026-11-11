@@ -53,9 +53,10 @@ def registrant_sectors(spend: dict | None, registrants: dict) -> dict[str, str]:
     quarters), else from the registration's own description. Lobbying firms come out "professional"."""
     votes: dict[str, Counter] = defaultdict(Counter)
     for q in ((spend or {}).get("quarters") or {}).values():
-        for name, sec, rid in (q.get("orgs") or {}).values():
+        resorted = q.get("org_sectors") or {}          # older quarters re-sorted under the current rules
+        for k, (name, sec, rid) in (q.get("orgs") or {}).items():
             if rid:
-                votes[str(rid)][sec] += 1
+                votes[str(rid)][resorted.get(k, sec)] += 1
     out = {r: c.most_common(1)[0][0] for r, c in votes.items()}
     for rid, reg in (registrants or {}).items():
         if rid not in out:
