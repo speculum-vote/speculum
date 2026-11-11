@@ -38,10 +38,10 @@
  "facts": [
   {
    "date": "2006",
-   "text": "A change in federal law leaves charging veterans for help with a VA claim, without VA accreditation, against the law but with no criminal penalty.",
+   "text": "The Veterans Benefits, Health Care, and Information Technology Act of 2006 repeals the criminal penalty for charging prohibited fees for help with a VA claim. Charging without accreditation stays against the law, with no criminal penalty.",
    "source": {
-    "title": "IVN, Nov. 26, 2025",
-    "url": "https://ivn.us/posts/inside-battle-stop-companies-profiting-veterans-benefits-2025-11-26"
+    "title": "Congressional Research Service, LSB11455",
+    "url": "https://www.everycrsreport.com/reports/LSB11455.html"
    },
    "source2": {
     "title": "Stateline, Dec. 6, 2024",
@@ -82,10 +82,22 @@
   },
   {
    "date": "2025-03-27",
-   "text": "H.R. 1732 is referred to the Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs, its last recorded action.",
+   "text": "H.R. 1732 is referred to the Veterans' Affairs Subcommittee on Disability Assistance and Memorial Affairs.",
    "source": {
     "title": "BillTrack50, H.R. 1732",
     "url": "https://www.billtrack50.com/billdetail/1850139"
+   }
+  },
+  {
+   "date": "2026-03-18",
+   "text": "The full House Veterans' Affairs Committee holds a legislative hearing that includes H.R. 1732. It has not voted on the bill.",
+   "source": {
+    "title": "House Veterans' Affairs Committee, hearing notice, Mar. 18, 2026",
+    "url": "https://democrats-veterans.house.gov/events/hearings/legislative-hearing-march-18-2026"
+   },
+   "source2": {
+    "title": "The Lobby, H.R. 1732 status",
+    "url": "https://www.thelobbynews.com/congress/bills/119/house-bill/1732"
    }
   },
   {

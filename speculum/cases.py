@@ -215,16 +215,20 @@ def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[d
     by_id = {m["bioguide"]: m for m in members}
     rids = {rid for rid, r in (lobbying.get("registrants") or {}).items() if up(r.get("name")) in {up(n) for n in cfg.get("focus", [])}}
     gifts = defaultdict(lambda: {"amount": 0.0, "n": 0})
+    regnames = {up((lobbying.get("registrants") or {}).get(r, {}).get("name")) for r in rids}
+    people = set()                                   # lobbyists who filed their own contribution reports
     for bio, gs in (lobbying.get("by_member") or {}).items():
         for g in gs:
             if str(g.get("registrant_id")) in rids:
                 gifts[bio]["amount"] += float(g.get("amount") or 0)
                 gifts[bio]["n"] += 1
+                if g.get("reported_by") and up(g["reported_by"]) not in regnames:
+                    people.add(g["reported_by"])
     grows = sorted([{"bioguide": b, "name": by_id.get(b, {}).get("name", b), "party": by_id.get(b, {}).get("party"),
                      "state": by_id.get(b, {}).get("state"), "amount": round(v["amount"], 2), "n": v["n"],
                      "seats": seats.get(b, [])} for b, v in gifts.items()], key=lambda r: -r["amount"])
     voted = {norm(v["bill"]) for v in votes.get("votes") or [] if v.get("bill") and int(v.get("congress") or 0) == cg}
-    return {"focus": focus, "others": others, "context": context, "others_total": round(sum(r["amount"] for r in others), 2),
+    return {"n_lobbyists": len(people), "focus": focus, "others": others, "context": context, "others_total": round(sum(r["amount"] for r in others), 2),
             "focus_total": round(sum(r["amount"] for r in focus), 2), "issue": cfg.get("issue"),
             "issue_label": cfg.get("issue_label"), "issue_total": round(issue_total, 2),
             "quarters": [q[0] for q in quarters], "gifts": grows, "gifts_total": round(sum(r["amount"] for r in grows), 2),
