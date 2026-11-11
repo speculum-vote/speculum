@@ -46,7 +46,7 @@ def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: 
             if r.get("own"):
                 e = regs.setdefault(core_name(r["name"]), {"names": set(), "spend": 0.0, "rids": set()})
                 e["names"].add(r["name"])
-                e["spend"] += sum((r.get("issues") or {}).values())
+                e["spend"] += r["own_amount"] if "own_amount" in r else sum((r.get("issues") or {}).values())
                 e["rids"].add(str(rid))
         for k, o in (v.get("orgs") or {}).items():
             clients[core_name(o[0])].add(k)
@@ -201,7 +201,7 @@ def spend_compare(cfg: dict, spend: dict | None, lobbying: dict, members: list[d
         issue_total += ((q.get("issues") or {}).get(cfg.get("issue") or "", {}) or {}).get("amount", 0.0)
         for r in (q.get("registrants") or {}).values():
             if r.get("own") and up(r.get("name")) in names:
-                tot[up(r["name"])] += sum((r.get("issues") or {}).values())
+                tot[up(r["name"])] += r["own_amount"] if "own_amount" in r else sum((r.get("issues") or {}).values())
     row = lambda n, label=None: {"name": label or n, "amount": round(tot.get(up(n), 0.0), 2)}
     focus = [row(n) for n in cfg.get("focus", [])]
     others = sorted([row(n) for n in cfg.get("others", [])], key=lambda r: -r["amount"])

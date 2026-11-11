@@ -28,7 +28,8 @@ log = logging.getLogger("speculum.lobbyspend")
 BASE = "https://lda.gov/api/v1"
 PERIODS = {1: "first_quarter", 2: "second_quarter", 3: "third_quarter", 4: "fourth_quarter"}
 FIRST_YEAR = 2025                    # the record covers the 119th Congress
-BILLS_RULE = 2      # 2: mentions of bills from earlier Congresses left out (see _earlier_congress)
+BILLS_RULE = 3      # 2: mentions of bills from earlier Congresses left out (see _earlier_congress)
+                    # 3: registrants carry own_amount (dollars on their own reports; "issues" is a weight, not dollars)
 REFRESH_DAYS = 120                   # quarters this recent are fetched again (late filings, amendments)
 
 
@@ -247,8 +248,10 @@ def aggregate(filings: list[dict]) -> dict:
         # A registrant's issue mix, by the money it reported (or its report count when it reported none):
         # used to place its political contributions (LD-203) in an issue area.
         r = registrants.setdefault(str(reg["id"]), {"name": reg.get("name"), "issues": defaultdict(float),
-                                                    "own": 0, "for_clients": 0})
+                                                    "own": 0, "for_clients": 0, "own_amount": 0.0})
         r["own" if own else "for_clients"] += 1
+        if own:
+            r["own_amount"] += amt          # dollars on its own reports, including reports that list no issue
         w = amt if amt else 1.0
         for c in codes:
             r["issues"][c] += w / len(codes)
