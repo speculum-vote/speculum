@@ -1,0 +1,639 @@
+{
+ "AMERICAN CHIROPRACTIC ASSOCIATION": {
+  "reports_read": 20,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "06f163e4-5ae8-4d39-a3b9-2046e4bf14d9",
+    "words": " instructions to HHS, DOL, and Treasury to develop rule for implementation of Sec. 2706 of the Public Health Service Act, and for Physician Fee Schedule amendments."
+   }
+  ]
+ },
+ "AMERICAN FROZEN FOOD INSTITUTE": {
+  "reports_read": 13,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "first_quarter",
+    "uuid": "76e7fb09-3a54-492b-8392-e31ac86cc35b",
+    "words": "Agriculture Appropriations FY2019 and issues related to control of foodborne pathogens; Farm Bill, FDA User Fees, Food Safety Modernization Act. Paycheck Protection Program"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "0d8dc3f6-bfce-424c-8db4-680d32fcfcd5",
+    "words": "Agriculture Appropriations FY2019 and issues related to control of foodborne pathogens; Farm Bill, FDA User Fees, Food Safety Modernization Act. Paycheck Protection Program"
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "b9acc2c0-f5bb-4710-9bbe-4ca96d9caa75",
+    "words": "Agriculture Appropriations FY2019 and issues related to control of foodborne pathogens; Farm Bill, FDA User Fees, Food Safety Modernization Act. Paycheck Protection Program"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "19b4087b-3197-4840-b28d-c0344634bdb4",
+    "words": "Agriculture Appropriations FY2019 and issues related to control of foodborne pathogens; Farm Bill, FDA User Fees, Food Safety Modernization Act. Paycheck Protection Program"
+   }
+  ]
+ },
+ "AMERICAS CREDIT UNIONS, FKA CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA": {
+  "reports_read": 9,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "7ba39e68-f8b2-4daa-a026-722f14d721b0",
+    "words": "d Issues related to OCC National Bank and Savings Association Digital Activities Issues related to FHFA's proposed Adverse Market Refinance Fee Issues related to the treatment of certain COVID-19 Loss Mitigation options under RESPA (Reg X) Issues related to the NCUA 2020 Regulatory "
+   }
+  ]
+ },
+ "BANK OF AMERICA CORPORATION": {
+  "reports_read": 26,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "bc184376-6adc-4d8a-9a6a-cf7df996c269",
+    "words": " issues related to brokered deposits; S 2903, Climate Change Financial Risk Act of 2019, issues related to bank stress tests; HR 5195, FAIR Fees Act, issues related to bank stress tests; HR 6800, The Heroes Act, issues related to paycheck protection program; HR 7777, Paycheck Protect"
+   }
+  ]
+ },
+ "CALIFORNIA ASSOCIATION OF REALTORS": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "3f914143-3b95-40ce-8add-ccaf48ede759",
+    "words": " rental assistance. H.R. 299; Blue Water Navy Vietnam Veterans Act of 2019; Would remove the loan limit on V.A. home loans and increase the fee on the loans. H.R. 748; Coronavirus Aid, Relief, and Economic Security Act or the CARES Act; Creates forgivable loans for small businesses "
+   }
+  ]
+ },
+ "CENCORA, INC.": {
+  "reports_read": 40,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "b19b860b-89de-4559-9b03-1a77e3297a25",
+    "words": "n Act of 2019. Medicare Part B Biosimilar Reimbursement. Proposed modifications to the existing definition of distributor bona fide service fees in Medicare Part B. Coronavirus Aid, Relief and Economic Security Act (CARES Act). Recognizing pharmacists as providers within Medicare for"
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "11a2ea47-3c1e-4ec7-9a18-df8a1a7cffd9",
+    "words": "n Act of 2019. Medicare Part B Biosimilar Reimbursement. Proposed modifications to the existing definition of distributor bona fide service fees in Medicare Part B. Coronavirus Aid, Relief and Economic Security Act (CARES Act). Recognizing pharmacists as providers within Medicare for"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "f3276819-5326-4bc3-887e-256d3fe2122a",
+    "words": "n Act of 2019. Medicare Part B Biosimilar Reimbursement. Proposed modifications to the existing definition of distributor bona fide service fees in Medicare Part B. Coronavirus Aid, Relief and Economic Security Act (CARES Act). Recognizing pharmacists as providers within Medicare for"
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "e33fbe86-3643-4286-8c73-2b0b2159f85a",
+    "words": "ition Program. Medicare Part B Biosimilar Reimbursement. Proposed modifications to the existing definition of distributor bona fide service fees in Medicare Part B. Recognizing pharmacists as providers within Medicare for COVID-19 response. Paycheck Protection Program Flexibility Act"
+   }
+  ]
+ },
+ "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "ow processing times to input loans, exhaustion of the under $10 billion in bank asset funding tranche, loan forgiveness, and payment of PPP fees to the originating bank (House, Senate, FDIC, OCC, Federal Reserve, CFPB) Coronavirus Aid, Relief, and Economic Security (CARES) Acts Paych"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "conomic Security (CARES) Acts Paycheck Protection Program (PPP), and the Treasury and SBA implementation - difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions (House) Coronavirus Aid, Relief, and Economic Securit"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "oyed, self-rental income qualifying for forgiveness, intended way to remit forgiveness amounts to lenders, difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions, and eligibility for employee retention credit (ERC) "
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "ow processing times to input loans, exhaustion of the under $10 billion in bank asset funding tranche, loan forgiveness, and payment of PPP fees to the originating bank (House, Senate, FDIC, OCC, Federal Reserve, CFPB) Coronavirus Aid, Relief, and Economic Security (CARES) Acts Paych"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "conomic Security (CARES) Acts Paycheck Protection Program (PPP), and the Treasury and SBA implementation - difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions (House) Coronavirus Aid, Relief, and Economic Securit"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "oyed, self-rental income qualifying for forgiveness, intended way to remit forgiveness amounts to lenders, difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions, and eligibility for employee retention credit (ERC) "
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "ow processing times to input loans, exhaustion of the under $10 billion in bank asset funding tranche, loan forgiveness, and payment of PPP fees to the originating bank (House, Senate, FDIC, OCC, Federal Reserve, CFPB) Coronavirus Aid, Relief, and Economic Security (CARES) Acts Paych"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "conomic Security (CARES) Acts Paycheck Protection Program (PPP), and the Treasury and SBA implementation - difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions (House) Coronavirus Aid, Relief, and Economic Securit"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "oyed, self-rental income qualifying for forgiveness, intended way to remit forgiveness amounts to lenders, difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions, and eligibility for employee retention credit (ERC) "
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "ow processing times to input loans, exhaustion of the under $10 billion in bank asset funding tranche, loan forgiveness, and payment of PPP fees to the originating bank (House, Senate, FDIC, OCC, Federal Reserve, CFPB) Coronavirus Aid, Relief, and Economic Security (CARES) Acts Paych"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "conomic Security (CARES) Acts Paycheck Protection Program (PPP), and the Treasury and SBA implementation - difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions (House) Coronavirus Aid, Relief, and Economic Securit"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "oyed, self-rental income qualifying for forgiveness, intended way to remit forgiveness amounts to lenders, difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions, and eligibility for employee retention credit (ERC) "
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "conomic Security (CARES) Acts Paycheck Protection Program (PPP), and the Treasury and SBA implementation - difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions (House) Letters - Comment Letter to the Office of Com"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9cb68f06-72f0-48da-8cec-798acdce2c74",
+    "words": "oyed, self-rental income qualifying for forgiveness, intended way to remit forgiveness amounts to lenders, difference in taxing origination fee income from PPP loans between tax paying community banks and tax-exempt credit unions, and eligibility for employee retention credit (ERC) "
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "d Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act (Appropriate Sections) Regarding lender origination fees in the Paycheck Protection Program (PPP) (House and Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act ("
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": " certification, tax deductions for business expenses paid with PPP funds, provisions that a PPP lender shall only be responsible for paying fees to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of f"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "s to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of fees earned (House) Letters - Comment Letter to the Federal Deposit Insurance Corporation (FDIC) regarding: Proposed Revisions to Statement of P"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "d Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act (Appropriate Sections) Regarding lender origination fees in the Paycheck Protection Program (PPP) (House and Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act ("
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": " certification, tax deductions for business expenses paid with PPP funds, provisions that a PPP lender shall only be responsible for paying fees to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of f"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "s to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of fees earned (House) Letters - Comment Letter to the Federal Deposit Insurance Corporation (FDIC) regarding: Proposed Revisions to Statement of P"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "d Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act (Appropriate Sections) Regarding lender origination fees in the Paycheck Protection Program (PPP) (House and Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act ("
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": " certification, tax deductions for business expenses paid with PPP funds, provisions that a PPP lender shall only be responsible for paying fees to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of f"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "s to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of fees earned (House) Letters - Comment Letter to the Consumer Financial Protection Bureau (CFPB) regarding: Small Business Data Collection Rulema"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": " certification, tax deductions for business expenses paid with PPP funds, provisions that a PPP lender shall only be responsible for paying fees to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of f"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "s to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of fees earned (House)"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "d Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act (Appropriate Sections) Regarding lender origination fees in the Paycheck Protection Program (PPP) (House and Senate) H.R. 133 - Consolidated Appropriations Act (116th Congress) and the CARES Act ("
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": " certification, tax deductions for business expenses paid with PPP funds, provisions that a PPP lender shall only be responsible for paying fees to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of f"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5c31d8ca-e56e-45ae-9aed-461991ea98d3",
+    "words": "s to an agent for services for which the lender directly contracts with the agent - applies to all PPP Loans, and changing the structure of fees earned (House) Letters - Comment Letter to the Consumer Financial Protection Bureau (CFPB) regarding: Small Business Data Collection Rulema"
+   }
+  ]
+ },
+ "FUTURE STANDARD": {
+  "reports_read": 12,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "first_quarter",
+    "uuid": "30afa2e8-4d77-4828-90b6-f162895811b0",
+    "words": "Small Business Investor Tax Parity Act of 2020, regarding all provisions. Relief for Business Development Companies from the Acquired Funds Fees and Expenses Rule. HR 748, CARES Act, regarding regarding Paycheck Protection Program, Main Street Lending Facility, and Exchange Stabiliza"
+   }
+  ]
+ },
+ "HO-CHUNK NATION LEGISLATURE": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "ad1c35be-c08e-4095-9848-3684531a03c9",
+    "words": "CDC grant opportunities; Paycheck Protection Program; Beloit fee-to-trust application; Coronavirus Relief Fund; FY2021 appropriations; the CARES Act; energy provisions in CARES Act; IHS third-party reimbu"
+   }
+  ]
+ },
+ "INDEPENDENT COMMUNITY BANKERS OF AMERICA": {
+  "reports_read": 17,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "b3952340-579d-4797-969e-004cb42bf11b",
+    "words": "atory Relief Act, Accounting Provisions S. 3548 CARES Act, Accounting Provisions Accounting for Paycheck Protection Program Loan Processing Fees Current Expected Credit Losses (CECL) Standard"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "05838b83-a41e-4954-bff5-9e381a3d086d",
+    "words": "atory Relief Act, Accounting Provisions S. 3548 CARES Act, Accounting Provisions Accounting for Paycheck Protection Program Loan Processing Fees Current Expected Credit Losses (CECL) Standard"
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "0749760c-9f71-4808-b8a7-4f5435826c50",
+    "words": "Accounting for Paycheck Protection Program Loan Processing Fees Current Expected Credit Losses (CECL) Standard"
+   },
+   {
+    "year": 2021,
+    "period": "second_quarter",
+    "uuid": "ead63653-abe0-4679-824b-c6e33a99b3fa",
+    "words": "Accounting for Paycheck Protection Program Loan Processing Fees Current Expected Credit Losses (CECL) Standard"
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "b754ee1e-f341-4413-ae74-826269d3b321",
+    "words": "Accounting for Paycheck Protection Program Loan Processing Fees Current Expected Credit Losses (CECL) Standard"
+   }
+  ]
+ },
+ "LOEWS HOTELS HOLDING CORPORATION": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "2e8fe644-7ea3-4471-8422-6cfa0389fbc8",
+    "words": "hotel industry, including: fair regulation of short-term online housing rentals and hotel operating companies; labor and wage issues; hotel fees; privacy and data breach laws; deceptive practices by online travel companies; COVID-19 relief efforts including business tax incentives an"
+   },
+   {
+    "year": 2021,
+    "period": "second_quarter",
+    "uuid": "72d18b85-e375-4105-bbe2-083bb2c55649",
+    "words": "hotel industry, including: fair regulation of short-term online housing rentals and hotel operating companies; labor and wage issues; hotel fees; privacy and data breach laws; deceptive practices by online travel companies; COVID-19 relief efforts including business tax incentives an"
+   }
+  ]
+ },
+ "MIDDLETOWN MEDICAL PC": {
+  "reports_read": 7,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "9c24dfa1-a4e5-4325-9c83-b218d0d8cb9c",
+    "words": "PPP loan forgiveness; Medicare Accelerated and Advance Payments; provider liability reform; physician fee schedule; telemedicine expansion"
+   }
+  ]
+ },
+ "MORTGAGE BANKERS ASSOCIATION": {
+  "reports_read": 56,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "1975d6fc-762d-4229-bcbf-0088e42ecaf1",
+    "words": "pprops Act of 2021 S.1214Privacy Bill of Rights Act116 S.1463A bill to establish a score keeping rule to ensure that increases in guarantee fees of Fannie Mae and Freddie Mac shall not be used to offset provisions that increase the deficit.116 S.1722FHA Appraiser Eligibility Expansio"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "c1eb454a-62a7-400d-a56a-6fb730d28ad6",
+    "words": " temporary relief from troubled debt restructurings.116 S.1463A bill to establish a scorekeeping rule to ensure that increases in guarantee fees of Fannie Mae and Freddie Mac shall not be used to offset provisions that increase the deficit.116 S.1722FHA Appraiser Eligibility Expansio"
+   }
+  ]
+ },
+ "NATIONAL AFFORDABLE HOUSING MANAGEMENT ASSOCIATION (NAHMA)": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "0cd9a036-a27d-46b1-bd48-90b69c5ca2d9",
+    "words": "his time period must provide the tenant with 30 days to vacate. Furthermore, during the 120-day moratorium, tenants may not be charged late fees, penalties, or other charges for nonpayment of rent. This title provides FY2020 appropriations for the Department of Housing and Urban Deve"
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "fc1f7754-42bb-4501-b634-f57a27249d7b",
+    "words": "his time period must provide the tenant with 30 days to vacate. Furthermore, during the 120-day moratorium, tenants may not be charged late fees, penalties, or other charges for nonpayment of rent. This title provides FY2020 appropriations for the Department of Housing and Urban Deve"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "a92895d9-d196-4bfe-9713-5d9de6e2ddff",
+    "words": "his time period must provide the tenant with 30 days to vacate. Furthermore, during the 120-day moratorium, tenants may not be charged late fees, penalties, or other charges for nonpayment of rent. This title provides FY2020 appropriations for the Department of Housing and Urban Deve"
+   }
+  ]
+ },
+ "NATIONAL ASSOCIATION OF COLLEGE STORES": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "first_quarter",
+    "uuid": "d12e9af6-33c0-4993-a04b-6017a274c1ed",
+    "words": "111-203 (H.R. 4173), - Dodd-Frank Wall Street Reform and Consumer Protection Act, Subtitle G, Sec. 1075 of HR 4173 (as enacted). Reasonable fees and rules for payment card transactions. H.R. 748 - CARES Act --SBA Paycheck Protection Program loans."
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "1e4f8b30-655b-45a8-adbf-0a8b7f1d99bd",
+    "words": "111-203 (H.R. 4173), - Dodd-Frank Wall Street Reform and Consumer Protection Act, Subtitle G, Sec. 1075 of HR 4173 (as enacted). Reasonable fees and rules for payment card transactions. -H.R. 748 - CARES Act --SBA Paycheck Protection Program loans. -Phase 4 emergency and stimulus leg"
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "c90d010f-06ce-495d-9c35-7d2c233e25f1",
+    "words": "111-203 (H.R. 4173), - Dodd-Frank Wall Street Reform and Consumer Protection Act, Subtitle G, Sec. 1075 of HR 4173 (as enacted). Reasonable fees and rules for payment card transactions. -H.R. 748 - CARES Act --SBA Paycheck Protection Program loans. Main Street Lending Program --Insti"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "71ffad29-8852-43ca-bc8b-dea8600f4d3e",
+    "words": "111-203 (H.R. 4173), - Dodd-Frank Wall Street Reform and Consumer Protection Act, Subtitle G, Sec. 1075 of HR 4173 (as enacted). Reasonable fees and rules for payment card transactions. -H.R. 748 - CARES Act --SBA Paycheck Protection Program loans. Main Street Lending Program --Insti"
+   }
+  ]
+ },
+ "NATIONAL ASSOCIATION OF FEDERALLY-INSURED CREDIT UNIONS": {
+  "reports_read": 17,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "first_quarter",
+    "uuid": "b6524be2-b397-4a0d-ae3b-f77899141ab2",
+    "words": " unions and increase funding for PPP; provide temporary capital flexibility; modernize E-sign Act; enhance SBA 7(a) loan program by waiving fees for small business borrowers and lenders, increase federal guaranty, increase deferment flexibility, increase maximum loan size, increase g"
+   },
+   {
+    "year": 2020,
+    "period": "first_quarter",
+    "uuid": "b6524be2-b397-4a0d-ae3b-f77899141ab2",
+    "words": " unions and increase funding for PPP; provide temporary capital flexibility; modernize E-sign Act; enhance SBA 7(a) loan program by waiving fees for small business borrowers and lenders, increase federal guaranty, increase deferment flexibility, increase maximum loan size, increase g"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "c5a6af6e-82e7-40ab-a0a1-e6050aec2d49",
+    "words": " unions and increase funding for PPP; provide temporary capital flexibility; modernize E-sign Act; enhance SBA 7(a) loan program by waiving fees for small business borrowers and lenders, increase federal guaranty, increase deferment flexibility, increase maximum loan size, increase g"
+   },
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "c5a6af6e-82e7-40ab-a0a1-e6050aec2d49",
+    "words": " unions and increase funding for PPP; provide temporary capital flexibility; modernize E-sign Act; enhance SBA 7(a) loan program by waiving fees for small business borrowers and lenders, increase federal guaranty, increase deferment flexibility, increase maximum loan size, increase g"
+   }
+  ]
+ },
+ "NATIONAL GROCERS ASSOCIATION": {
+  "reports_read": 15,
+  "fee_mentions": [
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "c9f62ddc-a769-40cc-9bcb-23a2e1bada35",
+    "words": " Card Standards, Security and Fraud Open Banking and Reatime Gross Settlement Standards Durbin Amendment/ Debit Reform Merchant Credit Card Fee Increases Paycheck Protection Program"
+   },
+   {
+    "year": 2021,
+    "period": "second_quarter",
+    "uuid": "6b5f0c52-1f67-4589-af5e-ab13f51d57a6",
+    "words": "Payments Card Standards, Security and Fraud Durbin Amendment/ Debit Reform Merchant Credit Card Fee Increases Paycheck Protection Program Credit Card Routing Reform"
+   },
+   {
+    "year": 2021,
+    "period": "third_quarter",
+    "uuid": "4972a4b7-c0a7-4ee4-9386-49db2dc1b992",
+    "words": "Payments Card Standards, Security and Fraud Durbin Amendment/ Debit Reform Merchant Credit Card Fee Increases Paycheck Protection Program Credit Card Routing Reform"
+   }
+  ]
+ },
+ "NATIONAL SEAFOOD ASSOCIATION, F/K/A NATIONAL FISHERIES INSTITUTE": {
+  "reports_read": 16,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "6231d223-223d-44d3-905e-c1d9a2f02cba",
+    "words": " FY21 Labor, HHS and related Agencies Appropriations; FY21 Department of Homeland Security Appropriations; NOAA funding;FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "6231d223-223d-44d3-905e-c1d9a2f02cba",
+    "words": "cies Appropriations; FY21 Department of Homeland Security Appropriations; NOAA funding;FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "b7612809-b6c1-4d02-bc24-bce3fa0e8dea",
+    "words": " FY21 Labor, HHS and related Agencies Appropriations; FY21 Department of Homeland Security Appropriations; NOAA funding;FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "b7612809-b6c1-4d02-bc24-bce3fa0e8dea",
+    "words": "cies Appropriations; FY21 Department of Homeland Security Appropriations; NOAA funding;FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "8a51986a-79cc-4101-a7cc-f27dbebbbaa2",
+    "words": "d related Agencies Appropriations; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "8a51986a-79cc-4101-a7cc-f27dbebbbaa2",
+    "words": "; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   },
+   {
+    "year": 2021,
+    "period": "second_quarter",
+    "uuid": "9144ad97-55fe-4e3a-8924-d710cf77539a",
+    "words": "d related Agencies Appropriations; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2021,
+    "period": "second_quarter",
+    "uuid": "9144ad97-55fe-4e3a-8924-d710cf77539a",
+    "words": "; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   },
+   {
+    "year": 2021,
+    "period": "third_quarter",
+    "uuid": "38fd423a-b37a-460a-999b-efccd8c791d4",
+    "words": "d related Agencies Appropriations; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2021,
+    "period": "third_quarter",
+    "uuid": "38fd423a-b37a-460a-999b-efccd8c791d4",
+    "words": "; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   },
+   {
+    "year": 2021,
+    "period": "fourth_quarter",
+    "uuid": "1b338482-491e-4bd4-a4bf-fecbd5a9c06d",
+    "words": "d related Agencies Appropriations; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and relate"
+   },
+   {
+    "year": 2021,
+    "period": "fourth_quarter",
+    "uuid": "1b338482-491e-4bd4-a4bf-fecbd5a9c06d",
+    "words": "; Implementation of FY21 Department of Homeland Security Appropriations; NOAA funding; FDA budget and user fees; Country of Origin Labeling fees; FY21 Commerce Justice Science Appropriations on H2B visas, red snapper, and SIMP; FY21 Ag, FDA and related Agencies Appropriations; CARES "
+   }
+  ]
+ },
+ "NATIONAL SHOOTING SPORTS FOUNDATION": {
+  "reports_read": 32,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "83b83139-b681-41e6-96a5-bf87c5bcfd99",
+    "words": "s Proposed Revision to Lands Firearms Policy (Docket Number: COE-2018-0008); USMCA Implementation Act (Section 205 - merchandise processing fee); USML to CCL Transition."
+   },
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "c7343478-3eee-4f6a-a5fd-6682a3d680dd",
+    "words": "t Loans / Banking Discrimination; Untraceable Firearms Act of 2020 (S.3743); USMCA Implementation Act (Section 205 - merchandise processing fee); Wild Game Donation Act of 2019 (H.R.2291)."
+   }
+  ]
+ },
+ "PRIVATE PRACTICE SECTION OF APTA": {
+  "reports_read": 10,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "03fe126c-0495-4ba1-9432-98211056b966",
+    "words": "ighting of the office/outpatient Evaluation & Management (E/M) Codes. Wrote and filed PPS comment letter to CMS re: 2021 Medicare Physician Fee Schedule proposed rule. Engaged with lawmakers and their staff as well as CMS in order to achieve Medicare coverage of PT provided via tele"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "774181ff-64f6-4092-acd3-ec30031013f1",
+    "words": "riggered by the re-weighting of the office/outpatient Evaluation & Management (E/M) Codes. Summarized impact of CMS 2021 Medicare Physician Fee Schedule final rule upon PPS members. Engaged with lawmakers and their staff as well as CMS in order to achieve Medicare coverage of PT pro"
+   }
+  ]
+ },
+ "QUAPAW TRIBAL BUSINESS COMMITTEE": {
+  "reports_read": 5,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "second_quarter",
+    "uuid": "8ee534cd-64a0-44e2-872c-6f3b1544fc18",
+    "words": "Program; Energy provisions in the CARES Act; The next COVID legislation; Coronavirus Relief Fund; regulatory reform and tribal development; Fee to trust; Indian Self-Determination statement by POTUS."
+   }
+  ]
+ },
+ "SHAKOPEE MDEWAKANTON DAKOTA (SIOUX) COMMUNITY": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "third_quarter",
+    "uuid": "df227901-7559-4cb2-bd73-60fc48f9dd4a",
+    "words": "Tribal self government; land and natural resources; gaming; fee-to-trust issues; government to government consultation; tax policy; gaming management; CARES Act; coronavirus relief; paycheck protection p"
+   },
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "5f63675e-0878-4c6d-b320-e78905c07c27",
+    "words": "Tribal self government; land and natural resources; gaming; fee-to-trust issues; government to government consultation; tax policy; gaming management; CARES Act; coronavirus relief; paycheck protection p"
+   },
+   {
+    "year": 2021,
+    "period": "first_quarter",
+    "uuid": "42e7484c-a952-4e04-bd79-240d9d82bae4",
+    "words": "Tribal self government; land and natural resources; gaming; fee-to-trust issues; government to government consultation; tax policy; gaming management; CARES Act; coronavirus relief; paycheck protection p"
+   }
+  ]
+ },
+ "WORLDWIDE ERC": {
+  "reports_read": 8,
+  "fee_mentions": [
+   {
+    "year": 2020,
+    "period": "fourth_quarter",
+    "uuid": "f7503592-7878-4625-a683-82172468fdb1",
+    "words": "deral Government, including provisions for the Department of Homeland Security to establish and collect certain immigration-related premium fees) $1.4 trillion Omnibus and $900 billion COVID relief package (Includes deduction of expenses that are otherwise not deductible if the busin"
+   }
+  ]
+ }
+}
