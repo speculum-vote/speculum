@@ -184,8 +184,8 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     spend = lobbyspend.with_backfill(read_newest(snapshots_root, "spend.json", snap.date),
                                      snapshots_root.parent / "records" / "ld2_backfill.json")
     mb = money_mod.build(members, finance, lobbying, spend, set_aside=_set_aside(snapshots_root))
-    common["case_for"] = {k: {"slug": c["slug"], "title": c["title"]} for k, c in
-                          _build_cases(E, snapshots_root.parent, prev, spend, votes, members, lobbying, common).items()}
+    case_links, cases_done = _build_cases(E, snapshots_root.parent, prev, spend, votes, members, lobbying, common)
+    common["case_for"] = {k: {"slug": c["slug"], "title": c["title"]} for k, c in case_links.items()}
     bd = _build_bills(E, prev, spend, votes, members, lobbying, read_newest(snapshots_root, "billinfo.json", snap.date), common)
     (prev / "chamber.html").write_text(E.get_template("chamber.html").render(
         root="", page="chamber", rows=rows, members=members, mb=mb,
@@ -268,7 +268,8 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     # The front page: what Speculum is, a few of the night's findings, where to go, and the latest stories.
     (prev / "index.html").write_text(E.get_template("home.html").render(
         root="", page="home", f=fd, timeline=timeline or [], n_members=len(members), n_votes=len(votes.get("votes", [])),
-        n_bills=len(bd["bills"]), n_chains=sum(1 for c in chains or [] if c.get("research_by")), mb=mb, **common), encoding="utf-8")
+        n_bills=len(bd["bills"]), n_chains=sum(1 for c in chains or [] if c.get("research_by")), mb=mb,
+        featured=_featured_cases(cases_done), home_findings=HOME_FINDINGS, **common), encoding="utf-8")
     _build_pages(E, snapshots_root.parent, prev, common)
     from .. import lameduck as lameduck_mod
     ld = chains_mod.load_json(snapshots_root.parent / "lameduck.json", {"members": []})
@@ -405,7 +406,22 @@ def _build_bills(E, prev: Path, spend, votes, members, lobbying, info, common) -
     return bd
 
 
-def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying, common) -> dict:
+# The findings shown on the front page, in this order when present (the rest are on Findings).
+HOME_FINDINGS = ["gatekeepers", "shared-funders", "bill-lobbyists", "largest-giver"]
+
+
+def _featured_cases(done: list[dict]) -> list[dict]:
+    """Cases for the front page: those with a `feature` rank, in order, each with its headline figure."""
+    from .. import cases as cases_mod
+    out = []
+    for c in sorted((c for c in done if c.get("feature")), key=lambda c: c["feature"]):
+        h = cases_mod.headline(c)
+        if h:
+            out.append({"slug": c["slug"], "title": c["title"], "dek": c.get("dek"), **h})
+    return out
+
+
+def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying, common) -> tuple[dict, list]:
     """Cases (speculum/cases.py): one decision followed through the record. Returns {bill slug: case} for links."""
     from .. import cases as cases_mod
     done = [cases_mod.compute(c, spend, votes, members, lobbying, data_root) for c in cases_mod.load(data_root)]
@@ -415,7 +431,7 @@ def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying
             root="../", page="cases", c=c, **common), encoding="utf-8")
     (prev / "cases.html").write_text(E.get_template("cases.html").render(root="", page="cases", cases=done, **common),
                                      encoding="utf-8")
-    return {f"{c['congress']}-{b.lower()}": c for c in done for b in c["bills"] or []}
+    return {f"{c['congress']}-{b.lower()}": c for c in done for b in c["bills"] or []}, done
 
 
 def _build_saiddone(E, data_root: Path, prev: Path, spend, votes, members, lobbying, info, common) -> dict:

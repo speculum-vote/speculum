@@ -38,3 +38,13 @@ def test_own_amount_counts_reports_without_issues():
                                  "lobbying_activities": acts}
     a = aggregate([f("a", "40000.00", [])])
     assert a["registrants"]["7"]["own_amount"] == 40000.0 and a["registrants"]["7"]["issues"] == {}
+
+
+def test_case_headlines():
+    from speculum.cases import headline
+    h = headline({"ppp": {"totals": {"fees": 38.01e9}, "history": {"n_orgs": 744, "fee_orgs": [1, 2]}}})
+    assert h["figure"] == "$38B" and "two named those fees" in h["line"]
+    v = headline({"compare": {"focus_total": 4.56e6, "others_total": 4.34e6, "others": [0] * 7}})
+    assert v["fmt"] == "money" and "seven major" in v["line"]
+    assert headline({"compare": {"focus_total": 1, "others_total": 2, "others": []}}) is None
+    assert headline({"measure": {"n_funders": 12, "n_both": 12}})["figure"] == "12 of 12"

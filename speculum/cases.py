@@ -308,6 +308,39 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
                 extra["ppp"]["borrowers"] = ppp_borrowers(json.loads(bp.read_text(encoding="utf-8")))
                 extra["ppp"]["borrowers_public"] = bool(case.get("borrowers_public"))
                 extra["ppp"]["borrower_notes"] = case.get("borrower_notes") or []
-    return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle")}, "facts": facts, **extra,
+    return {**{k: case.get(k) for k in ("slug", "title", "dek", "congress", "bills", "vehicle", "feature")}, "facts": facts, **extra,
             "not_yet": case.get("not_yet"), "orgs": orgs, "groups": groups, "n_orgs": len(orgs), "reports": merged["reports"],
             "measure": m, "former": former, "n_former": len(merged["former"])}
+
+
+_WORDS = "zero one two three four five six seven eight nine".split()
+
+
+def _n(k: int) -> str:
+    return _WORDS[k] if 0 <= k < 10 else f"{k:,}"
+
+
+def headline(c: dict) -> dict | None:
+    """One figure and one line for a case's card on the home page, computed from the case's own data."""
+    if c.get("compare"):
+        K = c["compare"]
+        if K.get("focus_total") and K["focus_total"] > K.get("others_total", 0):
+            return {"figure": K["focus_total"], "fmt": "money",
+                    "line": f"in lobbying by a company that charges veterans for help with claims: more than "
+                            f"{_n(len(K['others']))} major veterans service organizations combined."}
+    if c.get("ppp"):
+        P, H = c["ppp"], (c["ppp"].get("history") or {})
+        line = "in estimated fees the government paid lenders for PPP loans it guaranteed in full."
+        if H.get("n_orgs") and H.get("fee_orgs") is not None:
+            line += f" Of {H['n_orgs']:,} organizations that lobbied on the program, {_n(len(H['fee_orgs']))} named those fees."
+        fees = P["totals"]["fees"]
+        fig = f"${fees / 1e9:.0f}B" if fees >= 1e10 else fees
+        return {"figure": fig, "fmt": "text" if isinstance(fig, str) else "money", "line": line}
+    m = c.get("measure")
+    if m and m.get("n_funders"):
+        return {"figure": f"{m['n_both']} of {m['n_funders']}", "fmt": "text",
+                "line": "organizations that funded members voting on it gave to members on both sides."}
+    if c.get("n_orgs"):
+        return {"figure": c["n_orgs"], "fmt": "int", "line": "organizations lobbied on it."}
+    return None
+

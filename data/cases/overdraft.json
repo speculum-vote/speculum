@@ -3,21 +3,60 @@
  "title": "The overdraft rule",
  "dek": "A federal rule to limit what the largest banks charge for overdrafts, and the resolution that undid it before it took effect.",
  "congress": 119,
- "bills": ["SJRES18", "HJRES59"],
+ "bills": [
+  "SJRES18",
+  "HJRES59"
+ ],
  "vehicle": "SJRES18",
  "regulators": "Comptroller of the Currency|\\bOCC\\b|FDIC|Federal Deposit Insurance|Federal Reserve|\\bCFPB\\b|Consumer Financial Protection|Department of the Treasury|Treasury Department|\\bSEC\\b|Securities and Exchange|NCUA|National Credit Union|FHFA|Federal Housing Finance|Banking Committee|Committee on Banking|Financial Services Committee|Committee on Financial Services",
  "facts": [
-  {"date": "2024-12-12", "text": "The Consumer Financial Protection Bureau finalizes a rule on overdraft fees at banks and credit unions with more than $10 billion in assets. Each could charge $5, charge no more than its costs and losses, or treat overdrafts as loans under the lending laws, with the interest rate disclosed.",
-   "source": {"title": "CFPB press release, Dec. 12, 2024 (reprinted by CUInsight)", "url": "https://www.cuinsight.com/press-release/cfpb-closes-overdraft-loophole-to-save-americans-billions-in-fees/"}},
-  {"date": "2024-12-12", "text": "The bureau estimates the rule would save consumers up to $5 billion a year in overdraft fees, about $225 for each household that pays them.",
-   "source": {"title": "CFPB press release, Dec. 12, 2024 (reprinted by CUInsight)", "url": "https://www.cuinsight.com/press-release/cfpb-closes-overdraft-loophole-to-save-americans-billions-in-fees/"}},
-  {"date": "2024-12-30", "text": "The rule is published: \"Overdraft Lending: Very Large Financial Institutions,\" 89 Fed. Reg. 106768, to take effect October 1, 2025.",
-   "source": {"title": "Public Law 119-10 (citing the rule), Congress.gov", "url": "https://www.congress.gov/119/plaws/publ10/PLAW-119publ10.htm"}},
-  {"date": "2025-03-27", "text": "The Senate passes S.J.Res. 18, a Congressional Review Act resolution disapproving the rule, 52 to 48.", "vote": "s-119-1-153"},
-  {"date": "2025-04-09", "text": "The House passes it, 217 to 211.", "vote": "h-119-1-96"},
-  {"date": "2025-05-09", "text": "The President signs it: Public Law 119-10. The rule has no force or effect, and under the Congressional Review Act the bureau may not issue a substantially similar rule unless Congress authorizes it.",
-   "source": {"title": "Public Law 119-10, Congress.gov", "url": "https://www.congress.gov/119/plaws/publ10/PLAW-119publ10.htm"},
-   "source2": {"title": "5 U.S.C. 801(b)(2)", "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section801&num=0&edition=prelim"}}
+  {
+   "date": "2024-12-12",
+   "text": "The Consumer Financial Protection Bureau finalizes a rule on overdraft fees at banks and credit unions with more than $10 billion in assets. Each could charge $5, charge no more than its costs and losses, or treat overdrafts as loans under the lending laws, with the interest rate disclosed.",
+   "source": {
+    "title": "CFPB press release, Dec. 12, 2024 (reprinted by CUInsight)",
+    "url": "https://www.cuinsight.com/press-release/cfpb-closes-overdraft-loophole-to-save-americans-billions-in-fees/"
+   }
+  },
+  {
+   "date": "2024-12-12",
+   "text": "The bureau estimates the rule would save consumers up to $5 billion a year in overdraft fees, about $225 for each household that pays them.",
+   "source": {
+    "title": "CFPB press release, Dec. 12, 2024 (reprinted by CUInsight)",
+    "url": "https://www.cuinsight.com/press-release/cfpb-closes-overdraft-loophole-to-save-americans-billions-in-fees/"
+   }
+  },
+  {
+   "date": "2024-12-30",
+   "text": "The rule is published: \"Overdraft Lending: Very Large Financial Institutions,\" 89 Fed. Reg. 106768, to take effect October 1, 2025.",
+   "source": {
+    "title": "Public Law 119-10 (citing the rule), Congress.gov",
+    "url": "https://www.congress.gov/119/plaws/publ10/PLAW-119publ10.htm"
+   }
+  },
+  {
+   "date": "2025-03-27",
+   "text": "The Senate passes S.J.Res. 18, a Congressional Review Act resolution disapproving the rule, 52 to 48.",
+   "vote": "s-119-1-153"
+  },
+  {
+   "date": "2025-04-09",
+   "text": "The House passes it, 217 to 211.",
+   "vote": "h-119-1-96"
+  },
+  {
+   "date": "2025-05-09",
+   "text": "The President signs it: Public Law 119-10. The rule has no force or effect, and under the Congressional Review Act the bureau may not issue a substantially similar rule unless Congress authorizes it.",
+   "source": {
+    "title": "Public Law 119-10, Congress.gov",
+    "url": "https://www.congress.gov/119/plaws/publ10/PLAW-119publ10.htm"
+   },
+   "source2": {
+    "title": "5 U.S.C. 801(b)(2)",
+    "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section801&num=0&edition=prelim"
+   }
+  }
  ],
- "not_yet": "Lobbying reports that describe the rule in words, without naming either resolution, are not counted yet: 36 organizations mentioned overdraft in report text from January 2025 to March 2026."
+ "not_yet": "Lobbying reports that describe the rule in words, without naming either resolution, are not counted yet: 36 organizations mentioned overdraft in report text from January 2025 to March 2026.",
+ "feature": 3
 }
