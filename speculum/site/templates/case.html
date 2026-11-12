@@ -4,6 +4,7 @@
 <p class="meta"><a href="../cases.html">← Cases</a></p>
 <h1>{{ c.title }}</h1>
 <p class="lede">{{ c.dek }}</p>
+{% if c.why %}<p class="case-why"><b>Why this case.</b> {{ c.why }} <a href="../cases.html#chosen">How cases are chosen</a></p>{% endif %}
 {% set m = c.measure %}
 {% from "_toc.html" import toc %}{{ toc([("record", "What happened"), ("spend", "The lobbying, side by side") if c.compare else none, ("gifts", "Whose campaigns it funded") if c.compare else none, ("paid", "What the lenders were paid") if c.ppp else none, ("then", "Who lobbied on it, 2020–21") if c.ppp and c.ppp.history and c.ppp.history.rule_version else none, ("borrowed", "Lobbied, and borrowed") if c.ppp and c.ppp.borrowers and (not public or c.ppp.borrowers_public) else none, ("today", "The same lenders today") if c.ppp and c.ppp.today else none, ("lobbied", "Who lobbied it") if c.n_orgs else none, ("funded", "Whom they funded") if m else none,
   ("former", "From the regulators to the lobby") if c.former else none, ("rules", "How this page is counted")]) }}

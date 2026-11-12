@@ -440,3 +440,5 @@ ol.case-time p .meta { display: block; margin-top: 4px; }
 .home-cases .hc b { font: 500 2.6rem/1.05 var(--serif); color: var(--ink); margin-bottom: 8px; }
 .home-cases .hc-l { font-size: 15px; color: var(--ink-2); flex: 1; }
 .home-cases .hc-go { margin-top: 14px; font: 500 12px/1 var(--mono); letter-spacing: .08em; color: var(--gold); }
+.case-why { max-width: 70ch; margin: 4px 0 14px; padding: 10px 14px; border-left: 3px solid var(--line, #ccc); color: var(--ink-2); font-size: .95em; }
+.case-why a { white-space: nowrap; }

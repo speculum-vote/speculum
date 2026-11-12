@@ -3,9 +3,11 @@
 {% block body %}
 <h1>Cases</h1>
 <p class="lede">One decision followed through the public record from start to finish: what it would have done, who lobbied on it, whom they funded among the members who voted, and who had worked for the regulators before lobbying. The same rules for every case. No verdicts.</p>
+<div class="notice" id="chosen"><b>How cases are chosen.</b> A case is chosen because one federal decision left an unusually complete public trail (the decision itself, the lobbying reports that name it, and the money around it) and because it reaches many people. Choosing a case is an editorial decision, and we say so. What follows from it is not: every figure is computed by the same published rules as the rest of the site, and a case is published whatever it shows. Why each case was chosen is at the top of its page. To suggest the next one, write to <a href="mailto:hello@speculum.vote">hello@speculum.vote</a>.</div>
 {% for c in cases %}{% set m = c.measure %}
 <div class="datafile"><div class="datahead"><a href="case/{{ c.slug }}.html"><b>{{ c.title }}</b></a></div>
 <p>{{ c.dek }}</p>
+{% if c.why %}<p class="meta"><b>Why this case:</b> {{ c.why }}</p>{% endif %}
 <p class="meta">{% if c.ppp %}{{ c.ppp.totals.loans|num }} loans · {{ c.ppp.totals.fees|money }} in estimated fees to {{ c.ppp.n_lenders|num }} lenders{% else %}{{ c.n_orgs }} organizations lobbied it{% if m %} · {{ m.n_funders }} funded members who voted, {{ m.n_both }} of them on both sides{% endif %}{% if c.former %} · {{ c.former|length }} lobbyist{{ 's' if c.former|length != 1 }} from a financial regulator or banking committee{% endif %}{% endif %}</p></div>
 {% endfor %}
 <div class="notice">How a case is counted is on its page and on the <a href="method.html#cases">Method</a> page.</div>
