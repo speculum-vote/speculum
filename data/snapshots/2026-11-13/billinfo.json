@@ -14,7 +14,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/108"
   },
   "119-HCONRES113": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-18",
    "latest_action": {
     "date": "2026-07-23",
@@ -27,7 +27,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/113"
   },
   "119-HCONRES14": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-18",
    "latest_action": {
     "date": "2025-05-20",
@@ -313,7 +313,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/139"
   },
   "119-HJRES140": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-12",
    "latest_action": {
     "date": "2026-04-27",
@@ -326,7 +326,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140"
   },
   "119-HJRES142": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-22",
    "latest_action": {
     "date": "2026-02-18",
@@ -339,7 +339,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/142"
   },
   "119-HJRES20": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-15",
    "latest_action": {
     "date": "2025-05-09",
@@ -391,7 +391,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/24"
   },
   "119-HJRES25": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-21",
    "latest_action": {
     "date": "2025-04-10",
@@ -404,7 +404,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/25"
   },
   "119-HJRES35": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-03-14",
@@ -495,7 +495,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/78"
   },
   "119-HJRES87": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2025-06-12",
@@ -508,7 +508,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/87"
   },
   "119-HJRES88": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2025-06-12",
@@ -521,7 +521,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/88"
   },
   "119-HJRES89": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2025-06-12",
@@ -534,7 +534,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/89"
   },
   "119-HR1": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2025-07-04",
@@ -573,11 +573,11 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1011"
   },
   "119-HR1013": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-05",
    "latest_action": {
-    "date": "2025-11-28",
-    "text": "Placed on the Union Calendar, Calendar No. 340."
+    "date": "2026-11-11",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
    },
    "policy_area": "Finance and Financial Sector",
    "sponsor": "Rep. Lucas, Frank D. [R-OK-3]",
@@ -599,7 +599,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10136"
   },
   "119-HR10184": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-08-31",
    "latest_action": {
     "date": "2026-09-16",
@@ -625,7 +625,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10326"
   },
   "119-HR10357": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-14",
    "latest_action": {
     "date": "2026-09-16",
@@ -664,7 +664,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1041"
   },
   "119-HR10431": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-16",
    "latest_action": {
     "date": "2026-09-16",
@@ -677,7 +677,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10431"
   },
   "119-HR10445": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-16",
    "latest_action": {
     "date": "2026-09-16",
@@ -690,7 +690,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10445"
   },
   "119-HR1047": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-09-19",
@@ -703,7 +703,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1047"
   },
   "119-HR1048": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-03-31",
@@ -729,7 +729,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1049"
   },
   "119-HR10545": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-24",
    "latest_action": {
     "date": "2026-09-24",
@@ -742,7 +742,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10545"
   },
   "119-HR1061": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-02-06",
@@ -768,7 +768,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1069"
   },
   "119-HR1105": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-02-06",
@@ -781,7 +781,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1105"
   },
   "119-HR1109": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-07",
    "latest_action": {
     "date": "2025-11-19",
@@ -807,7 +807,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1118"
   },
   "119-HR1138": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-07",
    "latest_action": {
     "date": "2025-02-07",
@@ -820,7 +820,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1138"
   },
   "119-HR1151": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-07",
    "latest_action": {
     "date": "2025-02-07",
@@ -846,7 +846,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1156"
   },
   "119-HR1163": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-10",
    "latest_action": {
     "date": "2026-05-04",
@@ -859,7 +859,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1163"
   },
   "119-HR1177": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-10",
    "latest_action": {
     "date": "2025-02-10",
@@ -885,7 +885,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1181"
   },
   "119-HR1197": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-11",
    "latest_action": {
     "date": "2025-02-11",
@@ -924,7 +924,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1228"
   },
   "119-HR1255": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-12",
    "latest_action": {
     "date": "2025-02-12",
@@ -937,7 +937,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1255"
   },
   "119-HR1262": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-12",
    "latest_action": {
     "date": "2025-12-02",
@@ -963,7 +963,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1263"
   },
   "119-HR1267": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-12",
    "latest_action": {
     "date": "2025-02-12",
@@ -989,7 +989,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1286"
   },
   "119-HR1301": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -1015,7 +1015,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/131"
   },
   "119-HR1317": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -1028,7 +1028,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1317"
   },
   "119-HR1319": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2026-02-20",
@@ -1041,7 +1041,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1319"
   },
   "119-HR1320": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2026-02-20",
@@ -1080,7 +1080,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1329"
   },
   "119-HR1340": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -1093,7 +1093,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1340"
   },
   "119-HR1346": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2026-05-14",
@@ -1106,7 +1106,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1346"
   },
   "119-HR1347": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -1119,7 +1119,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1347"
   },
   "119-HR1355": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2026-02-04",
@@ -1132,7 +1132,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1355"
   },
   "119-HR1366": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-14",
    "latest_action": {
     "date": "2026-03-17",
@@ -1171,7 +1171,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/139"
   },
   "119-HR14": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -1184,7 +1184,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/14"
   },
   "119-HR1402": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-18",
    "latest_action": {
     "date": "2025-09-16",
@@ -1197,7 +1197,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1402"
   },
   "119-HR1414": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-18",
    "latest_action": {
     "date": "2025-02-18",
@@ -1210,7 +1210,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1414"
   },
   "119-HR1415": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-18",
    "latest_action": {
     "date": "2025-02-18",
@@ -1262,7 +1262,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1442"
   },
   "119-HR1479": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-21",
    "latest_action": {
     "date": "2025-04-29",
@@ -1288,7 +1288,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1491"
   },
   "119-HR1492": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-21",
    "latest_action": {
     "date": "2025-02-21",
@@ -1327,7 +1327,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1503"
   },
   "119-HR1509": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-21",
    "latest_action": {
     "date": "2025-02-21",
@@ -1340,7 +1340,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1509"
   },
   "119-HR1510": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-21",
    "latest_action": {
     "date": "2025-09-08",
@@ -1366,7 +1366,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/152"
   },
   "119-HR1521": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-24",
    "latest_action": {
     "date": "2025-02-24",
@@ -1379,7 +1379,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1521"
   },
   "119-HR1526": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-24",
    "latest_action": {
     "date": "2025-04-10",
@@ -1431,7 +1431,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1534"
   },
   "119-HR1548": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-24",
    "latest_action": {
     "date": "2025-02-24",
@@ -1444,7 +1444,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1548"
   },
   "119-HR1566": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-25",
    "latest_action": {
     "date": "2026-02-10",
@@ -1457,7 +1457,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1566"
   },
   "119-HR1574": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-25",
    "latest_action": {
     "date": "2025-02-25",
@@ -1470,7 +1470,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1574"
   },
   "119-HR1585": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-25",
    "latest_action": {
     "date": "2025-02-25",
@@ -1483,7 +1483,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1585"
   },
   "119-HR1589": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-26",
    "latest_action": {
     "date": "2025-02-27",
@@ -1509,7 +1509,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1608"
   },
   "119-HR161": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2026-04-28",
@@ -1561,7 +1561,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/165"
   },
   "119-HR1650": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-27",
    "latest_action": {
     "date": "2025-02-27",
@@ -1574,7 +1574,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1650"
   },
   "119-HR1672": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-27",
    "latest_action": {
     "date": "2025-02-27",
@@ -1613,7 +1613,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1681"
   },
   "119-HR1689": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-27",
    "latest_action": {
     "date": "2026-04-21",
@@ -1652,7 +1652,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1717"
   },
   "119-HR1735": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-27",
    "latest_action": {
     "date": "2025-02-27",
@@ -1678,7 +1678,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1770"
   },
   "119-HR1777": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-03",
    "latest_action": {
     "date": "2025-03-03",
@@ -1691,7 +1691,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1777"
   },
   "119-HR1799": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-03",
    "latest_action": {
     "date": "2026-03-19",
@@ -1717,7 +1717,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1804"
   },
   "119-HR1815": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-03",
    "latest_action": {
     "date": "2025-07-30",
@@ -1730,7 +1730,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1815"
   },
   "119-HR1834": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-04",
    "latest_action": {
     "date": "2026-02-10",
@@ -1782,7 +1782,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/187"
   },
   "119-HR1870": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -1795,7 +1795,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1870"
   },
   "119-HR1871": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -1808,7 +1808,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1871"
   },
   "119-HR1897": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2026-04-20",
@@ -1821,7 +1821,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1897"
   },
   "119-HR1909": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-03-06",
@@ -1847,7 +1847,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1917"
   },
   "119-HR1919": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-07-17",
@@ -1873,7 +1873,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/192"
   },
   "119-HR1944": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-03-06",
@@ -1912,7 +1912,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1958"
   },
   "119-HR1968": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-10",
    "latest_action": {
     "date": "2025-03-15",
@@ -1925,7 +1925,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1968"
   },
   "119-HR1987": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-10",
    "latest_action": {
     "date": "2025-05-12",
@@ -1938,7 +1938,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1987"
   },
   "119-HR1990": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-10",
    "latest_action": {
     "date": "2025-03-10",
@@ -1977,7 +1977,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1998"
   },
   "119-HR20": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -1990,7 +1990,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/20"
   },
   "119-HR2028": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -2016,7 +2016,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2035"
   },
   "119-HR2036": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -2055,7 +2055,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2071"
   },
   "119-HR2089": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -2081,7 +2081,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2096"
   },
   "119-HR21": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-01-24",
@@ -2094,11 +2094,11 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/21"
   },
   "119-HR2102": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-14",
    "latest_action": {
-    "date": "2025-04-04",
-    "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs."
+    "date": "2026-11-12",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
    },
    "policy_area": "Armed Forces and National Security",
    "sponsor": "Rep. Bilirakis, Gus M. [R-FL-12]",
@@ -2120,7 +2120,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2140"
   },
   "119-HR2145": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-14",
    "latest_action": {
     "date": "2026-05-21",
@@ -2146,7 +2146,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2189"
   },
   "119-HR2191": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-18",
    "latest_action": {
     "date": "2025-03-18",
@@ -2159,7 +2159,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2191"
   },
   "119-HR2199": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-18",
    "latest_action": {
     "date": "2025-03-18",
@@ -2172,7 +2172,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2199"
   },
   "119-HR22": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-04-10",
@@ -2185,7 +2185,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/22"
   },
   "119-HR2203": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-18",
    "latest_action": {
     "date": "2025-03-18",
@@ -2198,7 +2198,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2203"
   },
   "119-HR2214": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-18",
    "latest_action": {
     "date": "2025-03-18",
@@ -2276,7 +2276,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2262"
   },
   "119-HR2269": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-21",
    "latest_action": {
     "date": "2025-06-24",
@@ -2315,7 +2315,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2270"
   },
   "119-HR2289": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-24",
    "latest_action": {
     "date": "2026-04-15",
@@ -2354,7 +2354,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2312"
   },
   "119-HR2332": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-25",
    "latest_action": {
     "date": "2026-09-28",
@@ -2367,7 +2367,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2332"
   },
   "119-HR2385": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-26",
    "latest_action": {
     "date": "2026-06-25",
@@ -2380,7 +2380,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2385"
   },
   "119-HR2392": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-26",
    "latest_action": {
     "date": "2025-05-06",
@@ -2393,7 +2393,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2392"
   },
   "119-HR2410": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-27",
    "latest_action": {
     "date": "2025-03-27",
@@ -2419,7 +2419,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2423"
   },
   "119-HR2433": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-27",
    "latest_action": {
     "date": "2026-02-04",
@@ -2432,7 +2432,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2433"
   },
   "119-HR2441": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-27",
    "latest_action": {
     "date": "2025-06-04",
@@ -2445,7 +2445,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2441"
   },
   "119-HR2444": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-27",
    "latest_action": {
     "date": "2025-04-29",
@@ -2458,7 +2458,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2444"
   },
   "119-HR247": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-09",
    "latest_action": {
     "date": "2025-01-09",
@@ -2484,7 +2484,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2478"
   },
   "119-HR2483": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-31",
    "latest_action": {
     "date": "2025-12-01",
@@ -2497,7 +2497,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2483"
   },
   "119-HR2484": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-31",
    "latest_action": {
     "date": "2025-04-29",
@@ -2536,7 +2536,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2493"
   },
   "119-HR2509": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-31",
    "latest_action": {
     "date": "2025-03-31",
@@ -2549,7 +2549,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2509"
   },
   "119-HR2528": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-12-15",
@@ -2562,7 +2562,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2528"
   },
   "119-HR2531": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -2575,7 +2575,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2531"
   },
   "119-HR2540": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -2588,7 +2588,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2540"
   },
   "119-HR2547": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -2601,7 +2601,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2547"
   },
   "119-HR2548": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -2614,7 +2614,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2548"
   },
   "119-HR2550": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-12-15",
@@ -2627,7 +2627,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2550"
   },
   "119-HR2571": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-12-15",
@@ -2640,7 +2640,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2571"
   },
   "119-HR2586": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -2666,7 +2666,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2591"
   },
   "119-HR2592": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2026-09-15",
@@ -2679,7 +2679,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2592"
   },
   "119-HR2598": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2025-04-02",
@@ -2731,7 +2731,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2616"
   },
   "119-HR2617": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-03",
    "latest_action": {
     "date": "2026-01-13",
@@ -2757,7 +2757,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2659"
   },
   "119-HR2665": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-07",
    "latest_action": {
     "date": "2025-04-07",
@@ -2770,7 +2770,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2665"
   },
   "119-HR2675": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-07",
    "latest_action": {
     "date": "2026-06-15",
@@ -2783,7 +2783,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2675"
   },
   "119-HR2683": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-07",
    "latest_action": {
     "date": "2026-01-13",
@@ -2796,7 +2796,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2683"
   },
   "119-HR2696": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-07",
    "latest_action": {
     "date": "2025-04-07",
@@ -2809,7 +2809,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2696"
   },
   "119-HR27": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-02-10",
@@ -2835,7 +2835,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2721"
   },
   "119-HR2725": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-08",
    "latest_action": {
     "date": "2025-04-08",
@@ -2874,7 +2874,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/276"
   },
   "119-HR2794": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-09",
    "latest_action": {
     "date": "2025-04-09",
@@ -2887,7 +2887,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2794"
   },
   "119-HR28": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-01-15",
@@ -2900,7 +2900,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/28"
   },
   "119-HR2804": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-09",
    "latest_action": {
     "date": "2026-07-02",
@@ -2913,7 +2913,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2804"
   },
   "119-HR2808": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-09-05",
@@ -2926,7 +2926,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2808"
   },
   "119-HR2853": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2026-05-13",
@@ -2939,7 +2939,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2853"
   },
   "119-HR2854": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-04-10",
@@ -2965,7 +2965,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2860"
   },
   "119-HR2872": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-04-10",
@@ -2978,7 +2978,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2872"
   },
   "119-HR2882": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-04-10",
@@ -3030,7 +3030,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2931"
   },
   "119-HR2940": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-17",
    "latest_action": {
     "date": "2025-04-17",
@@ -3069,7 +3069,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2966"
   },
   "119-HR2978": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-21",
    "latest_action": {
     "date": "2026-09-16",
@@ -3134,7 +3134,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3015"
   },
   "119-HR306": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-09",
    "latest_action": {
     "date": "2025-01-09",
@@ -3147,7 +3147,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/306"
   },
   "119-HR3062": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-29",
    "latest_action": {
     "date": "2025-09-19",
@@ -3160,7 +3160,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3062"
   },
   "119-HR3074": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-29",
    "latest_action": {
     "date": "2026-07-15",
@@ -3225,7 +3225,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3123"
   },
   "119-HR3149": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-12-11",
@@ -3238,7 +3238,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3149"
   },
   "119-HR3151": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -3251,7 +3251,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3151"
   },
   "119-HR3152": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -3264,7 +3264,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3152"
   },
   "119-HR3160": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -3277,7 +3277,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3160"
   },
   "119-HR3164": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2026-05-21",
@@ -3290,7 +3290,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3164"
   },
   "119-HR3170": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-12-04",
@@ -3303,7 +3303,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3170"
   },
   "119-HR3178": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-05",
    "latest_action": {
     "date": "2025-05-05",
@@ -3329,7 +3329,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3187"
   },
   "119-HR32": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-01-03",
@@ -3342,7 +3342,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/32"
   },
   "119-HR3209": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-06",
    "latest_action": {
     "date": "2025-05-06",
@@ -3381,7 +3381,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3234"
   },
   "119-HR3238": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-07",
    "latest_action": {
     "date": "2025-05-07",
@@ -3394,7 +3394,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3238"
   },
   "119-HR3269": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-08",
    "latest_action": {
     "date": "2025-05-08",
@@ -3420,7 +3420,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3276"
   },
   "119-HR33": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-01-16",
@@ -3459,7 +3459,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3357"
   },
   "119-HR3383": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-14",
    "latest_action": {
     "date": "2025-12-15",
@@ -3537,7 +3537,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3425"
   },
   "119-HR3437": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-15",
    "latest_action": {
     "date": "2025-05-15",
@@ -3550,7 +3550,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3437"
   },
   "119-HR3447": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-15",
    "latest_action": {
     "date": "2026-03-26",
@@ -3576,7 +3576,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3486"
   },
   "119-HR3492": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-19",
    "latest_action": {
     "date": "2025-12-18",
@@ -3602,7 +3602,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/35"
   },
   "119-HR3512": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2025-05-20",
@@ -3615,7 +3615,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3512"
   },
   "119-HR3514": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2026-07-15",
@@ -3628,7 +3628,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3514"
   },
   "119-HR3521": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2025-05-20",
@@ -3641,7 +3641,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3521"
   },
   "119-HR3548": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-21",
    "latest_action": {
     "date": "2025-05-21",
@@ -3667,7 +3667,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/359"
   },
   "119-HR3593": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-23",
    "latest_action": {
     "date": "2025-09-10",
@@ -3693,7 +3693,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/36"
   },
   "119-HR3616": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-29",
    "latest_action": {
     "date": "2025-12-18",
@@ -3732,7 +3732,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3628"
   },
   "119-HR3632": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-29",
    "latest_action": {
     "date": "2025-12-17",
@@ -3745,7 +3745,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3632"
   },
   "119-HR3633": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-29",
    "latest_action": {
     "date": "2026-09-15",
@@ -3758,7 +3758,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633"
   },
   "119-HR3638": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-29",
    "latest_action": {
     "date": "2025-12-15",
@@ -3771,7 +3771,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3638"
   },
   "119-HR3657": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-29",
    "latest_action": {
     "date": "2026-09-25",
@@ -3784,7 +3784,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3657"
   },
   "119-HR3668": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-02",
    "latest_action": {
     "date": "2025-12-15",
@@ -3810,7 +3810,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3682"
   },
   "119-HR3684": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-03",
    "latest_action": {
     "date": "2025-06-03",
@@ -3823,7 +3823,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3684"
   },
   "119-HR3699": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-04",
    "latest_action": {
     "date": "2026-02-04",
@@ -3862,7 +3862,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/375"
   },
   "119-HR38": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-10-03",
@@ -3875,7 +3875,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/38"
   },
   "119-HR3838": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-09",
    "latest_action": {
     "date": "2025-09-30",
@@ -3914,7 +3914,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3881"
   },
   "119-HR3890": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-10",
    "latest_action": {
     "date": "2025-06-10",
@@ -3927,7 +3927,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3890"
   },
   "119-HR3898": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-11",
    "latest_action": {
     "date": "2025-12-15",
@@ -3940,7 +3940,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3898"
   },
   "119-HR3935": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-11",
    "latest_action": {
     "date": "2025-06-13",
@@ -3966,7 +3966,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3937"
   },
   "119-HR3944": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-12",
    "latest_action": {
     "date": "2025-09-18",
@@ -3992,7 +3992,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3978"
   },
   "119-HR4": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-06",
    "latest_action": {
     "date": "2025-07-24",
@@ -4005,7 +4005,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4"
   },
   "119-HR4016": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-16",
    "latest_action": {
     "date": "2025-12-08",
@@ -4070,7 +4070,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4104"
   },
   "119-HR4109": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-24",
    "latest_action": {
     "date": "2026-05-14",
@@ -4083,7 +4083,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4109"
   },
   "119-HR4121": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-25",
    "latest_action": {
     "date": "2025-06-25",
@@ -4096,7 +4096,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4121"
   },
   "119-HR4146": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-25",
    "latest_action": {
     "date": "2025-06-26",
@@ -4109,7 +4109,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4146"
   },
   "119-HR4206": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-26",
    "latest_action": {
     "date": "2025-06-26",
@@ -4122,7 +4122,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4206"
   },
   "119-HR4213": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-26",
    "latest_action": {
     "date": "2025-06-26",
@@ -4161,7 +4161,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4219"
   },
   "119-HR4231": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-27",
    "latest_action": {
     "date": "2025-06-27",
@@ -4174,7 +4174,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4231"
   },
   "119-HR4249": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-30",
    "latest_action": {
     "date": "2025-06-30",
@@ -4187,7 +4187,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4249"
   },
   "119-HR425": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-15",
    "latest_action": {
     "date": "2026-06-18",
@@ -4200,7 +4200,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/425"
   },
   "119-HR4262": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-30",
    "latest_action": {
     "date": "2025-09-10",
@@ -4213,7 +4213,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4262"
   },
   "119-HR4275": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-02",
    "latest_action": {
     "date": "2025-07-23",
@@ -4239,7 +4239,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4294"
   },
   "119-HR4299": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-07",
    "latest_action": {
     "date": "2025-07-07",
@@ -4291,7 +4291,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4305"
   },
   "119-HR4312": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-10",
    "latest_action": {
     "date": "2025-12-01",
@@ -4304,7 +4304,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4312"
   },
   "119-HR4313": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-10",
    "latest_action": {
     "date": "2025-12-02",
@@ -4317,7 +4317,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4313"
   },
   "119-HR4317": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-10",
    "latest_action": {
     "date": "2025-07-10",
@@ -4343,7 +4343,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4346"
   },
   "119-HR4366": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-14",
    "latest_action": {
     "date": "2026-01-13",
@@ -4369,7 +4369,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4371"
   },
   "119-HR4393": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-15",
    "latest_action": {
     "date": "2025-07-16",
@@ -4408,7 +4408,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4423"
   },
   "119-HR4466": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-16",
    "latest_action": {
     "date": "2025-07-16",
@@ -4421,7 +4421,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4466"
   },
   "119-HR4503": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-17",
    "latest_action": {
     "date": "2025-12-10",
@@ -4460,7 +4460,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4544"
   },
   "119-HR4552": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-21",
    "latest_action": {
     "date": "2025-07-21",
@@ -4473,7 +4473,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4552"
   },
   "119-HR4553": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-21",
    "latest_action": {
     "date": "2025-09-10",
@@ -4499,7 +4499,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4559"
   },
   "119-HR4581": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-22",
    "latest_action": {
     "date": "2025-07-22",
@@ -4512,7 +4512,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4581"
   },
   "119-HR4582": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-22",
    "latest_action": {
     "date": "2025-07-22",
@@ -4525,7 +4525,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4582"
   },
   "119-HR4583": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-22",
    "latest_action": {
     "date": "2025-07-22",
@@ -4551,7 +4551,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4593"
   },
   "119-HR4626": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2026-02-25",
@@ -4590,7 +4590,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4646"
   },
   "119-HR4669": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-09-03",
@@ -4616,7 +4616,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4690"
   },
   "119-HR471": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-16",
    "latest_action": {
     "date": "2025-03-06",
@@ -4629,7 +4629,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/471"
   },
   "119-HR4710": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-07-23",
@@ -4642,7 +4642,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4710"
   },
   "119-HR4731": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-07-23",
@@ -4655,7 +4655,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4731"
   },
   "119-HR4733": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-12-01",
@@ -4668,7 +4668,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4733"
   },
   "119-HR4754": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-24",
    "latest_action": {
     "date": "2025-07-24",
@@ -4681,7 +4681,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4754"
   },
   "119-HR4758": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-25",
    "latest_action": {
     "date": "2026-02-25",
@@ -4694,7 +4694,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4758"
   },
   "119-HR4763": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-25",
    "latest_action": {
     "date": "2025-07-25",
@@ -4707,7 +4707,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4763"
   },
   "119-HR4776": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-25",
    "latest_action": {
     "date": "2025-12-18",
@@ -4720,7 +4720,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4776"
   },
   "119-HR4779": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-25",
    "latest_action": {
     "date": "2025-07-25",
@@ -4746,7 +4746,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4795"
   },
   "119-HR4849": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-08-01",
    "latest_action": {
     "date": "2025-08-01",
@@ -4759,7 +4759,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4849"
   },
   "119-HR4896": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-08-05",
    "latest_action": {
     "date": "2025-08-05",
@@ -4824,7 +4824,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/504"
   },
   "119-HR5061": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-08-29",
    "latest_action": {
     "date": "2025-09-03",
@@ -4837,7 +4837,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5061"
   },
   "119-HR5079": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-02",
    "latest_action": {
     "date": "2025-09-03",
@@ -4850,7 +4850,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5079"
   },
   "119-HR5081": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-02",
    "latest_action": {
     "date": "2025-09-02",
@@ -4863,7 +4863,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5081"
   },
   "119-HR5089": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-02",
    "latest_action": {
     "date": "2025-09-10",
@@ -4941,7 +4941,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5143"
   },
   "119-HR5145": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-04",
    "latest_action": {
     "date": "2025-09-04",
@@ -4954,7 +4954,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5145"
   },
   "119-HR5166": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-05",
    "latest_action": {
     "date": "2025-09-05",
@@ -4967,7 +4967,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5166"
   },
   "119-HR5167": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-08",
    "latest_action": {
     "date": "2025-11-28",
@@ -5045,7 +5045,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5214"
   },
   "119-HR5221": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-09",
    "latest_action": {
     "date": "2026-02-10",
@@ -5058,7 +5058,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5221"
   },
   "119-HR5256": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-10",
    "latest_action": {
     "date": "2025-09-10",
@@ -5071,7 +5071,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5256"
   },
   "119-HR5267": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-10",
    "latest_action": {
     "date": "2026-09-08",
@@ -5084,7 +5084,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5267"
   },
   "119-HR5269": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-10",
    "latest_action": {
     "date": "2025-09-10",
@@ -5110,7 +5110,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/530"
   },
   "119-HR5300": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-11",
    "latest_action": {
     "date": "2025-09-18",
@@ -5123,7 +5123,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5300"
   },
   "119-HR5301": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-11",
    "latest_action": {
     "date": "2025-09-17",
@@ -5136,7 +5136,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5301"
   },
   "119-HR5304": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-11",
    "latest_action": {
     "date": "2025-09-11",
@@ -5162,7 +5162,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5317"
   },
   "119-HR5334": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-11",
    "latest_action": {
     "date": "2026-09-18",
@@ -5175,7 +5175,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5334"
   },
   "119-HR5342": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-12",
    "latest_action": {
     "date": "2025-09-12",
@@ -5188,7 +5188,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5342"
   },
   "119-HR5343": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-15",
    "latest_action": {
     "date": "2025-09-17",
@@ -5227,7 +5227,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5362"
   },
   "119-HR5371": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-16",
    "latest_action": {
     "date": "2025-11-12",
@@ -5240,7 +5240,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5371"
   },
   "119-HR5376": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-16",
    "latest_action": {
     "date": "2025-09-16",
@@ -5253,7 +5253,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5376"
   },
   "119-HR5378": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-16",
    "latest_action": {
     "date": "2025-09-16",
@@ -5266,7 +5266,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5378"
   },
   "119-HR5408": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-16",
    "latest_action": {
     "date": "2026-06-10",
@@ -5279,7 +5279,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5408"
   },
   "119-HR5454": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-18",
    "latest_action": {
     "date": "2025-09-18",
@@ -5292,7 +5292,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5454"
   },
   "119-HR5475": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-18",
    "latest_action": {
     "date": "2025-09-18",
@@ -5305,7 +5305,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5475"
   },
   "119-HR5494": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-18",
    "latest_action": {
     "date": "2025-09-18",
@@ -5318,7 +5318,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5494"
   },
   "119-HR5509": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-19",
    "latest_action": {
     "date": "2025-09-19",
@@ -5331,7 +5331,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5509"
   },
   "119-HR5526": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-19",
    "latest_action": {
     "date": "2025-09-19",
@@ -5357,7 +5357,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/556"
   },
   "119-HR5582": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-26",
    "latest_action": {
     "date": "2025-09-26",
@@ -5383,7 +5383,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5587"
   },
   "119-HR5600": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-26",
    "latest_action": {
     "date": "2025-09-26",
@@ -5435,7 +5435,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5688"
   },
   "119-HR573": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-21",
    "latest_action": {
     "date": "2025-12-10",
@@ -5448,7 +5448,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/573"
   },
   "119-HR574": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-21",
    "latest_action": {
     "date": "2025-01-21",
@@ -5513,7 +5513,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5878"
   },
   "119-HR5885": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-10-31",
    "latest_action": {
     "date": "2025-10-31",
@@ -5526,7 +5526,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5885"
   },
   "119-HR591": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-21",
    "latest_action": {
     "date": "2025-01-21",
@@ -5578,7 +5578,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6047"
   },
   "119-HR6084": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-18",
    "latest_action": {
     "date": "2026-03-17",
@@ -5591,7 +5591,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6084"
   },
   "119-HR6086": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-18",
    "latest_action": {
     "date": "2025-12-18",
@@ -5604,7 +5604,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6086"
   },
   "119-HR6130": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-19",
    "latest_action": {
     "date": "2026-09-16",
@@ -5617,7 +5617,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6130"
   },
   "119-HR6160": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-19",
    "latest_action": {
     "date": "2025-11-19",
@@ -5643,7 +5643,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6213"
   },
   "119-HR6222": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-20",
    "latest_action": {
     "date": "2025-11-21",
@@ -5656,7 +5656,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6222"
   },
   "119-HR6231": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-20",
    "latest_action": {
     "date": "2025-11-20",
@@ -5669,7 +5669,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6231"
   },
   "119-HR6248": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-21",
    "latest_action": {
     "date": "2025-11-21",
@@ -5695,7 +5695,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6260"
   },
   "119-HR6291": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-25",
    "latest_action": {
     "date": "2025-12-11",
@@ -5721,7 +5721,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6329"
   },
   "119-HR633": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-22",
    "latest_action": {
     "date": "2025-04-28",
@@ -5734,7 +5734,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/633"
   },
   "119-HR6333": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-01",
    "latest_action": {
     "date": "2025-12-11",
@@ -5747,7 +5747,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6333"
   },
   "119-HR6336": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-01",
    "latest_action": {
     "date": "2025-12-01",
@@ -5773,7 +5773,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6359"
   },
   "119-HR6387": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-03",
    "latest_action": {
     "date": "2026-04-27",
@@ -5786,7 +5786,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6387"
   },
   "119-HR6398": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-03",
    "latest_action": {
     "date": "2026-04-17",
@@ -5799,7 +5799,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6398"
   },
   "119-HR6409": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-03",
    "latest_action": {
     "date": "2026-04-17",
@@ -5825,7 +5825,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6422"
   },
   "119-HR6423": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-04",
    "latest_action": {
     "date": "2025-12-04",
@@ -5838,7 +5838,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6423"
   },
   "119-HR643": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2025-01-23",
@@ -5864,7 +5864,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6472"
   },
   "119-HR6484": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-05",
    "latest_action": {
     "date": "2025-12-11",
@@ -5877,7 +5877,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6484"
   },
   "119-HR6485": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-05",
    "latest_action": {
     "date": "2025-12-05",
@@ -5890,7 +5890,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6485"
   },
   "119-HR649": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2025-06-05",
@@ -5903,7 +5903,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/649"
   },
   "119-HR6500": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-09",
    "latest_action": {
     "date": "2026-09-02",
@@ -5929,7 +5929,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6504"
   },
   "119-HR651": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2025-01-23",
@@ -5942,7 +5942,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/651"
   },
   "119-HR6518": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-09",
    "latest_action": {
     "date": "2025-12-09",
@@ -5955,7 +5955,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6518"
   },
   "119-HR6566": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-10",
    "latest_action": {
     "date": "2025-12-10",
@@ -5968,7 +5968,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6566"
   },
   "119-HR6574": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-10",
    "latest_action": {
     "date": "2025-12-10",
@@ -5981,7 +5981,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6574"
   },
   "119-HR6610": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-11",
    "latest_action": {
     "date": "2026-07-22",
@@ -5994,7 +5994,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6610"
   },
   "119-HR6633": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-11",
    "latest_action": {
     "date": "2026-09-16",
@@ -6007,7 +6007,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6633"
   },
   "119-HR6644": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-11",
    "latest_action": {
     "date": "2026-07-11",
@@ -6020,7 +6020,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6644"
   },
   "119-HR6677": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-11",
    "latest_action": {
     "date": "2025-12-11",
@@ -6033,7 +6033,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6677"
   },
   "119-HR6687": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-12",
    "latest_action": {
     "date": "2025-12-12",
@@ -6046,7 +6046,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6687"
   },
   "119-HR6703": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-15",
    "latest_action": {
     "date": "2025-12-18",
@@ -6059,7 +6059,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6703"
   },
   "119-HR6718": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-15",
    "latest_action": {
     "date": "2025-12-15",
@@ -6072,7 +6072,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6718"
   },
   "119-HR6832": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-17",
    "latest_action": {
     "date": "2026-09-16",
@@ -6085,7 +6085,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6832"
   },
   "119-HR6875": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-18",
    "latest_action": {
     "date": "2026-01-21",
@@ -6111,7 +6111,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/692"
   },
   "119-HR6938": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-06",
    "latest_action": {
     "date": "2026-01-23",
@@ -6150,7 +6150,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/695"
   },
   "119-HR6951": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-06",
    "latest_action": {
     "date": "2026-01-06",
@@ -6163,7 +6163,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6951"
   },
   "119-HR6955": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-07",
    "latest_action": {
     "date": "2026-07-22",
@@ -6176,7 +6176,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6955"
   },
   "119-HR7006": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-12",
    "latest_action": {
     "date": "2026-01-15",
@@ -6189,7 +6189,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7006"
   },
   "119-HR7008": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-12",
    "latest_action": {
     "date": "2026-09-30",
@@ -6215,7 +6215,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7015"
   },
   "119-HR7024": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-13",
    "latest_action": {
     "date": "2026-05-20",
@@ -6228,7 +6228,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7024"
   },
   "119-HR703": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2025-01-23",
@@ -6241,7 +6241,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/703"
   },
   "119-HR7035": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-13",
    "latest_action": {
     "date": "2026-01-13",
@@ -6267,7 +6267,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7084"
   },
   "119-HR7128": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-16",
    "latest_action": {
     "date": "2026-07-13",
@@ -6280,7 +6280,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7128"
   },
   "119-HR7147": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-20",
    "latest_action": {
     "date": "2026-04-30",
@@ -6293,7 +6293,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7147"
   },
   "119-HR7148": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-20",
    "latest_action": {
     "date": "2026-02-03",
@@ -6306,7 +6306,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7148"
   },
   "119-HR7273": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-30",
    "latest_action": {
     "date": "2026-02-04",
@@ -6319,7 +6319,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7273"
   },
   "119-HR7296": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-30",
    "latest_action": {
     "date": "2026-01-30",
@@ -6332,7 +6332,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7296"
   },
   "119-HR7300": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-30",
    "latest_action": {
     "date": "2026-02-02",
@@ -6358,7 +6358,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/736"
   },
   "119-HR7386": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-05",
    "latest_action": {
     "date": "2026-04-21",
@@ -6371,7 +6371,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7386"
   },
   "119-HR7389": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-05",
    "latest_action": {
     "date": "2026-05-21",
@@ -6384,7 +6384,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7389"
   },
   "119-HR7390": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-05",
    "latest_action": {
     "date": "2026-02-10",
@@ -6410,7 +6410,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7401"
   },
   "119-HR7437": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-09",
    "latest_action": {
     "date": "2026-02-09",
@@ -6436,7 +6436,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/747"
   },
   "119-HR7502": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-11",
    "latest_action": {
     "date": "2026-09-16",
@@ -6449,7 +6449,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7502"
   },
   "119-HR7520": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-12",
    "latest_action": {
     "date": "2026-02-12",
@@ -6462,7 +6462,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7520"
   },
   "119-HR7548": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-12",
    "latest_action": {
     "date": "2026-02-12",
@@ -6475,7 +6475,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7548"
   },
   "119-HR7567": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-13",
    "latest_action": {
     "date": "2026-05-19",
@@ -6501,7 +6501,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/758"
   },
   "119-HR7613": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-20",
    "latest_action": {
     "date": "2026-04-15",
@@ -6540,7 +6540,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7623"
   },
   "119-HR77": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-03",
    "latest_action": {
     "date": "2025-02-13",
@@ -6566,7 +6566,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7726"
   },
   "119-HR7744": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-02",
    "latest_action": {
     "date": "2026-03-09",
@@ -6579,7 +6579,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7744"
   },
   "119-HR7757": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-03",
    "latest_action": {
     "date": "2026-07-13",
@@ -6605,7 +6605,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/776"
   },
   "119-HR7863": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-09",
    "latest_action": {
     "date": "2026-03-09",
@@ -6644,7 +6644,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7892"
   },
   "119-HR7895": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-12",
    "latest_action": {
     "date": "2026-07-02",
@@ -6657,7 +6657,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7895"
   },
   "119-HR791": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-28",
    "latest_action": {
     "date": "2025-01-28",
@@ -6683,7 +6683,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7959"
   },
   "119-HR7961": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-17",
    "latest_action": {
     "date": "2026-03-17",
@@ -6696,7 +6696,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7961"
   },
   "119-HR7973": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-18",
    "latest_action": {
     "date": "2026-04-20",
@@ -6709,7 +6709,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7973"
   },
   "119-HR7977": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-18",
    "latest_action": {
     "date": "2026-03-18",
@@ -6722,7 +6722,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7977"
   },
   "119-HR801": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-28",
    "latest_action": {
     "date": "2025-01-28",
@@ -6761,7 +6761,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/804"
   },
   "119-HR8070": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-25",
    "latest_action": {
     "date": "2026-03-25",
@@ -6774,7 +6774,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8070"
   },
   "119-HR8163": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-30",
    "latest_action": {
     "date": "2026-05-21",
@@ -6787,7 +6787,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8163"
   },
   "119-HR8170": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-02",
    "latest_action": {
     "date": "2026-04-22",
@@ -6813,7 +6813,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/818"
   },
   "119-HR8210": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-06",
    "latest_action": {
     "date": "2026-04-21",
@@ -6852,7 +6852,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8278"
   },
   "119-HR8308": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-15",
    "latest_action": {
     "date": "2026-04-15",
@@ -6891,7 +6891,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/832"
   },
   "119-HR833": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-31",
    "latest_action": {
     "date": "2025-01-31",
@@ -6917,7 +6917,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8365"
   },
   "119-HR8375": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-20",
    "latest_action": {
     "date": "2026-04-27",
@@ -6930,7 +6930,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8375"
   },
   "119-HR8398": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-21",
    "latest_action": {
     "date": "2026-04-21",
@@ -6943,7 +6943,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8398"
   },
   "119-HR8413": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-21",
    "latest_action": {
     "date": "2026-04-21",
@@ -6956,7 +6956,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8413"
   },
   "119-HR842": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-31",
    "latest_action": {
     "date": "2025-10-03",
@@ -6982,7 +6982,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8428"
   },
   "119-HR845": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-31",
    "latest_action": {
     "date": "2025-12-18",
@@ -6995,7 +6995,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/845"
   },
   "119-HR8462": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-23",
    "latest_action": {
     "date": "2026-04-29",
@@ -7034,7 +7034,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8466"
   },
   "119-HR8467": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-23",
    "latest_action": {
     "date": "2026-06-11",
@@ -7047,7 +7047,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8467"
   },
   "119-HR8469": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-23",
    "latest_action": {
     "date": "2026-07-14",
@@ -7060,7 +7060,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8469"
   },
   "119-HR8495": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-24",
    "latest_action": {
     "date": "2026-04-24",
@@ -7086,7 +7086,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/856"
   },
   "119-HR8580": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-29",
    "latest_action": {
     "date": "2026-04-29",
@@ -7112,7 +7112,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/859"
   },
   "119-HR8595": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-30",
    "latest_action": {
     "date": "2026-07-29",
@@ -7138,7 +7138,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/861"
   },
   "119-HR8646": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-01",
    "latest_action": {
     "date": "2026-06-08",
@@ -7164,7 +7164,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8684"
   },
   "119-HR8730": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-11",
    "latest_action": {
     "date": "2026-05-11",
@@ -7190,7 +7190,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/875"
   },
   "119-HR8752": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-12",
    "latest_action": {
     "date": "2026-05-12",
@@ -7203,7 +7203,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8752"
   },
   "119-HR8770": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-12",
    "latest_action": {
     "date": "2026-07-14",
@@ -7216,7 +7216,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8770"
   },
   "119-HR8771": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-12",
    "latest_action": {
     "date": "2026-06-15",
@@ -7229,7 +7229,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8771"
   },
   "119-HR8773": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-12",
    "latest_action": {
     "date": "2026-05-12",
@@ -7242,7 +7242,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8773"
   },
   "119-HR8774": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-12",
    "latest_action": {
     "date": "2026-05-13",
@@ -7255,7 +7255,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8774"
   },
   "119-HR879": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-31",
    "latest_action": {
     "date": "2025-01-31",
@@ -7268,7 +7268,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/879"
   },
   "119-HR8800": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-13",
    "latest_action": {
     "date": "2026-09-14",
@@ -7320,7 +7320,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/884"
   },
   "119-HR8845": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-15",
    "latest_action": {
     "date": "2026-05-15",
@@ -7333,7 +7333,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8845"
   },
   "119-HR8870": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-19",
    "latest_action": {
     "date": "2026-05-22",
@@ -7372,7 +7372,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8897"
   },
   "119-HR8997": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-21",
    "latest_action": {
     "date": "2026-05-21",
@@ -7385,7 +7385,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8997"
   },
   "119-HR8998": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-21",
    "latest_action": {
     "date": "2026-05-21",
@@ -7411,7 +7411,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/901"
   },
   "119-HR9022": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-22",
    "latest_action": {
     "date": "2026-06-23",
@@ -7424,7 +7424,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9022"
   },
   "119-HR9026": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-26",
    "latest_action": {
     "date": "2026-07-22",
@@ -7437,7 +7437,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9026"
   },
   "119-HR9027": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-26",
    "latest_action": {
     "date": "2026-05-26",
@@ -7450,7 +7450,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9027"
   },
   "119-HR9028": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-26",
    "latest_action": {
     "date": "2026-05-26",
@@ -7463,7 +7463,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9028"
   },
   "119-HR9029": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-26",
    "latest_action": {
     "date": "2026-05-26",
@@ -7476,7 +7476,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9029"
   },
   "119-HR9137": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-04",
    "latest_action": {
     "date": "2026-06-04",
@@ -7502,7 +7502,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/915"
   },
   "119-HR9170": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-05",
    "latest_action": {
     "date": "2026-06-05",
@@ -7515,7 +7515,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9170"
   },
   "119-HR9171": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-05",
    "latest_action": {
     "date": "2026-06-05",
@@ -7528,7 +7528,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9171"
   },
   "119-HR9232": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-09",
    "latest_action": {
     "date": "2026-07-07",
@@ -7541,11 +7541,11 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9232"
   },
   "119-HR9237": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-10",
    "latest_action": {
-    "date": "2026-07-16",
-    "text": "POSTPONED PROCEEDINGS - Pursuant to clause 1(c) of rule XIX, the Chair announced further proceedings on H.R. 9237 is postponed."
+    "date": "2026-11-11",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
    },
    "policy_area": "Armed Forces and National Security",
    "sponsor": "Rep. Bost, Mike [R-IL-12]",
@@ -7567,7 +7567,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9238"
   },
   "119-HR9250": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-10",
    "latest_action": {
     "date": "2026-06-24",
@@ -7580,7 +7580,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9250"
   },
   "119-HR9260": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-11",
    "latest_action": {
     "date": "2026-06-11",
@@ -7593,7 +7593,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9260"
   },
   "119-HR928": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-04",
@@ -7606,7 +7606,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/928"
   },
   "119-HR929": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-04",
@@ -7619,7 +7619,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/929"
   },
   "119-HR9310": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-12",
    "latest_action": {
     "date": "2026-06-12",
@@ -7632,7 +7632,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9310"
   },
   "119-HR9332": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-18",
    "latest_action": {
     "date": "2026-09-16",
@@ -7645,7 +7645,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9332"
   },
   "119-HR9335": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-18",
    "latest_action": {
     "date": "2026-07-21",
@@ -7658,7 +7658,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9335"
   },
   "119-HR9338": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-18",
    "latest_action": {
     "date": "2026-07-21",
@@ -7671,7 +7671,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9338"
   },
   "119-HR9339": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-18",
    "latest_action": {
     "date": "2026-09-16",
@@ -7684,7 +7684,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9339"
   },
   "119-HR9340": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-18",
    "latest_action": {
     "date": "2026-09-30",
@@ -7697,7 +7697,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9340"
   },
   "119-HR9390": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-23",
    "latest_action": {
     "date": "2026-07-21",
@@ -7710,7 +7710,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9390"
   },
   "119-HR9393": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-23",
    "latest_action": {
     "date": "2026-07-21",
@@ -7723,7 +7723,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9393"
   },
   "119-HR9396": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-23",
    "latest_action": {
     "date": "2026-06-25",
@@ -7749,7 +7749,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9436"
   },
   "119-HR946": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-06",
@@ -7762,7 +7762,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/946"
   },
   "119-HR9494": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-25",
    "latest_action": {
     "date": "2026-06-25",
@@ -7775,7 +7775,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9494"
   },
   "119-HR9495": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-26",
    "latest_action": {
     "date": "2026-06-26",
@@ -7788,7 +7788,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9495"
   },
   "119-HR9497": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-29",
    "latest_action": {
     "date": "2026-09-17",
@@ -7814,7 +7814,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9500"
   },
   "119-HR9504": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-29",
    "latest_action": {
     "date": "2026-07-01",
@@ -7827,7 +7827,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9504"
   },
   "119-HR9535": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-30",
    "latest_action": {
     "date": "2026-06-30",
@@ -7853,7 +7853,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9576"
   },
   "119-HR9599": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-06",
    "latest_action": {
     "date": "2026-07-06",
@@ -7879,7 +7879,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9612"
   },
   "119-HR9624": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-09",
    "latest_action": {
     "date": "2026-07-20",
@@ -7892,7 +7892,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9624"
   },
   "119-HR9645": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-13",
    "latest_action": {
     "date": "2026-07-15",
@@ -7905,7 +7905,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9645"
   },
   "119-HR9693": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-15",
    "latest_action": {
     "date": "2026-07-15",
@@ -7957,7 +7957,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/976"
   },
   "119-HR9770": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-18",
    "latest_action": {
     "date": "2026-07-22",
@@ -7970,7 +7970,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9770"
   },
   "119-HR979": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-05",
    "latest_action": {
     "date": "2026-09-16",
@@ -7996,7 +7996,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/980"
   },
   "119-HR9925": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-23",
    "latest_action": {
     "date": "2026-07-23",
@@ -9296,7 +9296,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-resolution/992"
   },
   "119-S100": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-15",
    "latest_action": {
     "date": "2025-01-15",
@@ -9348,7 +9348,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1032"
   },
   "119-S1040": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-13",
    "latest_action": {
     "date": "2025-04-10",
@@ -9361,7 +9361,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1040"
   },
   "119-S1041": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-13",
    "latest_action": {
     "date": "2026-07-21",
@@ -9374,7 +9374,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1041"
   },
   "119-S1045": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-13",
    "latest_action": {
     "date": "2025-03-13",
@@ -9387,7 +9387,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1045"
   },
   "119-S1067": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-13",
    "latest_action": {
     "date": "2025-03-13",
@@ -9400,7 +9400,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1067"
   },
   "119-S1071": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-14",
    "latest_action": {
     "date": "2025-12-18",
@@ -9413,7 +9413,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1071"
   },
   "119-S1092": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-24",
    "latest_action": {
     "date": "2026-03-24",
@@ -9426,7 +9426,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1092"
   },
   "119-S1095": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-24",
    "latest_action": {
     "date": "2025-04-10",
@@ -9439,7 +9439,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1095"
   },
   "119-S1096": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-24",
    "latest_action": {
     "date": "2025-04-10",
@@ -9452,7 +9452,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1096"
   },
   "119-S1097": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-24",
    "latest_action": {
     "date": "2025-04-10",
@@ -9478,7 +9478,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1101"
   },
   "119-S1105": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-25",
    "latest_action": {
     "date": "2025-03-25",
@@ -9491,7 +9491,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1105"
   },
   "119-S1173": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-27",
    "latest_action": {
     "date": "2025-03-27",
@@ -9504,7 +9504,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1173"
   },
   "119-S1232": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -9517,7 +9517,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1232"
   },
   "119-S1234": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -9530,7 +9530,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1234"
   },
   "119-S1241": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-01",
    "latest_action": {
     "date": "2025-04-01",
@@ -9543,7 +9543,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1241"
   },
   "119-S1261": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-02",
    "latest_action": {
     "date": "2025-04-02",
@@ -9556,7 +9556,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1261"
   },
   "119-S1272": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-03",
    "latest_action": {
     "date": "2025-04-03",
@@ -9569,7 +9569,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1272"
   },
   "119-S128": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-16",
    "latest_action": {
     "date": "2025-01-16",
@@ -9582,7 +9582,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/128"
   },
   "119-S1296": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-03",
    "latest_action": {
     "date": "2025-04-03",
@@ -9595,7 +9595,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1296"
   },
   "119-S1302": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-03",
    "latest_action": {
     "date": "2025-04-03",
@@ -9621,7 +9621,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1318"
   },
   "119-S1323": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-08",
    "latest_action": {
     "date": "2025-04-08",
@@ -9634,7 +9634,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1323"
   },
   "119-S1337": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-08",
    "latest_action": {
     "date": "2025-04-08",
@@ -9660,7 +9660,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1339"
   },
   "119-S1367": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-09",
    "latest_action": {
     "date": "2025-04-09",
@@ -9673,7 +9673,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1367"
   },
   "119-S1379": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-09",
    "latest_action": {
     "date": "2025-04-09",
@@ -9686,7 +9686,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1379"
   },
   "119-S1383": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-09",
    "latest_action": {
     "date": "2026-03-26",
@@ -9699,7 +9699,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1383"
   },
   "119-S1404": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-04-10",
@@ -9712,7 +9712,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1404"
   },
   "119-S1414": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2026-07-27",
@@ -9725,7 +9725,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1414"
   },
   "119-S146": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-16",
    "latest_action": {
     "date": "2025-05-19",
@@ -9738,7 +9738,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/146"
   },
   "119-S1462": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-10-27",
@@ -9751,7 +9751,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1462"
   },
   "119-S1467": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-10",
    "latest_action": {
     "date": "2025-06-17",
@@ -9764,7 +9764,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1467"
   },
   "119-S1525": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-30",
    "latest_action": {
     "date": "2026-08-10",
@@ -9777,7 +9777,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1525"
   },
   "119-S1536": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-30",
    "latest_action": {
     "date": "2025-04-30",
@@ -9790,7 +9790,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1536"
   },
   "119-S1541": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-04-30",
    "latest_action": {
     "date": "2025-04-30",
@@ -9803,7 +9803,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1541"
   },
   "119-S1546": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-10-08",
@@ -9816,7 +9816,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1546"
   },
   "119-S1547": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2026-06-17",
@@ -9829,7 +9829,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1547"
   },
   "119-S1552": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2026-03-11",
@@ -9842,7 +9842,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1552"
   },
   "119-S1553": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -9855,7 +9855,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1553"
   },
   "119-S1557": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -9868,7 +9868,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1557"
   },
   "119-S1562": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -9881,7 +9881,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1562"
   },
   "119-S1582": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-07-18",
@@ -9894,7 +9894,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582"
   },
   "119-S1586": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-01",
    "latest_action": {
     "date": "2025-05-01",
@@ -9920,7 +9920,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1596"
   },
   "119-S1600": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-05",
    "latest_action": {
     "date": "2025-05-05",
@@ -9933,7 +9933,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1600"
   },
   "119-S1639": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-07",
    "latest_action": {
     "date": "2025-05-07",
@@ -9946,7 +9946,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1639"
   },
   "119-S1640": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-07",
    "latest_action": {
     "date": "2025-05-07",
@@ -9972,7 +9972,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1642"
   },
   "119-S1705": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-08",
    "latest_action": {
     "date": "2025-05-08",
@@ -9998,7 +9998,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1706"
   },
   "119-S1707": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-12",
    "latest_action": {
     "date": "2025-05-12",
@@ -10011,7 +10011,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1707"
   },
   "119-S1717": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-12",
    "latest_action": {
     "date": "2025-05-12",
@@ -10024,7 +10024,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1717"
   },
   "119-S1748": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-14",
    "latest_action": {
     "date": "2026-08-05",
@@ -10037,7 +10037,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1748"
   },
   "119-S1816": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2025-05-20",
@@ -10050,7 +10050,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1816"
   },
   "119-S1821": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-20",
    "latest_action": {
     "date": "2025-05-20",
@@ -10063,7 +10063,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1821"
   },
   "119-S1829": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-21",
    "latest_action": {
     "date": "2025-06-26",
@@ -10076,7 +10076,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1829"
   },
   "119-S1831": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-21",
    "latest_action": {
     "date": "2025-05-21",
@@ -10089,7 +10089,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1831"
   },
   "119-S1838": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-21",
    "latest_action": {
     "date": "2026-08-10",
@@ -10102,7 +10102,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1838"
   },
   "119-S1862": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-22",
    "latest_action": {
     "date": "2025-05-22",
@@ -10115,7 +10115,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1862"
   },
   "119-S187": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-22",
    "latest_action": {
     "date": "2025-01-22",
@@ -10128,7 +10128,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/187"
   },
   "119-S1874": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-22",
    "latest_action": {
     "date": "2026-07-28",
@@ -10141,7 +10141,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1874"
   },
   "119-S1875": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-22",
    "latest_action": {
     "date": "2025-05-22",
@@ -10154,7 +10154,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1875"
   },
   "119-S1877": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-05-22",
    "latest_action": {
     "date": "2025-05-22",
@@ -10167,7 +10167,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1877"
   },
   "119-S1939": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-04",
    "latest_action": {
     "date": "2025-06-04",
@@ -10180,7 +10180,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1939"
   },
   "119-S1954": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-04",
    "latest_action": {
     "date": "2026-07-27",
@@ -10193,7 +10193,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1954"
   },
   "119-S2": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-20",
    "latest_action": {
     "date": "2026-06-10",
@@ -10206,7 +10206,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2"
   },
   "119-S2019": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-10",
    "latest_action": {
     "date": "2025-06-10",
@@ -10219,7 +10219,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2019"
   },
   "119-S2110": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-18",
    "latest_action": {
     "date": "2025-11-20",
@@ -10232,7 +10232,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2110"
   },
   "119-S2121": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-18",
    "latest_action": {
     "date": "2025-06-18",
@@ -10245,7 +10245,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2121"
   },
   "119-S213": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2025-01-23",
@@ -10258,7 +10258,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/213"
   },
   "119-S2153": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-24",
    "latest_action": {
     "date": "2025-06-24",
@@ -10271,7 +10271,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2153"
   },
   "119-S2207": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-06-30",
    "latest_action": {
     "date": "2025-06-30",
@@ -10284,7 +10284,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2207"
   },
   "119-S222": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-23",
    "latest_action": {
     "date": "2026-01-14",
@@ -10310,7 +10310,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2220"
   },
   "119-S2228": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-09",
    "latest_action": {
     "date": "2025-07-09",
@@ -10323,7 +10323,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2228"
   },
   "119-S2237": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-10",
    "latest_action": {
     "date": "2025-07-10",
@@ -10336,7 +10336,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2237"
   },
   "119-S2256": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-10",
    "latest_action": {
     "date": "2025-07-10",
@@ -10349,7 +10349,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2256"
   },
   "119-S2276": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-15",
    "latest_action": {
     "date": "2025-07-15",
@@ -10362,7 +10362,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2276"
   },
   "119-S2296": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-15",
    "latest_action": {
     "date": "2025-11-12",
@@ -10375,7 +10375,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2296"
   },
   "119-S2326": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-17",
    "latest_action": {
     "date": "2025-07-17",
@@ -10388,7 +10388,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2326"
   },
   "119-S2342": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-17",
    "latest_action": {
     "date": "2025-07-29",
@@ -10401,7 +10401,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2342"
   },
   "119-S2354": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-17",
    "latest_action": {
     "date": "2025-07-17",
@@ -10414,7 +10414,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2354"
   },
   "119-S2355": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-17",
    "latest_action": {
     "date": "2026-07-27",
@@ -10427,7 +10427,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2355"
   },
   "119-S2388": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-07-23",
@@ -10466,7 +10466,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2403"
   },
   "119-S2420": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-23",
    "latest_action": {
     "date": "2025-07-23",
@@ -10479,7 +10479,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2420"
   },
   "119-S2426": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-24",
    "latest_action": {
     "date": "2025-07-24",
@@ -10492,7 +10492,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2426"
   },
   "119-S2431": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-24",
    "latest_action": {
     "date": "2025-07-24",
@@ -10505,7 +10505,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2431"
   },
   "119-S2439": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-24",
    "latest_action": {
     "date": "2025-07-24",
@@ -10518,7 +10518,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2439"
   },
   "119-S2465": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-24",
    "latest_action": {
     "date": "2025-07-24",
@@ -10531,7 +10531,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2465"
   },
   "119-S2503": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-29",
    "latest_action": {
     "date": "2026-02-24",
@@ -10557,7 +10557,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/254"
   },
   "119-S2556": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-30",
    "latest_action": {
     "date": "2025-07-30",
@@ -10570,7 +10570,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2556"
   },
   "119-S2572": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-31",
    "latest_action": {
     "date": "2025-07-31",
@@ -10583,7 +10583,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2572"
   },
   "119-S2586": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-31",
    "latest_action": {
     "date": "2025-07-31",
@@ -10596,7 +10596,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2586"
   },
   "119-S2587": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-31",
    "latest_action": {
     "date": "2025-07-31",
@@ -10609,7 +10609,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2587"
   },
   "119-S2613": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-31",
    "latest_action": {
     "date": "2025-07-31",
@@ -10622,7 +10622,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2613"
   },
   "119-S2621": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-07-31",
    "latest_action": {
     "date": "2025-07-31",
@@ -10635,7 +10635,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2621"
   },
   "119-S2651": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-08-01",
    "latest_action": {
     "date": "2025-08-01",
@@ -10648,7 +10648,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2651"
   },
   "119-S2658": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-08-01",
    "latest_action": {
     "date": "2026-07-28",
@@ -10661,7 +10661,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2658"
   },
   "119-S266": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-28",
    "latest_action": {
     "date": "2025-01-28",
@@ -10674,7 +10674,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/266"
   },
   "119-S2709": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-04",
    "latest_action": {
     "date": "2025-09-04",
@@ -10687,7 +10687,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2709"
   },
   "119-S2750": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-10",
    "latest_action": {
     "date": "2025-09-10",
@@ -10700,7 +10700,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2750"
   },
   "119-S2761": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-10",
    "latest_action": {
     "date": "2025-09-10",
@@ -10713,7 +10713,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2761"
   },
   "119-S278": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-28",
    "latest_action": {
     "date": "2025-06-30",
@@ -10726,7 +10726,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/278"
   },
   "119-S281": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-28",
    "latest_action": {
     "date": "2025-04-29",
@@ -10752,7 +10752,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/284"
   },
   "119-S2882": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-18",
    "latest_action": {
     "date": "2025-10-09",
@@ -10765,7 +10765,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2882"
   },
   "119-S2903": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-18",
    "latest_action": {
     "date": "2026-03-19",
@@ -10778,7 +10778,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2903"
   },
   "119-S2932": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-09-29",
    "latest_action": {
     "date": "2025-09-29",
@@ -10791,7 +10791,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2932"
   },
   "119-S2975": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-10-06",
    "latest_action": {
     "date": "2026-05-04",
@@ -10804,7 +10804,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2975"
   },
   "119-S2983": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-10-07",
    "latest_action": {
     "date": "2025-10-08",
@@ -10817,7 +10817,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/2983"
   },
   "119-S3014": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-10-16",
    "latest_action": {
     "date": "2025-10-16",
@@ -10830,7 +10830,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3014"
   },
   "119-S3062": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-10-28",
    "latest_action": {
     "date": "2026-05-11",
@@ -10856,7 +10856,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/307"
   },
   "119-S3097": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-04",
    "latest_action": {
     "date": "2026-08-04",
@@ -10869,7 +10869,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3097"
   },
   "119-S3122": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-06",
    "latest_action": {
     "date": "2025-11-06",
@@ -10895,7 +10895,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/314"
   },
   "119-S315": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-29",
    "latest_action": {
     "date": "2025-04-03",
@@ -10908,7 +10908,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/315"
   },
   "119-S3150": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-06",
    "latest_action": {
     "date": "2025-11-06",
@@ -10921,7 +10921,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3150"
   },
   "119-S317": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-29",
    "latest_action": {
     "date": "2025-01-29",
@@ -10947,7 +10947,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/32"
   },
   "119-S3265": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-20",
    "latest_action": {
     "date": "2025-11-20",
@@ -10960,7 +10960,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3265"
   },
   "119-S3267": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-11-20",
    "latest_action": {
     "date": "2025-11-20",
@@ -10973,7 +10973,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3267"
   },
   "119-S3290": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-01",
    "latest_action": {
     "date": "2025-12-01",
@@ -10986,7 +10986,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3290"
   },
   "119-S3293": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-01",
    "latest_action": {
     "date": "2025-12-01",
@@ -10999,7 +10999,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3293"
   },
   "119-S331": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-30",
    "latest_action": {
     "date": "2025-07-16",
@@ -11012,7 +11012,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/331"
   },
   "119-S3315": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-02",
    "latest_action": {
     "date": "2026-10-05",
@@ -11025,7 +11025,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3315"
   },
   "119-S3345": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-04",
    "latest_action": {
     "date": "2025-12-04",
@@ -11038,7 +11038,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3345"
   },
   "119-S3385": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-08",
    "latest_action": {
     "date": "2025-12-11",
@@ -11051,7 +11051,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3385"
   },
   "119-S3386": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-08",
    "latest_action": {
     "date": "2025-12-11",
@@ -11064,7 +11064,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3386"
   },
   "119-S351": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-30",
    "latest_action": {
     "date": "2025-11-20",
@@ -11077,7 +11077,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/351"
   },
   "119-S3525": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-12-17",
    "latest_action": {
     "date": "2026-03-19",
@@ -11103,7 +11103,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/356"
   },
   "119-S3597": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-08",
    "latest_action": {
     "date": "2026-04-14",
@@ -11116,7 +11116,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3597"
   },
   "119-S3623": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-13",
    "latest_action": {
     "date": "2026-01-13",
@@ -11129,7 +11129,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3623"
   },
   "119-S3752": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-01-29",
    "latest_action": {
     "date": "2026-01-29",
@@ -11142,7 +11142,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3752"
   },
   "119-S3755": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-02",
    "latest_action": {
     "date": "2026-02-02",
@@ -11155,7 +11155,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3755"
   },
   "119-S3774": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-04",
    "latest_action": {
     "date": "2026-02-04",
@@ -11168,7 +11168,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3774"
   },
   "119-S3788": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-05",
    "latest_action": {
     "date": "2026-07-27",
@@ -11181,7 +11181,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3788"
   },
   "119-S381": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-04",
@@ -11194,7 +11194,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/381"
   },
   "119-S3822": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-10",
    "latest_action": {
     "date": "2026-02-10",
@@ -11207,7 +11207,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3822"
   },
   "119-S383": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-04",
@@ -11220,7 +11220,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/383"
   },
   "119-S3903": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-24",
    "latest_action": {
     "date": "2026-02-24",
@@ -11233,7 +11233,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3903"
   },
   "119-S3931": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-26",
    "latest_action": {
     "date": "2026-02-26",
@@ -11246,7 +11246,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3931"
   },
   "119-S394": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-04",
    "latest_action": {
     "date": "2025-02-04",
@@ -11259,7 +11259,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/394"
   },
   "119-S3947": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-02-26",
    "latest_action": {
     "date": "2026-04-15",
@@ -11272,7 +11272,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3947"
   },
   "119-S3971": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-03",
    "latest_action": {
     "date": "2026-04-13",
@@ -11285,7 +11285,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3971"
   },
   "119-S4027": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-09",
    "latest_action": {
     "date": "2026-03-09",
@@ -11298,7 +11298,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4027"
   },
   "119-S4189": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-03-25",
    "latest_action": {
     "date": "2026-08-07",
@@ -11311,7 +11311,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4189"
   },
   "119-S424": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-05",
    "latest_action": {
     "date": "2025-02-05",
@@ -11324,7 +11324,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/424"
   },
   "119-S4281": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-13",
    "latest_action": {
     "date": "2026-04-13",
@@ -11337,7 +11337,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4281"
   },
   "119-S43": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-09",
    "latest_action": {
     "date": "2025-01-09",
@@ -11350,7 +11350,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/43"
   },
   "119-S4384": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-27",
    "latest_action": {
     "date": "2026-04-27",
@@ -11363,7 +11363,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4384"
   },
   "119-S4395": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-27",
    "latest_action": {
     "date": "2026-10-05",
@@ -11376,7 +11376,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4395"
   },
   "119-S4407": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-28",
    "latest_action": {
     "date": "2026-08-05",
@@ -11389,7 +11389,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4407"
   },
   "119-S441": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-02-06",
@@ -11402,7 +11402,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/441"
   },
   "119-S4429": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-29",
    "latest_action": {
     "date": "2026-09-22",
@@ -11415,7 +11415,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4429"
   },
   "119-S4440": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-29",
    "latest_action": {
     "date": "2026-04-29",
@@ -11441,7 +11441,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4465"
   },
   "119-S448": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-02-06",
@@ -11454,7 +11454,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/448"
   },
   "119-S455": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2025-02-06",
@@ -11467,7 +11467,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/455"
   },
   "119-S4591": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-20",
    "latest_action": {
     "date": "2026-06-24",
@@ -11480,7 +11480,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4591"
   },
   "119-S46": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-09",
    "latest_action": {
     "date": "2025-01-09",
@@ -11493,7 +11493,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/46"
   },
   "119-S4615": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-20",
    "latest_action": {
     "date": "2026-08-05",
@@ -11506,7 +11506,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4615"
   },
   "119-S4638": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-05-21",
    "latest_action": {
     "date": "2026-05-21",
@@ -11519,7 +11519,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4638"
   },
   "119-S465": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-06",
    "latest_action": {
     "date": "2026-09-30",
@@ -11532,7 +11532,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/465"
   },
   "119-S4668": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-02",
    "latest_action": {
     "date": "2026-10-05",
@@ -11545,7 +11545,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4668"
   },
   "119-S4690": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-04",
    "latest_action": {
     "date": "2026-06-04",
@@ -11558,7 +11558,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4690"
   },
   "119-S4744": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-10",
    "latest_action": {
     "date": "2026-06-11",
@@ -11584,7 +11584,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4753"
   },
   "119-S4784": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-15",
    "latest_action": {
     "date": "2026-07-27",
@@ -11597,7 +11597,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4784"
   },
   "119-S4795": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-16",
    "latest_action": {
     "date": "2026-06-16",
@@ -11610,7 +11610,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4795"
   },
   "119-S4796": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-16",
    "latest_action": {
     "date": "2026-06-16",
@@ -11623,7 +11623,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4796"
   },
   "119-S4797": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-16",
    "latest_action": {
     "date": "2026-06-16",
@@ -11636,7 +11636,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4797"
   },
   "119-S4802": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-17",
    "latest_action": {
     "date": "2026-07-22",
@@ -11662,7 +11662,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4875"
   },
   "119-S492": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-10",
    "latest_action": {
     "date": "2025-02-10",
@@ -11675,7 +11675,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/492"
   },
   "119-S4921": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-06-24",
@@ -11688,7 +11688,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4921"
   },
   "119-S4927": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-06-24",
@@ -11701,7 +11701,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4927"
   },
   "119-S4928": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-06-24",
@@ -11714,7 +11714,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4928"
   },
   "119-S4938": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-09-16",
@@ -11727,7 +11727,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4938"
   },
   "119-S4942": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-06-24",
@@ -11740,7 +11740,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4942"
   },
   "119-S4944": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-06-24",
    "latest_action": {
     "date": "2026-06-24",
@@ -11753,7 +11753,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4944"
   },
   "119-S4949": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-13",
    "latest_action": {
     "date": "2026-07-15",
@@ -11766,7 +11766,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/4949"
   },
   "119-S5": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-06",
    "latest_action": {
     "date": "2025-01-29",
@@ -11779,7 +11779,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5"
   },
   "119-S5025": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-16",
    "latest_action": {
     "date": "2026-07-16",
@@ -11792,7 +11792,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5025"
   },
   "119-S5028": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-16",
    "latest_action": {
     "date": "2026-07-16",
@@ -11805,7 +11805,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5028"
   },
   "119-S5180": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-07-30",
    "latest_action": {
     "date": "2026-07-30",
@@ -11818,7 +11818,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5180"
   },
   "119-S524": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-11",
    "latest_action": {
     "date": "2025-03-10",
@@ -11831,7 +11831,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/524"
   },
   "119-S5244": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-08-05",
    "latest_action": {
     "date": "2026-08-05",
@@ -11844,7 +11844,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5244"
   },
   "119-S526": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-11",
    "latest_action": {
     "date": "2025-02-11",
@@ -11857,7 +11857,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/526"
   },
   "119-S544": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-12",
    "latest_action": {
     "date": "2026-02-11",
@@ -11870,7 +11870,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/544"
   },
   "119-S5526": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-24",
    "latest_action": {
     "date": "2026-09-24",
@@ -11883,7 +11883,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5526"
   },
   "119-S558": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-04-30",
@@ -11896,7 +11896,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/558"
   },
   "119-S559": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -11922,7 +11922,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5618"
   },
   "119-S5653": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-09-30",
    "latest_action": {
     "date": "2026-09-30",
@@ -11935,7 +11935,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/5653"
   },
   "119-S579": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -11948,7 +11948,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/579"
   },
   "119-S587": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -11961,7 +11961,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/587"
   },
   "119-S593": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
@@ -11974,7 +11974,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/593"
   },
   "119-S6": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-01-15",
    "latest_action": {
     "date": "2025-01-22",
@@ -11987,7 +11987,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/6"
   },
   "119-S623": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-18",
    "latest_action": {
     "date": "2025-02-18",
@@ -12013,7 +12013,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/629"
   },
   "119-S688": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-24",
    "latest_action": {
     "date": "2026-03-24",
@@ -12026,7 +12026,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/688"
   },
   "119-S691": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-24",
    "latest_action": {
     "date": "2025-02-24",
@@ -12039,7 +12039,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/691"
   },
   "119-S708": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-25",
    "latest_action": {
     "date": "2025-02-25",
@@ -12052,7 +12052,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/708"
   },
   "119-S709": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-25",
    "latest_action": {
     "date": "2025-02-25",
@@ -12078,7 +12078,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/723"
   },
   "119-S752": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-26",
    "latest_action": {
     "date": "2025-02-26",
@@ -12091,7 +12091,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/752"
   },
   "119-S756": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-26",
    "latest_action": {
     "date": "2025-02-26",
@@ -12104,7 +12104,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/756"
   },
   "119-S763": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-27",
    "latest_action": {
     "date": "2025-02-27",
@@ -12130,7 +12130,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/779"
   },
   "119-S832": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-04",
    "latest_action": {
     "date": "2025-03-04",
@@ -12143,7 +12143,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/832"
   },
   "119-S836": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-04",
    "latest_action": {
     "date": "2026-03-16",
@@ -12156,7 +12156,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/836"
   },
   "119-S844": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-04",
    "latest_action": {
     "date": "2025-03-04",
@@ -12169,7 +12169,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/844"
   },
   "119-S852": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -12182,7 +12182,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/852"
   },
   "119-S853": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-07-23",
@@ -12195,7 +12195,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/853"
   },
   "119-S857": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2025-03-05",
@@ -12208,7 +12208,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/857"
   },
   "119-S864": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-05",
    "latest_action": {
     "date": "2026-03-19",
@@ -12221,7 +12221,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/864"
   },
   "119-S875": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-03-18",
@@ -12234,7 +12234,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/875"
   },
   "119-S891": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-03-06",
@@ -12247,7 +12247,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/891"
   },
   "119-S902": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-06",
    "latest_action": {
     "date": "2025-12-02",
@@ -12260,7 +12260,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/902"
   },
   "119-S919": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-10",
    "latest_action": {
     "date": "2025-03-18",
@@ -12273,7 +12273,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/919"
   },
   "119-S925": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -12286,7 +12286,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/925"
   },
   "119-S926": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-12-10",
@@ -12299,7 +12299,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/926"
   },
   "119-S931": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -12312,7 +12312,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/931"
   },
   "119-S932": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-03-11",
@@ -12325,20 +12325,20 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/932"
   },
   "119-S933": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
-    "date": "2026-03-04",
-    "text": "Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably."
+    "date": "2026-11-09",
+    "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 689."
    },
    "policy_area": "Science, Technology, Communications",
    "sponsor": "Sen. Cruz, Ted [R-TX]",
    "sponsor_bioguide": "C001098",
-   "title": "NASA Transition Authorization Act of 2025",
+   "title": "NASA Authorization Act of 2026",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/933"
   },
   "119-S942": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2026-03-19",
@@ -12351,7 +12351,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/942"
   },
   "119-SCONRES33": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-04-21",
    "latest_action": {
     "date": "2026-04-29",
@@ -12364,7 +12364,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/33"
   },
   "119-SCONRES7": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-21",
@@ -12624,7 +12624,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/172"
   },
   "119-SJRES18": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-05-09",
@@ -12780,7 +12780,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/199"
   },
   "119-SJRES205": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2026-08-05",
    "latest_action": {
     "date": "2026-08-05",
@@ -12884,7 +12884,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/34"
   },
   "119-SJRES37": {
-   "fetched": "2026-11-06",
+   "fetched": "2026-11-13",
    "introduced": "2025-03-11",
    "latest_action": {
     "date": "2025-04-03",
