@@ -368,6 +368,19 @@ def cmd_pppfees(args) -> int:
     return 0
 
 
+def cmd_billcheck(args) -> int:
+    """Re-read every lobbying report our data counts for one bill (data/records/bill_check.json)."""
+    from .http import Fetcher
+    from .sources import billcheck
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    snaps = sorted(p for p in (ROOT / "snapshots").iterdir() if (p / "spend.json").exists())
+    spend = json.loads((snaps[-1] / "spend.json").read_text(encoding="utf-8"))
+    res = billcheck.reread(ROOT / "records" / "bill_check.json", fetch, os.environ.get("LDA_API_KEY"), spend, args.bill)
+    log.info("bill check %s: %s", args.bill, res["_summary"])
+    return 0
+
+
 def cmd_pppborrowers(args) -> int:
     """Match the SBA's PPP loans to 2020-21 lobbying clients and firms (data/records/ppp_borrowers.json)."""
     from .sources import pppborrowers
@@ -486,6 +499,8 @@ def main(argv=None) -> int:
     sub.add_parser("pppborrowers", help="match PPP loans to 2020-21 lobbying clients and firms")
     pf = sub.add_parser("pppfees", help="re-read every 2020-21 report of the clients that mention fees near PPP")
     pf.add_argument("--names", help="client names, separated by |; default: every client flagged")
+    bc = sub.add_parser("billcheck", help="re-read every lobbying report counted for one bill")
+    bc.add_argument("--bill", required=True, help="bill label as in spend.json, e.g. HR1013")
     pk = sub.add_parser("pppcheck", help="every 2019-21 report naming each client, with amounts as filed")
     pk.add_argument("--names", help="client names, separated by |")
     pk.add_argument("--years", help="filing years, comma-separated (default 2019,2020,2021)")
@@ -500,7 +515,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck}[args.cmd](args)
 
 
 if __name__ == "__main__":
