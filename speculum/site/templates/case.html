@@ -39,6 +39,39 @@
 </tbody></table></div>
 <p class="meta">Contributions as reported on LD-203 filings, January 2025 onward, to members sitting now. A contribution is not evidence of a vote or a position.{% if K.unvoted|length == c.bills|length %} None of the bills on this page has had a recorded vote.{% endif %}</p>
 {% endif %}
+{% if c.contracts %}{% set T = c.contracts %}
+<h2 id="contracts">Who won, who lost, and what they reported</h2>
+<p>What each company reported on federal lobbying reports (LD-2) from January 2025 through September 2026, for every issue it lobbied on, and whether any of its reports named air traffic control or the new system in their own words.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Company</th><th>Contract</th><th class="r">Lobbying reported, all issues</th><th>Reports naming air traffic control</th></tr></thead><tbody>
+{% for x in T.companies %}{% set L = x.lobbying %}
+{% if loop.first or (x.won != T.companies[loop.index0 - 1].won) %}<tr><td colspan="4" class="muted" style="padding-top:14px">{{ 'Won' if x.won else 'Bid and lost' }}</td></tr>{% endif %}
+<tr><td><b>{{ x.name }}</b>{% if x.note %}<br><span class="muted" style="font-size:13px">{{ x.note }}</span>{% endif %}</td>
+<td>{{ x.what }}{% if x.value %}<br><span class="muted">{{ x.value }}{% if x.when %} · {{ x.when }}{% endif %}</span>{% endif %}</td>
+<td class="r num">{% if L %}{{ L.total|money }}{% if not L.own_filer %}<br><span class="muted" style="font-size:13px;white-space:normal">{% if L.firms|length <= 2 %}through {{ L.firms|map('org')|join(', ') }}{% else %}through {{ L.firms|length }} lobbying firms{% endif %}</span>{% endif %}{% else %}<span class="muted">no reports</span>{% endif %}</td>
+<td style="font-size:14px">{% if L and L.named %}{% set n = L.named[0] %}{{ L.n_named }} report{{ 's' if L.n_named != 1 }}, {% if n.quarter == '2025-Q1' %}from the start of 2025{% else %}first in {{ n.quarter[:4] }} Q{{ n.quarter[-1] }}{% endif %}: <a href="{{ n.url }}">“{{ n.words|truncate(140) }}”</a>{% elif L %}<span class="muted">none</span>{% else %}<span class="muted">—</span>{% endif %}</td></tr>
+{% endfor %}</tbody></table></div>
+<p class="meta">A quarter's amount is the company's own report when it files one (that figure already includes what it pays outside firms), otherwise the total of its lobbying firms' reports; amended reports count once. Large companies report one figure for everything they lobby on, so their totals are not spending on air traffic control. Lobbying for a contract is legal, and these reports cannot show whether it affected any award.</p>
+
+<h2 id="lobbied">Everyone who lobbied on it</h2>
+<p><b>{{ T.orgs|length }} organizations</b> named air traffic control or the new system on {{ T.n_reports|num }} lobbying reports from January 2025 through September 2026: airlines, pilots' and controllers' unions, airports and cities, manufacturers and contractors.</p>
+<details><summary>All {{ T.orgs|length }}, by how many quarters they reported it</summary>
+<ul class="rules" style="columns:2">{% for o in T.orgs %}<li>{{ o.name|org }} <span class="muted">· {{ o.quarters }} quarter{{ 's' if o.quarters != 1 }}</span></li>{% endfor %}</ul></details>
+
+<h2 id="former">From the agency and the committees to the lobby</h2>
+<p>Lobbyists must list the government jobs they held in the past 20 years. Of the {{ T.n_lobbyists|num }} lobbyists on these reports, <b>{{ T.former|length }}</b> listed a post at the FAA, the Transportation Department, or the congressional committees that write and fund aviation law.</p>
+<ul class="rules">{% for f in T.former %}<li><b>{{ f.name }}</b>, lobbying on air traffic control for {{ (f.for|map('org')|join(', ')).rstrip('.') }}. As reported: “{{ f.post }}”</li>{% endfor %}</ul>
+
+<h2 id="gifts">Whose campaigns they funded</h2>
+<p>Contributions reported on LD-203 filings ({{ T.years }}) by each company's PAC and lobbyists, to members sitting now. {{ T.panel_seats }} of the {{ T.seats }} sit on {{ T.panels }}. “Tilt” is how much more each of those members got, on average, than each other member: 1.0× is even. Across all {{ T.n_base|num }} organizations that gave at least $50,000, the typical tilt is {{ '%.1f'|format(T.median) }}×.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Giver</th><th class="r">Gave</th><th class="r">Members</th><th class="r">To the aviation panels</th><th class="r">Tilt</th><th class="r">D / R</th></tr></thead><tbody>
+{% for x in T.companies %}{% set g = x.giving %}{% if g %}<tr><td>{{ x.name }}{% if not x.won %} <span class="muted">(lost)</span>{% endif %}</td><td class="r num">{{ g.total|money }}</td><td class="r num">{{ g.members }}</td><td class="r num">{{ g.to_panel|money }} · {{ g.panel_members }}</td><td class="r num">{% if g.ratio %}{{ '%.1f'|format(g.ratio) }}×{% if g.percentile is not none %} <span class="muted">· top {{ 100 - g.percentile }}%</span>{% endif %}{% else %}—{% endif %}</td><td class="r num">{% set d = g.party.get('D', 0) %}{% set r = g.party.get('R', 0) %}{% if d + r %}{{ (d / (d + r))|pct }} / {{ (r / (d + r))|pct }}{% endif %}</td></tr>{% endif %}{% endfor %}
+{% for x in T.context_givers %}{% if loop.first %}<tr><td colspan="6" class="muted" style="padding-top:14px">For comparison</td></tr>{% endif %}<tr><td>{{ x.name|org }}</td><td class="r num">{{ x.total|money }}</td><td class="r num">{{ x.members }}</td><td class="r num">{{ x.to_panel|money }} · {{ x.panel_members }}</td><td class="r num">{% if x.ratio %}{{ '%.1f'|format(x.ratio) }}×{% if x.percentile is not none %} <span class="muted">· top {{ 100 - x.percentile }}%</span>{% endif %}{% endif %}</td><td class="r num">{% set d = x.party.get('D', 0) %}{% set r = x.party.get('R', 0) %}{% if d + r %}{{ (d / (d + r))|pct }} / {{ (r / (d + r))|pct }}{% endif %}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="meta">Companies with no row reported no contributions (Rohde &amp; Schwarz USA, Indra and Thales file no LD-203 reports of their own). Republicans hold every committee and subcommittee chair in this Congress. A contribution is not evidence of a vote, a position or a contract decision.</p>
+{% endif %}
+
 {% if c.ppp %}{% set P = c.ppp %}{% set t = P.totals %}
 <h2 id="paid">What the lenders were paid</h2>
 <div class="said-done"><div><b class="num">{{ t.loans|num }}</b><p>loans disbursed, by {{ P.n_lenders|num }} lenders</p></div>
@@ -164,9 +197,10 @@
 
 <h2 id="rules">How this page is counted</h2>
 <ul class="rules">
-<li>Every dated fact above links its source: the official roll call, the law as printed, or the agency's announcement.</li>
+<li>Every dated fact above links its source: {% if c.contracts %}the agency's or the company's own announcement or the government report where one exists, otherwise the news report that first published it, named as such.{% else %}the official roll call, the law as printed, or the agency's announcement.{% endif %}</li>
 {% if c.n_orgs %}<li>Who lobbied: organizations that named {{ c.bills|map('billname')|join(' or ') }} on a quarterly lobbying report (LD-2). Sectors follow the site's word rules (<a href="../method.html#bills">Method</a>).</li>{% endif %}
 {% for o in c.orgs if o.fixed %}<li>* Sector set by hand for {{ o.name|org }}: {{ o.fixed }}</li>{% endfor %}
+{% if c.contracts %}<li>Contracts: the companies named in the FAA's and the companies' own announcements, linked above. Lobbying: every 2025 and 2026 report naming each company as client, re-read from the Senate's lobbying database; “everyone who lobbied” uses the database's own search of the specific issues for “air traffic control”, “BNATCS”, “air traffic management” and “Modern Skies”, then checks each report's words again. Organizations are merged by name. The re-read is frozen, so later filings do not change this page until it is updated.</li>{% endif %}
 {% if c.not_yet %}<li>Not yet counted: {{ c.not_yet }}</li>{% endif %}
 <li>A case is chosen to show how one decision moved through the record; every case is counted by the same rules, and a case is never dropped because of what it shows.</li>
 </ul>

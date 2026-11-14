@@ -1,0 +1,1877 @@
+{
+ "phrases": [
+  "air traffic control",
+  "BNATCS",
+  "air traffic management",
+  "Modern Skies"
+ ],
+ "years": [
+  2025,
+  2026
+ ],
+ "n_reports": 781,
+ "companies": [
+  {
+   "name": "Peraton",
+   "won": true,
+   "what": "Manages the overhaul",
+   "value": "$1.5 billion",
+   "when": "Dec. 2025",
+   "registrant_id": 401106618,
+   "lobbying": {
+    "total": 1490000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 210000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 200000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 200000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 190000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 240000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 230000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 220000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q3",
+    "named": [
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/698ef489-3a26-49a0-9034-2c801d8b07a5/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "Department of Transportation Air Traffic Control modernization."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/5ac91091-28ff-4cee-a76b-ef204e12bcac/print/",
+      "by": "PERATON CORP.",
+      "own": true,
+      "words": "H.R.4552/S.2465 Transportation HUD Appropriations bill, 2026--Brand-New Air Traffic Control System"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/083f46d4-6068-4d22-961a-b9ab6e266a46/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "Department of Transportation Air Traffic Control modernization."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/d01262b1-8e83-41fb-8a50-57c680446924/print/",
+      "by": "PERATON CORP.",
+      "own": true,
+      "words": "H.R.4552/S.2465 Transportation HUD Appropriations bill, 2026--Brand-New Air Traffic Control System"
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/abb54287-cfeb-44bd-8f99-ec69b95763cf/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "Department of Transportation Air Traffic Control modernization."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/96acda59-8c76-4172-83a4-5c2d4f51456b/print/",
+      "by": "PERATON CORP.",
+      "own": true,
+      "words": "H.R.____/S.___ Transportation HUD Appropriations bill, 2027--Brand-New Air Traffic Control System"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/a1a6799e-7f3a-402a-a054-8c52046c2ae5/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "Department of Transportation Air Traffic Control modernization."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/7d75f33c-605f-4701-bc7b-7f65de39ad51/print/",
+      "by": "PERATON CORP.",
+      "own": true,
+      "words": "H.R.9170/ S.___ Transportation HUD Appropriations bill, 2027--Brand-New Air Traffic Control System"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/7a7aede8-c145-4beb-a9d6-853caced037c/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "Department of Transportation Air Traffic Control modernization."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/164cc443-d378-471b-8c0b-b6f7c78baf29/print/",
+      "by": "PERATON CORP.",
+      "own": true,
+      "words": "H.R.9170/ S.___ Transportation HUD Appropriations bill, 2027--Brand-New Air Traffic Control System"
+     }
+    ],
+    "n_named": 10,
+    "own_filer": true,
+    "firms": [
+     "CASSIDY & ASSOCIATES, INC.",
+     "INNOVATIVE FEDERAL STRATEGIES, LLC",
+     "MONUMENT ADVOCACY"
+    ]
+   }
+  },
+  {
+   "name": "Rohde & Schwarz USA",
+   "won": true,
+   "what": "Voice switches",
+   "value": "up to $4.9 billion",
+   "when": "Apr. 2026",
+   "lobbying": {
+    "total": 120000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q2",
+      "amount": 20000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 20000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 20000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 20000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 20000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 20000.0,
+      "how": "firms"
+     }
+    ],
+    "first_named": "2025-Q2",
+    "named": [
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/970b6a66-3556-4543-843a-62ccf2fec3bd/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives, and federal procurement policies for communications and security equipment."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/9c58e01a-8401-49a9-900c-2b63bdc09de9/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives (BNATCS), and federal procurement policies for communications and security equipment."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/cdf40b98-9ba6-4c8e-874d-28b36d413b89/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives (BNATCS), and federal procurement policies for telecommunications safety and security equipment."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/222d1101-095c-471e-8658-cdcd62dd823c/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives (BNATCS), and federal procurement policies for telecommunications safety and security equipment."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/7ed46ae7-722b-46ec-886f-70154e96ca52/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives (BNATCS), and federal procurement policies for telecommunications safety and security equipment."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/dd1f0b0f-6c62-4493-a864-eebc8217ee9a/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Aviation security technology standards, air traffic control system modernization initiatives (BNATCS), and federal procurement policies for telecommunications safety and security equipment."
+     }
+    ],
+    "n_named": 6,
+    "own_filer": false,
+    "firms": [
+     "JTR STRATEGIES LLC"
+    ]
+   }
+  },
+  {
+   "name": "RTX (Collins Aerospace)",
+   "won": true,
+   "what": "Radars",
+   "value": "$438 million",
+   "when": "Jan. 2026",
+   "registrant_id": 39267,
+   "note": "RTX's reports cover all its businesses, from jet engines to missiles.",
+   "lobbying": {
+    "total": 25220000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 3660000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 4180000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 2820000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 3260000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 4460000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 3860000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 2980000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q1",
+    "named": [
+     {
+      "quarter": "2025-Q1",
+      "url": "https://lda.gov/filings/public/filing/bb0aaf7e-00be-4908-88e4-70a8dd97ce07/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in, FY 2026 Department of Transport"
+     },
+     {
+      "quarter": "2025-Q1",
+      "url": "https://lda.gov/filings/public/filing/11136700-919d-4e0f-ab60-5bfa13f26617/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY26 (bills pending); provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. Energy and Water and Related Agencies Appropriations Act FY26 (bills pendi"
+     },
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/0549b971-52a7-4260-a44f-50d7ecb61505/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in, FY 2026 Department of Transport"
+     },
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/65f8b4f6-a0fc-4081-84c4-5c28261575a3/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY26 (bills pending); provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. Energy and Water Development and Related Agencies Appropriations Act FY26"
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/b837d224-4ed6-4308-84dd-eec580defb1f/print/",
+      "by": "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+      "own": false,
+      "words": "Air Traffic Control (ATC) modernization and FAA appropriations."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/43111893-2d65-49e0-8cde-49818d7cfcd1/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "H.R. 4552/S. 2465 Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY26; provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. H.R. 4553 - Energy and Water Development and Related Agencies Appropriatio"
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/db56fc27-3ed8-41f9-8973-b026e46cbe9f/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in H.R. 4552/S. 2465, Department of"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/208b6d1d-d9d1-4a07-93c6-f437b58faa71/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in H.R.4552/S.2465, Department of T"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/50942b67-0323-40a3-9af8-3fee97632f1f/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "H.R. 4552/S. 2465 Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY26; provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. H.R. 4553/S. 3293 - Energy and Water Development and Related Agencies Appr"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/401a48c9-334c-453e-9bdf-a2a0c6b3e0ce/print/",
+      "by": "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+      "own": false,
+      "words": "Air Traffic Control (ATC) modernization and FAA appropriations."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/fa25e0d8-7be0-4da4-a90c-c480466a0f06/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in the Department of Transportation"
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/381667db-4992-4a51-87c1-a1b2092ec47b/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "…Appropriations Act FY26, Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY27 (bills pending); provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. 119-74 - Consolidated CJS, Energy & Water, Interior Appropriations Act FY2"
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/9c6026a9-fb8d-4ac4-adf3-77e05c4f6ef9/print/",
+      "by": "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+      "own": false,
+      "words": "Air Traffic Control (ATC) modernization and FAA appropriations."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/573121de-df75-4b15-b08c-a1197230bab6/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in H.R.9170, the Transportation, Ho"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/96806e1a-c94e-472e-8fce-02431cadb201/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "H.R. 9170 - Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY27 (Senate bill pending); provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. H.R. 9022 - Energy and Water Development and Related Agencies Appropriatio"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/7d60ca5d-98cc-4cae-8742-188f35e8ed43/print/",
+      "by": "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+      "own": false,
+      "words": "Air Traffic Control (ATC) modernization and FAA appropriations."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/4c6f9a2a-c1d7-434d-a7a9-c4810cc686b4/print/",
+      "by": "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+      "own": false,
+      "words": "Air Traffic Control (ATC) modernization and FAA appropriations."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/08c313ce-f89e-43ee-89ca-4a3d43af1a4f/print/",
+      "by": "INVARIANT LLC",
+      "own": false,
+      "words": "Support funding for air traffic improvements, human space flight technology, aviation propulsion technologies, sustainable aviation fuels, upgrades to air assets and defense aviation technologies in H.R.9170, the Transportation, Ho"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/9d994fb0-80fc-4148-8b88-a4a089370409/print/",
+      "by": "RTX CORPORATION AND AFFILIATES",
+      "own": true,
+      "words": "H.R. 9170 - Transportation, Housing and Urban Development and Related Agencies Appropriations Act FY27 (Senate bill pending); provisions related to air traffic control modernization, satellite voice communications, aircraft accessibility, aircraft instrumentation, flight safety, FAA. H.R. 9022 - Energy and Water Development and Related Agencies Appropriatio"
+     }
+    ],
+    "n_named": 19,
+    "own_filer": true,
+    "firms": [
+     "AKIN GUMP STRAUSS HAUER & FELD",
+     "AMERICAN DEFENSE INTERNATIONAL",
+     "ATLANTIC STRATEGIES GROUP",
+     "BGR GOVERNMENT AFFAIRS",
+     "C. BAKER CONSULTING, INC.",
+     "CALLAWASSIE CONSULTING LLC",
+     "CORNERSTONE GOVERNMENT AFFAIRS, INC.",
+     "DLA PIPER LLP (US)",
+     "ETHERTON AND ASSOCIATES, INC.",
+     "FORBES-TATE",
+     "INNOVATIVE FEDERAL STRATEGIES, LLC",
+     "INVARIANT LLC",
+     "J.A. GREEN AND COMPANY",
+     "O'KEEFFE SHAHMORADI STRATEGIES, LLC",
+     "S-3 GROUP",
+     "THE DIONNE COMPANY",
+     "THE ROOSEVELT GROUP"
+    ]
+   }
+  },
+  {
+   "name": "Indra",
+   "won": true,
+   "what": "Radars",
+   "value": "$342 million",
+   "when": "Jan. 2026",
+   "lobbying": null
+  },
+  {
+   "name": "Air Space Intelligence",
+   "won": true,
+   "what": "Traffic-flow software",
+   "value": "up to $875.95 million over 12 years",
+   "when": "June 2026",
+   "registrant_id": 401110167,
+   "lobbying": {
+    "total": 1740000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 90000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 180000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 220000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 250000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 320000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 320000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 360000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q4",
+      "amount": 0.0,
+      "how": "firms"
+     }
+    ],
+    "first_named": "2025-Q2",
+    "named": [
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/b81e00b4-d3d9-4bbd-a2be-027872fef0aa/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization. H.R.1 - One Big Beautiful Bill Act."
+     },
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/3a07b2d3-e47b-4fcd-9b82-f88b4668afbc/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/6d093536-4f68-4143-9247-2482fb51b873/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act (P.L.119-21)."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/cd495cab-e7e3-4215-b39d-3908d75360f4/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization. H.R.1 - One Big Beautiful Bill Act."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/49071683-ada7-43da-9458-b672371c1e14/print/",
+      "by": "AIR SPACE INTELLIGENCE INC.",
+      "own": true,
+      "words": "H.R.4552/S.2465 FY2026 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management. Air Traffic Control / National Airspace System Modernization to support adoption of commercial technology for air traffic management."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/745c3440-fe48-4354-acb1-c10839a8b72b/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act (P.L.119-21) implementation; FY26 Transportation, Housing and Urban Development, and Related Agencies Appropriations Act (H.R.4552/S.2465). FA"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/a57addb4-1015-4fe1-a7c1-f50206b2223a/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/2b3952ed-ea5d-4c59-8e84-48d7f7b1a978/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act (P.L.119-21) implementation; FY26 Transportation, Housing and Urban Development, and Related Agencies Appropriations Act (H.R.4552/S.2465); H."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/66c11aac-eda5-458d-81fa-6758b5078a61/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/5ed5af6e-a160-46ed-b320-acdd8bbe04cf/print/",
+      "by": "AIR SPACE INTELLIGENCE INC.",
+      "own": true,
+      "words": "FY2027 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management. FY2027 National Defense Authorization - funding and policy to support adoption of commercial software for logistics, air operations, and airspace awareness. FY2027 Department of Defense A"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/46c95f87-ded4-4d28-8c7a-d80056614537/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act (P.L.119-21) implementation; FY27 Transportation, Housing and Urban Development, and Related Agencies Appropriations Act (H.R.9170); FY27 Depa"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/6939ba74-2aa4-474d-9056-ab9359584554/print/",
+      "by": "AIR SPACE INTELLIGENCE INC.",
+      "own": true,
+      "words": "FY2027 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management. Air Traffic Control / National Airspace System Modernization to support adoption of commercial technology for air traffic management."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/8a205932-a7e7-4754-9d73-957e64fc2ad3/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/86099e93-5b28-438b-8977-e4b9b7ca3e70/print/",
+      "by": "MO STRATEGIES, INC.",
+      "own": false,
+      "words": "FY2027 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management; Air Traffic Control / National Airspace System Modernization to support adoption of commercial technology for air traffic management; FY2027 National Defense Authorization - funding and p"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/7888786c-7067-4175-bf6f-f32874d56322/print/",
+      "by": "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)",
+      "own": false,
+      "words": "Funding issues related to air traffic control modernization; H.R.1, One Big Beautiful Bill Act (P.L.119-21) implementation; FY27 Transportation, Housing and Urban Development, and Related Agencies Appropriations Act (H.R.9170); FY27 Depa"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/e786836f-e7c4-41ed-9897-07d85e6628ec/print/",
+      "by": "ATLAS CROSSING LLC",
+      "own": false,
+      "words": "Issues related to Air Traffic Control modernization. Funding related to FAA and Air Traffic Control Modernization."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/98cbba8d-ccc5-4496-ad2d-070bba8af2e4/print/",
+      "by": "AIR SPACE INTELLIGENCE INC.",
+      "own": true,
+      "words": "FY2027 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management. Air Traffic Control / National Airspace System Modernization to support adoption of commercial technology for air traffic management."
+     },
+     {
+      "quarter": "2026-Q4",
+      "url": "https://lda.gov/filings/public/filing/73c4c8ff-520c-41b9-8c5f-98a2debdf943/print/",
+      "by": "MO STRATEGIES, INC.",
+      "own": false,
+      "words": "FY2027 THUD Appropriations Bill - funding and policy to support adoption of commercial technology for air traffic management; Air Traffic Control / National Airspace System Modernization to support adoption of commercial technology for air traffic management; FY2027 National Defense Authorization - funding and p"
+     }
+    ],
+    "n_named": 18,
+    "own_filer": true,
+    "firms": [
+     "ATLAS CROSSING LLC",
+     "BGR GOVERNMENT AFFAIRS",
+     "ICEBREAKER STRATEGIES, LLC",
+     "INVARIANT LLC",
+     "MO STRATEGIES, INC.",
+     "THE DIONNE COMPANY",
+     "VENTURE GOVERNMENT STRATEGIES, LLC (FKA HOBART HALLAWAY & QUAYLE VENTURES, LLC)"
+    ]
+   }
+  },
+  {
+   "name": "AT&T",
+   "won": true,
+   "what": "Telecom network (lead)",
+   "value": "$74.3 million first order; billions expected",
+   "when": "Aug. 2026",
+   "registrant_id": 34455,
+   "note": "AT&T's reports cover all its businesses.",
+   "lobbying": {
+    "total": 18840000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 2810000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 2140000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 2540000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 2860000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 3200000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 2650000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 2640000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": null,
+    "named": [],
+    "n_named": 0,
+    "own_filer": true,
+    "firms": [
+     "AKIN GUMP STRAUSS HAUER & FELD",
+     "ARNOLD & PORTER KAYE SCHOLER LLP",
+     "BAKER & HOSTETLER LLP",
+     "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
+     "CAPITOL COUNSEL LLC",
+     "CARPENTER STRATEGIC CONSULTING LLC",
+     "CLYBURN CONSULTING, LLC",
+     "COZEN O'CONNOR PUBLIC STRATEGIES",
+     "CROSSROADS STRATEGIES, LLC",
+     "DUNKEL GOVERNMENT RELATIONS",
+     "FARRAGUT PARTNERS LLP",
+     "GONRING, SPAHN & ASSOCIATES, INC.",
+     "HB STRATEGIES",
+     "HSA STRATEGIES",
+     "MAYER BROWN LLP",
+     "MERCURY STRATEGIES, LLC",
+     "MR. BRIAN KELLY",
+     "OGR",
+     "ORIGIN ADVOCACY LLC",
+     "POLARIS GOVERNMENT RELATIONS, LLC",
+     "POTOMAC STRATEGIC CONSULTING LLC",
+     "ROBERTI GLOBAL (F/K/A ROBERTI WHITE, LLC)",
+     "THE GIBSON GROUP, LLC"
+    ]
+   }
+  },
+  {
+   "name": "Verizon",
+   "won": true,
+   "what": "Telecom network (chosen 2023; now supporting)",
+   "value": "$2.4 billion (2023 award)",
+   "when": "2023",
+   "registrant_id": 5836,
+   "note": "Verizon's reports cover all its businesses.",
+   "lobbying": {
+    "total": 21550000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 2990000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 2990000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 2950000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 3350000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 3400000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 3050000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 2820000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q1",
+    "named": [
+     {
+      "quarter": "2025-Q1",
+      "url": "https://lda.gov/filings/public/filing/e817a8f9-bb83-4b13-9d76-aff9c58aaba3/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/cd9daf4d-28be-452e-a3a4-2f6ab1d1d578/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/6f82e70f-3f0d-4b21-b62a-0821e4871b4c/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/d2e8dba9-45cb-4720-bb8f-7a59eb474336/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/bad04449-e70f-4f86-90b4-02d8205f3eaa/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/d2347463-9f01-4a59-9dc1-c39f7a943622/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/79f16284-3ed3-4880-a78b-5ac8d7a4babd/print/",
+      "by": "CASSIDY & ASSOCIATES, INC.",
+      "own": false,
+      "words": "FAA network and telecommunications contracting."
+     }
+    ],
+    "n_named": 7,
+    "own_filer": true,
+    "firms": [
+     "ALPINE ADVISORS",
+     "ALPINE GROUP PARTNERS, LLC.",
+     "AVOQ, LLC",
+     "BGR GOVERNMENT AFFAIRS",
+     "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
+     "CAPITOL CONSULTING GROUP LLC (DC)",
+     "CAPITOL COUNSEL LLC",
+     "CAPITOL IMPACT, LLC",
+     "CASSIDY & ASSOCIATES, INC.",
+     "CONVERGENCE STRATEGIES, LLC",
+     "DCI GROUP, L.L.C.",
+     "EMPIRE CONSULTING GROUP",
+     "FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
+     "FORBES-TATE",
+     "HILLNORTH LLC",
+     "MARSHALL & POPP, LLC",
+     "MAYER BROWN LLP",
+     "MCGINLEY LLC",
+     "MERCURY STRATEGIES, LLC",
+     "MINDSET ADVOCACY, LLC",
+     "NEALE CREEK, LLC",
+     "OGR",
+     "PHRONESISDC, LLC",
+     "POLARIS GOVERNMENT RELATIONS, LLC",
+     "RESOLUTION PUBLIC AFFAIRS, LLC",
+     "THE LIVINGSTON GROUP, LLC",
+     "TRACTION STRATEGIC"
+    ]
+   }
+  },
+  {
+   "name": "Parsons",
+   "won": false,
+   "what": "Bid to manage the overhaul, with IBM",
+   "registrant_id": 401103402,
+   "lobbying": {
+    "total": 3075000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 530000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 415000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 430000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 490000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 430000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 400000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 380000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q2",
+    "named": [
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/fbd35885-5a49-415f-8574-b15dc93f69d2/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…to Amtrak and the Northeast Corridor, Federal Transit Administration (FTA) Capital Investment Grant (CIG) program, Federal Aviation Administration (FAA) Air Traffic Control modernization, PFAS."
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/64d2d9e7-7992-4ee4-9b94-4f67a1806047/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…Corridor, Surface Transportation Funding, Federal Transit Administration (FTA) Capital Investment Grant (CIG) program, Federal Aviation Administration (FAA) Air Traffic Control modernization, PFAS."
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/da10d2e2-2e05-4daf-baec-309ba37575c1/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…Corridor, Surface Transportation Funding, Federal Transit Administration (FTA) Capital Investment Grant (CIG) program, Federal Aviation Administration (FAA) Air Traffic Control modernization, PFAS."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/a6f27130-16a3-4b4f-98a1-927cb197aa03/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…Corridor, Federal Transit Administration (FTA) Capital Investment Grant (CIG) program, Surface Transportation Funding, Federal Aviation Administration (FAA) Air Traffic Control modernization, PFAS."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/78a2004c-9305-431e-a8d3-a4a6bb7cdd3e/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…Administration (FTA), FTA Capital Investment Grant (CIG) program, Surface Transportation Funding and Policies, Federal Aviation Administration (FAA), FAA Air Traffic Control modernization, PFAS, Project Delivery and Streamlining"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/9ce1861e-9fb7-46a6-a366-b4ae3358d3f6/print/",
+      "by": "PARSONS CORPORATION",
+      "own": true,
+      "words": "…Administration (FTA), FTA Capital Investment Grant (CIG) program, Surface Transportation Funding and Policies, Federal Aviation Administration (FAA), FAA Air Traffic Control modernization, PFAS, Project Delivery and Streamlining."
+     }
+    ],
+    "n_named": 6,
+    "own_filer": true,
+    "firms": [
+     "BALLARD PARTNERS",
+     "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
+     "MAYNOR & STIERS, LLC",
+     "S-3 GROUP"
+    ]
+   }
+  },
+  {
+   "name": "Palantir",
+   "won": false,
+   "what": "Bid for the traffic-flow software",
+   "registrant_id": 400643940,
+   "lobbying": {
+    "total": 12220000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 1570000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 1640000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 1230000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 1610000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 1980000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 2080000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 2110000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q1",
+    "named": [
+     {
+      "quarter": "2025-Q1",
+      "url": "https://lda.gov/filings/public/filing/1bcb9302-d5ba-4ede-9258-b2a157a1d841/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/eca7bafc-9776-4772-a83a-23c03b8335d1/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2025-Q3",
+      "url": "https://lda.gov/filings/public/filing/cc5ae1d1-5844-4e4f-9ea8-060a33a5f33d/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/463a30dd-7989-4791-a6dc-2317b213dd02/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/ee7693d5-b0ce-45e4-9409-4e928df62823/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/b55a7b4f-87db-439a-987e-d33e99637fa9/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/3f556c27-e0ba-46ac-b757-b556beaf5622/print/",
+      "by": "ALPINE GROUP PARTNERS, LLC.",
+      "own": false,
+      "words": "Commercial space and satellite issues Air Traffic Control"
+     }
+    ],
+    "n_named": 7,
+    "own_filer": true,
+    "firms": [
+     "ALPINE GROUP PARTNERS, LLC.",
+     "ANCHOR & ARROW LLC",
+     "ANCHOR & ARROW STRATEGIES",
+     "AVOQ, LLC",
+     "BALLARD PARTNERS",
+     "BROWNSTEIN HYATT FARBER SCHRECK, LLP",
+     "CORNERSTONE GOVERNMENT AFFAIRS, INC.",
+     "FEROX STRATEGIES",
+     "INVARIANT LLC",
+     "J.A. GREEN AND COMPANY",
+     "MILLER STRATEGIES, LLC",
+     "NORTHERN COMPASS GROUP LLC",
+     "PENN AVENUE PARTNERS",
+     "RED+BLUE STRATEGIES"
+    ]
+   }
+  },
+  {
+   "name": "Thales",
+   "won": false,
+   "what": "Bid for the traffic-flow software",
+   "lobbying": {
+    "total": 2007500.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 180000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 200000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 200000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 260000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 310000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 350000.0,
+      "how": "firms"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 507500.0,
+      "how": "firms"
+     }
+    ],
+    "first_named": "2025-Q4",
+    "named": [
+     {
+      "quarter": "2025-Q4",
+      "url": "https://lda.gov/filings/public/filing/f270bea9-220b-4817-b51c-c25cca5097e0/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Federal Aviation Administration (FAA) Brand New ATC System (BNATCS) radar modernization and common automation platform programs."
+     },
+     {
+      "quarter": "2026-Q1",
+      "url": "https://lda.gov/filings/public/filing/5ebe5e53-4ce0-4f80-bbb2-fee7f6e351e8/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Federal Aviation Administration (FAA) Brand New ATC System (BNATCS) radar modernization, Strategic Management of Airspace Routing Trajectories (SMART), and common automation platform (CAP) programs."
+     },
+     {
+      "quarter": "2026-Q2",
+      "url": "https://lda.gov/filings/public/filing/185fefb8-ac92-4ca8-adef-34dc29dc16bb/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Federal Aviation Administration (FAA) Brand New ATC System (BNATCS) radar modernization, Strategic Management of Airspace Routing Trajectories (SMART), and common automation platform (CAP) programs."
+     },
+     {
+      "quarter": "2026-Q3",
+      "url": "https://lda.gov/filings/public/filing/c3b98c2c-0b2f-47dc-8d48-e0e8f34e10f9/print/",
+      "by": "JTR STRATEGIES LLC",
+      "own": false,
+      "words": "Federal Aviation Administration (FAA) Brand New ATC System (BNATCS) radar modernization, Strategic Management of Airspace Routing Trajectories (SMART), and common automation platform (CAP) programs."
+     }
+    ],
+    "n_named": 4,
+    "own_filer": false,
+    "firms": [
+     "262 STRATEGY LLC",
+     "AUBREY MATURIN LLC",
+     "BAKER DONELSON BEARMAN CALDWELL & BERKOWITZ",
+     "CONTINENTAL CONSULTING GROUP CORPORATION",
+     "HOLLAND & KNIGHT LLP",
+     "INNOVATIVE FEDERAL STRATEGIES, LLC",
+     "JTR STRATEGIES LLC",
+     "RIGHT POLICY LLC",
+     "THOLOS GOVERNMENT RELATIONS"
+    ]
+   }
+  }
+ ],
+ "orgs": [
+  {
+   "name": "AERLOGICS",
+   "quarters": 7,
+   "reports": 8
+  },
+  {
+   "name": "AERONAUTICAL REPAIR STATION ASSOCIATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "AEROSPACE INDUSTRIES ASSOCIATION OF AMERICA INC",
+   "quarters": 7,
+   "reports": 9
+  },
+  {
+   "name": "AIR LINE PILOTS ASSOCIATION",
+   "quarters": 7,
+   "reports": 8
+  },
+  {
+   "name": "AIR SPACE INTELLIGENCE",
+   "quarters": 7,
+   "reports": 23
+  },
+  {
+   "name": "AIRCRAFT OWNERS & PILOTS ASSOCIATION",
+   "quarters": 7,
+   "reports": 8
+  },
+  {
+   "name": "AIREON LLC",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "AIRLINES FOR AMERICA",
+   "quarters": 7,
+   "reports": 21
+  },
+  {
+   "name": "AIRPORTS COUNCIL INTERNATIONAL - NORTH AMERICA",
+   "quarters": 7,
+   "reports": 14
+  },
+  {
+   "name": "ALASKA AIRLINES INC",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "AMERICAN ASSOCIATION OF AIRPORT EXECUTIVES",
+   "quarters": 7,
+   "reports": 19
+  },
+  {
+   "name": "ASSOCIATION FOR UNCREWED VEHICLE SYSTEMS INTERNATIONAL",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "CITY OF AUSTIN",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "CITY OF RIVERSIDE, CALIFORNIA",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "COMMUNICATIONS WORKERS OF AMERICA",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "DELTA AIRLINES",
+   "quarters": 7,
+   "reports": 21
+  },
+  {
+   "name": "EMBRAER AIRCRAFT HOLDING INC",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "EXPERIMENTAL AIRCRAFT ASSOCIATION INC",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "FEDEX CORPORATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "GARMIN INTERNATIONAL, INC.",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "GLOBAL BUSINESS TRAVEL ASSOCIATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "HILLSBOROUGH COUNTY AVIATION AUTHORITY (TAMPA INTERNATIONAL AIRPORT)",
+   "quarters": 7,
+   "reports": 11
+  },
+  {
+   "name": "JETBLUE AIRWAYS CORPORATION",
+   "quarters": 7,
+   "reports": 24
+  },
+  {
+   "name": "JOBSOHIO",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "LEIDOS INC",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "MCCARTHY ADVANCED CONSULTING, LLC (ON BEHALF OF NJASAP)",
+   "quarters": 7,
+   "reports": 14
+  },
+  {
+   "name": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+   "quarters": 7,
+   "reports": 16
+  },
+  {
+   "name": "NATIONAL AIR TRANSPORTATION ASSOCIATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "NATIONAL BUSINESS AVIATION ASSOCIATION",
+   "quarters": 7,
+   "reports": 15
+  },
+  {
+   "name": "PALANTIR TECHNOLOGIES, INC.",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "REGIONAL AIRLINE ASSOCIATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "RELIABLE ROBOTICS CORPORATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "RTX CORPORATION AND AFFILIATES",
+   "quarters": 7,
+   "reports": 17
+  },
+  {
+   "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+   "quarters": 7,
+   "reports": 14
+  },
+  {
+   "name": "SOUTHERN AIRWAYS EXPRESS",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "SOUTHWEST AIRLINES",
+   "quarters": 7,
+   "reports": 20
+  },
+  {
+   "name": "SULLIVAN STRATEGIES LLC (ON BEHALF OF JOBSOHIO)",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "U.S. TRAVEL ASSOCIATION",
+   "quarters": 7,
+   "reports": 18
+  },
+  {
+   "name": "UNITED AIRLINES INC",
+   "quarters": 7,
+   "reports": 27
+  },
+  {
+   "name": "UNITED STATES CONTRACT WEATHER OBSERVING ASSOCIATION",
+   "quarters": 7,
+   "reports": 7
+  },
+  {
+   "name": "AIR TRAFFIC CONTROL ASSOCIATION",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "AIRBUS AMERICAS INC",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "AMERICAN AIRLINES, INC.",
+   "quarters": 6,
+   "reports": 23
+  },
+  {
+   "name": "CAMPBELL SCIENTIFIC",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "CGI FEDERAL INC.",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "CHAMBER OF COMMERCE OF THE U.S.A.",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "ERNST & YOUNG LLP",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "HONEYWELL INTERNATIONAL",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "JOHNSTOWN-CAMBRIA COUNTY AIRPORT AUTHORITY & CAMBRIAN HILLS DEVELOPMENT GROUP",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "MIDWEST AIR TRAFFIC CONTROL SERVICE, INC.",
+   "quarters": 6,
+   "reports": 12
+  },
+  {
+   "name": "NEXTEON TECHNOLOGIES",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "PARSONS CORPORATION",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "ROHDE & SCHWARZ USA, INC.",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "SAAB, INC.",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "SHIFT5",
+   "quarters": 6,
+   "reports": 8
+  },
+  {
+   "name": "SOUTHWEST AIRLINES PILOT ASSOCIATION",
+   "quarters": 6,
+   "reports": 11
+  },
+  {
+   "name": "SPOKANE AIRPORT BOARD",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "THE BOEING COMPANY",
+   "quarters": 6,
+   "reports": 11
+  },
+  {
+   "name": "THE BUSINESS ROUNDTABLE, INC.",
+   "quarters": 6,
+   "reports": 8
+  },
+  {
+   "name": "UFA, INC.",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "UPS (UNITED PARCEL SERVICE)",
+   "quarters": 6,
+   "reports": 6
+  },
+  {
+   "name": "WING AVIATION LLC",
+   "quarters": 6,
+   "reports": 7
+  },
+  {
+   "name": "ADB SAFEGATE AMERICAS LLC",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "CHARLESTON COUNTY AVIATION AUTHORITY",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "GENERAL AVIATION MANUFACTURERS ASSOCIATION",
+   "quarters": 5,
+   "reports": 6
+  },
+  {
+   "name": "HAWAIIAN AIRLINES, INC.",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "INDEPENDENT PILOTS ASSOCIATION",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "INTERNATIONAL AIR TRANSPORT ASSOCIATION",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "NETJETS ASSOCIATION OF SHARED AIRCRAFT PILOTS",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "PERATON",
+   "quarters": 5,
+   "reports": 10
+  },
+  {
+   "name": "RHODE ISLAND AIRPORT CORPORATION",
+   "quarters": 5,
+   "reports": 5
+  },
+  {
+   "name": "GENERAL DYNAMICS",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "GLASS AVIATION HOLDINGS, INC. (D/B/A AIRSPACE DATA)",
+   "quarters": 4,
+   "reports": 6
+  },
+  {
+   "name": "INLAND VALLEY DEVELOPMENT AGENCY",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "JOBY AERO, INC.",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "L3 HARRIS TECHNOLOGIES",
+   "quarters": 4,
+   "reports": 5
+  },
+  {
+   "name": "NATIONAL ASSOCIATION OF STATE AVIATION OFFICIALS",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "NEW BEDFORD PANORAMEX CORP.",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "SAN BERNARDINO INTERNATIONAL AIRPORT AUTHORITY",
+   "quarters": 4,
+   "reports": 4
+  },
+  {
+   "name": "THALES USA",
+   "quarters": 4,
+   "reports": 5
+  },
+  {
+   "name": "ATLAS AIR WORLDWIDE HOLDINGS, INC.",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "CARGO AIRLINE ASSOCIATION",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "FAA MANAGERS ASSOCIATION INC",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "LEXINGTON-FAYETTE URBAN COUNTY AIRPORT BOARD (BLUE GRASS AIRPORT)",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "PROFESSIONAL AVIATION SAFETY SPECIALISTS",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "V2X",
+   "quarters": 3,
+   "reports": 3
+  },
+  {
+   "name": "AVIATION INNOVATION COALITION",
+   "quarters": 2,
+   "reports": 3
+  },
+  {
+   "name": "CAE USA, INC",
+   "quarters": 2,
+   "reports": 2
+  },
+  {
+   "name": "FLIGHTSAFETY INTERNATIONAL INC.",
+   "quarters": 2,
+   "reports": 2
+  },
+  {
+   "name": "GREENVILLE-SPARTANBURG AIRPORT",
+   "quarters": 2,
+   "reports": 3
+  },
+  {
+   "name": "INNOVATIVE FEDERAL STRATEGIES (ON BEHALF OF CLIENTS)",
+   "quarters": 2,
+   "reports": 2
+  },
+  {
+   "name": "INTERSOFT ELECTRONICS, INC.",
+   "quarters": 2,
+   "reports": 3
+  },
+  {
+   "name": "LS TECHNOLOGIES",
+   "quarters": 2,
+   "reports": 3
+  },
+  {
+   "name": "SAVANNAH AIRPORT COMMISSION",
+   "quarters": 2,
+   "reports": 2
+  },
+  {
+   "name": "STEELCASE INC",
+   "quarters": 2,
+   "reports": 2
+  },
+  {
+   "name": "AMERICAN AUTOMOBILE ASSOCIATION",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "ASSOCIATION OF VALUE AIRLINES",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "ASTRION GROUP LLC",
+   "quarters": 1,
+   "reports": 2
+  },
+  {
+   "name": "AURA NETWORK SYSTEMS",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "ELWELL & ASSOCIATES",
+   "quarters": 1,
+   "reports": 4
+  },
+  {
+   "name": "FRESNO COUNCIL OF GOVERNMENTS (FORMERLY COUNCIL OF FRESNO COUNTY GOVERNMENTS)",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "FRESNO, CA",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "GENERAL AVIATION COMPANY",
+   "quarters": 1,
+   "reports": 2
+  },
+  {
+   "name": "INTERNATIONAL ASSOCIATION OF MACHINISTS AND AEROSPACE WORKERS",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "JFK NTO, LLC",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "PRODIGIQ",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "TEXAS TECH UNIVERSITY SYSTEM",
+   "quarters": 1,
+   "reports": 1
+  },
+  {
+   "name": "TRANSPORTATION TRADES DEPARTMENT AFL-CIO",
+   "quarters": 1,
+   "reports": 1
+  }
+ ],
+ "n_lobbyists": 471,
+ "former": [
+  {
+   "name": "Brian Bell",
+   "post": "Staff Director, House Transportation and Infrastructure's Aviation Subcommittee; Senior Legislative Counsel, Rep. Janice Hahn; and Legislative Assistant, Rep. Laura Richardson.",
+   "for": [
+    "AIR TRAFFIC CONTROL ASSOCIATION",
+    "GENERAL AVIATION MANUFACTURERS ASSOCIATION",
+    "RTX CORPORATION"
+   ]
+  },
+  {
+   "name": "Scott Brenner",
+   "post": "Chief of External Affairs, Sci & Tech Dir, DHS; Assoc Administrator External Affairs, NHTSA; Assoc Administrator Public Affairs, FAA; Director of Communications, House Transportation & Infrastructure Committee",
+   "for": [
+    "AIRLINES FOR AMERICA",
+    "AVIATION INNOVATION COALITION",
+    "CGI FEDERAL INC."
+   ]
+  },
+  {
+   "name": "Robert Chamberlin",
+   "post": "Chief Counsel, US Senate Commerce Committee; Senior Counsel, US Senate Commerce Committee; Assistant Counsel, House Transportation and Infrastructure Committee.",
+   "for": [
+    "ADB SAFEGATE AMERICAS LLC",
+    "NEXTEON TECHNOLOGIES",
+    "SPOKANE AIRPORT BOARD",
+    "UNITED STATES CONTRACT WEATHER OBSERVING ASSOCIATION"
+   ]
+  },
+  {
+   "name": "Margaret Cummisky",
+   "post": "Department of Commerce U.S. Senate - Committee on Appropriations, Committee on Commerce, Science, and Transportation, and Office of Senator Inouye",
+   "for": [
+    "ALASKA AIRLINES INC"
+   ]
+  },
+  {
+   "name": "Alison Graab",
+   "post": "Attorney, Surface Transportation Board; Counsel, Senate Commerce Cmte; Policy Director, Senate Commerce Cmte.; Clerk, Senate Appropriations Cmte THUD",
+   "for": [
+    "GLASS AVIATION HOLDINGS, INC. (D/B/A AIRSPACE DATA)"
+   ]
+  },
+  {
+   "name": "Daniel Hickey",
+   "post": "House Transportation & Infrastructure (Staff, 2009); Dep Asst Sec of Transportation for Gov Aff (2005-2007); Dep Assoc Admin for Gov and Industry Aff, FAA (2004-2005)",
+   "for": [
+    "EMBRAER AIRCRAFT HOLDING INC"
+   ]
+  },
+  {
+   "name": "John Keast",
+   "post": "Staff Director, Senate Armed Services Committee; Staff Director, Senate Commerce Committee; Chief of Staff, Rep. Roger Wicker",
+   "for": [
+    "RTX CORP AND AFFILIATES"
+   ]
+  },
+  {
+   "name": "Archie Miller",
+   "post": "Rep. Sam Graves - House Transportation and Infrastructure Committee",
+   "for": [
+    "GENERAL AVIATION MANUFACTURERS ASSOCIATION"
+   ]
+  },
+  {
+   "name": "John Murphy",
+   "post": "Deputy Chief of Staff, Rep. Bud Shuster; Professional Staff, House T&I Committee",
+   "for": [
+    "JETBLUE AIRWAYS CORPORATION"
+   ]
+  },
+  {
+   "name": "Sara Peters",
+   "post": "Deputy Staff Dir., Budget Dir., Counsel, House Cmte. on Appropriations; Dep. Dir., Govt Affairs, Policy, & Strategic Planning, NHTSA; Professional Staff Member, Subcmte on THUD, House Cmte. on Appropriations; Leg. Counsel, Sen. Thad Chochran",
+   "for": [
+    "INTERSOFT ELECTRONICS, INC."
+   ]
+  },
+  {
+   "name": "Max Rosen",
+   "post": "Research Assistant, Aviation Subcommittee",
+   "for": [
+    "ASSOCIATION FOR UNCREWED VEHICLE SYSTEMS INTERNATIONAL"
+   ]
+  },
+  {
+   "name": "Jenny Rosenberg",
+   "post": "Asst. Sec. Aviation Int'l Affairs (Acting), US DOT Asst. Administrator, FAA US Senate Commerce Committee Staff US Senate Appropriations Committee Staff",
+   "for": [
+    "ASTRION GROUP LLC",
+    "AURA NETWORK SYSTEMS",
+    "ROHDE & SCHWARZ USA, INC.",
+    "THALES USA"
+   ]
+  },
+  {
+   "name": "Jack Ruddy",
+   "post": "Legislative Assistant, Congressman Sam Graves; Legislative Director, Congressman Sam Graves; Deputy Staff Director, House Committee on Transportation and Infrastructure; Staff Director, House Committee on Transportation and Infrastructure",
+   "for": [
+    "DELTA AIRLINES",
+    "LS TECHNOLOGIES"
+   ]
+  },
+  {
+   "name": "Paul Sass",
+   "post": "Staff Director, House Committee on Transportation and Infrastructure; Deputy Staff Director, House Committee on Small Business; Congressman Sam Graves - Chief of Staff, Legislative Director, Legislative Assistant",
+   "for": [
+    "JOHNSTOWN-CAMBRIA COUNTY AIRPORT AUTHORITY & CAMBRIAN HILLS DEVELOPMENT GROUP"
+   ]
+  },
+  {
+   "name": "Steven Schultz",
+   "post": "Legislative Assistant and Legislative Correspondent, Legislative Assistant, Senior Legislative Assistant, and Legislative Counsel for the office of Rep. Donald M. Payne, Jr.; Shared Staff for the Committee on Transportation and Infrastructure.",
+   "for": [
+    "NEXTEON TECHNOLOGIES",
+    "UNITED STATES CONTRACT WEATHER OBSERVING ASSOCIATION"
+   ]
+  },
+  {
+   "name": "Christopher Senn",
+   "post": "Asst. Admin. FAA; Counsel, House Aviation Subcommittee",
+   "for": [
+    "WING AVIATION LLC"
+   ]
+  },
+  {
+   "name": "Heideh Shahmoradi",
+   "post": "Staff Director, Senate Transportation, Housing and Urban Development, and Related Agencies Appropriations Subcommittee",
+   "for": [
+    "AIR TRAFFIC CONTROL ASSOCIATION",
+    "CHARLESTON COUNTY AVIATION AUTHORITY",
+    "GENERAL AVIATION MANUFACTURERS ASSOCIATION",
+    "RTX CORPORATION",
+    "SOUTHWEST AIRLINES"
+   ]
+  },
+  {
+   "name": "Alexander Simpson",
+   "post": "Senior Counsel, US Senate Committee on Commerce, Science, and Transportation; Legislative Correspondent, Rep Chris Van Hollen",
+   "for": [
+    "JOHNSTOWN-CAMBRIA COUNTY AIRPORT AUTHORITY & CAMBRIAN HILLS DEVELOPMENT GROUP",
+    "PERATON"
+   ]
+  },
+  {
+   "name": "Suzanne Sullivan",
+   "post": "Deputy Chief of Staff, US Department of Transportation, February 1997 - August 1998, Assistant Administrator for Government and Industry Affairs, Federal Aviation Administration, September 1998 - May 2002",
+   "for": [
+    "JOBSOHIO",
+    "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION"
+   ]
+  },
+  {
+   "name": "Samuel Whitehorn",
+   "post": "Deputy SD/GC, US Senate Commerce Committee; Acting SD, US Senate Commerce Committee; Sr. Counsel, US Senate Commerce Committee.",
+   "for": [
+    "ADB SAFEGATE AMERICAS LLC",
+    "NEXTEON TECHNOLOGIES",
+    "SPOKANE AIRPORT BOARD",
+    "UNITED STATES CONTRACT WEATHER OBSERVING ASSOCIATION"
+   ]
+  },
+  {
+   "name": "Andrea Wohleber",
+   "post": "Rep Sutton: SA, LC, LA; House Committee on T&I, Peter DeFazio: Professional Staff Member, Senior Professional Staff Member; FRA: Senior Advisor",
+   "for": [
+    "TRANSPORTATION TRADES DEPARTMENT AFL-CIO"
+   ]
+  }
+ ],
+ "_sources": {
+  "topic_check": [
+   "records/topic_check.json at 40d32f6",
+   "records/topic_check.json at 62d1d80"
+  ],
+  "issue_search": "records/issue_search.json",
+  "frozen": "2026-11-14"
+ }
+}

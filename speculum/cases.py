@@ -288,6 +288,14 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
     extra = {}
     if case.get("dataset") == "spend_compare":
         extra["compare"] = spend_compare(case.get("compare") or {}, spend, lobbying, members, votes, cg, case["bills"], data_root)
+    if case.get("dataset") == "contracts":              # frozen re-read of the filings (speculum/contracts.py)
+        from . import contracts as CT
+        root = Path(data_root or ".")
+        rp = root / "records" / f"case_{case['slug']}.json"
+        snaps = sorted(d for d in (root / "snapshots").glob("*") if (d / "committees.json").exists()) if (root / "snapshots").exists() else []
+        if rp.exists() and snaps:
+            extra["contracts"] = CT.compute(case, json.loads(rp.read_text(encoding="utf-8")), lobbying,
+                                            json.loads((snaps[-1] / "committees.json").read_text(encoding="utf-8")), members)
     if case.get("dataset") == "ppp":                    # SBA loan data, per lender (speculum/sources/ppp.py)
         p = Path(data_root or ".") / "records" / "ppp_lenders.json"
         if p.exists():
@@ -322,6 +330,11 @@ def _n(k: int) -> str:
 
 def headline(c: dict) -> dict | None:
     """One figure and one line for a case's card on the home page, computed from the case's own data."""
+    if c.get("contracts"):
+        T = c["contracts"]
+        return {"figure": len(T["orgs"]), "fmt": "int",
+                "line": "organizations reported lobbying on air traffic control while the FAA bought a new system fast. "
+                        "Who won, who lost, and whose campaigns they funded."}
     if c.get("compare"):
         K = c["compare"]
         if K.get("focus_total") and K["focus_total"] > K.get("others_total", 0):
