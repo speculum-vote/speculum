@@ -394,6 +394,19 @@ def cmd_topiccheck(args) -> int:
     return 0
 
 
+def cmd_issuesearch(args) -> int:
+    """Every report whose specific issues contain a phrase (data/records/issue_search.json)."""
+    from .http import Fetcher
+    from .sources import billcheck
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    phrases = [n.strip() for n in args.names.split("|") if n.strip()]
+    years = [int(y) for y in args.years.split(",")]
+    res = billcheck.issue_search(ROOT / "records" / "issue_search.json", fetch, os.environ.get("LDA_API_KEY"), phrases, years)
+    log.info("issue search: %d reports, %d without a match", len(res["reports"]), res["_without_match"])
+    return 0
+
+
 def cmd_pppborrowers(args) -> int:
     """Match the SBA's PPP loans to 2020-21 lobbying clients and firms (data/records/ppp_borrowers.json)."""
     from .sources import pppborrowers
@@ -517,6 +530,9 @@ def main(argv=None) -> int:
     tc = sub.add_parser("topiccheck", help="re-read every report for named clients, keeping aviation activities")
     tc.add_argument("--names", required=True, help="client names separated by |")
     tc.add_argument("--years", default="2025,2026")
+    isr = sub.add_parser("issuesearch", help="every report whose specific issues contain a phrase")
+    isr.add_argument("--names", required=True, help="phrases separated by |")
+    isr.add_argument("--years", default="2025,2026")
     pk = sub.add_parser("pppcheck", help="every 2019-21 report naming each client, with amounts as filed")
     pk.add_argument("--names", help="client names, separated by |")
     pk.add_argument("--years", help="filing years, comma-separated (default 2019,2020,2021)")
@@ -531,7 +547,7 @@ def main(argv=None) -> int:
     sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch}[args.cmd](args)
 
 
 if __name__ == "__main__":
