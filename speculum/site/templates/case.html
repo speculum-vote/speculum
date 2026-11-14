@@ -45,7 +45,7 @@
 <div class="table-wrap"><table class="data">
 <thead><tr><th>Company</th><th>Contract</th><th class="r">Lobbying reported, all issues</th><th>Reports naming air traffic control</th></tr></thead><tbody>
 {% for x in T.companies %}{% set L = x.lobbying %}
-{% if loop.first or (x.won != T.companies[loop.index0 - 1].won) %}<tr><td colspan="4" class="muted" style="padding-top:14px">{{ 'Won' if x.won else 'Bid and lost' }}</td></tr>{% endif %}
+{% set grp = x.group or ('Won' if x.won else 'Bid and lost') %}{% set prev = T.companies[loop.index0 - 1] %}{% if loop.first or grp != (prev.group or ('Won' if prev.won else 'Bid and lost')) %}<tr><td colspan="4" class="muted" style="padding-top:14px">{{ grp }}</td></tr>{% endif %}
 <tr><td><b>{{ x.name }}</b>{% if x.note %}<br><span class="muted" style="font-size:13px">{{ x.note }}</span>{% endif %}</td>
 <td>{{ x.what }}{% if x.value %}<br><span class="muted">{{ x.value }}{% if x.when %} · {{ x.when }}{% endif %}</span>{% endif %}</td>
 <td class="r num">{% if L %}{{ L.total|money }}{% if not L.own_filer %}<br><span class="muted" style="font-size:13px;white-space:normal">{% if L.firms|length <= 2 %}through {{ L.firms|map('org')|join(', ') }}{% else %}through {{ L.firms|length }} lobbying firms{% endif %}</span>{% endif %}{% else %}<span class="muted">no reports</span>{% endif %}</td>

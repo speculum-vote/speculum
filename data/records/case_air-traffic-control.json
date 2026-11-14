@@ -849,6 +849,73 @@
    }
   },
   {
+   "name": "L3Harris",
+   "group": "Runs the current network",
+   "what": "Operates the FAA's current telecommunications network (FTI), which the new network is replacing",
+   "registrant_id": 17636,
+   "won": true,
+   "note": "L3Harris's reports cover all its businesses. The Register reported its role on Nov. 13, 2026.",
+   "lobbying": {
+    "total": 4120000.0,
+    "quarters": [
+     {
+      "quarter": "2025-Q1",
+      "amount": 780000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q2",
+      "amount": 440000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q3",
+      "amount": 440000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2025-Q4",
+      "amount": 460000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q1",
+      "amount": 960000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q2",
+      "amount": 530000.0,
+      "how": "own"
+     },
+     {
+      "quarter": "2026-Q3",
+      "amount": 510000.0,
+      "how": "own"
+     }
+    ],
+    "first_named": "2025-Q2",
+    "named": [
+     {
+      "quarter": "2025-Q2",
+      "url": "https://lda.gov/filings/public/filing/12dd7631-5d33-475c-af8a-6a52e3cdacb3/print/",
+      "by": "L3HARRIS TECHNOLOGIES, INC.",
+      "own": true,
+      "words": "…Appropriations - including programs related to FAA NextGen and network modernization H.R. 1, One Big Beautiful Bill Act, including issues related to FAA Air Traffic Control modernization"
+     }
+    ],
+    "n_named": 1,
+    "own_filer": true,
+    "firms": [
+     "BALLARD PARTNERS",
+     "BASELINE STRATEGIES, LLC",
+     "MCALLISTER & QUINN, LLC",
+     "PRASAM",
+     "THE GABOTON GROUP, LLC"
+    ]
+   }
+  },
+  {
    "name": "Parsons",
    "won": false,
    "what": "Bid to manage the overhaul, with IBM",

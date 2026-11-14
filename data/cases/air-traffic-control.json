@@ -1,69 +1,273 @@
 {
  "slug": "air-traffic-control",
  "title": "The air traffic control overhaul",
- "dek": "The FAA is replacing the country's air traffic control equipment on a deadline, with $12.5 billion from Congress and a request for $50 billion more. Who won the contracts, who lobbied, and whose campaigns they funded.",
- "why": "A $12.5 billion federal program bought fast, under what the FAA calls a first-of-its-kind procurement, with $50 billion more requested after a nationwide outage, and with the contracts, the lobbying and the campaign money all on the public record.",
+ "dek": "The FAA is replacing the country's air traffic control equipment on a deadline, with $12.5 billion from Congress and requests for tens of billions more. Who won the contracts, who lobbied, and whose campaigns they funded.",
+ "why": "A $12.5 billion federal program bought fast, under what the FAA calls a first-of-its-kind procurement, with tens of billions more requested after a nationwide outage, and with the contracts, the lobbying and the campaign money all on the public record.",
  "congress": 119,
  "bills": [],
  "vehicle": null,
  "feature": 1,
  "dataset": "contracts",
  "facts": [
-  {"date": "2025-05-08", "text": "Transportation Secretary Sean Duffy announced a plan to build a \"brand new\" air traffic control system: new communications, surveillance, automation and facilities.",
-   "source": {"title": "Holland & Knight, The BNATCS State of Play", "url": "https://www.hklaw.com/en/insights/publications/2026/04/the-bnatcs-state-of-play"}},
-  {"date": "2025-07-04", "text": "Congress provided $12.5 billion for the overhaul in the 2025 tax and spending law (P.L. 119-21).",
-   "source": {"title": "GAO-26-107992", "url": "https://www.gao.gov/products/gao-26-107992"}},
-  {"date": "2025-12-04", "text": "The FAA picked Peraton, a company owned by the private equity firm Veritas Capital, to manage the whole overhaul as its \"prime integrator,\" over a joint bid by Parsons and IBM. The Associated Press reported that Peraton had little experience working with the FAA and that Parsons had extensive experience with FAA contracts.",
-   "source": {"title": "FAA", "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-duffy-faa-administrator-bedford-announce-prime-integrator"},
-   "source2": {"title": "Associated Press", "url": "https://www.barchart.com/story/news/36486057/what-to-know-about-the-air-traffic-control-overhaul-and-the-company-faa-hired-to-manage-it"}},
-  {"date": "2026-01-05", "text": "RTX's Collins Aerospace ($438 million) and Indra ($342 million) won contracts to replace up to 612 radars by June 2028.",
-   "source": {"title": "RTX", "url": "https://www.rtx.com/news/news-center/2026/01/05/rtx-awarded-faa-contract-to-deploy-next-generation-surveillance-radars-for-nation"},
-   "source2": {"title": "Reason Foundation", "url": "https://reason.org/aviation-policy-news/brand-new-air-traffic-control-system/"}},
-  {"date": "2026-02-10", "text": "The FAA told Congress that Peraton's contract is worth $1.5 billion, with fees earned or lost on schedule, quality, cost control and management.",
-   "source": {"title": "Reuters", "url": "https://www.yahoo.com/news/articles/faa-says-air-traffic-control-011348853.html"}},
-  {"date": "2026-04-21", "text": "Rohde & Schwarz USA won a contract worth up to $4.9 billion to replace up to 462 voice switches.",
-   "source": {"title": "Rohde & Schwarz", "url": "https://www.rohde-schwarz.com/se/_229356-1619688.html"}},
-  {"date": "2026-06-22", "text": "Air Space Intelligence won a 12-year contract worth up to $875.95 million for the software that manages traffic flow across the country (FMDS and SMART). Twelve companies bid, among them Palantir and Thales.",
-   "source": {"title": "Federal award notice", "url": "https://orangeslices.ai/transportation-secretary-sean-p-duffy-selects-air-space-intelligence-to-deploy-state-of-the-art-air-traffic-control-software-revolutionize-our-skies/"},
-   "source2": {"title": "The Air Current", "url": "https://theaircurrent.com/intel/faa-awards-key-875-million-air-traffic-management-contract-to-air-space-intelligence-confirming-tac-reporting/"}},
-  {"date": "2026-08-13", "text": "The FAA made AT&T the lead contractor for its telecommunications network (FENS) under waiver authority, without a new competition, which it said would take at least 22 months and miss the December 2028 deadline. Verizon, chosen in 2023, moved to a supporting role.",
-   "source": {"title": "AVweb", "url": "https://avweb.com/aviation-news/faa-att-74-3-million-new-atc-network/"},
-   "source2": {"title": "Nextgov", "url": "https://www.nextgov.com/modernization/2026/08/faa-brings-t-network-modernization-program/415417/"}},
-  {"date": "2026-08-20", "text": "Politico reported that FAA officials were considering scaling back Peraton's role. The FAA and Peraton both denied it.",
-   "source": {"title": "AVweb", "url": "https://avweb.com/aviation-news/faa-frustrated-atc-overhaul-contractor/"}},
-  {"date": "2026-09", "text": "The Government Accountability Office found that the FAA had no lifecycle cost estimate for the overhaul and no integrated schedule (it had 11,389 separate project schedules), and that it \"could be prioritizing speed over costs and air traffic disruptions.\" The Transportation Department partially agreed with both recommendations.",
-   "source": {"title": "GAO-26-107992", "url": "https://www.gao.gov/products/gao-26-107992"}},
-  {"date": "2026-10-15", "text": "Politico reported, from an internal FAA document, that the agency had a term sheet for an ownership stake in Air Space Intelligence. Others questioned whether the FAA has the legal authority for such a deal.",
-   "source": {"title": "AVweb", "url": "https://www.avweb.com/aviation-news/faa-seeks-ownership-in-air-traffic-ai/"},
-   "source2": {"title": "Semafor", "url": "https://www.semafor.com/article/10/16/2026/faa-equity-talks-raise-questions-about-the-agencys-legal-authority"}},
-  {"date": "2026-11-13", "text": "Communication problems at several air route traffic control centers forced a nationwide ground stop of more than four hours. That night the administration raised its funding request from $30.1 billion to $50 billion. The cause is under investigation.",
-   "source": {"title": "FAA", "url": "https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop"},
-   "source2": {"title": "CNBC", "url": "https://www.cnbc.com/2026/11/13/faa-ground-stop.html"}}
+  {
+   "date": "2025-05-08",
+   "text": "Transportation Secretary Sean Duffy announced a plan to build a \"brand new\" air traffic control system: new communications, surveillance, automation and facilities.",
+   "source": {
+    "title": "Holland & Knight, The BNATCS State of Play",
+    "url": "https://www.hklaw.com/en/insights/publications/2026/04/the-bnatcs-state-of-play"
+   }
+  },
+  {
+   "date": "2025-07-04",
+   "text": "Congress provided $12.5 billion for the overhaul in the 2025 tax and spending law (P.L. 119-21).",
+   "source": {
+    "title": "GAO-26-107992",
+    "url": "https://www.gao.gov/products/gao-26-107992"
+   }
+  },
+  {
+   "date": "2025-12-04",
+   "text": "The FAA picked Peraton, a company owned by the private equity firm Veritas Capital, to manage the whole overhaul as its \"prime integrator,\" over a joint bid by Parsons and IBM. The Associated Press reported that Peraton had little experience working with the FAA and that Parsons had extensive experience with FAA contracts.",
+   "source": {
+    "title": "FAA",
+    "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-duffy-faa-administrator-bedford-announce-prime-integrator"
+   },
+   "source2": {
+    "title": "Associated Press",
+    "url": "https://www.barchart.com/story/news/36486057/what-to-know-about-the-air-traffic-control-overhaul-and-the-company-faa-hired-to-manage-it"
+   }
+  },
+  {
+   "date": "2026-01-05",
+   "text": "RTX's Collins Aerospace ($438 million) and Indra ($342 million) won contracts to replace up to 612 radars by June 2028.",
+   "source": {
+    "title": "RTX",
+    "url": "https://www.rtx.com/news/news-center/2026/01/05/rtx-awarded-faa-contract-to-deploy-next-generation-surveillance-radars-for-nation"
+   },
+   "source2": {
+    "title": "Reason Foundation",
+    "url": "https://reason.org/aviation-policy-news/brand-new-air-traffic-control-system/"
+   }
+  },
+  {
+   "date": "2026-02-10",
+   "text": "The FAA told Congress that Peraton's contract is worth $1.5 billion, with fees earned or lost on schedule, quality, cost control and management.",
+   "source": {
+    "title": "Reuters",
+    "url": "https://www.yahoo.com/news/articles/faa-says-air-traffic-control-011348853.html"
+   }
+  },
+  {
+   "date": "2026-04-21",
+   "text": "Rohde & Schwarz USA won a contract worth up to $4.9 billion to replace up to 462 voice switches.",
+   "source": {
+    "title": "Rohde & Schwarz",
+    "url": "https://www.rohde-schwarz.com/se/_229356-1619688.html"
+   }
+  },
+  {
+   "date": "2026-06-22",
+   "text": "Air Space Intelligence won a 12-year contract worth up to $875.95 million for the software that manages traffic flow across the country (FMDS and SMART). Twelve companies bid, among them Palantir and Thales.",
+   "source": {
+    "title": "Federal award notice",
+    "url": "https://orangeslices.ai/transportation-secretary-sean-p-duffy-selects-air-space-intelligence-to-deploy-state-of-the-art-air-traffic-control-software-revolutionize-our-skies/"
+   },
+   "source2": {
+    "title": "The Air Current",
+    "url": "https://theaircurrent.com/intel/faa-awards-key-875-million-air-traffic-management-contract-to-air-space-intelligence-confirming-tac-reporting/"
+   }
+  },
+  {
+   "date": "2026-08-13",
+   "text": "The FAA made AT&T the lead contractor for its telecommunications network (FENS) under waiver authority, without a new competition, which it said would take at least 22 months and miss the December 2028 deadline. Verizon, chosen in 2023, moved to a supporting role.",
+   "source": {
+    "title": "AVweb",
+    "url": "https://avweb.com/aviation-news/faa-att-74-3-million-new-atc-network/"
+   },
+   "source2": {
+    "title": "Nextgov",
+    "url": "https://www.nextgov.com/modernization/2026/08/faa-brings-t-network-modernization-program/415417/"
+   }
+  },
+  {
+   "date": "2026-08-20",
+   "text": "Politico reported that FAA officials were considering scaling back Peraton's role. The FAA and Peraton both denied it.",
+   "source": {
+    "title": "AVweb",
+    "url": "https://avweb.com/aviation-news/faa-frustrated-atc-overhaul-contractor/"
+   }
+  },
+  {
+   "date": "2026-09",
+   "text": "The Government Accountability Office found that the FAA had no lifecycle cost estimate for the overhaul and no integrated schedule (it had 11,389 separate project schedules), and that it \"could be prioritizing speed over costs and air traffic disruptions.\" The Transportation Department partially agreed with both recommendations.",
+   "source": {
+    "title": "GAO-26-107992",
+    "url": "https://www.gao.gov/products/gao-26-107992"
+   }
+  },
+  {
+   "date": "2026-10-15",
+   "text": "Politico reported, from an internal FAA document, that the agency had a term sheet for an ownership stake in Air Space Intelligence. Others questioned whether the FAA has the legal authority for such a deal.",
+   "source": {
+    "title": "AVweb",
+    "url": "https://www.avweb.com/aviation-news/faa-seeks-ownership-in-air-traffic-ai/"
+   },
+   "source2": {
+    "title": "Semafor",
+    "url": "https://www.semafor.com/article/10/16/2026/faa-equity-talks-raise-questions-about-the-agencys-legal-authority"
+   }
+  },
+  {
+   "date": "2026-11-10",
+   "text": "The FAA expanded Air Space Intelligence's SMART traffic tool to all 22 of its air route traffic control centers.",
+   "source": {
+    "title": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/11/13/us-grounds-all-flights-after-communication-issue"
+   }
+  },
+  {
+   "date": "2026-11-13",
+   "text": "In the morning, the White House and Secretary Duffy formally asked Congress for $30.1 billion: $10.1 billion for air traffic control, $2 billion for control towers and $18 billion for airports. That afternoon, communication problems at several air route traffic control centers forced a nationwide ground stop of more than four hours. That night Duffy said he wants $50 billion, without saying how that figure relates to the morning's request.",
+   "source": {
+    "title": "AeroTime",
+    "url": "https://www.aerotime.aero/articles/duffy-congress-atc-funding-nationwide-outage"
+   },
+   "source2": {
+    "title": "The Hill",
+    "url": "https://thehill.com/policy/transportation/6220399-duffy-billions-air-traffic-ground-stop/"
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "text": "No official cause has been announced. Duffy blamed old routers overloaded with data; CBS News reported that the FAA's preliminary finding points to routers made between 2001 and 2006; Bloomberg reported that the FBI is examining a software update; Homeland Security Secretary Markwayne Mullin said officials were looking at any link to the SMART rollout. Air Space Intelligence said the ground stop was not caused by SMART or any of its products. Officials found no sign of a cyberattack.",
+   "source": {
+    "title": "CBS News",
+    "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
+   },
+   "source2": {
+    "title": "The Air Current",
+    "url": "https://theaircurrent.com/feed/dispatches/u-s-halts-flight-departures-nationwide-on-air-traffic-communications-outage/"
+   }
+  }
  ],
  "contracts": {
-  "topic": "air traffic|\\bBNATCS\\b|\\bFENS\\b|FAA network|air traffic management",
-  "panels": ["HSPW05", "SSCM33", "HSAP20", "SSAP24"],
+  "topic": "air traffic|\\bBNATCS\\b|\\bFENS\\b|\\bFTI\\b|FAA network|FAA Telecommunications",
+  "panels": [
+   "HSPW05",
+   "SSCM33",
+   "HSAP20",
+   "SSAP24"
+  ],
   "panel_names": "the House and Senate aviation subcommittees and the House and Senate subcommittees that fund the FAA",
   "posts": "FAA|Federal Aviation|Dep(artment|t\\.?) of Transportation|\\bDOT\\b|Transportation and Infrastructure|\\bT&I\\b|T\\s?&\\s?I|Commerce, Science|Senate Commerce|Aviation Subcommittee|Subcommittee on Aviation|Secretary of Transportation|THUD|Transportation, Housing",
-  "context_givers": [26477, 614],
-  "aliases": {"DELTA AIRLINES": "DELTA AIR LINES", "AIR TRANSPORT ASSOCIATION OF AMERICA": "AIRLINES FOR AMERICA",
-              "SOUTHWEST AIRLINES PILOT ASSOCIATION": "SOUTHWEST AIRLINES PILOTS ASSOCIATION",
-              "PROFESSIONAL AVIATION SAFETY SPECIALISTS AFL CIO": "PROFESSIONAL AVIATION SAFETY SPECIALISTS",
-              "L3 HARRIS TECHNOLOGIES": "L3HARRIS TECHNOLOGIES", "HONEYWELL AEROSPACE": "HONEYWELL INTERNATIONAL",
-              "HILL EAST GROUP ON BEHALF OF AIRPORTS COUNCIL INTERNATIONAL NORTH AMERICA": "AIRPORTS COUNCIL INTERNATIONAL NORTH AMERICA",
-              "DOERRER GROUP ON BEHALF OF MIDWEST AIR TRAFFIC SERVICE": "MIDWEST AIR TRAFFIC CONTROL SERVICE"},
+  "context_givers": [
+   26477,
+   614
+  ],
+  "aliases": {
+   "DELTA AIRLINES": "DELTA AIR LINES",
+   "AIR TRANSPORT ASSOCIATION OF AMERICA": "AIRLINES FOR AMERICA",
+   "SOUTHWEST AIRLINES PILOT ASSOCIATION": "SOUTHWEST AIRLINES PILOTS ASSOCIATION",
+   "PROFESSIONAL AVIATION SAFETY SPECIALISTS AFL CIO": "PROFESSIONAL AVIATION SAFETY SPECIALISTS",
+   "L3 HARRIS TECHNOLOGIES": "L3HARRIS TECHNOLOGIES",
+   "HONEYWELL AEROSPACE": "HONEYWELL INTERNATIONAL",
+   "HILL EAST GROUP ON BEHALF OF AIRPORTS COUNCIL INTERNATIONAL NORTH AMERICA": "AIRPORTS COUNCIL INTERNATIONAL NORTH AMERICA",
+   "DOERRER GROUP ON BEHALF OF MIDWEST AIR TRAFFIC SERVICE": "MIDWEST AIR TRAFFIC CONTROL SERVICE"
+  },
   "companies": [
-   {"name": "Peraton", "won": true, "what": "Manages the overhaul", "value": "$1.5 billion", "when": "Dec. 2025", "client": "^PERATON", "registrant_id": 401106618},
-   {"name": "Rohde & Schwarz USA", "won": true, "what": "Voice switches", "value": "up to $4.9 billion", "when": "Apr. 2026", "client": "ROHDE"},
-   {"name": "RTX (Collins Aerospace)", "won": true, "what": "Radars", "value": "$438 million", "when": "Jan. 2026", "client": "^RTX", "registrant_id": 39267, "note": "RTX's reports cover all its businesses, from jet engines to missiles."},
-   {"name": "Indra", "won": true, "what": "Radars", "value": "$342 million", "when": "Jan. 2026"},
-   {"name": "Air Space Intelligence", "won": true, "what": "Traffic-flow software", "value": "up to $875.95 million over 12 years", "when": "June 2026", "client": "AIR SPACE INTELLIGENCE", "registrant_id": 401110167},
-   {"name": "AT&T", "won": true, "what": "Telecom network (lead)", "value": "$74.3 million first order; billions expected", "when": "Aug. 2026", "client": "^AT&T", "registrant_id": 34455, "note": "AT&T's reports cover all its businesses."},
-   {"name": "Verizon", "won": true, "what": "Telecom network (chosen 2023; now supporting)", "value": "$2.4 billion (2023 award)", "when": "2023", "client": "VERIZON", "registrant_id": 5836, "note": "Verizon's reports cover all its businesses."},
-   {"name": "Parsons", "won": false, "what": "Bid to manage the overhaul, with IBM", "client": "^PARSONS", "registrant_id": 401103402},
-   {"name": "Palantir", "won": false, "what": "Bid for the traffic-flow software", "client": "PALANTIR", "registrant_id": 400643940},
-   {"name": "Thales", "won": false, "what": "Bid for the traffic-flow software", "client": "THALES"}
+   {
+    "name": "Peraton",
+    "won": true,
+    "what": "Manages the overhaul",
+    "value": "$1.5 billion",
+    "when": "Dec. 2025",
+    "client": "^PERATON",
+    "registrant_id": 401106618
+   },
+   {
+    "name": "Rohde & Schwarz USA",
+    "won": true,
+    "what": "Voice switches",
+    "value": "up to $4.9 billion",
+    "when": "Apr. 2026",
+    "client": "ROHDE"
+   },
+   {
+    "name": "RTX (Collins Aerospace)",
+    "won": true,
+    "what": "Radars",
+    "value": "$438 million",
+    "when": "Jan. 2026",
+    "client": "^RTX",
+    "registrant_id": 39267,
+    "note": "RTX's reports cover all its businesses, from jet engines to missiles."
+   },
+   {
+    "name": "Indra",
+    "won": true,
+    "what": "Radars",
+    "value": "$342 million",
+    "when": "Jan. 2026"
+   },
+   {
+    "name": "Air Space Intelligence",
+    "won": true,
+    "what": "Traffic-flow software",
+    "value": "up to $875.95 million over 12 years",
+    "when": "June 2026",
+    "client": "AIR SPACE INTELLIGENCE",
+    "registrant_id": 401110167
+   },
+   {
+    "name": "AT&T",
+    "won": true,
+    "what": "Telecom network (lead)",
+    "value": "$74.3 million first order; billions expected",
+    "when": "Aug. 2026",
+    "client": "^AT&T",
+    "registrant_id": 34455,
+    "note": "AT&T's reports cover all its businesses."
+   },
+   {
+    "name": "Verizon",
+    "won": true,
+    "what": "Telecom network (chosen 2023; now supporting)",
+    "value": "$2.4 billion (2023 award)",
+    "when": "2023",
+    "client": "VERIZON",
+    "registrant_id": 5836,
+    "note": "Verizon's reports cover all its businesses."
+   },
+   {
+    "name": "L3Harris",
+    "group": "Runs the current network",
+    "what": "Operates the FAA's current telecommunications network (FTI), which the new network is replacing",
+    "client": "L3 ?HARRIS",
+    "registrant_id": 17636,
+    "won": true,
+    "note": "L3Harris's reports cover all its businesses. The Register reported its role on Nov. 13, 2026."
+   },
+   {
+    "name": "Parsons",
+    "won": false,
+    "what": "Bid to manage the overhaul, with IBM",
+    "client": "^PARSONS",
+    "registrant_id": 401103402
+   },
+   {
+    "name": "Palantir",
+    "won": false,
+    "what": "Bid for the traffic-flow software",
+    "client": "PALANTIR",
+    "registrant_id": 400643940
+   },
+   {
+    "name": "Thales",
+    "won": false,
+    "what": "Bid for the traffic-flow software",
+    "client": "THALES"
+   }
   ]
  },
- "not_yet": "Lobbying reports for October to December 2026, which cover the outage and the $50 billion request, are due January 20, 2027; contribution reports for July to December 2026 are due January 30, 2027. Contract values are the maximums announced, not money paid."
+ "not_yet": "The cause of the November 13 ground stop has not been announced. Lobbying reports for October to December 2026, which cover the outage and the $50 billion request, are due January 20, 2027; contribution reports for July to December 2026 are due January 30, 2027. Contract values are the maximums announced, not money paid."
 }
