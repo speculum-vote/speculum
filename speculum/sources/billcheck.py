@@ -59,3 +59,47 @@ def reread(out: Path, fetch, key: str | None, spend: dict, label: str) -> dict:
                         "orgs": len({r["org_key"] for r in reports})}}
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res
+
+
+AVIATION = r"air traffic|Federal Aviation|\bFAA\b|NextGen|BNATCS|airspace|radar|voice switch|aviation"
+
+
+def topic_reread(out: Path, fetch, key: str | None, names: list[str], years, words: str = AVIATION) -> dict:
+    """Every report for each named client in the given years, read in full: the amount as filed, and each activity
+    whose description matches `words` or that lists a matching agency, with its words and the agencies lobbied.
+    Saved to data/records/topic_check.json."""
+    from urllib.parse import quote
+    from .ppplobby import name_key
+    fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
+    headers = {"Authorization": f"Token {key}"} if key else None
+    pat = re.compile(words, re.I)
+    res = {"_words": words, "_years": list(years)}
+    for name in names:
+        rows, seen = [], set()
+        for y in years:
+            page = 1
+            while True:
+                data = fetch.get_json("lda", f"topic_{name_key(name)}_{y}_p{page}.json",
+                                      f"{BASE}/filings/?client_name={quote(name)}&filing_year={y}&page={page}&page_size=25",
+                                      headers=headers)
+                for f in data.get("results", []):
+                    if f.get("filing_uuid") in seen:
+                        continue
+                    seen.add(f.get("filing_uuid"))
+                    cli, reg = f.get("client") or {}, f.get("registrant") or {}
+                    acts = []
+                    for a in f.get("lobbying_activities") or []:
+                        d = re.sub(r"\s+", " ", a.get("description") or "")
+                        ents = [e.get("name") for e in a.get("government_entities") or [] if e.get("name")]
+                        if pat.search(d) or any(pat.search(e) for e in ents):
+                            acts.append({"issue": a.get("general_issue_code"), "words": d[:900], "entities": ents})
+                    rows.append({"year": f.get("filing_year"), "period": f.get("filing_period"), "type": f.get("filing_type"),
+                                 "registrant": reg.get("name"), "client": cli.get("name"), "own": cli.get("client_self_select"),
+                                 "income": f.get("income"), "expenses": f.get("expenses"), "posted": f.get("dt_posted"),
+                                 "uuid": f.get("filing_uuid"), "matches": acts})
+                if not data.get("next"):
+                    break
+                page += 1
+        res[name] = sorted(rows, key=lambda r: (r["year"] or 0, r["period"] or "", r["posted"] or ""))
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res
