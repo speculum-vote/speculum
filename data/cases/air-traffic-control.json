@@ -139,14 +139,26 @@
   },
   {
    "date": "2026-11-14",
-   "text": "No official cause has been announced. Duffy blamed old routers overloaded with data; CBS News reported that the FAA's preliminary finding points to routers made between 2001 and 2006; Bloomberg reported that the FBI is examining a software update; Homeland Security Secretary Markwayne Mullin said officials were looking at any link to the SMART rollout. Air Space Intelligence said the ground stop was not caused by SMART or any of its products. Officials found no sign of a cyberattack.",
+   "text": "No official cause had been announced. Duffy blamed routers overloaded with data; Bloomberg reported that the FBI was examining a software update; Homeland Security Secretary Markwayne Mullin said officials were looking at any link to the SMART rollout. Air Space Intelligence said the ground stop was not caused by SMART or any of its products. Officials found no sign of a cyberattack.",
    "source": {
-    "title": "CBS News",
-    "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"
+    "title": "SecurityWeek (citing Bloomberg)",
+    "url": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/"
    },
    "source2": {
     "title": "The Air Current",
     "url": "https://theaircurrent.com/feed/dispatches/u-s-halts-flight-departures-nationwide-on-air-traffic-communications-outage/"
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "text": "Duffy said the trouble began with a new router at an FAA facility in southern Arkansas, installed during work to replace old copper lines, which overloaded the systems that carry radar and other data. That router and a second one from Amarillo, Texas, are being tested at an L3Harris lab. He asked whether it was \"a faulty installation by L3Harris\" without saying it was. L3Harris said it is supporting the FAA's investigation. Hewlett Packard Enterprise, whose Juniper unit made the router, said the routers did not fail. Officials said SMART played no role. The root cause has not been determined.",
+   "source": {
+    "title": "Yahoo News live coverage",
+    "url": "https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html"
+   },
+   "source2": {
+    "title": "TechRepublic",
+    "url": "https://www.techrepublic.com/article/news-faa-smart-ai-ground-stop/"
    }
   }
  ],
