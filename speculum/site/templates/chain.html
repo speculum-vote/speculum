@@ -14,7 +14,7 @@
 </div>
 {% endmacro %}
 {% macro checkline(o) %}
-<p class="checkline">{% if o._check and o._check.result == 'supported' and not o._disputed %}Source checked {{ o._check.on }}{% if o._check.dispute_upheld %} · a reader's dispute was checked and the item stands{% endif %}{% elif o._disputed %}<span class="ck-warn">Disputed by a reader · withdrawn from the public page until re-checked</span>{% elif o._check %}<span class="ck-warn">Did not match its source ({{ o._check.result|replace('_', ' ') }}){% if o._check.note %}: {{ o._check.note }}{% endif %} · not public</span>{% else %}<span class="ck-wait">Not yet checked against its source · not public</span>{% endif %}{% if not public and o._public is defined and o._check and o._check.result == 'supported' and not o._public and not o._disputed %} · <span class="ck-wait">graded {{ o.grade }}: not published automatically</span>{% endif %}{% if o._fp %} · <a href="#dispute" class="dispute-link" data-fp="{{ o._fp }}" data-label="{{ (o.claim or '')|truncate(140, killwords=False, end='…') }}">Dispute</a>{% endif %}</p>
+<p class="checkline">{% if o._check and o._check.result == 'supported' and not o._disputed %}Source checked {{ o._check.on }}{% if o._check.dispute_upheld %} · a reader's dispute was checked and the item stands{% endif %}{% elif o._disputed %}<span class="ck-warn">Disputed by a reader · withdrawn from the public page until re-checked</span>{% elif o._check %}<span class="ck-warn">Did not match its source ({{ o._check.result|replace('_', ' ') }}){% if o._check.note %}: {{ o._check.note }}{% endif %} · not public</span>{% else %}<span class="ck-wait">Not yet checked against its source · not public</span>{% endif %}{% if not public and o._public is defined and o._check and o._check.result == 'supported' and not o._public and not o._disputed %} · <span class="ck-wait">graded {{ o.grade }}: not published automatically</span>{% endif %}</p>
 {% endmacro %}
 {% macro money_table(pattern, show_contractor) %}
 <div class="tbl-wrap"><table>
@@ -35,7 +35,7 @@
 <h1>{{ c.bill|billname }}{% if c.country %}: arms to {{ 'the ' if c.country in ['United Arab Emirates', 'United Kingdom', 'Philippines', 'Netherlands'] else '' }}{{ c.country }}{% endif %}</h1>
 <p class="lede">{{ c.title }}</p>
 <p>{% if c.status == 'approved' %}<span class="status ok">Reviewed</span> by {{ c.review.approved_by }} on {{ c.review.date }}{% if c.review.note %} · {{ c.review.note }}{% endif %}
-{% elif c.auto_public %}<span class="status verified">Source-checked</span> Researched with AI. {% if public %}Every item on this page{% else %}Every item marked "Source checked"{% endif %} was checked against the source it cites by an independent AI checker, which opens the source and confirms it says what the item says. No editor has reviewed it. Anyone can dispute an item with a source; a disputed item is withdrawn until it is checked again.
+{% elif c.auto_public %}<span class="status verified">Source-checked</span> Researched with AI. {% if public %}Every item on this page{% else %}Every item marked "Source checked"{% endif %} was checked against the source it cites by an independent AI checker, which opens the source and confirms it says what the item says. No editor has reviewed it. Found an error? Send the source that shows it to <a href="{{ root }}corrections.html">corrections</a>.
 {% elif c.research_by == 'ai-draft' %}<span class="status draft">AI draft · not yet checked</span> Drafted by {{ c.draft_meta.by }} on {{ c.draft_meta.on }}. It is published once the record of the sale passes the source check.
 {% elif c.research_by %}<span class="status draft">Not yet checked</span> Researched with AI; the record of the sale has not yet passed the source check, so this chain is not public.
 {% else %}<span class="status draft">Votes and money only</span> The mechanism and outcome links have not been researched yet.{% endif %}</p>
@@ -52,7 +52,7 @@
   <div class="reading"><div class="label">How it was cleared</div><div class="context" style="margin-top:6px">{{ mx.clearance or 'Not researched.' }}</div></div>
 </div>
 
-{% from "_toc.html" import toc %}{{ toc([("decision", "The decision"), ("record", "What the sale contained"), ("shows", "What the record shows"), ("money", "The money around the vote"), ("dispute", "Dispute an item")]) }}
+{% from "_toc.html" import toc %}{{ toc([("decision", "The decision"), ("record", "What the sale contained"), ("shows", "What the record shows"), ("money", "The money around the vote")]) }}
 <ol class="chain">
 <li>
   <div class="step" id="decision">1 · The decision</div>
@@ -181,38 +181,6 @@
 </li>
 </ol>
 
-<div class="notice">This page follows a decision, not a person: the Senate's refusal, on {{ c.date }}, to advance a resolution blocking this sale. It does not claim that any senator caused any harm, that any contribution influenced any vote, or that anyone acted improperly. Each senator's vote is shown as the public record of their part in the decision. To dispute an item, use its Dispute link.</div>
+<div class="notice">This page follows a decision, not a person: the Senate's refusal, on {{ c.date }}, to advance a resolution blocking this sale. It does not claim that any senator caused any harm, that any contribution influenced any vote, or that anyone acted improperly. Each senator's vote is shown as the public record of their part in the decision. To report an error, send the source that shows it to <a href="{{ root }}corrections.html">corrections</a>.</div>
 
-<section id="dispute" class="dispute">
-  <h2>Dispute an item</h2>
-  <p class="meta">Choose an item with its <b>Dispute</b> link, then give a source that contradicts it. The item is withdrawn from the public page until the checker has read your source beside the original; if the item does not hold up, it stays down, and if it does, it returns with a note that it was disputed and checked. Disputes are published in the project's public record, so do not include personal details.</p>
-  <form id="dispute-form">
-    <p class="dispute-item" id="dispute-item">No item chosen yet.</p>
-    <input type="hidden" name="fp" id="dispute-fp">
-    <input type="hidden" name="chain" value="{{ c.id }}">
-    <label>Source that contradicts it (a link)<input type="url" name="source" required placeholder="https://"></label>
-    <label>What it shows (optional, up to 1,000 characters)<textarea name="note" maxlength="1000" rows="4"></textarea></label>
-    <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" style="position:absolute;left:-9999px">
-    <button type="submit" disabled id="dispute-send">Send dispute</button>
-    <p class="meta" id="dispute-msg" role="status"></p>
-  </form>
-</section>
-<script>
-(function () {
-  var f = document.getElementById('dispute-form'), fp = document.getElementById('dispute-fp'),
-      item = document.getElementById('dispute-item'), send = document.getElementById('dispute-send'), msg = document.getElementById('dispute-msg');
-  document.querySelectorAll('.dispute-link').forEach(function (a) {
-    a.addEventListener('click', function () { fp.value = a.dataset.fp; item.textContent = 'Item: ' + a.dataset.label; send.disabled = false; msg.textContent = ''; });
-  });
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    send.disabled = true; msg.textContent = 'Sending…';
-    fetch('{{ root }}api/dispute', { method: 'POST', headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(new FormData(f))) })
-      .then(function (r) { return r.json().then(function (j) { return [r.ok, j]; }); })
-      .then(function (x) { msg.textContent = x[0] ? 'Received. The item will be withdrawn on the next nightly update and re-checked against your source in the weekly check, on Sundays.' : (x[1].error || 'Could not send.'); if (!x[0]) send.disabled = false; })
-      .catch(function () { msg.textContent = 'Could not send. You can also write to the corrections address.'; send.disabled = false; });
-  });
-})();
-</script>
 {% endblock %}

@@ -133,7 +133,6 @@ td.num { white-space: nowrap; }
 .story .facts li { margin-bottom: 3px; }
 .story .names { font-size: 13.5px; margin: 0 0 12px; }
 .story-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font: 11.5px/1.4 var(--mono); color: var(--ink-3); }
-.react button { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; background: none; color: var(--ink-3); border: 1px solid var(--line); padding: 5px 9px; margin-left: 6px; cursor: not-allowed; }
 @media (max-width: 640px) { .tide-name { font-size: 36px; } }
 
 /* The Dependents: consequence chains */
@@ -508,3 +507,6 @@ table.collapsed tbody tr:nth-child(n+51) { display: none; }
 .mine-card h2::after { display: none; }
 .site-search .wrap { display: block; }
 @media (max-width: 640px) { .ex-pick label { display: block; } .ex-pick select { display: block; width: 100%; margin: 6px 0 0; } }
+.sd-bills td:first-child { min-width: 280px; }
+.sd-bills td:last-child { white-space: nowrap; }
+@media (max-width: 600px) { .sd-bills td:first-child { min-width: 190px; } }

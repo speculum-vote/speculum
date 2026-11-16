@@ -37,7 +37,7 @@ DECISION = re.compile(
     r"|Passage, Objections of the President|On Overriding the Veto|On Passage, Objections)", re.I)
 
 LD2_URL = "https://lda.gov/filings/public/filing/{}/print"
-MIN_FUNDERS = 5          # a bill joins the ballot once this many organizations that lobbied it funded voters
+MIN_FUNDERS = 5          # a bill qualifies once this many organizations that lobbied it funded its voters
 SELF = {"self", "", "same", "myself"}
 
 
@@ -147,7 +147,7 @@ def measure(key: tuple[int, str], lobbied_entry: dict, rolls: list[dict], positi
 
 
 def build(spend: dict | None, votes: dict, members: list[dict], lobbying: dict, info: dict | None) -> dict:
-    """Every bill that qualifies, measured. Which of them are open on the site is decided by the readers' rounds."""
+    """Every bill that qualifies, measured, most-lobbied first."""
     lobbied = collect(spend, info)
     bills_info = (info or {}).get("bills", {})
     party = {m["bioguide"]: m["party"] for m in members}
@@ -176,97 +176,5 @@ def build(spend: dict | None, votes: dict, members: list[dict], lobbying: dict, 
             "years": lobbying.get("years_label")}
 
 
-# ---- Readers' rounds -------------------------------------------------------------------------------------------
-# Verified reader-checkers choose which bill opens next. Each round runs ROUND_DAYS days over a fixed shortlist:
-# the CANDIDATES most-lobbied qualifying bills not yet open. Votes are kept privately (functions/api/ballot.js)
-# and counted by the nightly run after the round closes; only the totals are published. The bill with the most
-# votes opens; a tie goes to the bill more organizations lobbied, then to the bill listed first. A round with no
-# votes opens nothing. The first bill (H.R. 1, the most lobbied) was opened at the start, before any round.
-ROUND_DAYS = 7
-CANDIDATES = 6
-FIRST = "119-hr1"
-
-
-def load_state(path) -> dict:
-    import json
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except (FileNotFoundError, ValueError):
-        return {"opened": [], "round": None, "closed": []}
-
-
-def save_state(path, state: dict) -> None:
-    import json
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(state, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
-def shortlist(sd: dict, state: dict) -> list[str]:
-    opened = {o["slug"] for o in state.get("opened") or []}
-    return [m["slug"] for m in sd["bills"] if m["slug"] not in opened][:CANDIDATES]
-
-
-def advance(state: dict, sd: dict, today: str, tally=None) -> dict:
-    """Bring the rounds up to date for `today` (YYYY-MM-DD, Eastern). `tally(round_id)` returns {slug: votes};
-    it is called only for a round that has closed. Returns the new state; the input is not changed."""
-    from datetime import date, timedelta
-    import copy
-    st = copy.deepcopy(state) or {}
-    st.setdefault("opened", [])
-    st.setdefault("closed", [])
-    if not st["opened"] and FIRST in sd["by_slug"]:
-        st["opened"].append({"slug": FIRST, "on": today, "by": "first"})
-    rnd = st.get("round")
-    if rnd and today > rnd["closes"]:
-        counts = {s: int(n) for s, n in ((tally(rnd["id"]) if tally else {}) or {}).items() if s in rnd["candidates"]}
-        order = {s: i for i, s in enumerate(rnd["candidates"])}
-        lob = {s: (sd["by_slug"].get(s) or {}).get("n_lobbied", 0) for s in rnd["candidates"]}
-        winner = None
-        if any(counts.values()):
-            winner = sorted((s for s in rnd["candidates"] if counts.get(s)), key=lambda s: (-counts[s], -lob[s], order[s]))[0]
-            if winner not in {o["slug"] for o in st["opened"]}:
-                st["opened"].append({"slug": winner, "on": today, "by": rnd["id"]})
-        st["closed"].append({**rnd, "counts": {s: counts.get(s, 0) for s in rnd["candidates"]},
-                             "votes": sum(counts.values()), "winner": winner})
-        rnd = None
-    if not rnd:
-        cands = shortlist(sd, st)
-        if cands:
-            start = date.fromisoformat(today)
-            rnd = {"id": today, "opens": today, "closes": (start + timedelta(days=ROUND_DAYS - 1)).isoformat(), "candidates": cands}
-    st["round"] = rnd
-    return st
-
-
-def kv_tally(round_id: str) -> dict:
-    """Count a closed round's votes in the private sign-up store, then delete them (only totals are kept)."""
-    import os, logging
-    import requests
-    log = logging.getLogger("speculum")
-    token, acct = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
-    if not token or not acct:
-        raise RuntimeError("no Cloudflare credentials to count the round")
-    base = f"https://api.cloudflare.com/client/v4/accounts/{acct}/storage/kv/namespaces"
-    h = {"Authorization": f"Bearer {token}"}
-    ns = requests.get(base, headers=h, params={"per_page": 100}, timeout=60).json()
-    nid = next((n["id"] for n in ns.get("result") or [] if n.get("title") == "speculum-signups"), None)
-    if not nid:
-        return {}
-    counts: dict = {}
-    names, cursor = [], None
-    while True:
-        params = {"prefix": f"b:{round_id}:", "limit": 1000, **({"cursor": cursor} if cursor else {})}
-        page = requests.get(f"{base}/{nid}/keys", headers=h, params=params, timeout=60).json()
-        names += [k["name"] for k in page.get("result") or []]
-        cursor = (page.get("result_info") or {}).get("cursor")
-        if not cursor:
-            break
-    for name in names:
-        r = requests.get(f"{base}/{nid}/values/{name}", headers=h, timeout=60)
-        slug = r.text.strip() if r.ok else ""
-        if slug:
-            counts[slug] = counts.get(slug, 0) + 1
-    for name in names:
-        requests.delete(f"{base}/{nid}/values/{name}", headers=h, timeout=60)
-    log.info("round %s: %d votes", round_id, sum(counts.values()))
-    return counts
+# Readers' rounds (retired November 16, 2026): verified reader-checkers voted each week on which bill opened next;
+# H.R. 1 and H.R. 8800 opened that way. Every qualifying bill is now shown. The code is in git history.

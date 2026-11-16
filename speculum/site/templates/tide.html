@@ -9,7 +9,7 @@
 
 {% if fs %}{% include "_founding.html" %}{% endif %}
 
-<div class="notice">Every story is written automatically from the night's public filings by fixed templates, the same way for every member and party, and links to the filings it came from. Spot an error? Send the filing that shows it to <a href="{{ root }}corrections.html">corrections</a>.{% if public %} Reactions open soon.{% endif %}</div>
+<div class="notice">Every story is written automatically from the night's public filings by fixed templates, the same way for every member and party, and links to the filings it came from. Spot an error? Send the filing that shows it to <a href="{{ root }}corrections.html">corrections</a>.</div>
 
 {% if ed.stories %}
 <div class="stories">
@@ -26,7 +26,6 @@
   {% endif %}
   <div class="story-foot">
     <span class="srcs">Sources: {% for src in s.sources %}{% if src.url %}<a href="{{ src.url }}">{{ src.label }}</a>{% else %}{{ src.label }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</span>
-    <span class="react" aria-label="Reactions open at public launch"><button disabled>Approve</button><button disabled>Disapprove</button></span>
   </div>
 </article>
 {% endfor %}

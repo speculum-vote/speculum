@@ -305,16 +305,6 @@ def cmd_verify(args) -> int:
     return 0
 
 
-def said_done_data(snap) -> dict:
-    """Both sides of the vote, measured for every qualifying bill in a snapshot (speculum/saiddone.py)."""
-    from . import saiddone
-    from .sources.lda import clean
-    from .sources.senate import clean_votes
-    members = snap.read("members.json", [])
-    return saiddone.build(snap.read("spend.json"), clean_votes(snap.read("votes.json.gz", {"votes": [], "positions": {}})),
-                          members, clean(snap.read("lobbying.json", {"by_member": {}}), members), snap.read("billinfo.json"))
-
-
 def cmd_ppplobby(args) -> int:
     """One-time read of 2020-21 lobbying reports for the PPP case (data/records/ppp_lobbying.json); resumable."""
     from .http import Fetcher
@@ -452,30 +442,6 @@ def cmd_guard(args) -> int:
     return 0
 
 
-def cmd_saiddone(args) -> int:
-    """Bring the readers' rounds up to date: count a closed round, open its winner, start the next round."""
-    from . import saiddone
-    from .snapshot import latest
-    snap = latest(ROOT / "snapshots")
-    if snap is None:
-        log.error("no snapshot yet")
-        return 1
-    sd = said_done_data(snap)
-    path = ROOT / "saiddone.json"
-    state = saiddone.load_state(path)
-    today = args.date or today_et()
-    rnd = state.get("round")
-    tally = saiddone.kv_tally
-    if rnd and today > rnd["closes"] and not (os.environ.get("CLOUDFLARE_API_TOKEN") and os.environ.get("CLOUDFLARE_ACCOUNT_ID")):
-        log.warning("round %s has closed but there are no Cloudflare credentials to count it; left open until they are set", rnd["id"])
-        return 0
-    new = saiddone.advance(state, sd, today, tally)
-    saiddone.save_state(path, new)
-    r = new.get("round") or {}
-    log.info("said & done: open %s; round %s closes %s over %s", [o["slug"] for o in new["opened"]], r.get("id"), r.get("closes"), r.get("candidates"))
-    return 0
-
-
 def cmd_restore(args) -> int:
     """Rebuild a past night's files from git history, checked against that night's SHA-256 index."""
     from .snapshot import restore
@@ -543,11 +509,9 @@ def main(argv=None) -> int:
     g = sub.add_parser("guard", help="check the night's data and the built site before deploying")
     g.add_argument("--out", default="dist")
     g.add_argument("--site-only", action="store_true", help="check only the built site")
-    sd = sub.add_parser("saiddone", help="Said & Done: count a closed readers' round and start the next")
-    sd.add_argument("--date", help="today, YYYY-MM-DD (default: today in Eastern time)")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "saiddone": cmd_saiddone, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch}[args.cmd](args)
 
 
 if __name__ == "__main__":

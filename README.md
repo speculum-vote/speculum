@@ -26,7 +26,6 @@ speculum/
   saiddone.py      Said & Done: who lobbied a bill, and whom they funded on each side of its final vote
   sources/         one module per public source
   site/            templates, styles and the static site builder
-data/saiddone.json readers' rounds: which bills are open, the current shortlist, past totals
 data/snapshots/    one folder per night: meta.json and tide.json always, data files only when they changed
 tests/             tests against recorded real responses
 ```
@@ -36,7 +35,6 @@ tests/             tests against recorded real responses
 ```
 python -m speculum snapshot [--date YYYY-MM-DD] [--only votes finance lobbying]
 python -m speculum build --out dist
-python -m speculum saiddone [--date YYYY-MM-DD]       # count a closed readers' round, open the winner, start the next
 python -m speculum restore YYYY-MM-DD [--out DIR]   # a past night's files from git history, hash-checked (needs full history)
 pytest
 ```

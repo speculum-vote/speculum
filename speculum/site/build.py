@@ -286,10 +286,7 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
         sector_groups=__import__("speculum.lobbysectors", fromlist=["GROUPS"]).GROUPS,
         bill_min_orgs=__import__("speculum.bills", fromlist=["MIN_ORGS_FOR_PAGE"]).MIN_ORGS_FOR_PAGE, **common), encoding="utf-8")
     from . import data as data_mod
-    from .. import saiddone as sd_mod
-    said_opened = [sd["by_slug"][o["slug"]] for o in sd_mod.load_state(snapshots_root.parent / "saiddone.json").get("opened") or []
-                   if o["slug"] in sd["by_slug"]]
-    files = data_mod.write(prev, members, rows, votes, interest_rows, bd["bills"], said_opened, ld_rows)
+    files = data_mod.write(prev, members, rows, votes, interest_rows, bd["bills"], sd["bills"], ld_rows)
     (prev / "data.html").write_text(E.get_template("data.html").render(root="", page="data", files=files, **common), encoding="utf-8")
     # The readings only: itemized contributions live on each member's page and in the raw archive
     # (with them, this file passed Cloudflare's 25 MB limit on the first full night).
@@ -489,27 +486,17 @@ def _build_cases(E, data_root: Path, prev: Path, spend, votes, members, lobbying
 
 
 def _build_saiddone(E, data_root: Path, prev: Path, spend, votes, members, lobbying, info, common) -> dict:
-    """Said & Done (see speculum/saiddone.py): the bills the readers have opened, and the current round."""
+    """Said & Done (see speculum/saiddone.py): every qualifying bill, each with its own page."""
     from .. import saiddone as sd_mod
     sd = sd_mod.build(spend, votes, members, lobbying, info)
-    st = sd_mod.load_state(data_root / "saiddone.json")
-    opened_on = {o["slug"]: o for o in st.get("opened") or []}
-    opened = [sd["by_slug"][o["slug"]] for o in st.get("opened") or [] if o["slug"] in sd["by_slug"]]
-    rnd = st.get("round") or {}
-    cands = [sd["by_slug"][c] for c in rnd.get("candidates") or [] if c in sd["by_slug"]]
-    labels = {m["slug"]: m["label"] for m in sd["bills"]}
     (prev / "said").mkdir(exist_ok=True)
-    (prev / "saiddone").mkdir(exist_ok=True)
     (prev / "saiddone.html").write_text(E.get_template("saiddone.html").render(
-        root="", page="saiddone", st=st, opened=opened, cands=cands, labels=labels, years=sd["years"],
-        min_funders=sd["min_funders"], **common), encoding="utf-8")
+        root="", page="saiddone", bills=sd["bills"], years=sd["years"], min_funders=sd["min_funders"], **common),
+        encoding="utf-8")
     tmpl = E.get_template("said.html")
-    for m in opened:
+    for m in sd["bills"]:
         (prev / "said" / f"{m['slug']}.html").write_text(tmpl.render(
-            root="../", page="saiddone", m=m, opened_on=opened_on.get(m["slug"]), years=sd["years"], **common), encoding="utf-8")
-    # Read by functions/api/ballot.js: which bills may be voted for, and until when.
-    (prev / "saiddone" / "ballot.json").write_text(json.dumps(
-        {"round": rnd.get("id"), "closes": rnd.get("closes"), "candidates": [c["slug"] for c in cands]}), encoding="utf-8")
+            root="../", page="saiddone", m=m, years=sd["years"], **common), encoding="utf-8")
     return sd
 
 

@@ -5,7 +5,7 @@
 <h1>{{ m.label }}: both sides of the vote</h1>
 {% if m.title %}<p class="lede">{{ m.title }}</p>{% endif %}
 {% set i = m.info %}
-<p class="meta">{{ m.congress }}th Congress{% if i.sponsor %} · sponsor: {% if i.sponsor_bioguide and i.sponsor_bioguide in member_ids %}<a href="../member/{{ i.sponsor_bioguide }}.html">{{ i.sponsor }}</a>{% else %}{{ i.sponsor }}{% endif %}{% endif %}{% if i.url %} · <a href="{{ i.url }}">Congress.gov</a>{% endif %}{% if m.slug in bill_slugs %} · <a href="../bill/{{ m.slug }}.html">Who lobbied it</a>{% endif %}{% if opened_on %} · opened {{ opened_on.on|shortdate }}{{ ' by the readers’ vote' if opened_on.by != 'first' else '' }}{% endif %}</p>
+<p class="meta">{{ m.congress }}th Congress{% if i.sponsor %} · sponsor: {% if i.sponsor_bioguide and i.sponsor_bioguide in member_ids %}<a href="../member/{{ i.sponsor_bioguide }}.html">{{ i.sponsor }}</a>{% else %}{{ i.sponsor }}{% endif %}{% endif %}{% if i.url %} · <a href="{{ i.url }}">Congress.gov</a>{% endif %}{% if m.slug in bill_slugs %} · <a href="../bill/{{ m.slug }}.html">Who lobbied it</a>{% endif %}</p>
 
 {% from "_toc.html" import toc %}{{ toc([("vote", "The vote"), ("pattern", "The pattern"), ("orgs", "The organizations"), ("rule", "The rule")]) }}
 

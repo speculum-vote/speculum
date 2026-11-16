@@ -46,22 +46,6 @@ def test_both_sides_counts():
     assert m["money"] == {"yes": 110, "no": 50}
 
 
-def test_rounds_open_first_bill_then_count():
-    bills = [{"slug": s, "n_lobbied": n} for s, n in [("119-hr1", 900), ("119-a", 500), ("119-b", 400), ("119-c", 300)]]
-    data = {"bills": bills, "by_slug": {b["slug"]: b for b in bills}}
-    st = sd.advance({}, data, "2026-11-08")
-    assert [o["slug"] for o in st["opened"]] == ["119-hr1"]
-    assert st["round"]["candidates"] == ["119-a", "119-b", "119-c"] and st["round"]["closes"] == "2026-11-14"
-    assert sd.advance(st, data, "2026-11-14", lambda r: {"119-b": 9}) == st          # still open on its last day
-    st2 = sd.advance(st, data, "2026-11-15", lambda r: {"119-b": 2, "119-c": 2, "119-hr1": 50})
-    assert st2["closed"][0]["winner"] == "119-b"                                     # tie: more organizations lobbied
-    assert st2["closed"][0]["counts"] == {"119-a": 0, "119-b": 2, "119-c": 2}        # votes for bills off the ballot ignored
-    assert [o["slug"] for o in st2["opened"]] == ["119-hr1", "119-b"]
-    assert st2["round"]["candidates"] == ["119-a", "119-c"] and st2["round"]["id"] == "2026-11-15"
-    st3 = sd.advance(st2, data, "2026-11-22", lambda r: {})
-    assert st3["closed"][-1]["winner"] is None and len(st3["opened"]) == 2          # no votes, nothing opens
-
-
 def test_lobbying_report_links_follow_the_bill_through_quarters():
     from speculum import bills
     spend = {"quarters": {

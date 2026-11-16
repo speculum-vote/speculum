@@ -26,7 +26,7 @@ def _write(path: Path, header: list[str], rows, gz: bool = False) -> dict:
     return {"file": path.name, "rows": n, "bytes": path.stat().st_size, "columns": header}
 
 
-def write(out: Path, members, chamber_rows, votes, interests, bills, said_opened, leaving_rows) -> list[dict]:
+def write(out: Path, members, chamber_rows, votes, interests, bills, said_bills, leaving_rows) -> list[dict]:
     d = out / "data"
     d.mkdir(exist_ok=True)
     by_id = {m["bioguide"]: m for m in members}
@@ -95,8 +95,8 @@ def write(out: Path, members, chamber_rows, votes, interests, bills, said_opened
         ["bill", "organization", "sector", "both_sides", "yes_members_funded", "yes_amount", "no_members_funded",
          "no_amount", "lobbying_reports_naming_the_bill", "contribution_reports"],
         ([m["label"], o["name"], o["sector_name"], "yes" if o["both"] else "no", o["yes"]["members"], o["yes"]["amount"],
-          o["no"]["members"], o["no"]["amount"], o.get("n_said", 0), o["n_filings"]] for m in said_opened for o in m["orgs"])),
-        "title": "Said & Done", "about": "For each bill the readers have opened: every organization that lobbied it and "
+          o["no"]["members"], o["no"]["amount"], o.get("n_said", 0), o["n_filings"]] for m in said_bills for o in m["orgs"])),
+        "title": "Said & Done", "about": "For every qualifying bill: every organization that lobbied it and "
         "funded members who voted on it, with whom it funded on each side of the final vote."})
 
     files.append({**_write(d / "leaving.csv",
