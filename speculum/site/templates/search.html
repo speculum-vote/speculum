@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Search · Speculum{% endblock %}
+{% block body %}
+<h1>Search</h1>
+<p class="lede">Members of Congress, companies and other organizations, PACs, bills, cases and pages. The search runs in your browser; nothing you type is sent anywhere.</p>
+<div class="search-page" role="search">
+  <input type="search" id="sq" placeholder="A name, a company, a bill number such as HR 1013, a topic" aria-label="Search Speculum" autocomplete="off">
+</div>
+<div id="sout" class="sr-page" aria-live="polite"></div>
+<noscript><p class="meta">Search needs JavaScript. Every member is on <a href="chamber.html">The Chamber</a>, every organization on <a href="interests.html">Organizations and PACs</a>, every bill on <a href="bills.html">Bills</a>.</p></noscript>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var q = document.getElementById("sq"), out = document.getElementById("sout"), S = window.SpeculumSearch;
+  var start = new URLSearchParams(location.search).get("q") || "";
+  q.value = start;
+  function run() {
+    var v = q.value;
+    if (!v.trim()) { out.innerHTML = ""; return; }
+    S.load().then(function (ix) {
+      if (q.value !== v) return;
+      var r = S.rank(ix, v, 60);
+      out.innerHTML = r.length ? '<p class="meta">' + r.length + (r.length === 60 ? "+ results" : r.length === 1 ? " result" : " results") + '</p>' + r.map(function (e) { return S.html(e, false); }).join("")
+        : '<p class="meta">Nothing found for “' + window.SpeculumTables.esc(v) + '”. Try a last name, a company, a bill number such as “HR 1013”, or a topic such as “banks”.</p>';
+      history.replaceState(null, "", "?q=" + encodeURIComponent(v));
+    });
+  }
+  q.addEventListener("input", run);
+  run(); q.focus();
+});
+</script>
+{% endblock %}

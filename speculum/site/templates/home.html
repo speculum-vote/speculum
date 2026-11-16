@@ -25,6 +25,7 @@
 {% endif %}
 
 {% include "_find.html" %}
+<p class="meta" style="margin-top:-8px"><a href="mine.html">Your members in full: their money, their votes, how they compare, and what’s new since your last visit →</a></p>
 
 {% set shown = [] %}{% for id in home_findings %}{% for x in f.findings if x.id == id and x.head is not none %}{% if shown|length < 3 %}{% set _ = shown.append(x) %}{% endif %}{% endfor %}{% endfor %}
 {% if shown %}
@@ -45,6 +46,7 @@
   <a href="chamber.html"><b>The Chamber</b><span>All {{ n_members }} members side by side. Open any member's votes, money and lobbyists.</span></a>
   <a href="money.html"><b>The Money</b><span>Where campaign money comes from, what lobbying costs, and which committees it follows.</span></a>
   <a href="bills.html"><b>Bills</b><span>Who lobbied each bill, by sector, and what they gave the members who voted on it.</span></a>
+  <a href="explore.html"><b>Follow the money</b><span>Pick an industry and see which members it funds, filtered by party, state or committee.</span></a>
   <a href="tide.html"><b>The Tide</b><span>A new edition each night: the day's votes and filings.</span></a>
   <a href="saiddone.html"><b>Said &amp; Done</b><span>Who lobbied a bill and whom they funded on each side of its vote. Readers choose the next bill.</span></a>
   <a href="method.html"><b>Method</b><span>Every rule behind every figure, so anyone can check the work.</span></a>

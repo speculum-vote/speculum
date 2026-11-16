@@ -30,7 +30,18 @@
   </div>
 </div>
 
+{% if e.concentration %}
+<h2>Where it concentrates</h2>
+<p>For each committee, what the average member on it received from {{ e.name }}, against the average for every other sitting member. 1.0× would be even. Only committees where it funded at least four members.</p>
+<div class="tbl-wrap"><table data-nofilter>
+<thead><tr><th>Committee</th><th class="r">Members funded</th><th class="r">Average per member on it</th><th class="r">Everyone else</th><th class="r">Ratio</th></tr></thead><tbody>
+{% for c in e.concentration %}<tr><td>{{ c.name }}</td><td class="r num">{{ c.funded }} of {{ c.seats }}</td><td class="r num">{{ c.avg_on|money }}</td><td class="r num">{{ c.avg_off|money }}</td><td class="r num">{{ '%.1f'|format(c.ratio) }}×</td></tr>
+{% endfor %}</tbody></table></div>
+<p class="meta">Members sit on several committees, so these overlap. A higher ratio says where the money went, not why.</p>
+{% endif %}
+
 <h2>Members funded</h2>
+<p class="meta">Sort by any column; filter by party, chamber, state or committee.</p>
 <div class="tbl-wrap"><table>
 <thead><tr><th>Member</th><th>Seat</th><th class="r">Amount</th><th class="r">{{ 'Gifts' if e.kind == 'committee' else 'Contributions' }}</th></tr></thead>
 <tbody>

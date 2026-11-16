@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-root="{{ root }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +14,11 @@
 <body>
 <header class="mast"><div class="wrap">
   <a class="wordmark" href="{{ root }}index.html">Specul<span>u</span>m</a>
+  <button class="search-btn" id="search-btn" type="button" aria-expanded="false" aria-controls="site-search" title="Search (press /)"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Search</span></button>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   <nav id="site-nav">
     <a href="{{ root }}index.html" {% if page == 'home' %}class="on"{% endif %}>Home</a>
+    <a href="{{ root }}mine.html" {% if page == 'mine' %}class="on"{% endif %}>Your members</a>
     <a href="{{ root }}cases.html" {% if page == 'cases' %}class="on"{% endif %}>Cases</a>
     <a href="{{ root }}chamber.html" {% if page == 'chamber' %}class="on"{% endif %}>The Chamber</a>
     <a href="{{ root }}money.html" {% if page in ('money', 'funders', 'gatekeepers') %}class="on"{% endif %}>The Money</a>
@@ -27,7 +29,12 @@
     <a href="{{ root }}method.html" {% if page == 'method' %}class="on"{% endif %}>Method</a>
   </nav>
   {% if not public %}<span class="preview-flag">{{ "Readers' preview · not yet published" if launched else "Early access · not yet public" }}</span>{% endif %}
-</div></header>
+</div>
+  <div class="site-search" id="site-search" role="search" hidden><div class="wrap">
+    <input type="search" placeholder="Search members, companies, bills, cases…" aria-label="Search Speculum" autocomplete="off">
+    <div class="sr-list" role="listbox"></div>
+  </div></div>
+</header>
 <main class="wrap">
 {% block body %}{% endblock %}
 </main>
@@ -47,7 +54,7 @@
     if (t.dataset.csv) { a.href = "{{ root }}" + t.dataset.csv; a.setAttribute("download", ""); }
     else a.addEventListener("click", function (ev) {
       ev.preventDefault();
-      var rows = Array.prototype.map.call(t.rows, function (r) {
+      var rows = Array.prototype.filter.call(t.rows, function (r) { return !r.hidden; }).map(function (r) {
         return Array.prototype.map.call(r.cells, function (c) {
           var v = (c.tagName === "TH" ? c.textContent : c.innerText).replace(/\s+/g, " ").trim();
           return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
@@ -69,5 +76,6 @@
 })();
 </script>
 {% block scripts %}{% endblock %}
+<script src="{{ root }}static/site.js?v={{ css_v }}" defer></script>
 </body>
 </html>

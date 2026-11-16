@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Your members · Speculum{% endblock %}
+{% block body %}
+<h1>Your members</h1>
+<p class="lede">Your two senators and your representative: where their money comes from, how they vote, and how that compares with the rest of their chamber. Follow any member to see what they have voted on since your last visit.</p>
+
+<div id="mine-follow"></div>
+
+{% set find_heading = "Find your members" %}{% include "_find.html" %}
+
+<div id="mine-out" aria-live="polite"></div>
+
+<div class="notice">Your state, district and the members you follow are kept only in this browser, on this device. Speculum does not know who you are or whom you looked up. Figures come from FEC candidate totals, lobbying contribution reports (LD-203) and roll calls; each member’s page links every figure to its source. A contribution is not evidence of a vote.</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var T = window.SpeculumTables, out = document.getElementById("mine-out"), fol = document.getElementById("mine-follow"), data = null, M_ = {};
+  function get(bio) { return M_[bio] || (M_[bio] = T.getJSON("mine/" + bio + ".json").then(function (x) { data.members[bio] = x; return x; }, function () { return null; })); }
+  function getAll(bios) { return Promise.all(bios.map(get)); }
+  var PN = {D: "Democrat", R: "Republican", I: "Independent", L: "Libertarian"}, CH = {h: "House", s: "Senate"};
+  var POS = {"Yea": "Yes", "Aye": "Yes", "Nay": "No", "No": "No", "Not Voting": "Did not vote", "Present": "Present"};
+  function load(k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }
+  function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  var follows = load("spec-follow", []), seen = load("spec-seen", {}), seenNow = {};   // seenNow: what this visit started from
+  Object.keys(seen).forEach(function (k) { seenNow[k] = seen[k]; });
+  function pct(x) { return x == null ? "—" : Math.round(x * 100) + "%"; }
+  function ord(p) { return p == null ? "" : (p >= 50 ? "higher than " + Math.round(p) + "%" : "lower than " + Math.round(100 - p) + "%"); }
+  function cmp(M, key, val, fmt) {
+    var p = M.pct[key], med = M.med[key];
+    if (val == null || p == null) return "";
+    return '<div class="mine-cmp">' + ord(p) + " of the " + CH[M.ch] + (med != null ? " · chamber median " + fmt(med) : "") + "</div>";
+  }
+  function isNew(bio, date) { return seenNow[bio] && date > seenNow[bio]; }
+  function card(bio) {
+    var M = data.members[bio]; if (!M) return "";
+    var on = follows.indexOf(bio) !== -1, h = '<article class="mine-card" id="m-' + bio + '">';
+    h += '<header><div><h2><a href="member/' + bio + '.html">' + T.esc(M.n) + '</a></h2><div class="meta"><span class="party-' + M.p + '">' + (PN[M.p] || M.p) + '</span> · ' + T.esc(M.seat) +
+      (M.x ? ' · <span class="find-leaving">Leaving in January</span>' : '') + '</div></div>' +
+      '<button class="follow' + (on ? ' on' : '') + '" data-b="' + bio + '" aria-pressed="' + on + '">' + (on ? "Following" : "Follow") + '</button></header>';
+    h += '<div class="readings">';
+    h += '<div class="reading"><div class="label">Raised from contributors</div><div class="value">' + (M.raised != null ? T.money(M.raised) : "—") + '</div><div class="context">' + (M.cycle ? T.esc(M.cycle) + ". " : "") +
+      'Small donors ' + pct(M.small) + ', PACs and committees ' + pct(M.pac) + '.</div>' + cmp(M, "small_share", M.small, pct).replace("higher", "small-donor share higher").replace("lower than", "small-donor share lower than") + '</div>';
+    h += '<div class="reading"><div class="label">Lobbyist money</div><div class="value">' + T.money(M.lob) + '</div><div class="context">from registered lobbyists and their organizations’ PACs (LD-203, ' + T.esc(data.years || "") + ').</div>' + cmp(M, "lobbyist_total", M.lob, T.money) + '</div>';
+    h += '<div class="reading"><div class="label">Party unity · Voted</div><div class="value">' + pct(M.unity) + ' · ' + pct(M.att) + '</div><div class="context">of party-splitting votes cast with their party · of roll calls this session.</div>' + cmp(M, "attendance", M.att, pct).replace("higher", "attendance higher").replace("lower than", "attendance lower than") + '</div>';
+    h += '</div>';
+    if (M.givers.length || M.sectors.length) {
+      h += '<div class="mine-two"><div><div class="label">Lobbying organizations that reported giving the most</div><ol class="mine-list">' + M.givers.map(function (g) {
+        return '<li><a href="interest/r-' + g[0] + '.html">' + T.esc(g[1]) + '</a> <span class="num">' + T.money(g[2]) + '</span></li>'; }).join("") + '</ol></div>';
+      h += '<div><div class="label">By industry</div><ol class="mine-list">' + M.sectors.map(function (s) {
+        return '<li><a href="explore.html#s=' + s[0] + '">' + T.esc(s[1]) + '</a> <span class="num">' + T.money(s[2]) + '</span></li>'; }).join("") + '</ol></div></div>';
+    }
+    if (M.cases.length) {
+      h += '<div class="label" style="margin-top:18px">On the cases</div><ul class="mine-votes">' + M.cases.map(function (c) {
+        return '<li><span class="num">' + c[2] + '</span> <a href="case/' + c[0] + '.html">' + T.esc(c[1]) + '</a>: ' + T.esc(c[3]) + ' · <b>' + (POS[c[4]] || T.esc(c[4])) + '</b>' + (c[5] ? ' · <a href="' + c[5] + '">roll call</a>' : '') + '</li>'; }).join("") + '</ul>';
+    }
+    if (M.recent.length) {
+      var nNew = M.recent.filter(function (v) { return isNew(bio, v[1]); }).length;
+      h += '<div class="label" style="margin-top:18px">Latest roll calls' + (nNew ? ' · <span class="mine-new">' + nNew + ' new since your last visit</span>' : '') + '</div><ul class="mine-votes">' + M.recent.slice(0, 6).map(function (v) {
+        return '<li' + (isNew(bio, v[1]) ? ' class="is-new"' : '') + '><span class="num">' + v[1] + '</span> ' + T.esc(v[3]) + ' · <b>' + (POS[v[5]] || T.esc(v[5])) + '</b>' + (v[6] ? ' <span class="muted">(' + T.esc(v[6]) + ')</span>' : '') +
+          (v[7] ? ' · <a href="' + v[7] + '">roll call</a>' : '') + '</li>'; }).join("") + '</ul>';
+    }
+    h += '<p class="meta"><a href="member/' + bio + '.html">Full record for ' + T.esc(M.n) + ' →</a></p></article>';
+    return h;
+  }
+  function markSeen(bios) {
+    bios.forEach(function (b) { var M = data.members[b]; if (M && M.recent.length) { seen[b] = M.recent[0][1]; } });
+    save("spec-seen", seen);
+  }
+  function wire(root) {
+    root.querySelectorAll("button.follow").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var bio = b.dataset.b, i = follows.indexOf(bio);
+        if (i === -1) follows.push(bio); else follows.splice(i, 1);
+        save("spec-follow", follows); drawFollows();
+        document.querySelectorAll('button.follow[data-b="' + bio + '"]').forEach(function (x) {
+          var on = follows.indexOf(bio) !== -1; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on); x.textContent = on ? "Following" : "Follow"; });
+      });
+    });
+  }
+  function drawFollows() {
+    if (!data) return;
+    getAll(follows).then(function () { drawFollows2(); });
+  }
+  function drawFollows2() {
+    var fs = follows.filter(function (b) { return data.members[b]; });
+    fol.innerHTML = fs.length ? '<section class="mine-following"><div class="label">Following</div><div class="find-cards">' + fs.map(function (b) {
+      var M = data.members[b], n = M.recent.filter(function (v) { return isNew(b, v[1]); }).length;
+      return '<a class="find-card" href="#m-' + b + '" data-b="' + b + '"><b>' + T.esc(M.n) + '</b><span class="party-' + M.p + '">' + (PN[M.p] || M.p) + '</span><span>' + T.esc(M.seat) + '</span>' +
+        (n ? '<span class="mine-new">' + n + ' new vote' + (n > 1 ? 's' : '') + '</span>' : '<span class="muted">No new votes</span>') + '</a>'; }).join("") + '</div></section>' : "";
+    fol.querySelectorAll("a[data-b]").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        var b = a.dataset.b; if (!document.getElementById("m-" + b)) { ev.preventDefault(); show([b], true); }
+      });
+    });
+  }
+  var current = [];
+  function show(bios, extra, after) {
+    if (!data) return;
+    var list = extra ? current.concat(bios.filter(function (b) { return current.indexOf(b) === -1; })) : bios;
+    current = list;
+    getAll(list).then(function () {
+      if (current !== list) return;
+      out.innerHTML = list.map(card).join("") + (after || "");
+      wire(out); markSeen(list);
+      if (extra) { var el = document.getElementById("m-" + bios[0]); if (el) el.scrollIntoView({behavior: "smooth"}); }
+    });
+  }
+  T.getJSON("mine.json").then(function (d) {
+    data = d; data.members = {}; drawFollows();
+    if (pending) show(pending[0], false, pending[1]);
+    else if (follows.length && !current.length) show(follows.slice());
+  });
+  var pending = null;
+  document.addEventListener("find:members", function (ev) {
+    var x = ev.detail, bios = x.senators.concat(x.reps.length === 1 ? x.reps : []);
+    var after = x.reps.length > 1 ? '<p class="meta">Choose your district above to add your representative.</p>' : "";
+    if (!data) { pending = [bios, after]; return; }
+    show(bios, false, after);
+  });
+});
+</script>
+{% endblock %}

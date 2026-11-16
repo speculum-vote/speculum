@@ -98,7 +98,7 @@ def env() -> Environment:
     e.filters["shortdate"] = shortdate
     e.filters["money"] = money
     e.filters["pct"] = pct
-    e.globals["css_v"] = __import__("hashlib").sha256((HERE / "static" / "style.css").read_bytes()).hexdigest()[:10]
+    e.globals["css_v"] = __import__("hashlib").sha256((HERE / "static" / "style.css").read_bytes() + (HERE / "static" / "site.js").read_bytes()).hexdigest()[:10]
     e.filters["org"] = org_name
     e.filters["num"] = lambda x: f"{x:,}" if isinstance(x, (int, float)) and not isinstance(x, bool) else ("—" if x is None else x)
     return e
@@ -123,6 +123,7 @@ def build(snapshots_root: Path, out: Path, raw_root: Path | None = None) -> dict
         d.mkdir(parents=True, exist_ok=True)
     for d in (pub, prev):
         shutil.copy(HERE / "static" / "style.css", d / "static" / "style.css")
+        shutil.copy(HERE / "static" / "site.js", d / "static" / "site.js")
 
     (pub / "index.html").write_text(E.get_template("holding.html").render(), encoding="utf-8")
     (pub / "signups.html").write_text(E.get_template("signups.html").render(), encoding="utf-8")
@@ -165,7 +166,7 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     ledgers = ledger_mod.build(members, finance, votes, lobbying.get("by_member", {}))
 
     site_cfg = chains_mod.load_json(snapshots_root.parent / "site.json", {}) or {}
-    common = {"snapshot_date": snap.date, "day_number": day_number(snap.date), "public": public,
+    common = {"snapshot_date": snap.date, "day_number": day_number(snap.date), "public": public, "_snapshots_root": str(snapshots_root),
               "show_dependents": (not public) or bool(site_cfg.get("dependents_public", True)),
               "launched": site_cfg.get("public") == "launch"}
     rows = []
@@ -251,7 +252,8 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     sd = _build_saiddone(E, snapshots_root.parent, prev, spend, votes, members, lobbying,
                          read_newest(snapshots_root, "billinfo.json", snap.date), common)
     timeline = _build_tide(E, snapshots_root, prev, members, common, public)
-    interest_rows = _build_interests(E, prev, members, finance, lobbying, common)
+    committees = read_newest(snapshots_root, "committees.json", snap.date)
+    interest_rows = _build_interests(E, prev, members, finance, lobbying, common, committees)
     chains = None
     if common["show_dependents"]:
         chains = _build_chains(E, snapshots_root.parent, prev, members, finance, lobbying, votes, common, public)
@@ -294,14 +296,66 @@ def _render_site(E, prev: Path, snapshots_root: Path, snap, public: bool) -> dic
     slim = {bio: {**{k: v for k, v in L.items() if k != "lobbyist_items"}, "lobbyist_count": len(L.get("lobbyist_items") or [])}
             for bio, L in ledgers.items()}
     (prev / "ledgers.json").write_text(json.dumps({"date": snap.date, "ledgers": slim}, default=str), encoding="utf-8")
+    _build_interactive(E, prev, members, ledgers, lobbying, vlist, positions, spend, committees, interest_rows,
+                       bd["bills"], cases_done, leaving, common)
     return {"members": len(members), "votes": len(vlist)}
+
+
+def _build_interactive(E, prev: Path, members, ledgers, lobbying, vlist, positions, spend, committees, interest_rows,
+                       bills, cases_done, leaving, common) -> None:
+    """Search, the filters on member tables, the industry explorer and Your members (speculum/site/interactive.py)."""
+    from . import interactive as ix
+    from .. import gatekeepers as gk_mod, lobbysectors
+    from .. import money as money_mod
+    seats, cindex = ix.member_seats(committees), ix.committee_index(committees)
+    sectors_of = gk_mod.registrant_sectors(spend, lobbying.get("registrants") or {})
+    ix.write(prev, "committees.json", cindex)
+    ix.write(prev, "people.json", {m["bioguide"]: [m["party"], m["chamber"][0], m["state"], seats.get(m["bioguide"], [])] for m in members})
+    listing, files = ix.explore(lobbying, sectors_of, lobbysectors.NAMES, seats, cindex, members)
+    ix.write(prev, "explore.json", {"years": lobbying.get("years_label"), "sectors": listing})
+    for k, f in files.items():
+        ix.write(prev, f"explore/{k}.json", f)
+    info = read_newest(Path(common.get("_snapshots_root", "data/snapshots")), "billinfo.json", common["snapshot_date"], {}) or {}
+    titles = {k: (x.get("short_title") or x.get("title")) for k, x in (info.get("bills") or {}).items() if isinstance(x, dict)}
+    summaries = ix.mine(members, ledgers, lobbying, vlist, positions, cases_done, sectors_of, lobbysectors.NAMES, seat, leaving, cindex, seats, titles)
+    ix.write(prev, "mine.json", {"date": common["snapshot_date"], "years": lobbying.get("years_label")})
+    for bio, sm in summaries.items():               # one small file per member: a reader loads only their own
+        ix.write(prev, f"mine/{bio}.json", sm)
+    pages = [["Home", "What Speculum is and what the record shows", "index.html"],
+             ["Your members", "Your senators and representative: their money, votes and standing", "mine.html", "my representative senator zip"],
+             ["Cases", "One decision followed through the record", "cases.html"],
+             ["The Chamber", "Every member of Congress, side by side", "chamber.html", "members house senate"],
+             ["The Money", "Where members' money comes from", "money.html", "contributions donors"],
+             ["Explore the money by industry", "Which members each industry funds, by committee, party and state", "explore.html", "industry sector follow the money"],
+             ["Funders", "The largest funders", "funders.html"],
+             ["Gatekeepers", "Industry money to the committees that oversee it", "gatekeepers.html", "committee"],
+             ["Bills", "The bills organizations lobbied on most", "bills.html", "legislation lobbied"],
+             ["Findings", "What the record shows tonight", "findings.html"],
+             ["The Tide", "Daily stories from the record", "tide.html", "news"],
+             ["Said & Done", "What members said and what they did", "saiddone.html", "promises"],
+             ["Lame duck", "Members who are leaving and still voting", "lameduck.html", "leaving retiring defeated"],
+             ["Organizations and PACs", "Every organization and PAC that gave to members", "interests.html", "interests pacs"],
+             ["Method", "How every figure is counted", "method.html", "rules methodology"],
+             ["Corrections", "What we got wrong and fixed", "corrections.html"],
+             ["Data", "Download the data", "data.html", "csv download"],
+             ["About", "About Speculum", "about.html"]]
+    pages += [[name, "The money in this area", f"money/{key}.html", "lobbying area"] for key, (name, _) in money_mod.AREAS.items()]
+    ix.write(prev, "search.json", ix.search_index(members, seat, bills, cases_done, interest_rows, pages))
+    (prev / "explore.html").write_text(E.get_template("explore.html").render(root="", page="money", **common), encoding="utf-8")
+    (prev / "mine.html").write_text(E.get_template("mine.html").render(root="", page="mine", **common), encoding="utf-8")
+    (prev / "search.html").write_text(E.get_template("search.html").render(root="", page="search", **common), encoding="utf-8")
 
 
 INTERESTS_FIRST = 200
 
 
-def _build_interests(E, prev: Path, members, finance, lobbying, common) -> list:
+def _build_interests(E, prev: Path, members, finance, lobbying, common, committees=None) -> list:
     all_ = interests_mod.build(members, finance, lobbying)
+    from . import interactive as ix
+    seats, cindex = ix.member_seats(committees), ix.committee_index(committees)
+    for e in all_.values():
+        if e["total"] >= 50_000 and e["members"] >= 10 and seats:
+            e["concentration"] = ix.concentration({r["bioguide"]: float(r["amount"] or 0) for r in e["rows"]}, seats, cindex)
     by_id = {m["bioguide"]: m for m in members}
     rows = sorted(all_.values(), key=lambda e: -e["total"])
     (prev / "interest").mkdir(exist_ok=True)

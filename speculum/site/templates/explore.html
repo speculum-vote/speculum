@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Explore the money by industry · Speculum{% endblock %}
+{% block body %}
+<p class="meta"><a href="money.html">← The Money</a></p>
+<h1>Explore the money by industry</h1>
+<p class="lede">Pick an industry to see which members of Congress its lobbying organizations funded, where on the committees that money concentrates, and which organizations gave the most. Filter by party, chamber, state or committee.</p>
+
+<div class="ex-pick">
+  <label>Industry <select id="ex-sector" aria-label="Industry"><option value="">Loading…</option></select></label>
+</div>
+
+<div id="ex-out" aria-live="polite"><noscript><p class="meta">The explorer needs JavaScript. The same money, by area, is on <a href="money.html">The Money</a> and, by organization, on <a href="interests.html">Organizations and PACs</a>.</p></noscript></div>
+
+<div class="notice">What this counts: contributions that lobbying organizations report on LD-203 filings (their PACs and their lobbyists' own gifts) to members sitting now, <span id="ex-years">2025–2026</span>, grouped by the industry each organization is sorted into under the rules on the <a href="method.html">Method</a> page. Giving to a member is legal and common. A contribution is not evidence of a vote, a position or a decision.</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var T = window.SpeculumTables, sel = document.getElementById("ex-sector"), out = document.getElementById("ex-out");
+  var P = {D: "Democrats", R: "Republicans", I: "Independents"}, people = null;
+  function m(x) { return T.money(x); }
+  function pct(x) { return Math.round(x * 100) + "%"; }
+  Promise.all([T.getJSON("explore.json"), T.getJSON("people.json"), T.getJSON("find.json")]).then(function (x) {
+    var list = x[0], fm = {}; people = x[1];
+    x[2].members.forEach(function (r) { fm[r.b] = r; });
+    document.getElementById("ex-years").textContent = list.years || "";
+    sel.innerHTML = list.sectors.map(function (s) { return '<option value="' + s.key + '">' + T.esc(s.name) + " · " + m(s.total) + '</option>'; }).join("");
+    var want = (location.hash.match(/s=([a-z-]+)/) || [])[1];
+    if (want && list.sectors.some(function (s) { return s.key === want; })) sel.value = want;
+    sel.addEventListener("change", function () { history.replaceState(null, "", "#s=" + sel.value); show(sel.value, fm); });
+    show(sel.value, fm);
+  }).catch(function () { out.innerHTML = '<p class="meta">Could not load the explorer just now.</p>'; });
+
+  function show(key, fm) {
+    out.innerHTML = '<p class="meta">Loading…</p>';
+    T.getJSON("explore/" + key + ".json").then(function (d) {
+      var by = {D: 0, R: 0, I: 0}, ch = {h: 0, s: 0};
+      d.members.forEach(function (r) { var p = people[r[0]]; if (p) { by[p[0] === "D" ? "D" : p[0] === "R" ? "R" : "I"] += r[1]; ch[p[1]] += r[1]; } });
+      var tot = d.total || 1, h = "";
+      h += '<div class="readings"><div class="reading"><div class="label">Reported to members</div><div class="value">' + m(d.total) + '</div><div class="context">to ' + d.members.length + ' sitting members, from ' + d.n_givers + ' organizations</div></div>';
+      h += '<div class="reading"><div class="label">By party</div><div class="fbar" style="margin-top:16px"><span style="width:' + (100 * by.D / tot).toFixed(2) + '%;background:#8fb3d9"></span><span style="width:' + (100 * by.R / tot).toFixed(2) + '%;background:#d99a8f"></span><span style="width:' + (100 * by.I / tot).toFixed(2) + '%;background:#b9b39a"></span></div><div class="context">Democrats ' + pct(by.D / tot) + ' · Republicans ' + pct(by.R / tot) + (by.I / tot >= 0.005 ? ' · Independents ' + pct(by.I / tot) : '') + '</div></div>';
+      h += '<div class="reading"><div class="label">By chamber</div><div class="value" style="font-size:20px">House ' + m(ch.h) + '<br>Senate ' + m(ch.s) + '</div></div></div>';
+      if (d.concentration && d.concentration.length) {
+        h += '<h2>Where it concentrates</h2><p>For each committee, what the average member on it received from this industry, against the average for every other member. 1.0× would be even. Committees where the industry funded fewer than five members are left out.</p>';
+        h += '<div class="tbl-wrap"><table data-nofilter><thead><tr><th>Committee</th><th class="r">Members funded</th><th class="r">Average per member on it</th><th class="r">Everyone else</th><th class="r">Ratio</th></tr></thead><tbody>' +
+          d.concentration.map(function (c) { return '<tr><td>' + T.esc(c.name) + '</td><td class="r num">' + c.funded + ' of ' + c.seats + '</td><td class="r num">' + m(c.avg_on) + '</td><td class="r num">' + m(c.avg_off) + '</td><td class="r num">' + c.ratio.toFixed(1) + '×</td></tr>'; }).join("") + '</tbody></table></div>';
+      }
+      h += '<h2>Members funded</h2><p class="meta">Sort by any column; filter by party, chamber, state or committee. Each name opens the member’s page, where every contribution links to its filing.</p>';
+      h += '<div class="tbl-wrap"><table id="ex-members" data-late><thead><tr><th>Member</th><th>Seat</th><th class="r">Reported</th><th class="r">Contributions</th></tr></thead><tbody>' +
+        d.members.map(function (r) { var f = fm[r[0]]; if (!f) return ""; var seat = f.c === "s" ? f.s + " · Senate" : f.s + (f.d ? "-" + f.d : " at large");
+          return '<tr><td><a href="member/' + r[0] + '.html">' + T.esc(f.n) + '</a> <span class="party-' + f.p + ' num">' + f.p + '</span></td><td class="num">' + seat + '</td><td class="r num" data-v="' + r[1] + '">' + m(r[1]) + '</td><td class="r num">' + r[2] + '</td></tr>'; }).join("") + '</tbody></table></div>';
+      h += '<h2>Organizations that gave the most</h2><div class="tbl-wrap"><table data-nofilter><thead><tr><th>Organization</th><th class="r">Reported to members</th></tr></thead><tbody>' +
+        d.givers.slice(0, 25).map(function (g) { return '<tr><td><a href="interest/r-' + g[0] + '.html">' + T.esc(g[1]) + '</a></td><td class="r num" data-v="' + g[2] + '">' + m(g[2]) + '</td></tr>'; }).join("") + '</tbody></table></div>' +
+        (d.n_givers > 25 ? '<p class="meta">The 25 that gave the most, of ' + d.n_givers + '.</p>' : '');
+      out.innerHTML = h;
+      out.querySelectorAll("table").forEach(function (t) { T.enhance(t); });
+    }).catch(function () { out.innerHTML = '<p class="meta">Could not load this industry just now.</p>'; });
+  }
+});
+</script>
+{% endblock %}

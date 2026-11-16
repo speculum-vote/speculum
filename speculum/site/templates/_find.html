@@ -38,6 +38,8 @@
       '<div class="find-group"><div class="label">House' + (d === "" && rep.length > 1 ? (only ? ' · the districts this ZIP code touches' : ' · all ' + rep.length + ' districts') : '') + '</div><div class="find-cards">' +
       (rep.map(card).join("") || '<p class="muted">This seat is vacant in the record.</p>') + '</div></div>';
     out.innerHTML = h;
+    try { document.dispatchEvent(new CustomEvent("find:members", {detail: {state: s, district: d, senators: sen.map(function (m) { return m.b; }),
+      reps: rep.map(function (m) { return m.b; })}})); } catch (e) {}
   }
   function districts() {
     var s = st.value, seen = data.members.filter(function (m) { return m.s === s && m.c === "h"; })
