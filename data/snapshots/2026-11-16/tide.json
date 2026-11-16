@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-16",
+ "first": false,
+ "more": 0,
+ "roll_calls": 0,
+ "since": "2026-11-15",
+ "stories": [
+  {
+   "date": null,
+   "dek": "Registered lobbyists and their organizations file twice-yearly reports of contributions to federal officeholders.",
+   "facts": [
+    "Donald S. Beyer, Jr. (D-VA): $500",
+    "1 contribution in newly posted reports."
+   ],
+   "headline": "New lobbyist contribution reports list $500 to 1 member",
+   "id": "2026-11-16-01",
+   "kind": "Lobbyist money",
+   "member_names": [],
+   "members": [
+    "B001292"
+   ],
+   "score": 12,
+   "sources": [
+    {
+     "label": "LD-203 reports, lda.gov",
+     "url": "https://lda.gov/system/public/"
+    }
+   ],
+   "status": "draft"
+  }
+ ]
+}
