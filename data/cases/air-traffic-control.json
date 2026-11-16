@@ -151,7 +151,7 @@
   },
   {
    "date": "2026-11-15",
-   "text": "Duffy said the trouble began with a new router at an FAA facility in southern Arkansas, installed during work to replace old copper lines, which overloaded the systems that carry radar and other data. That router and a second one from Amarillo, Texas, are being tested at an L3Harris lab. He asked whether it was \"a faulty installation by L3Harris\" without saying it was. L3Harris said it is supporting the FAA's investigation. Hewlett Packard Enterprise, whose Juniper unit made the router, said the routers did not fail. Officials said SMART played no role. The root cause has not been determined.",
+   "text": "Duffy said the trouble began with a new router at an FAA facility in southern Arkansas, which overloaded the systems that carry radar and other data. That router and a second one from Amarillo, Texas, are being tested at an L3Harris lab. He asked whether it was \"a faulty installation by L3Harris\" without saying it was. L3Harris said it is supporting the FAA's investigation. Hewlett Packard Enterprise, whose Juniper unit made the router, said the routers did not fail. Officials said SMART played no role. The root cause has not been determined.",
    "source": {
     "title": "Yahoo News live coverage",
     "url": "https://www.yahoo.com/news/us/live/faa-ground-stop-latest-updates-duffy-blames-contractor-l3harris-thousands-more-flights-canceled-saturday-no-sign-of-cyberattack-161329174.html"
