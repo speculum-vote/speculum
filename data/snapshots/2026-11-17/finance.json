@@ -26889,7 +26889,7 @@
  },
  "C001080": {
   "candidate_id": "H0CA32101",
-  "cash_on_hand": 3680652.82,
+  "cash_on_hand": 3687652.82,
   "committee_id": "C00458125",
   "committee_name": "JUDY CHU FOR CONGRESS",
   "coverage_end": "2026-10-14",
@@ -26898,9 +26898,9 @@
   "disbursements": 1297130.26,
   "large": 818458.11,
   "last_report": "PRE-GENERAL",
-  "pac": 510163.0,
+  "pac": 517163.0,
   "party": 0.0,
-  "receipts": 1375778.13,
+  "receipts": 1382778.13,
   "self": 0.0,
   "small": 47157.02,
   "top_committees": [
@@ -116279,12 +116279,12 @@
   "cycle": 2026,
   "cycle_label": "2025–2026 cycle",
   "disbursements": 1790787.41,
-  "large": 1223235.22,
+  "large": 1222866.74,
   "last_report": "PRE-GENERAL",
   "pac": 886109.23,
   "party": 0.0,
   "receipts": 2236501.68,
-  "self": 0.0,
+  "self": 368.48,
   "small": 28566.11,
   "top_committees": [
    {
