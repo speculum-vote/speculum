@@ -3979,11 +3979,11 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3944"
   },
   "119-HR3978": {
-   "fetched": "2026-11-11",
+   "fetched": "2026-11-18",
    "introduced": "2025-06-12",
    "latest_action": {
-    "date": "2026-11-09",
-    "text": "Motion to reconsider laid on the table Agreed to without objection."
+    "date": "2026-11-10",
+    "text": "Received in the Senate. Read twice. Placed on Senate Legislative Calendar under General Orders. Calendar No. 695."
    },
    "policy_area": "Energy",
    "sponsor": "Rep. Latta, Robert E. [R-OH-5]",
@@ -7059,6 +7059,19 @@
    "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8469"
   },
+  "119-HR8483": {
+   "fetched": "2026-11-18",
+   "introduced": "2026-04-23",
+   "latest_action": {
+    "date": "2026-11-17",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
+   },
+   "policy_area": "Native Americans",
+   "sponsor": "Rep. Issa, Darrell [R-CA-48]",
+   "sponsor_bioguide": "I000056",
+   "title": "Barona Group of Capitan Grande Band of Mission Indians Land Transfer Act of 2026",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8483"
+  },
   "119-HR8495": {
    "fetched": "2026-11-13",
    "introduced": "2026-04-24",
@@ -7865,12 +7878,25 @@
    "title": "SECURE 340B Act",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9599"
   },
+  "119-HR9600": {
+   "fetched": "2026-11-18",
+   "introduced": "2026-07-06",
+   "latest_action": {
+    "date": "2026-11-17",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
+   },
+   "policy_area": "Public Lands and Natural Resources",
+   "sponsor": "Rep. Raskin, Jamie [D-MD-8]",
+   "sponsor_bioguide": "R000606",
+   "title": "Common Sense 250 Act of 2026",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9600"
+  },
   "119-HR9612": {
-   "fetched": "2026-11-11",
+   "fetched": "2026-11-18",
    "introduced": "2026-07-09",
    "latest_action": {
-    "date": "2026-11-09",
-    "text": "Motion to reconsider laid on the table Agreed to without objection."
+    "date": "2026-11-10",
+    "text": "Received in the Senate and Read twice and referred to the Committee on Environment and Public Works."
    },
    "policy_area": "Energy",
    "sponsor": "Rep. Fry, Russell [R-SC-7]",
@@ -8594,7 +8620,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-resolution/161"
   },
   "119-HRES1650": {
-   "fetched": "2026-11-11",
+   "fetched": "2026-11-18",
    "introduced": "2026-11-09",
    "latest_action": {
     "date": "2026-11-10",
@@ -8607,7 +8633,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1650"
   },
   "119-HRES1655": {
-   "fetched": "2026-11-11",
+   "fetched": "2026-11-18",
    "introduced": "2026-11-10",
    "latest_action": {
     "date": "2026-11-10",
