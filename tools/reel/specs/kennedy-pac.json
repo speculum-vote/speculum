@@ -1,0 +1,123 @@
+{
+ "name": "speculum-kennedy-pac-reel",
+ "scenes": [
+  {
+   "type": "hook",
+   "seconds": 5,
+   "kicker": "Sen. John Kennedy (R-La.) · leadership PAC",
+   "lines": [
+    {
+     "label": "Raised since January 2025",
+     "value": 16708328,
+     "fmt": "money"
+    },
+    {
+     "label": "Given to candidates",
+     "value": 245000,
+     "fmt": "money",
+     "gold": true
+    }
+   ],
+   "source": "FEC filings, Jan. 1, 2025 to Oct. 14, 2026"
+  },
+  {
+   "type": "statement",
+   "seconds": 5,
+   "kicker": "What a leadership PAC is",
+   "text": "A member's fund apart from their own campaign, usually pitched as a way to <b>help other candidates.</b>",
+   "sub": "Kennedy's is Common Sense for America PAC. 96% of its money came from individuals, mostly in gifts of $200 or less.",
+   "source": "FEC committee C00634774; FEC receipts by size"
+  },
+  {
+   "type": "bars",
+   "seconds": 7,
+   "kicker": "Where it went",
+   "title": "Of the <b>$14.0M</b> it spent:",
+   "fmt": "money",
+   "max": 13972136,
+   "rows": [
+    {
+     "label": "Direct mail",
+     "sub": "billed as \"direct mail costs\"",
+     "value": 10982540
+    },
+    {
+     "label": "Digital and website",
+     "value": 1059192
+    },
+    {
+     "label": "Other operating costs",
+     "sub": "consultants, polling, fees",
+     "value": 1463474
+    },
+    {
+     "label": "Federal candidates",
+     "sub": "48 checks to 28 committees",
+     "value": 245000,
+     "gold": true
+    },
+    {
+     "label": "Refunds and charity",
+     "value": 221929
+    }
+   ],
+   "note": "For every <b>$1</b> to candidates, about <b>$45</b> on direct mail.",
+   "source": "FEC itemized spending, amended reports counted once"
+  },
+  {
+   "type": "columns",
+   "seconds": 7,
+   "kicker": "Every two years since 2017",
+   "title": "Four years ago it gave most of its money to candidates. <b>Then the money poured in.</b>",
+   "fmt": "money",
+   "groups": [
+    {
+     "label": "17–18",
+     "a": 340976,
+     "b": 17000
+    },
+    {
+     "label": "19–20",
+     "a": 401126,
+     "b": 235000
+    },
+    {
+     "label": "21–22",
+     "a": 377129,
+     "b": 242000
+    },
+    {
+     "label": "23–24",
+     "a": 9811521,
+     "b": 325000
+    },
+    {
+     "label": "25–26",
+     "a": 16708328,
+     "b": 245000
+    }
+   ],
+   "legend": [
+    "Raised",
+    "To federal candidates"
+   ],
+   "note": "Since 2023: <b>$26.5M</b> raised, 2% of spending to candidates.",
+   "source": "FEC committee totals by two-year cycle"
+  },
+  {
+   "type": "statement",
+   "seconds": 5.5,
+   "kicker": "Not just him",
+   "text": "Of the 193 big leadership PACs, <b>27 spent 75% or more on themselves.</b> 13 Republican, 14 Democratic.",
+   "sub": "Kennedy's is the largest.",
+   "source": "FEC totals, 2025–26; big = spent over $250,000"
+  },
+  {
+   "type": "end",
+   "seconds": 5,
+   "text": "All of it is <b>legal.</b>",
+   "sub": "Campaign money can't go to personal use. FEC commissioners have ruled that ban doesn't cover leadership PACs.",
+   "source": "Sources: FEC filings, C00634774"
+  }
+ ]
+}
