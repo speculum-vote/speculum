@@ -21,6 +21,9 @@ def test_lobbyists_own_contributions_are_not_the_organizations():
     assert sd._personal({"contributor": "Jane Roe", "reported_by": "Jane Roe (Acme Corp)"})
     assert not sd._personal({"contributor": "Acme Corp PAC", "reported_by": "Jane Roe (Acme Corp)"})
     assert not sd._personal({"contributor": "Acme Corp PAC", "reported_by": "Acme Corp"})
+    # On an organization's own report, "Self" is the organization, not a lobbyist.
+    assert not sd._personal({"contributor": "Self", "reported_by": "Acme Corp"})
+    assert not sd._personal({"contributor": "", "reported_by": "Acme Corp"})
 
 
 def _data():

@@ -90,6 +90,13 @@
    "wrong": "The case said the White House and Secretary Duffy formally asked Congress for $30.1 billion on the morning of November 13, the day of the ground stop.",
    "changed": "The letter from Secretary Duffy and budget director Russell Vought was dated Thursday, November 12; it was reported the next morning. The timeline now gives it its own November 12 entry.",
    "scope": "Affected: the November 13 entry on the case page."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Said & Done",
+   "wrong": "On an organization's own contribution report (LD-203), a contribution listed as from \"Self\" was treated as a lobbyist's personal money and left out of the organization's giving. On those reports \"Self\" is the organization. 8,880 contributions ($17.9 million) from 590 organizations were affected.",
+   "changed": "\"Self\" is now read as a lobbyist only on a lobbyist's own report. Organizations' giving on Said & Done now includes these contributions: 126 bills qualify instead of 121, and on H.R. 1, for example, 742 organizations funded its voters (was 683) and 676 funded both sides (was 629).",
+   "scope": "Affected: Said & Done and its bill pages. Other pages counted these contributions already."
   }
  ]
 }

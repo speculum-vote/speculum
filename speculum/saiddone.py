@@ -55,12 +55,14 @@ def decisions(rolls: list[dict]) -> list[dict]:
 
 
 def _personal(r: dict) -> bool:
-    """A contribution a lobbyist reports as their own."""
+    """A contribution a lobbyist reports as their own. "Self" means the filer: a lobbyist on a lobbyist's report
+    (reported by "Name (Registrant)"), but the organization itself on an organization's report."""
     con = (r.get("contributor") or "").strip()
-    if con.lower() in SELF:
-        return True
     rb = r.get("reported_by") or ""
-    if " (" in rb and rb.endswith(")"):
+    by_lobbyist = " (" in rb and rb.endswith(")")
+    if con.lower() in SELF:
+        return by_lobbyist
+    if by_lobbyist:
         lob = re.sub(r"[^a-z]", "", rb[:rb.index(" (")].lower())
         return bool(lob) and re.sub(r"[^a-z]", "", con.lower()) == lob
     return False
