@@ -126,8 +126,20 @@
    }
   },
   {
+   "date": "2026-11-12",
+   "text": "In a letter to appropriations committee leaders, reported the next morning, Secretary Duffy and White House budget director Russell Vought asked Congress for $30.1 billion more: $10.1 billion for air traffic control, $2 billion for control towers and $18 billion for airports.",
+   "source": {
+    "title": "Bloomberg Government",
+    "url": "https://news.bgov.com/bloomberg-government-news/congress-faces-30-billion-ask-in-lame-duck-to-boost-air-safety"
+   },
+   "source2": {
+    "title": "The Epoch Times",
+    "url": "https://www.theepochtimes.com/us/duffy-asks-congress-for-50-billion-after-nationwide-flight-halt-6125044"
+   }
+  },
+  {
    "date": "2026-11-13",
-   "text": "In the morning, the White House and Secretary Duffy formally asked Congress for $30.1 billion: $10.1 billion for air traffic control, $2 billion for control towers and $18 billion for airports. That afternoon, communication problems at several air route traffic control centers forced a nationwide ground stop of more than four hours. That night Duffy said he wants $50 billion, without saying how that figure relates to the morning's request.",
+   "text": "On Friday afternoon, communication problems at several air route traffic control centers forced a nationwide ground stop of more than four hours. That night Duffy said he wants $50 billion, without saying how that figure relates to the $30.1 billion request.",
    "source": {
     "title": "AeroTime",
     "url": "https://www.aerotime.aero/articles/duffy-congress-atc-funding-nationwide-outage"
@@ -159,6 +171,46 @@
    "source2": {
     "title": "TechRepublic",
     "url": "https://www.techrepublic.com/article/news-faa-smart-ai-ground-stop/"
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "text": "The FAA's own account: data flooded its telecommunications network at 1,000 connection attempts every four to five seconds, and 17 of its 22 air route traffic control centers became unstable. It named two possible sources: a radio site in El Dorado, Arkansas, where L3Harris, its network provider, had been installing a new router, and a radar site in Amarillo, Texas. The routers are made by Juniper. The FAA switched off the function involved on all the new routers and on more than 60 other Juniper routers, and paused installing them. It said it had no indication of a cyberattack, that SMART does not feed the air traffic control system, and that it and L3Harris are still investigating the root cause.",
+   "source": {
+    "title": "FAA: Nationwide Ground Stop, Questions and Answers",
+    "url": "https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers"
+   }
+  },
+  {
+   "date": "2026-11-16",
+   "text": "Duffy said it remained unclear why the new router caused the failure. He said L3Harris had replaced the Amarillo router three weeks earlier. The FAA said the El Dorado work was part of the roughly $1 billion a year it spends to maintain and sustain the existing 1980s telecommunications network. Airlines canceled more than 18,000 flights.",
+   "source": {
+    "title": "Reuters",
+    "url": "https://www.yahoo.com/news/us/articles/us-probes-why-router-installation-182834297.html"
+   }
+  },
+  {
+   "date": "2026-11-17",
+   "text": "Duffy and FAA Administrator Bryan Bedford met Republican senators. Afterward Duffy said, \"We've been able to recreate what happened in El Dorado, but the root cause of what happened, we don't have clarity yet,\" and that 68 earlier installations of the same routers had worked. The FAA said it had halted new Juniper installations; the network is running on Cisco routers that have been in place for 25 years. Senators of both parties questioned the $50 billion: Sen. John Kennedy (R-La.) said \"I'm not going to vote for that\"; Commerce Committee chair Ted Cruz (R-Texas) said he did not expect the full amount to be funded; Sen. Brian Schatz (D-Hawaii), who said he generally supports investing in air traffic control, said \"$50 billion sounds like an awfully round number.\"",
+   "source": {
+    "title": "Fox 5 Atlanta (Reuters)",
+    "url": "https://www.fox5atlanta.com/news/we-dont-have-clarity-what-caused-faa-groundstop-duffy-says"
+   },
+   "source2": {
+    "title": "NBC Washington (AP)",
+    "url": "https://www.nbcwashington.com/news/national-international/sean-duffy-50-billion-air-travel-fixes-skepticism-congress/4184931/"
+   }
+  },
+  {
+   "date": "2026-11-17",
+   "text": "The Senate Commerce Committee's 13 Democrats asked the FAA, L3Harris and Juniper for briefings by November 23, and for a pause on new Juniper devices until testing shows they are safe. They noted that the $50 billion is $20 billion more than the request the department and the budget office sent on November 12. Rep. Laura Gillen (D-N.Y.) asked Duffy to testify before the House Transportation and Infrastructure Committee.",
+   "source": {
+    "title": "ABC News",
+    "url": "https://abcnews.com/Politics/senate-democrats-demand-briefings-faa-ground-stop-amid/story?id=138213462"
+   },
+   "source2": {
+    "title": "Rep. Gillen",
+    "url": "https://gillen.house.gov/media/press-releases/rep-gillen-urges-secretary-duffy-testify-congress-national-ground-stop-50"
    }
   }
  ],
@@ -281,5 +333,5 @@
    }
   ]
  },
- "not_yet": "The cause of the November 13 ground stop has not been announced. Lobbying reports for October to December 2026, which cover the outage and the $50 billion request, are due January 20, 2027; contribution reports for July to December 2026 are due January 30, 2027. Contract values are the maximums announced, not money paid."
+ "not_yet": "The root cause of the November 13 ground stop has not been determined; the FAA and L3Harris are still investigating. Lobbying reports for October to December 2026, which cover the outage and the $50 billion request, are due January 20, 2027; contribution reports for July to December 2026 are due January 30, 2027. Contract values are the maximums announced, not money paid."
 }

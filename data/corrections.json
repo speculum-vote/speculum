@@ -83,6 +83,13 @@
    "wrong": "Any organization whose description mentioned veterans or advocacy was placed with advocacy groups and nonprofits, including for-profit companies and lobbying firms named like \"Capitol Advocacy, LLC\".",
    "changed": "A name with a for-profit legal form (LLC, LLP, LP) is never placed with advocacy groups and nonprofits. If no other rule places it, it goes with law, lobbying and consulting firms. 41 registrants moved, nearly all lobbying firms. Older quarters were re-read from the archived filings.",
    "scope": "Affected: sector counts on bill pages, Cases and the gatekeepers page (lobbying firms' gifts count only as other money)."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Case: the air traffic control overhaul",
+   "wrong": "The case said the White House and Secretary Duffy formally asked Congress for $30.1 billion on the morning of November 13, the day of the ground stop.",
+   "changed": "The letter from Secretary Duffy and budget director Russell Vought was dated Thursday, November 12; it was reported the next morning. The timeline now gives it its own November 12 entry.",
+   "scope": "Affected: the November 13 entry on the case page."
   }
  ]
 }
