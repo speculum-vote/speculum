@@ -157,3 +157,26 @@ def issue_search(out: Path, fetch, key: str | None, phrases: list[str], years) -
     res = {"_phrases": phrases, "_years": list(years), "_without_match": off, "reports": reports}
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res
+
+
+def contrib_reread(out: Path, fetch, key: str | None, lobbying: dict, start: str, end: str) -> dict:
+    """Every contribution report (LD-203) our data counts for a member with a contribution dated start..end, fetched
+    again from the Senate's lobbying disclosure API, with each item in that window as filed: for checking a total
+    by hand before it goes public. Saved to data/records/contrib_check.json."""
+    fetch.min_interval["lda.gov"] = 0.55 if key else 4.2
+    headers = {"Authorization": f"Token {key}"} if key else None
+    uuids = sorted({r["filing_uuid"] for rows in (lobbying.get("by_member") or {}).values() for r in rows
+                    if r.get("filing_uuid") and start <= (r.get("date") or "")[:10] <= end})
+    reports = []
+    for u in uuids:
+        f = fetch.get_json("lda", f"contribcheck_{u}.json", f"{BASE}/contributions/{u}/", headers=headers)
+        items = [{"type": i.get("contribution_type"), "contributor": i.get("contributor_name"), "payee": i.get("payee_name"),
+                  "honoree": i.get("honoree_name"), "amount": i.get("amount"), "date": i.get("date")}
+                 for i in f.get("contribution_items") or [] if start <= (i.get("date") or "")[:10] <= end]
+        reports.append({"uuid": u, "type": f.get("filing_type"), "year": f.get("filing_year"), "period": f.get("filing_period"),
+                        "registrant": (f.get("registrant") or {}).get("name"), "lobbyist": (f.get("lobbyist") or {}),
+                        "posted": f.get("dt_posted"), "no_contributions": f.get("no_contributions"), "items": items})
+    res = {"window": [start, end], "reports": reports,
+           "_summary": {"reports": len(reports), "items": sum(len(r["items"]) for r in reports)}}
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res
