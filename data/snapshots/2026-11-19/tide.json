@@ -1,0 +1,196 @@
+{
+ "date": "2026-11-19",
+ "first": false,
+ "more": 0,
+ "roll_calls": 4,
+ "since": "2026-11-18",
+ "stories": [
+  {
+   "date": "2026-11-18T11:50:00",
+   "dek": "In the Senate, 19 Democrats, 1 Republican voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Motion.",
+    "Result: Motion Agreed to, 70 to 26.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "20 members voted against their party on Motion to Waive All Applicable Budgetary Discipline Re: H.R. 2347",
+   "id": "2026-11-19-01",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Christopher A. Coons (D-DE)",
+    "Catherine Cortez Masto (D-NV)",
+    "John Fetterman (D-PA)",
+    "Ruben Gallego (D-AZ)",
+    "Kirsten E. Gillibrand (D-NY)",
+    "Martin Heinrich (D-NM)",
+    "John W. Hickenlooper (D-CO)",
+    "Angus S. King, Jr. (I-ME)",
+    "Jon Ossoff (D-GA)",
+    "Rand Paul (R-KY)",
+    "Gary C. Peters (D-MI)",
+    "Jack Reed (D-RI)",
+    "Jacky Rosen (D-NV)",
+    "Brian Schatz (D-HI)",
+    "Charles E. Schumer (D-NY)",
+    "Jeanne Shaheen (D-NH)",
+    "Elissa Slotkin (D-MI)",
+    "Mark R. Warner (D-VA)",
+    "Raphael G. Warnock (D-GA)",
+    "Sheldon Whitehouse (D-RI)"
+   ],
+   "members": [
+    "C001088",
+    "C001113",
+    "F000479",
+    "G000555",
+    "G000574",
+    "H000273",
+    "H001046",
+    "K000383",
+    "O000174",
+    "P000595",
+    "P000603",
+    "R000122",
+    "R000608",
+    "S000148",
+    "S001181",
+    "S001194",
+    "S001208",
+    "W000790",
+    "W000802",
+    "W000805"
+   ],
+   "score": 50,
+   "sources": [
+    {
+     "label": "Senate roll call 266",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00266.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-266"
+  },
+  {
+   "date": "2026-11-18T12:42:00",
+   "dek": "In the Senate, 18 Democrats, 1 Republican voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Amendment.",
+    "Result: Amendment Agreed to, 69 to 27.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "19 members voted against their party on Capito Amdt. No. 6883",
+   "id": "2026-11-19-02",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Christopher A. Coons (D-DE)",
+    "John Fetterman (D-PA)",
+    "Ruben Gallego (D-AZ)",
+    "Kirsten E. Gillibrand (D-NY)",
+    "Martin Heinrich (D-NM)",
+    "John W. Hickenlooper (D-CO)",
+    "Angus S. King, Jr. (I-ME)",
+    "Jon Ossoff (D-GA)",
+    "Gary C. Peters (D-MI)",
+    "Jack Reed (D-RI)",
+    "Jacky Rosen (D-NV)",
+    "Mike Rounds (R-SD)",
+    "Brian Schatz (D-HI)",
+    "Charles E. Schumer (D-NY)",
+    "Jeanne Shaheen (D-NH)",
+    "Elissa Slotkin (D-MI)",
+    "Mark R. Warner (D-VA)",
+    "Raphael G. Warnock (D-GA)",
+    "Sheldon Whitehouse (D-RI)"
+   ],
+   "members": [
+    "C001088",
+    "F000479",
+    "G000555",
+    "G000574",
+    "H000273",
+    "H001046",
+    "K000383",
+    "O000174",
+    "P000595",
+    "R000122",
+    "R000605",
+    "R000608",
+    "S000148",
+    "S001181",
+    "S001194",
+    "S001208",
+    "W000790",
+    "W000802",
+    "W000805"
+   ],
+   "score": 48,
+   "sources": [
+    {
+     "label": "Senate roll call 267",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00267.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-267"
+  },
+  {
+   "date": "2026-11-18T13:23:00",
+   "dek": "In the Senate, 15 Democrats, 2 Republicans voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Cloture Motion.",
+    "Result: Cloture Motion Agreed to, 65 to 31.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "17 members voted against their party on Motion to Invoke Cloture Re. H.R. 2347",
+   "id": "2026-11-19-03",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Christopher A. Coons (D-DE)",
+    "John Fetterman (D-PA)",
+    "Ruben Gallego (D-AZ)",
+    "Kirsten E. Gillibrand (D-NY)",
+    "Josh Hawley (R-MO)",
+    "Martin Heinrich (D-NM)",
+    "John W. Hickenlooper (D-CO)",
+    "Angus S. King, Jr. (I-ME)",
+    "Jack Reed (D-RI)",
+    "Jacky Rosen (D-NV)",
+    "Mike Rounds (R-SD)",
+    "Brian Schatz (D-HI)",
+    "Charles E. Schumer (D-NY)",
+    "Elissa Slotkin (D-MI)",
+    "Mark R. Warner (D-VA)",
+    "Raphael G. Warnock (D-GA)",
+    "Sheldon Whitehouse (D-RI)"
+   ],
+   "members": [
+    "C001088",
+    "F000479",
+    "G000555",
+    "G000574",
+    "H000273",
+    "H001046",
+    "H001089",
+    "K000383",
+    "R000122",
+    "R000605",
+    "R000608",
+    "S000148",
+    "S001194",
+    "S001208",
+    "W000790",
+    "W000802",
+    "W000805"
+   ],
+   "score": 44,
+   "sources": [
+    {
+     "label": "Senate roll call 268",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00268.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-268"
+  }
+ ]
+}

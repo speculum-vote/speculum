@@ -3888,7 +3888,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3838"
   },
   "119-HR3843": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-06-09",
    "latest_action": {
     "date": "2025-06-09",
@@ -4018,7 +4018,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4016"
   },
   "119-HR4032": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-06-17",
    "latest_action": {
     "date": "2025-06-17",
@@ -4057,7 +4057,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4090"
   },
   "119-HR4104": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-06-24",
    "latest_action": {
     "date": "2025-06-24",
@@ -4265,7 +4265,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/43"
   },
   "119-HR4304": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-07-07",
    "latest_action": {
     "date": "2026-02-12",
@@ -4486,7 +4486,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4553"
   },
   "119-HR4559": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-07-21",
    "latest_action": {
     "date": "2025-07-21",
@@ -5409,7 +5409,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5625"
   },
   "119-HR5629": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-09-30",
    "latest_action": {
     "date": "2025-09-30",
@@ -5500,7 +5500,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/586"
   },
   "119-HR5878": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-10-31",
    "latest_action": {
     "date": "2025-10-31",
@@ -5552,7 +5552,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6019"
   },
   "119-HR6046": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-11-17",
    "latest_action": {
     "date": "2025-12-03",
@@ -5630,7 +5630,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/6160"
   },
   "119-HR6213": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2025-11-20",
    "latest_action": {
     "date": "2026-07-21",
@@ -6202,7 +6202,7 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7008"
   },
   "119-HR7015": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2026-01-12",
    "latest_action": {
     "date": "2026-01-12",
@@ -7917,6 +7917,19 @@
    "title": "Intelligence Authorization Act for Fiscal Year 2027",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9624"
   },
+  "119-HR9640": {
+   "fetched": "2026-11-19",
+   "introduced": "2026-07-09",
+   "latest_action": {
+    "date": "2026-11-18",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
+   },
+   "policy_area": "Energy",
+   "sponsor": "Rep. Wittman, Robert J. [R-VA-1]",
+   "sponsor_bioguide": "W000804",
+   "title": "Earth MRI Reauthorization Act of 2026",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9640"
+  },
   "119-HR9645": {
    "fetched": "2026-11-13",
    "introduced": "2026-07-13",
@@ -8334,11 +8347,11 @@
    "url": "https://www.congress.gov/bill/119th-congress/house-resolution/1224"
   },
   "119-HRES1247": {
-   "fetched": "2026-11-12",
+   "fetched": "2026-11-19",
    "introduced": "2026-04-30",
    "latest_action": {
-    "date": "2026-11-11",
-    "text": "POSTPONED PROCEEDINGS - At the conclusion of debate on H. Res. 1247, the Chair put the question on agreeing to the resolution and by voice vote, announced that the noes had prevailed. Mr. Takano demanded the yeas and nays and the Chair postponed further proceedings until a time to be announced."
+    "date": "2026-11-12",
+    "text": "Motion to reconsider laid on the table Agreed to without objection."
    },
    "policy_area": "Congress",
    "sponsor": "Rep. Takano, Mark [D-CA-39]",
