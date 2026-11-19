@@ -40,8 +40,8 @@
 <tbody>{% for o in m.orgs %}
 <tr{% if o.both %} class="both"{% endif %}><td>{{ o.name|org }}<div class="muted gsub">{{ o.sector_name }}{% if o.both %} · <span class="gold">both sides</span>{% endif %}</div></td>
 {% for s in [o.yes, o.no] %}<td class="r num">{% if s.members %}{{ s.members }} · {{ s.amount|money }}<div class="muted gsub">{% for p, n in s.party.items() %}{{ n }} {{ p }}{{ ' · ' if not loop.last }}{% endfor %}</div>{% else %}<span class="muted">—</span>{% endif %}</td>{% endfor %}
-<td class="num">{% for f in o.said %}<a href="{{ f.url }}" title="{{ f.quarter }} lobbying report">{{ f.quarter[2:4] }}Q{{ f.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_said > o.said|length %} <span class="muted">+{{ o.n_said - o.said|length }}</span>{% endif %}{% if not o.said %}<span class="muted">—</span>{% endif %}</td>
-<td class="num">{% for f in o.filings %}<a href="{{ f.url }}" title="{{ f.period }}">{{ loop.index }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_filings > o.filings|length %} <span class="muted">+{{ o.n_filings - o.filings|length }}</span>{% endif %}</td></tr>
+<td class="num links said-col">{% for f in o.said %}<a href="{{ f.url }}" title="{{ f.quarter }} lobbying report">{{ f.quarter[2:4] }}Q{{ f.quarter[-1] }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_said > o.said|length %} <span class="muted">+{{ o.n_said - o.said|length }}</span>{% endif %}{% if not o.said %}<span class="muted">—</span>{% endif %}</td>
+<td class="num links done-col">{% for f in o.filings %}<a href="{{ f.url }}" title="{{ f.period }}">{{ loop.index }}</a>{{ ' ' if not loop.last }}{% endfor %}{% if o.n_filings > o.filings|length %} <span class="muted">+{{ o.n_filings - o.filings|length }}</span>{% endif %}</td></tr>
 {% endfor %}</tbody></table></div>
 <p class="meta">D, R and I are members' current parties. Under Said, each link opens a quarterly lobbying report (LD-2) that names {{ m.label }}, labeled by year and quarter (25Q1 is January–March 2025); it may be the organization's own report or one a firm filed for it. Under Done, each number opens an LD-203 report that lists the contributions. All at lda.gov.</p>
 

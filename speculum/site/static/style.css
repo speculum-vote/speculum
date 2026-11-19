@@ -510,3 +510,7 @@ table.collapsed tbody tr:nth-child(n+51) { display: none; }
 .sd-bills td:first-child { min-width: 280px; }
 .sd-bills td:last-child { white-space: nowrap; }
 @media (max-width: 600px) { .sd-bills td:first-child { min-width: 190px; } }
+table.said td.links { white-space: normal; line-height: 1.9; }
+table.said td.links a { white-space: nowrap; }
+table.said td.said-col { min-width: 190px; max-width: 280px; }
+table.said td.done-col { min-width: 110px; }
