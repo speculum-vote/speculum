@@ -73,3 +73,20 @@ def fetch_spend(out: Path, fetch, key: str, members: list[dict], cycle: int = 20
     with gzip.open(out, "wt", encoding="utf-8") as f:
         json.dump(res, f, ensure_ascii=False)
     return res
+
+
+def committee_check(out: Path, fetch, key: str, committee_ids: list[str]) -> dict:
+    """Every cycle's totals and receipts by contribution size for a few committees, as the FEC reports them:
+    for checking a committee's history by hand. Saved to data/records/fec_committee_check.json."""
+    res = {}
+    for cid in committee_ids:
+        info = _get(fetch, key, f"cc_info_{cid}.json", f"/committee/{cid}/")
+        totals = _get(fetch, key, f"cc_totals_{cid}.json", f"/committee/{cid}/totals/", per_page=20, sort="-cycle")
+        cycles = [t.get("cycle") for t in totals.get("results") or []]
+        sizes = {}
+        for c in cycles:
+            s = _get(fetch, key, f"cc_size_{cid}_{c}.json", "/schedules/schedule_a/by_size/", committee_id=cid, cycle=c, per_page=20)
+            sizes[str(c)] = s.get("results") or []
+        res[cid] = {"info": (info.get("results") or [None])[0], "totals": totals.get("results") or [], "by_size": sizes}
+    out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res

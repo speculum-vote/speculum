@@ -87,6 +87,12 @@ jobs:
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
         run: python -m speculum leadpac
+      - name: Every cycle's totals for FEC committees (names = committee ids)
+        if: inputs.mode == 'feccheck'
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          NAMES: ${{ inputs.names }}
+        run: python -m speculum feccheck --names "$NAMES"
       - name: Match PPP loans to lobbying clients and firms
         if: inputs.mode == 'borrowers'
         run: python -m speculum pppborrowers
@@ -95,7 +101,7 @@ jobs:
         run: |
           git config user.name "speculum-bot"
           git config user.email "speculum-bot@users.noreply.github.com"
-          for f in ppp_lobbying ppp_spot ppp_borrowers ppp_check ppp_fees bill_check topic_check issue_search contrib_check; do [ -f data/records/$f.json ] && git add data/records/$f.json; done; [ -f data/records/leadpac_spend.json.gz ] && git add data/records/leadpac_spend.json.gz; true
+          for f in ppp_lobbying ppp_spot ppp_borrowers ppp_check ppp_fees bill_check topic_check issue_search contrib_check fec_committee_check; do [ -f data/records/$f.json ] && git add data/records/$f.json; done; [ -f data/records/leadpac_spend.json.gz ] && git add data/records/leadpac_spend.json.gz; true
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "PPP lobbying 2020-21 (${{ inputs.mode }})"
           for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
