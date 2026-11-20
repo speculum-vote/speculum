@@ -1,0 +1,124 @@
+{
+ "date": "2026-11-20",
+ "first": false,
+ "more": 0,
+ "roll_calls": 4,
+ "since": "2026-11-19",
+ "stories": [
+  {
+   "date": "2026-11-19T09:30:00",
+   "dek": "In the Senate, 15 Democrats, 2 Republicans voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On Passage of the Bill.",
+    "Result: Bill Passed, 62 to 33.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "17 members voted against their party on H.R. 2347, as Amended",
+   "id": "2026-11-20-01",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Christopher A. Coons (D-DE)",
+    "John Fetterman (D-PA)",
+    "Ruben Gallego (D-AZ)",
+    "Josh Hawley (R-MO)",
+    "Martin Heinrich (D-NM)",
+    "John W. Hickenlooper (D-CO)",
+    "Angus S. King, Jr. (I-ME)",
+    "Amy Klobuchar (D-MN)",
+    "Gary C. Peters (D-MI)",
+    "Jack Reed (D-RI)",
+    "Jacky Rosen (D-NV)",
+    "Mike Rounds (R-SD)",
+    "Brian Schatz (D-HI)",
+    "Charles E. Schumer (D-NY)",
+    "Elissa Slotkin (D-MI)",
+    "Mark R. Warner (D-VA)",
+    "Sheldon Whitehouse (D-RI)"
+   ],
+   "members": [
+    "C001088",
+    "F000479",
+    "G000574",
+    "H000273",
+    "H001046",
+    "H001089",
+    "K000367",
+    "K000383",
+    "P000595",
+    "R000122",
+    "R000605",
+    "R000608",
+    "S000148",
+    "S001194",
+    "S001208",
+    "W000802",
+    "W000805"
+   ],
+   "score": 44,
+   "sources": [
+    {
+     "label": "Senate roll call 270",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00270.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-270"
+  },
+  {
+   "date": "2026-11-19T14:01:00",
+   "dek": "In the Senate, 1 Democrat, 3 Republicans voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Concurrent Resolution.",
+    "Result: Concurrent Resolution Rejected, 48 to 51.",
+    "Most Democrats voted yes; most Republicans voted no."
+   ],
+   "headline": "4 members voted against their party on H.Con.Res. 93",
+   "id": "2026-11-20-02",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Susan M. Collins (R-ME)",
+    "John Fetterman (D-PA)",
+    "Lisa Murkowski (R-AK)",
+    "Rand Paul (R-KY)"
+   ],
+   "members": [
+    "C001035",
+    "F000479",
+    "M001153",
+    "P000603"
+   ],
+   "score": 26,
+   "sources": [
+    {
+     "label": "Senate roll call 269",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00269.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-269"
+  },
+  {
+   "date": "2026-11-19T22:07:00",
+   "dek": "The Senate margin was 2 votes.",
+   "facts": [
+    "Question: On the Cloture Motion.",
+    "Result: Cloture Motion Agreed to, 48 to 46.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "Motion to Invoke Cloture: Richard Wesley Bennett to be U.S. District Judge for the Southern District of Texas: decided by 2 votes",
+   "id": "2026-11-20-03",
+   "kind": "Close vote",
+   "member_names": [],
+   "members": [],
+   "score": 7,
+   "sources": [
+    {
+     "label": "Senate roll call 271",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00271.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-271"
+  }
+ ]
+}
