@@ -90,3 +90,48 @@ def committee_check(out: Path, fetch, key: str, committee_ids: list[str]) -> dic
         res[cid] = {"info": (info.get("results") or [None])[0], "totals": totals.get("results") or [], "by_size": sizes}
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res
+
+
+IE_KEEP = ("committee_id", "expenditure_amount", "expenditure_date", "dissemination_date", "support_oppose_indicator",
+           "candidate_id", "candidate_name", "candidate_office", "candidate_office_state", "candidate_party",
+           "payee_name", "expenditure_description", "category_code_full", "memo_code", "memo_text", "is_notice",
+           "filing_form", "report_type", "report_year", "transaction_id", "image_number", "file_number",
+           "amendment_indicator", "previous_file_number", "original_sub_id", "sub_id", "pdf_url", "filing_date",
+           "most_recent", "back_reference_transaction_id")
+TOTAL_KEEP = ("committee_id", "cycle", "coverage_start_date", "coverage_end_date", "last_report_type_full", "receipts",
+              "disbursements", "operating_expenditures", "independent_expenditures", "fed_candidate_committee_contributions",
+              "contributions_ie_and_party_expenditures_made_percent")
+
+
+def ie_fetch(out: Path, fetch, key: str, members: list[dict], cycles=(2024, 2026), batch: int = 20) -> dict:
+    """Every independent expenditure (Schedule E, from periodic reports and 24- and 48-hour notices) by current members'
+    leadership PACs, and each PAC's latest two-year totals, as filed. Saved to data/records/leadpac_ie.json.gz.
+    Notices repeat in the next periodic report: the reader dedupes, this keeps every row as filed."""
+    pacs = leadership_pacs(fetch, key, members, max(cycles))
+    ids = [p["committee_id"] for p in pacs]
+    groups = [ids[i:i + batch] for i in range(0, len(ids), batch)]
+    res = {"pacs": pacs, "ie": {}, "totals": {}}
+    for cycle in cycles:
+        rows, tots = [], []
+        for g, chunk in enumerate(groups):
+            t = _get(fetch, key, f"ie_tot_{cycle}_g{g}.json", "/totals/pac-party/", committee_id=chunk, cycle=cycle,
+                     per_page=100)
+            tots += [{k: r.get(k) for k in TOTAL_KEEP} for r in t.get("results") or []]
+            params, n = {"committee_id": chunk, "two_year_transaction_period": cycle, "per_page": 100,
+                         "sort": "-expenditure_date"}, 0
+            while True:
+                data = _get(fetch, key, f"ie_se_{cycle}_g{g}_p{n}.json", "/schedules/schedule_e/", **params)
+                got = data.get("results") or []
+                rows += [{k: r.get(k) for k in IE_KEEP} for r in got]
+                last = (data.get("pagination") or {}).get("last_indexes")
+                if not got or not last or len(got) < 100:
+                    break
+                params = {**params, **last}
+                n += 1
+        res["ie"][str(cycle)] = rows
+        res["totals"][str(cycle)] = tots
+        log.info("cycle %s: %d IE rows, %d totals", cycle, len(rows), len(tots))
+    res["_summary"] = {"pacs": len(pacs), **{f"ie_{c}": len(res["ie"][str(c)]) for c in cycles}}
+    with gzip.open(out, "wt", encoding="utf-8") as f:
+        json.dump(res, f, ensure_ascii=False)
+    return res

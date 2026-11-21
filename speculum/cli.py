@@ -426,6 +426,19 @@ def cmd_leadpac(args) -> int:
     return 0
 
 
+def cmd_leadpacie(args) -> int:
+    """Leadership PACs' independent expenditures, 2023-26, and latest totals (data/records/leadpac_ie.json.gz)."""
+    from .http import Fetcher
+    from .sources import fecspend
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"api.open.fec.gov": 3.7})
+    snap = sorted(p for p in (ROOT / "snapshots").iterdir() if (p / "members.json").exists())[-1]
+    members = json.loads((snap / "members.json").read_text(encoding="utf-8"))
+    res = fecspend.ie_fetch(ROOT / "records" / "leadpac_ie.json.gz", fetch, os.environ["FEC_API_KEY"], members)
+    log.info("leadership PAC IEs: %s", res["_summary"])
+    return 0
+
+
 def cmd_feccheck(args) -> int:
     """Every cycle's totals and receipts by size for FEC committees (data/records/fec_committee_check.json)."""
     from .http import Fetcher
@@ -538,6 +551,7 @@ def main(argv=None) -> int:
     tc.add_argument("--names", required=True, help="client names separated by |")
     tc.add_argument("--years", default="2025,2026")
     sub.add_parser("leadpac", help="leadership PACs' totals and itemized spending, 2025-26")
+    sub.add_parser("leadpacie", help="leadership PACs' independent expenditures, 2023-26, and latest totals")
     fcc = sub.add_parser("feccheck", help="every cycle's totals and receipts by size for FEC committees")
     fcc.add_argument("--names", required=True, help="committee ids separated by |")
     ccr = sub.add_parser("contribcheck", help="re-read LD-203 reports with contributions dated in a window")
@@ -557,7 +571,7 @@ def main(argv=None) -> int:
     g.add_argument("--site-only", action="store_true", help="check only the built site")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch, "contribcheck": cmd_contribcheck, "leadpac": cmd_leadpac, "feccheck": cmd_feccheck}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch, "contribcheck": cmd_contribcheck, "leadpac": cmd_leadpac, "leadpacie": cmd_leadpacie, "feccheck": cmd_feccheck}[args.cmd](args)
 
 
 if __name__ == "__main__":
