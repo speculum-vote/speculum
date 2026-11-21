@@ -206,7 +206,15 @@ def lda_read(out, fetch, key, items: list[str], years=(2025, 2026)) -> dict:
     res = {}
     for it in items:
         rows = []
-        if ":" in it:
+        if it.startswith("contrib:"):            # an LD-203 contribution report, every line as filed
+            u = it.split(":", 1)[1].strip()
+            f = fetch.get_json("lda", f"read_contrib_{u}.json", f"{BASE}/contributions/{u}/", headers=headers)
+            rows.append({"uuid": u, "year": f.get("filing_year"), "period": f.get("filing_period"), "type": f.get("filing_type"),
+                         "posted": f.get("dt_posted"), "registrant": (f.get("registrant") or {}).get("name"),
+                         "lobbyist": " ".join(x for x in ((f.get("lobbyist") or {}).get("first_name"), (f.get("lobbyist") or {}).get("last_name")) if x),
+                         "items": [{k: i.get(k) for k in ("contribution_type", "contributor_name", "payee_name", "honoree_name", "amount", "date")}
+                                   for i in f.get("contribution_items") or []]})
+        elif ":" in it:
             kind, val = it.split(":", 1)
             param = {"lobbyist": "lobbyist_name", "client": "client_name"}[kind.strip()]
             for y in years:
