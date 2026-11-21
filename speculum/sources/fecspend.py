@@ -103,7 +103,7 @@ TOTAL_KEEP = ("committee_id", "cycle", "coverage_start_date", "coverage_end_date
               "contributions_ie_and_party_expenditures_made_percent")
 
 
-def ie_fetch(out: Path, fetch, key: str, members: list[dict], cycles=(2024, 2026), batch: int = 20) -> dict:
+def ie_fetch(out: Path, fetch, key: str, members: list[dict], cycles=(2024, 2026), batch: int = 10) -> dict:
     """Every independent expenditure (Schedule E, from periodic reports and 24- and 48-hour notices) by current members'
     leadership PACs, and each PAC's latest two-year totals, as filed. Saved to data/records/leadpac_ie.json.gz.
     Notices repeat in the next periodic report: the reader dedupes, this keeps every row as filed."""
