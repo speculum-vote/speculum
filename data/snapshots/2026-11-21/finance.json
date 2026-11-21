@@ -74821,7 +74821,7 @@
   "cash_on_hand": 1395723.78,
   "committee_id": "C00675348",
   "committee_name": "CINDY HYDE-SMITH FOR US SENATE",
-  "coverage_end": "2026-10-14",
+  "coverage_end": "2026-11-20",
   "cycle": 2026,
   "cycle_label": "2021–2026 cycle",
   "disbursements": 5045478.02,
@@ -74859,7 +74859,7 @@
     "committee_id": "C00027466",
     "count": 2,
     "entity_type": "PTY",
-    "name": "Nrsc"
+    "name": "NRSC"
    },
    {
     "amount": 44500.0,
@@ -74887,35 +74887,35 @@
     "committee_id": "C00183962",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Cadence Bank Pac"
+    "name": "Cadence Bank PAC"
    },
    {
     "amount": 12000.0,
     "committee_id": "C00010868",
     "count": 4,
     "entity_type": "PAC",
-    "name": "American Council Of Engineering Companies (Acec/Pac)"
+    "name": "American Council of Engineering Companies (Acec/PAC)"
    },
    {
     "amount": 11000.0,
     "committee_id": null,
     "count": 3,
     "entity_type": "ORG",
-    "name": "Barbour Hurst Llc"
+    "name": "Barbour Hurst LLC"
    },
    {
     "amount": 11000.0,
     "committee_id": "C00034355",
     "count": 3,
     "entity_type": "PAC",
-    "name": "People Pac (Paccar Inc Employees Organized For Political Lea"
+    "name": "People PAC (Paccar Inc Employees Organized for Political Lea"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00571976",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Peter Norbeck Leadership Pac"
+    "name": "Peter Norbeck Leadership PAC"
    },
    {
     "amount": 10000.0,
@@ -74929,14 +74929,14 @@
     "committee_id": "C00492058",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Leadership And Accountability Are National Keys Pac (Lankpac"
+    "name": "Leadership and Accountability Are National Keys PAC (Lankpac"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00551853",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Oorah! Pac"
+    "name": "Oorah! PAC"
    },
    {
     "amount": 10000.0,
@@ -74950,49 +74950,49 @@
     "committee_id": "C00479899",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Woolpert Inc Pac"
+    "name": "Woolpert Inc PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00023028",
     "count": 3,
     "entity_type": "PAC",
-    "name": "National Cotton Council Of America Committee For The Advance"
+    "name": "National Cotton Council of America Committee for the Advance"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00845099",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Send In The Seal Pac"
+    "name": "Send in the Seal PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00542027",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Big Sky Opportunity Pac"
+    "name": "Big Sky Opportunity PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00014019",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Committee Organized For The Trading Of Cotton Pac Of The Acs"
+    "name": "Committee Organized for the Trading of Cotton PAC of the Acs"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00094573",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Elect-The Pac Of Alabama Farmers Federation"
+    "name": "Elect-The PAC of Alabama Farmers Federation"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00368696",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Responsibility & Freedom Work Pac"
+    "name": "Responsibility & Freedom Work PAC"
    },
    {
     "amount": 10000.0,
@@ -75013,35 +75013,35 @@
     "committee_id": "C00007880",
     "count": 2,
     "entity_type": "PAC",
-    "name": "America'S Credit Union Pac Of Credit Union National Associat"
+    "name": "America's Credit Union PAC of Credit Union National Associat"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00783167",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Working For Ohio"
+    "name": "Working for Ohio"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00110338",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Crystal Sugar Company Pac"
+    "name": "American Crystal Sugar Company PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00126763",
     "count": 3,
     "entity_type": "PAC",
-    "name": "National Association Of Convenience Stores Political Action"
+    "name": "National Association of Convenience Stores Political Action"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00428052",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Majority Committee Pac"
+    "name": "Majority Committee PAC"
    },
    {
     "amount": 10000.0,
@@ -75062,21 +75062,21 @@
     "committee_id": "C00480228",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Continuing America'S Strength And Security Pac"
+    "name": "Continuing America's Strength and Security PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00495887",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Tomorrow Is Meaningful Pac (Timpac)"
+    "name": "Tomorrow Is Meaningful PAC (Timpac)"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00409003",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Heartland Values Pac"
+    "name": "Heartland Values PAC"
    },
    {
     "amount": 10000.0,
@@ -75090,21 +75090,21 @@
     "committee_id": "C00413948",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Arkansas For Leadership Political Action Committee (Arkpac)"
+    "name": "Arkansas for Leadership Political Action Committee (Arkpac)"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00571000",
     "count": 2,
     "entity_type": "PAC",
-    "name": "True North Pac"
+    "name": "True North PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00570861",
     "count": 2,
     "entity_type": "PAC",
-    "name": "R Senate Pac"
+    "name": "R Senate PAC"
    },
    {
     "amount": 10000.0,
@@ -75118,21 +75118,21 @@
     "committee_id": "C00634774",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Common Sense For America Pac"
+    "name": "Common Sense for America PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00029348",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Forest & Paper Association Pac"
+    "name": "American Forest & Paper Association PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00571323",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Together Holding Our Majority Pac (Thompac)"
+    "name": "Together Holding Our Majority PAC (Thompac)"
    },
    {
     "amount": 10000.0,
@@ -75153,7 +75153,7 @@
     "committee_id": "C00035006",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Chevron Employees Pac"
+    "name": "Chevron Employees PAC"
    },
    {
     "amount": 10000.0,
@@ -75167,21 +75167,21 @@
     "committee_id": "C00391797",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Dirigo Pac"
+    "name": "Dirigo PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00442368",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Common Values Pac"
+    "name": "Common Values PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00832501",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Excellence Pac"
+    "name": "American Excellence PAC"
    }
   ]
  },

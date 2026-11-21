@@ -1,0 +1,136 @@
+{
+ "date": "2026-11-21",
+ "first": false,
+ "more": 0,
+ "roll_calls": 8,
+ "since": "2026-11-20",
+ "stories": [
+  {
+   "date": "2026-11-20T15:38:00",
+   "dek": "In the Senate, 6 Democrats voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Cloture Motion.",
+    "Result: Cloture Motion Agreed to, 55 to 31.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "6 members voted against their party on Motion to Invoke Cloture: Kyle Frederick Reardon to be U.S. District Judge for the District of Alaska",
+   "id": "2026-11-21-01",
+   "kind": "Broke ranks",
+   "member_names": [
+    "Catherine Cortez Masto (D-NV)",
+    "John Fetterman (D-PA)",
+    "Mazie K. Hirono (D-HI)",
+    "Tim Kaine (D-VA)",
+    "Jacky Rosen (D-NV)",
+    "Jeanne Shaheen (D-NH)"
+   ],
+   "members": [
+    "C001113",
+    "F000479",
+    "H001042",
+    "K000384",
+    "R000608",
+    "S001181"
+   ],
+   "score": 22,
+   "sources": [
+    {
+     "label": "Senate roll call 275",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00275.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-275"
+  },
+  {
+   "date": "2026-11-20T16:34:00",
+   "dek": "In the Senate, 2 Democrats voted against most of their own party on a vote that split the parties.",
+   "facts": [
+    "Question: On the Cloture Motion.",
+    "Result: Cloture Motion Agreed to, 48 to 31.",
+    "Most Democrats voted no; most Republicans voted yes."
+   ],
+   "headline": "2 members voted against their party on Motion to Invoke Cloture: Peter M. Mansfield to be U.S. District Judge for the Eastern District of Louisiana",
+   "id": "2026-11-21-02",
+   "kind": "Broke ranks",
+   "member_names": [
+    "John Fetterman (D-PA)",
+    "Mazie K. Hirono (D-HI)"
+   ],
+   "members": [
+    "F000479",
+    "H001042"
+   ],
+   "score": 14,
+   "sources": [
+    {
+     "label": "Senate roll call 278",
+     "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00278.htm"
+    }
+   ],
+   "status": "draft",
+   "vote_id": "s-119-2-278"
+  },
+  {
+   "date": null,
+   "dek": "Registered lobbyists and their organizations file twice-yearly reports of contributions to federal officeholders.",
+   "facts": [
+    "Jerry Moran (R-KS): $15,000",
+    "Stephanie I. Bice (R-OK): $14,000",
+    "Christopher A. Coons (D-DE): $13,000",
+    "Tom Cole (R-OK): $11,000",
+    "Brett Guthrie (R-KY): $11,000",
+    "Brendan F. Boyle (D-PA): $10,000",
+    "Lisa Blunt Rochester (D-DE): $10,000",
+    "Jake Ellzey (R-TX): $10,000",
+    "Ron Estes (R-KS): $10,000",
+    "Julie Fedorchak (R-ND): $10,000",
+    "254 contributions in newly posted reports."
+   ],
+   "headline": "New lobbyist contribution reports list $455,000 to 91 members",
+   "id": "2026-11-21-03",
+   "kind": "Lobbyist money",
+   "member_names": [],
+   "members": [
+    "M000934",
+    "B000740",
+    "C001088",
+    "C001053",
+    "G000558",
+    "B001296",
+    "B001303",
+    "E000071",
+    "E000298",
+    "F000482"
+   ],
+   "score": 12,
+   "sources": [
+    {
+     "label": "LD-203 reports, lda.gov",
+     "url": "https://lda.gov/system/public/"
+    }
+   ],
+   "status": "draft"
+  },
+  {
+   "date": null,
+   "dek": "Largest increases in total receipts since the previous edition.",
+   "facts": [],
+   "headline": "1 member filed new campaign finance reports",
+   "id": "2026-11-21-04",
+   "kind": "Campaign filings",
+   "member_names": [],
+   "members": [
+    "H001079"
+   ],
+   "score": 8,
+   "sources": [
+    {
+     "label": "FEC candidate totals",
+     "url": "https://www.fec.gov/data/"
+    }
+   ],
+   "status": "draft"
+  }
+ ]
+}
