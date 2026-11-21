@@ -180,3 +180,46 @@ def contrib_reread(out: Path, fetch, key: str | None, lobbying: dict, start: str
            "_summary": {"reports": len(reports), "items": sum(len(r["items"]) for r in reports)}}
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return res
+
+
+def lda_read(out, fetch, key, items: list[str], years=(2025, 2026)) -> dict:
+    """Research reads of quarterly lobbying reports (LD-2), as filed: each item is a filing UUID, or
+    "lobbyist:<last name>" / "client:<name>" for every report in the years listing that lobbyist or client. Keeps who
+    filed, the client, amounts, and per activity the issue, the description, the houses and agencies contacted and the
+    lobbyists with their former posts. Saved to data/records/lda_read.json."""
+    import json as _json
+    from urllib.parse import quote as _q
+    from .ppplobby import name_key
+    headers = {"Authorization": f"Token {key}"} if key else None
+
+    def slim(f):
+        return {"uuid": f.get("filing_uuid"), "year": f.get("filing_year"), "period": f.get("filing_period"),
+                "type": f.get("filing_type"), "posted": f.get("dt_posted"),
+                "registrant": (f.get("registrant") or {}).get("name"), "client": (f.get("client") or {}).get("name"),
+                "own": (f.get("client") or {}).get("client_self_select"), "income": f.get("income"), "expenses": f.get("expenses"),
+                "activities": [{"code": a.get("general_issue_code"), "description": (a.get("description") or "")[:600],
+                                "contacted": [g.get("name") for g in a.get("government_entities") or []],
+                                "lobbyists": [{"name": " ".join(x for x in ((l.get("lobbyist") or {}).get("first_name"), (l.get("lobbyist") or {}).get("last_name")) if x),
+                                               "covered_position": l.get("covered_position"), "new": l.get("new")}
+                                              for l in a.get("lobbyists") or []]}
+                               for a in f.get("lobbying_activities") or []]}
+    res = {}
+    for it in items:
+        rows = []
+        if ":" in it:
+            kind, val = it.split(":", 1)
+            param = {"lobbyist": "lobbyist_name", "client": "client_name"}[kind.strip()]
+            for y in years:
+                page = 1
+                while True:
+                    data = fetch.get_json("lda", f"read_{kind}_{name_key(val)}_{y}_p{page}.json",
+                                          f"{BASE}/filings/?{param}={_q(val.strip())}&filing_year={y}&page={page}&page_size=25", headers=headers)
+                    rows += [slim(f) for f in data.get("results", [])]
+                    if not data.get("next"):
+                        break
+                    page += 1
+        else:
+            rows.append(slim(fetch.get_json("lda", f"read_{it.strip()}.json", f"{BASE}/filings/{it.strip()}/", headers=headers)))
+        res[it] = rows
+    out.write_text(_json.dumps(res, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return res

@@ -411,6 +411,19 @@ def cmd_contribcheck(args) -> int:
     return 0
 
 
+def cmd_ldaread(args) -> int:
+    """Research reads of LD-2 reports: filing UUIDs, or lobbyist:<name> / client:<name> (data/records/lda_read.json)."""
+    from .http import Fetcher
+    from .sources import billcheck
+    run_date = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    fetch = Fetcher(RawArchive(ROOT / "raw", run_date), min_interval={"lda.gov": 0.55})
+    years = tuple(int(y) for y in (args.years or "2025,2026").split(","))
+    res = billcheck.lda_read(ROOT / "records" / "lda_read.json", fetch, os.environ.get("LDA_API_KEY"),
+                             [x for x in args.names.split("|") if x.strip()], years)
+    log.info("lda read: %s", {k: len(v) for k, v in res.items()})
+    return 0
+
+
 def cmd_leadpac(args) -> int:
     """Leadership PACs' totals and itemized spending, 2025-26 (data/records/leadpac_spend.json.gz)."""
     import time as _t
@@ -554,6 +567,9 @@ def main(argv=None) -> int:
     sub.add_parser("leadpacie", help="leadership PACs' independent expenditures, 2023-26, and latest totals")
     fcc = sub.add_parser("feccheck", help="every cycle's totals and receipts by size for FEC committees")
     fcc.add_argument("--names", required=True, help="committee ids separated by |")
+    lr = sub.add_parser("ldaread", help="research reads of LD-2 reports (uuids, lobbyist:<name>, client:<name>)")
+    lr.add_argument("--names", required=True)
+    lr.add_argument("--years", default="2025,2026")
     ccr = sub.add_parser("contribcheck", help="re-read LD-203 reports with contributions dated in a window")
     ccr.add_argument("--names", required=True, help="start|end, e.g. 2025-10-01|2025-11-12")
     isr = sub.add_parser("issuesearch", help="every report whose specific issues contain a phrase")
@@ -571,7 +587,7 @@ def main(argv=None) -> int:
     g.add_argument("--site-only", action="store_true", help="check only the built site")
     args = p.parse_args(argv)
     return {"snapshot": cmd_snapshot, "build": cmd_build, "chains": cmd_chains, "approve": cmd_approve,
-            "verify": cmd_verify, "restore": cmd_restore, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch, "contribcheck": cmd_contribcheck, "leadpac": cmd_leadpac, "leadpacie": cmd_leadpacie, "feccheck": cmd_feccheck}[args.cmd](args)
+            "verify": cmd_verify, "restore": cmd_restore, "guard": cmd_guard, "zcta": cmd_zcta, "ppp": cmd_ppp, "ppplobby": cmd_ppplobby, "pppspot": cmd_pppspot, "pppborrowers": cmd_pppborrowers, "pppcheck": cmd_pppcheck, "pppfees": cmd_pppfees, "billcheck": cmd_billcheck, "topiccheck": cmd_topiccheck, "issuesearch": cmd_issuesearch, "contribcheck": cmd_contribcheck, "leadpac": cmd_leadpac, "ldaread": cmd_ldaread, "leadpacie": cmd_leadpacie, "feccheck": cmd_feccheck}[args.cmd](args)
 
 
 if __name__ == "__main__":
