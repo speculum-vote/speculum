@@ -117,10 +117,15 @@ def ie_fetch(out: Path, fetch, key: str, members: list[dict], cycles=(2024, 2026
             t = _get(fetch, key, f"ie_tot_{cycle}_g{g}.json", "/totals/pac-party/", committee_id=chunk, cycle=cycle,
                      per_page=100)
             tots += [{k: r.get(k) for k in TOTAL_KEEP} for r in t.get("results") or []]
-            params, n = {"committee_id": chunk, "two_year_transaction_period": cycle, "per_page": 100,
-                         "sort": "-expenditure_date"}, 0
+            params, n = {"committee_id": chunk, "cycle": cycle, "per_page": 100, "sort": "-expenditure_date"}, 0
             while True:
-                data = _get(fetch, key, f"ie_se_{cycle}_g{g}_p{n}.json", "/schedules/schedule_e/", **params)
+                try:
+                    data = _get(fetch, key, f"ie_se_{cycle}_g{g}_p{n}.json", "/schedules/schedule_e/", **params)
+                except Exception as exc:  # keep going; the gap is recorded and reported
+                    body = getattr(getattr(exc, "response", None), "text", "")[:500]
+                    log.error("schedule_e failed for group %d cycle %s page %d: %s %s", g, cycle, n, exc.__class__.__name__, body)
+                    res.setdefault("errors", []).append({"cycle": cycle, "group": chunk, "page": n, "error": body or str(exc)[:200]})
+                    break
                 got = data.get("results") or []
                 rows += [{k: r.get(k) for k in IE_KEEP} for r in got]
                 last = (data.get("pagination") or {}).get("last_indexes")
