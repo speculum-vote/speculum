@@ -123,8 +123,8 @@ def ie_fetch(out: Path, fetch, key: str, members: list[dict], cycles=(2024, 2026
                     data = _get(fetch, key, f"ie_se_{cycle}_g{g}_p{n}.json", "/schedules/schedule_e/", **params)
                 except Exception as exc:  # keep going; the gap is recorded and reported
                     body = getattr(getattr(exc, "response", None), "text", "")[:500]
-                    log.error("schedule_e failed for group %d cycle %s page %d: %s %s", g, cycle, n, exc.__class__.__name__, body)
-                    res.setdefault("errors", []).append({"cycle": cycle, "group": chunk, "page": n, "error": body or str(exc)[:200]})
+                    log.error("schedule_e failed for group %d cycle %s page %d: %s %s", g, cycle, n, exc.__class__.__name__, body.replace(key, "***"))
+                    res.setdefault("errors", []).append({"cycle": cycle, "group": chunk, "page": n, "error": body.replace(key, "***") or exc.__class__.__name__})  # never str(exc): it holds the URL
                     break
                 got = data.get("results") or []
                 rows += [{k: r.get(k) for k in IE_KEEP} for r in got]
