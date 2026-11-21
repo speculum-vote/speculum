@@ -32,6 +32,21 @@ def test_mentions_before_a_bill_was_introduced_are_left_out():
     assert list(bills.collect(spend)[(119, "HR9")]["orgs"]) == ["a", "b"]
 
 
+def test_an_unknown_bill_is_dated_by_the_known_bill_numbered_below_it():
+    spend = {"quarters": {
+        "2025-Q1": _q({"HR8774": {"orgs": ["a"], "reports": 1, "former": []}, "HR120": {"orgs": ["a"], "reports": 1, "former": []},
+                       "HR3": {"orgs": ["a"], "reports": 1, "former": []}}, {"a": ["A Corp", "industry", ""]}),
+        "2026-Q2": _q({"HR8774": {"orgs": ["b"], "reports": 1, "former": []}}, {"b": ["B Union", "labor", "55"]}),
+    }}
+    info = {"bills": {"119-HR100": {"introduced": "2025-01-06"}, "119-HR8700": {"introduced": "2026-05-01"},
+                      "119-HR9000": {"introduced": "2026-06-10"}}}
+    c = bills.collect(spend, info)
+    assert list(c[(119, "HR8774")]["orgs"]) == ["b"]          # early 2025: the last Congress's H.R. 8774
+    assert (119, "HR120") in c and (119, "HR3") in c           # numbered after a bill already in; a reserved number
+    assert bills.earliest_intro(119, "HR8774", info["bills"], bills.intro_floor(info)) == "2026-05-01"
+    assert bills.earliest_intro(119, "HR50", info["bills"], bills.intro_floor(info)) is None
+
+
 def test_a_former_post_must_name_a_government_office():
     from speculum.sources.lobbyspend import is_post
     for t in ["Chief of Staff, Rep. Pat Smith", "Professional Staff, Senate Appropriations Committee", "Aide to Sens. Inhofe and Tillis",

@@ -10,7 +10,7 @@
    "area": "Senate roll calls",
    "wrong": "On 145 of 915 Senate roll calls, the count of Yea votes was one too high. The Senate vote source (Voteview) also records the President's announced position, and it was being counted as a senator's vote.",
    "changed": "The President's position is excluded from every Senate tally. Counts now match the Senate's official record.",
-   "scope": "Affected: Senate vote counts on member pages, Tide stories and Dependents chains (for example, the Qatar and UAE arms-sale votes now read 39–56)."
+   "scope": "Affected: Senate vote counts on member pages, Tide stories and Dependents chains (for example, the Qatar and UAE arms-sale votes now read 39\u201356)."
   },
   {
    "date": "2026-11-04",
@@ -65,7 +65,7 @@
    "prelaunch": true,
    "area": "Lobbying sectors",
    "wrong": "The word rule for hospitals also matched \"hospitality\", so hotel, casino and restaurant companies that describe themselves that way (Hilton, the American Hotel & Lodging Association, MGM, Boyd Gaming, Red Rock Resorts, Landry's and others) were placed with health.",
-   "changed": "The rule now matches \"hospital\" and \"hospitals\" only. Earlier quarters were re-read from the archived filings: 10 organizations moved, 9 to other business and 1 to agriculture and food. Four organizations in the 2020–21 PPP lobbying record were corrected the same way.",
+   "changed": "The rule now matches \"hospital\" and \"hospitals\" only. Earlier quarters were re-read from the archived filings: 10 organizations moved, 9 to other business and 1 to agriculture and food. Four organizations in the 2020\u201321 PPP lobbying record were corrected the same way.",
    "scope": "Affected: sector shares on bill pages, the gatekeepers page, Said & Done, Interests and Cases, by less than a point."
   },
   {
@@ -97,6 +97,13 @@
    "wrong": "On an organization's own contribution report (LD-203), a contribution listed as from \"Self\" was treated as a lobbyist's personal money and left out of the organization's giving. On those reports \"Self\" is the organization. 8,880 contributions ($17.9 million) from 590 organizations were affected.",
    "changed": "\"Self\" is now read as a lobbyist only on a lobbyist's own report. Organizations' giving on Said & Done now includes these contributions: 126 bills qualify instead of 121, and on H.R. 1, for example, 742 organizations funded its voters (was 683) and 676 funded both sides (was 629).",
    "scope": "Affected: Said & Done and its bill pages. Other pages counted these contributions already."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Lobbied bills",
+   "wrong": "Lobbying reports often cite a bill by number alone. A number cited before this Congress's bill of that number existed refers to the last Congress's bill, and those mentions were left out only when we had the bill's introduction date. For most bills we did not, so some early-2025 mentions of last Congress's bills were counted as lobbying on this Congress's bills (for example, 144 organizations citing H.R. 8774, last Congress's defense spending bill, were counted toward a 2026 bill about police vehicles).",
+   "changed": "Bills are numbered in the order they are introduced, so a bill whose date we lack is now dated no earlier than the bill numbered just below it, and a mention in a quarter that ended before then is left out. Reserved low numbers (50 and under) are kept as before.",
+   "scope": "Affected: bill pages and lists. 3,005 bills have 5 or more organizations (was 3,117); 7,076 organizations named bills (was 7,119); the PPP case's count of bills one lender named. Member, vote and money pages are unchanged."
   }
  ]
 }

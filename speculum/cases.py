@@ -36,7 +36,16 @@ def core_name(n: str | None) -> str:
     return PARENTS.get(s, s)
 
 
-def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: list[dict]) -> list[dict]:
+def bill_info(data_root: Path | None) -> dict | None:
+    """The newest snapshot's bill details (introduction dates), so mentions of an earlier Congress's bill numbers are
+    left out the same way as on the bill pages (bills.collect)."""
+    if not data_root:
+        return None
+    ps = sorted((Path(data_root) / "snapshots").glob("*/billinfo.json"))
+    return json.loads(ps[-1].read_text(encoding="utf-8")) if ps else None
+
+
+def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: list[dict], info: dict | None = None) -> list[dict]:
     """For each lender: whether it (or its parent) files its own lobbying reports in 2025-26, what it reported spending,
     how many bills it named, and what it gave sitting members (LD-203), by party."""
     regs: dict = {}
@@ -51,7 +60,7 @@ def ppp_today(lenders: list[dict], spend: dict | None, lobbying: dict, members: 
         for k, o in (v.get("orgs") or {}).items():
             clients[core_name(o[0])].add(k)
     named = defaultdict(set)
-    for (cg, b), e in collect(spend, None).items():
+    for (cg, b), e in collect(spend, info).items():
         for k in e["orgs"]:
             named[k].add(b)
     giving = org_giving(lobbying)
@@ -246,7 +255,8 @@ def load(data_root: Path) -> list[dict]:
 
 def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lobbying: dict, data_root: Path | None = None) -> dict:
     cg = int(case["congress"])
-    lobbied = collect(spend, None)
+    info = bill_info(data_root)
+    lobbied = collect(spend, info)
     merged = {"orgs": {}, "files": defaultdict(list), "former": {}, "former_for": defaultdict(set), "reports": 0}
     for b in case["bills"]:
         e = lobbied.get((cg, b))
@@ -306,7 +316,7 @@ def compute(case: dict, spend: dict | None, votes: dict, members: list[dict], lo
                 L["name"] = re.sub(r",?\s+a division of\s*$", "", L["name"], flags=re.I)   # cut short in the SBA's file
             extra["ppp"] = {**d, "lenders": d["lenders"][:25], "fee_rate": round(t["fees"] / t["amount"], 4),
                             "forgiven_share": round(t["forgiven"] / t["amount"], 4)}
-            extra["ppp"]["today"] = ppp_today(d["lenders"][:25], spend, lobbying, members)
+            extra["ppp"]["today"] = ppp_today(d["lenders"][:25], spend, lobbying, members, info)
             extra["ppp"]["years"] = lobbying.get("years_label")
             hp = Path(data_root or ".") / "records" / "ppp_lobbying.json"
             if hp.exists():

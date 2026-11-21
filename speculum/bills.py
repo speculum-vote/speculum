@@ -37,11 +37,45 @@ QUARTER_END = {1: "03-31", 2: "06-30", 3: "09-30", 4: "12-31"}
 from .sources.lobbyspend import is_post
 
 
+_KEY = re.compile(r"(\d+)-([A-Z]+)(\d+)")
+RESERVED = 50       # low numbers are held for leadership bills and introduced out of order
+
+
+def intro_floor(info: dict | None) -> dict:
+    """(congress, type) -> sorted [(number, introduced)] for bills whose introduction date is known. Bills are numbered
+    in the order they are introduced (apart from the reserved low numbers), so a bill introduced no earlier than the
+    known bill numbered just below it."""
+    out: dict = defaultdict(list)
+    for k, v in ((info or {}).get("bills") or {}).items():
+        m = _KEY.fullmatch(k)
+        if m and isinstance(v, dict) and v.get("introduced") and int(m[3]) > RESERVED:
+            out[(int(m[1]), m[2])].append((int(m[3]), v["introduced"]))
+    return {k: sorted(v) for k, v in out.items()}
+
+
+def earliest_intro(cg: int, bill: str, info: dict, floors: dict) -> str | None:
+    """The bill's introduction date if known; otherwise the earliest it can have been introduced (the date of the
+    nearest known bill numbered below it, or above it if that is earlier), or None for reserved numbers."""
+    known = (info.get(f"{cg}-{bill}") or {}).get("introduced")
+    if known:
+        return known
+    m = re.fullmatch(r"([A-Z]+)(\d+)", bill)
+    if not m or int(m[2]) <= RESERVED:
+        return None
+    seq = floors.get((cg, m[1])) or []
+    n = int(m[2])
+    below = [d for x, d in seq if x < n][-1:]
+    above = [d for x, d in seq if x > n][:1]
+    return min(below + above) if below else None
+
+
 def collect(spend: dict | None, info: dict | None = None) -> dict:
     """Merge the quarters: per (congress, bill) the organizations, report count, quarters and former officials.
     A mention in a quarter that ended before the bill was introduced refers to an earlier Congress's bill of the
-    same number, so it is left out (when the introduction date is known)."""
+    same number, so it is left out: when the introduction date is known, and otherwise when the quarter ended before
+    the nearest lower-numbered bill was introduced (see earliest_intro)."""
     out: dict = {}
+    floors = intro_floor(info) if info else {}
     info = (info or {}).get("bills", {})
     # An organization's sector is the one most of its quarters give it (its descriptions can differ from report to
     # report); a tie goes to the earliest quarter's.
@@ -55,7 +89,7 @@ def collect(spend: dict | None, info: dict | None = None) -> dict:
         qend = f"{label[:4]}-{QUARTER_END[int(label[-1])]}"
         orgs, people = q.get("orgs") or {}, q.get("people") or {}
         for b, v in (q.get("bills") or {}).items():
-            intro = (info.get(f"{cg}-{b}") or {}).get("introduced")
+            intro = earliest_intro(cg, b, info, floors) if floors or info else None
             if intro and intro > qend:
                 continue
             e = out.setdefault((cg, b), {"orgs": {}, "reports": 0, "quarters": [], "former": {}, "files": {}, "former_for": {}})
