@@ -1,5 +1,5 @@
 {
- "calls": 4674,
+ "calls": 4677,
  "counts": {
   "finance": 518,
   "house": 433,
@@ -35,9 +35,9 @@
    "sha256": "da8c442ff9556096a0e66ff035934afcc6842114eea054860a3d1e2bd02780b8"
   },
   "lobbying.json": {
-   "bytes": 76296497,
-   "night": "2026-11-22",
-   "sha256": "bda900d7c58b37f0a8f31cf98df55b886ab0d01d9acf05111283799d01a89d47"
+   "bytes": 76296591,
+   "night": "2026-11-23",
+   "sha256": "b29acc593678d8b7d0416fff9c43290e61cd06324a1c55f717ea5d3bbd6786a3"
   },
   "members.json": {
    "bytes": 261385,
@@ -45,9 +45,9 @@
    "sha256": "9234ac2ddfa0f81a608f1096e590c51aad54221fbfb2442a1cd4c27cd916ed62"
   },
   "spend.json": {
-   "bytes": 41191675,
+   "bytes": 41193008,
    "night": "2026-11-23",
-   "sha256": "98f8abaab42b21c415984bbe099e20c0b58f93495d8f1698b661681047d9b84c"
+   "sha256": "01583dd0716235da33df2a0fcbc73c3d7439a4cacfae03befa7832ac8d1cb83c"
   },
   "votes.json.gz": {
    "bytes": 454893,
@@ -57,6 +57,6 @@
  },
  "finance_partial": null,
  "note": "",
- "raw_files": 4674,
+ "raw_files": 4677,
  "votes_through": "2026-11-20"
 }
