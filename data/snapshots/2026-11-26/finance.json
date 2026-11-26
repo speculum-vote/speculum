@@ -1108,90 +1108,139 @@
  },
  "A000370": {
   "candidate_id": "H4NC12100",
-  "cash_on_hand": 483996.68,
+  "cash_on_hand": 438821.89,
   "committee_id": "C00546358",
   "committee_name": "ALMA ADAMS FOR CONGRESS",
-  "coverage_end": "2026-10-14",
+  "coverage_end": "2026-11-23",
   "cycle": 2026,
   "cycle_label": "2025–2026 cycle",
-  "disbursements": 572787.62,
-  "large": 102167.5,
-  "last_report": "PRE-GENERAL",
-  "pac": 360565.0,
+  "disbursements": 671866.41,
+  "large": 127082.5,
+  "last_report": "POST-GENERAL",
+  "pac": 387165.0,
   "party": 3000.0,
-  "receipts": 483374.93,
+  "receipts": 537278.93,
   "self": 0.0,
-  "small": 16305.06,
+  "small": 18694.06,
   "top_committees": [
+   {
+    "amount": 10000.0,
+    "committee_id": "C00792127",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "Fair Isaac Corporation Political Action Committee (Fico PAC)"
+   },
    {
     "amount": 10000.0,
     "committee_id": "C00467381",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Lendingtree Llc Political Action Committee"
+    "name": "Lendingtree LLC Political Action Committee"
+   },
+   {
+    "amount": 10000.0,
+    "committee_id": "C00010322",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "American Postal Workers Union Committee on Political Action"
+   },
+   {
+    "amount": 10000.0,
+    "committee_id": "C00002469",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "Machinists Non Partisan Political League of the International Association of Machinists &"
+   },
+   {
+    "amount": 10000.0,
+    "committee_id": "C00002972",
+    "count": 4,
+    "entity_type": "PAC",
+    "name": "The National Rural Electric Cooperative Association Action Committee for Rural Electrification (Acre)"
+   },
+   {
+    "amount": 10000.0,
+    "committee_id": "C00001016",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "Carpenters Legislative Improvement Committee United Brotherhood of Carpenters and Joiners"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00007542",
     "count": 2,
     "entity_type": "PAC",
-    "name": "International Association Of Sheet Metal, Air, Rail And Transportation Workers Political Action League"
+    "name": "International Association of Sheet Metal, Air, Rail and Transportation Workers Political Action League"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00028860",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Federation Of Teachers, Afl-Cio Committee On Political Education"
+    "name": "American Federation of Teachers, AFL-CIO Committee on Political Education"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00027342",
     "count": 2,
     "entity_type": "PAC",
-    "name": "International Brotherhood Of Electrical Workers Political Action Committee"
+    "name": "International Brotherhood of Electrical Workers Political Action Committee"
    },
    {
-    "amount": 7500.0,
+    "amount": 10000.0,
     "committee_id": "C00011114",
-    "count": 3,
+    "count": 4,
     "entity_type": "PAC",
-    "name": "American Federation Of State County & Municipal Employees  P E O P L E"
+    "name": "American Federation of State County & Municipal Employees  P E O P L E"
+   },
+   {
+    "amount": 10000.0,
+    "committee_id": "C00431361",
+    "count": 4,
+    "entity_type": "PAC",
+    "name": "Teachers Insurance Annuity Association of America PAC (TIAA PAC)"
    },
    {
     "amount": 7500.0,
-    "committee_id": "C00431361",
+    "committee_id": "C00023580",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "National Association of Letter Carriers of U.S.A. Political Fund (Letter Carrier Political"
+   },
+   {
+    "amount": 7500.0,
+    "committee_id": "C00163832",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Teachers Insurance Annuity Association Of America Pac (Tiaa Pac)"
+    "name": "CSX Corporation Good Government Fund"
    },
    {
     "amount": 7500.0,
     "committee_id": "C00251751",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Lowe'S Companies, Inc. Political Action Committee"
+    "name": "Lowe's Companies, Inc. Political Action Committee"
    },
    {
     "amount": 7000.0,
     "committee_id": "C00083535",
     "count": 5,
     "entity_type": "PAC",
-    "name": "Duke Energy Corporation Pac"
+    "name": "Duke Energy Corporation PAC"
    },
    {
-    "amount": 5000.0,
-    "committee_id": "C00792127",
-    "count": 1,
+    "amount": 6000.0,
+    "committee_id": "C00501429",
+    "count": 3,
     "entity_type": "PAC",
-    "name": "Fair Isaac Corporation Political Action Committee (Fico Pac)"
+    "name": "TD Bank N.A PAC"
    },
    {
-    "amount": 5000.0,
-    "committee_id": "C00010322",
-    "count": 1,
+    "amount": 6000.0,
+    "committee_id": "C00030718",
+    "count": 3,
     "entity_type": "PAC",
-    "name": "American Postal Workers Union Committee On Political Action"
+    "name": "National Association of Realtors Political Action Committee"
    },
    {
     "amount": 5000.0,
@@ -1199,13 +1248,6 @@
     "count": 1,
     "entity_type": "PAC",
     "name": "Unum Group Political Action Committee (Unumpac)"
-   },
-   {
-    "amount": 5000.0,
-    "committee_id": "C00002469",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Machinists Non Partisan Political League Of The International Association Of Machinists &"
    },
    {
     "amount": 5000.0,
@@ -1219,63 +1261,63 @@
     "committee_id": "C00007922",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Laborers' International Union Of North America (Liuna) Pac"
+    "name": "Laborers' International Union of North America (Liuna) PAC"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00383950",
     "count": 1,
     "entity_type": "PAC",
-    "name": "National Elevator Constructors Pac/ Intn'L  Union Of Elevator Constructors (Nec Pac)"
+    "name": "National Elevator Constructors PAC/ Intn'L  Union of Elevator Constructors (Nec PAC)"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00012476",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Ua Union Plumbers & Pipefitters Vote! Pac (United Association Of Journeymen And Apprentices Of The Plumbing & Pipefitting Industry Of The United States And Canada)"
+    "name": "Ua Union Plumbers & Pipefitters Vote! PAC (United Association of Journeymen and Apprentices of the Plumbing & Pipefitting Industry of the United States and Canada)"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00002089",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Communications Workers Of America-Cope Political Contributions Committee"
+    "name": "Communications Workers of America-Cope Political Contributions Committee"
    },
    {
     "amount": 5000.0,
-    "committee_id": "C00001016",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Carpenters Legislative Improvement Committee United Brotherhood Of Carpenters And Joiners"
-   },
-   {
-    "amount": 5000.0,
-    "committee_id": "C00501429",
+    "committee_id": "C00410266",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Td Bank N.A Pac"
+    "name": "The Vanguard Group Committee for Responsible Government"
    },
    {
     "amount": 5000.0,
-    "committee_id": "C00163832",
+    "committee_id": "C00096156",
+    "count": 3,
+    "entity_type": "PAC",
+    "name": "Honeywell International Political Action Committee"
+   },
+   {
+    "amount": 5000.0,
+    "committee_id": "C00029504",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Csx Corporation Good Government Fund"
+    "name": "Engineers Political Education Committee (Epec)/International Union of Operating Engineers"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00024521",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Association For Justice Political Action Committee (Aaj Pac)"
+    "name": "American Association for Justice Political Action Committee (Aaj PAC)"
    },
    {
-    "amount": 5000.0,
-    "committee_id": "C00002972",
-    "count": 3,
+    "amount": 4500.0,
+    "committee_id": "C00010868",
+    "count": 2,
     "entity_type": "PAC",
-    "name": "The National Rural Electric Cooperative Association Action Committee For Rural Electrification (Acre)"
+    "name": "American Council of Engineering Companies (Acec/PAC)"
    },
    {
     "amount": 4500.0,
@@ -1286,45 +1328,73 @@
    },
    {
     "amount": 4000.0,
+    "committee_id": "C00432252",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "Regions Financial Corporation Political Action Committee"
+   },
+   {
+    "amount": 4000.0,
     "committee_id": "C00451153",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Gridiron-Pac"
+    "name": "Gridiron-PAC"
+   },
+   {
+    "amount": 4000.0,
+    "committee_id": "C00109017",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "AT&T Inc. Federal Political Action Committee (AT&T Federal PAC)"
+   },
+   {
+    "amount": 4000.0,
+    "committee_id": "C00144766",
+    "count": 3,
+    "entity_type": "PAC",
+    "name": "National Beer Wholesalers Association Political Action Committee"
    },
    {
     "amount": 3500.0,
     "committee_id": "C00005157",
     "count": 1,
     "entity_type": "PAC",
-    "name": "International Brotherhood Of Boilermakers Campaign Assistance Fund"
+    "name": "International Brotherhood of Boilermakers Campaign Assistance Fund"
    },
    {
     "amount": 3500.0,
     "committee_id": "C00300178",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Wells Fargo And Company Employees Good Government Federal Fund Ii"
+    "name": "Wells Fargo and Company Employees Good Government Federal Fund II"
+   },
+   {
+    "amount": 3500.0,
+    "committee_id": "C00410068",
+    "count": 2,
+    "entity_type": "PAC",
+    "name": "Fraternity & Sorority Political Action Committee"
    },
    {
     "amount": 3500.0,
     "committee_id": "C00216754",
     "count": 2,
     "entity_type": "PAC",
-    "name": "North Carolina Farm Bureau Federation Inc Pol Act Cmte Inc (Aka) Nc Farm Bureau Farmpac"
+    "name": "North Carolina Farm Bureau Federation Inc Pol Act Cmte Inc (Aka) NC Farm Bureau Farmpac"
    },
    {
     "amount": 3000.0,
     "committee_id": "C00579540",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Ally Pac"
+    "name": "Ally PAC"
    },
    {
     "amount": 3000.0,
     "committee_id": "C00081414",
     "count": 1,
     "entity_type": "PAC",
-    "name": "American Sugar Cane League Of Usa Inc Political Action Committee"
+    "name": "American Sugar Cane League of USA Inc Political Action Committee"
    },
    {
     "amount": 3000.0,
@@ -1335,10 +1405,10 @@
    },
    {
     "amount": 3000.0,
-    "committee_id": "C00030718",
-    "count": 2,
+    "committee_id": "C00093054",
+    "count": 3,
     "entity_type": "PAC",
-    "name": "National Association Of Realtors Political Action Committee"
+    "name": "Walmart Inc. PAC for Responsible Government"
    },
    {
     "amount": 2500.0,
@@ -1349,31 +1419,38 @@
    },
    {
     "amount": 2500.0,
-    "committee_id": "C00432252",
+    "committee_id": "C00540518",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Regions Financial Corporation Political Action Committee"
+    "name": "The Capital Group Companies Inc Political Action Committee"
    },
    {
     "amount": 2500.0,
-    "committee_id": "C00410266",
+    "committee_id": "C00005249",
     "count": 1,
     "entity_type": "PAC",
-    "name": "The Vanguard Group Committee For Responsible Government"
+    "name": "National Association of Insurance and Financial Advisors Political Action Comm"
+   },
+   {
+    "amount": 2500.0,
+    "committee_id": "C00253468",
+    "count": 1,
+    "entity_type": "PAC",
+    "name": "Federal Agricultural Mortgage Corporation Political Action Committee"
    },
    {
     "amount": 2500.0,
     "committee_id": "C00004275",
     "count": 1,
     "entity_type": "PAC",
-    "name": "American Bankers Association Pac (Bankpac)"
+    "name": "American Bankers Association PAC (Bankpac)"
    },
    {
     "amount": 2500.0,
     "committee_id": "C00035451",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Air Line Pilots Association Pac"
+    "name": "Air Line Pilots Association PAC"
    },
    {
     "amount": 2500.0,
@@ -1384,17 +1461,10 @@
    },
    {
     "amount": 2500.0,
-    "committee_id": "C00023580",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "National Association Of Letter Carriers Of U.S.A. Political Fund (Letter Carrier Political"
-   },
-   {
-    "amount": 2500.0,
     "committee_id": "C00023028",
     "count": 1,
     "entity_type": "PAC",
-    "name": "National Cotton Council Of America Committee For The Advancement Of Cotton"
+    "name": "National Cotton Council of America Committee for the Advancement of Cotton"
    },
    {
     "amount": 2500.0,
@@ -1402,76 +1472,6 @@
     "count": 1,
     "entity_type": "PAC",
     "name": "Nucor Corporation Political Action Committee"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00002766",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "United Food And Commercial Workers International Union Active Ballot Club"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00408260",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "The Grant Thornton Llp Political Action Committee Llc"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00027359",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Int'L. Association Of Bridge, Structural, Ornamental & Reinforcing Iron Workers (Ipal)"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00004036",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Seiu Cope (Service Employees International Union Committee On Political Education)"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00029504",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Engineers Political Education Committee (Epec)/International Union Of Operating Engineers"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00267849",
-    "count": 2,
-    "entity_type": "PAC",
-    "name": "Allied Pilots Association Political Action Committee"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00144766",
-    "count": 2,
-    "entity_type": "PAC",
-    "name": "National Beer Wholesalers Association Political Action Committee"
-   },
-   {
-    "amount": 2500.0,
-    "committee_id": "C00096156",
-    "count": 2,
-    "entity_type": "PAC",
-    "name": "Honeywell International Political Action Committee"
-   },
-   {
-    "amount": 2000.0,
-    "committee_id": "C00010868",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "American Council Of Engineering Companies (Acec/Pac)"
-   },
-   {
-    "amount": 2000.0,
-    "committee_id": "C00003251",
-    "count": 1,
-    "entity_type": "PAC",
-    "name": "Nea Fund For Children And Public Education"
    }
   ]
  },
@@ -161851,7 +161851,7 @@
  },
  "T000460": {
   "candidate_id": "H8CA01109",
-  "cash_on_hand": 1401439.52,
+  "cash_on_hand": 1403439.52,
   "committee_id": "C00326363",
   "committee_name": "MIKE THOMPSON FOR CONGRESS",
   "coverage_end": "2026-10-14",
@@ -161860,9 +161860,9 @@
   "disbursements": 5290993.22,
   "large": 2719262.19,
   "last_report": "PRE-GENERAL",
-  "pac": 2440654.8,
+  "pac": 2442654.8,
   "party": 8802.97,
-  "receipts": 5482944.34,
+  "receipts": 5484944.34,
   "self": 0.0,
   "small": 225839.56,
   "top_committees": [

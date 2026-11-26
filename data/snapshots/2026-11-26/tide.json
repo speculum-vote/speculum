@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-26",
+ "first": false,
+ "more": 0,
+ "roll_calls": 0,
+ "since": "2026-11-25",
+ "stories": [
+  {
+   "date": null,
+   "dek": "Largest increases in total receipts since the previous edition.",
+   "facts": [
+    "Alma S. Adams (D-NC): +$53,904, through 2026-11-23"
+   ],
+   "headline": "1 member filed new campaign finance reports",
+   "id": "2026-11-26-01",
+   "kind": "Campaign filings",
+   "member_names": [],
+   "members": [
+    "A000370"
+   ],
+   "score": 8,
+   "sources": [
+    {
+     "label": "FEC candidate totals",
+     "url": "https://www.fec.gov/data/"
+    }
+   ],
+   "status": "draft"
+  }
+ ]
+}
