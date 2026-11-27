@@ -1,0 +1,34 @@
+{
+ "date": "2026-11-27",
+ "first": false,
+ "more": 0,
+ "roll_calls": 0,
+ "since": "2026-11-26",
+ "stories": [
+  {
+   "date": null,
+   "dek": "Registered lobbyists and their organizations file twice-yearly reports of contributions to federal officeholders.",
+   "facts": [
+    "Raul Ruiz (D-CA): $1,000",
+    "Jimmy Panetta (D-CA): $500",
+    "2 contributions in newly posted reports."
+   ],
+   "headline": "New lobbyist contribution reports list $1,500 to 2 members",
+   "id": "2026-11-27-01",
+   "kind": "Lobbyist money",
+   "member_names": [],
+   "members": [
+    "R000599",
+    "P000613"
+   ],
+   "score": 12,
+   "sources": [
+    {
+     "label": "LD-203 reports, lda.gov",
+     "url": "https://lda.gov/system/public/"
+    }
+   ],
+   "status": "draft"
+  }
+ ]
+}
