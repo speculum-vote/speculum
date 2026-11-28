@@ -12449,55 +12449,55 @@
  },
  "B001300": {
   "candidate_id": "H6CA44103",
-  "cash_on_hand": 1083798.24,
+  "cash_on_hand": 1038915.6,
   "committee_id": "C00577353",
   "committee_name": "BARRAGAN FOR CONGRESS",
-  "coverage_end": "2026-10-14",
+  "coverage_end": "2026-11-23",
   "cycle": 2026,
   "cycle_label": "2025–2026 cycle",
-  "disbursements": 1419676.46,
-  "large": 208949.02,
-  "last_report": "PRE-GENERAL",
-  "pac": 799250.0,
+  "disbursements": 1513612.51,
+  "large": 213508.02,
+  "last_report": "POST-GENERAL",
+  "pac": 842750.0,
   "party": 0.0,
-  "receipts": 1021920.79,
+  "receipts": 1070974.2,
   "self": 0.0,
-  "small": 4440.19,
+  "small": 4626.4,
   "top_committees": [
    {
     "amount": 10000.0,
     "committee_id": "C00219568",
     "count": 2,
     "entity_type": "PAC",
-    "name": "International Union Of Operating Engineers Local No. 12 Voluntary Legislative Fund"
+    "name": "International Union of Operating Engineers Local No. 12 Voluntary Legislative Fund"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00110338",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Crystal Sugar Company Pac"
+    "name": "American Crystal Sugar Company PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00030718",
     "count": 4,
     "entity_type": "PAC",
-    "name": "National Association Of Realtors Political Action Committee"
+    "name": "National Association of Realtors Political Action Committee"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00007922",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Laborers' International Union Of North America (Liuna) Pac"
+    "name": "Laborers' International Union of North America (Liuna) PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00280222",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Kpmg Partners/Principals And Employees Pac"
+    "name": "KPMG Partners/Principals and Employees PAC"
    },
    {
     "amount": 10000.0,
@@ -12511,21 +12511,21 @@
     "committee_id": "C00358903",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Association Of Nurse Practitioners Political Action Committee"
+    "name": "American Association of Nurse Practitioners Political Action Committee"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00435933",
     "count": 3,
     "entity_type": "PAC",
-    "name": "American Academy Of Neurology Brainpac"
+    "name": "American Academy of Neurology Brainpac"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00186288",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Verizon Communications Inc. Good Government Club (Verizon Pac)"
+    "name": "Verizon Communications Inc. Good Government Club (Verizon PAC)"
    },
    {
     "amount": 10000.0,
@@ -12539,7 +12539,7 @@
     "committee_id": "C00007542",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Int'L Assoc Of Sheet Metal Air Rail And Transportation Workers Pac (Smart Pac)"
+    "name": "Int'L Assoc of Sheet Metal Air Rail and Transportation Workers PAC (Smart PAC)"
    },
    {
     "amount": 10000.0,
@@ -12553,14 +12553,14 @@
     "committee_id": "C00396895",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Gilead Sciences Inc Healthcare Policy Pac"
+    "name": "Gilead Sciences Inc Healthcare Policy PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00213819",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Delta Dental Plans Association Pac"
+    "name": "Delta Dental Plans Association PAC"
    },
    {
     "amount": 10000.0,
@@ -12574,28 +12574,28 @@
     "committee_id": "C00400929",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Cencora, Inc. Pac"
+    "name": "Cencora, Inc. PAC"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00011114",
     "count": 4,
     "entity_type": "PAC",
-    "name": "American Federation Of State, County And Municipal Employees, Afl-Cio"
+    "name": "American Federation of State, County and Municipal Employees, AFL-CIO"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00340364",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Blue Shield Of California Political Action Committee"
+    "name": "Blue Shield of California Political Action Committee"
    },
    {
     "amount": 10000.0,
     "committee_id": "C00016683",
     "count": 6,
     "entity_type": "PAC",
-    "name": "Pfizer Inc. Pac"
+    "name": "Pfizer Inc. PAC"
    },
    {
     "amount": 9000.0,
@@ -12616,7 +12616,7 @@
     "committee_id": "C00255752",
     "count": 3,
     "entity_type": "PAC",
-    "name": "American Society Of Anesthesiologists Political Action Committee"
+    "name": "American Society of Anesthesiologists Political Action Committee"
    },
    {
     "amount": 8500.0,
@@ -12630,7 +12630,7 @@
     "committee_id": "C00536573",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Abbvie Pac"
+    "name": "Abbvie PAC"
    },
    {
     "amount": 7500.0,
@@ -12644,7 +12644,7 @@
     "committee_id": "C00019653",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Edison International Pac"
+    "name": "Edison International PAC"
    },
    {
     "amount": 7500.0,
@@ -12658,7 +12658,7 @@
     "committee_id": "C00144766",
     "count": 4,
     "entity_type": "PAC",
-    "name": "National Beer Wholesalers Association Pac (Nbwa)"
+    "name": "National Beer Wholesalers Association PAC (Nbwa)"
    },
    {
     "amount": 7500.0,
@@ -12672,91 +12672,91 @@
     "committee_id": "C00024521",
     "count": 3,
     "entity_type": "PAC",
-    "name": "American Assoc For Justice Pac (Aaj Pac)"
+    "name": "American Assoc for Justice PAC (Aaj PAC)"
    },
    {
     "amount": 7500.0,
     "committee_id": "C00199257",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Genentech Inc Pac (Genenpac)"
+    "name": "Genentech Inc PAC (Genenpac)"
    },
    {
     "amount": 7500.0,
     "committee_id": "C00109017",
     "count": 4,
     "entity_type": "PAC",
-    "name": "At&T Inc. Federal Political Action Committee (At&T Federal Pac)"
+    "name": "AT&T Inc. Federal Political Action Committee (AT&T Federal PAC)"
    },
    {
     "amount": 7000.0,
     "committee_id": "C00009985",
     "count": 2,
     "entity_type": "PAC",
-    "name": "National Association Of Broadcasters Political Action Committee (Nabpac)"
+    "name": "National Association of Broadcasters Political Action Committee (Nabpac)"
    },
    {
     "amount": 6500.0,
     "committee_id": "C00010868",
     "count": 2,
     "entity_type": "PAC",
-    "name": "American Council Of Engineering Companies (Acec Pac)"
+    "name": "American Council of Engineering Companies (Acec PAC)"
    },
    {
     "amount": 6176.05,
     "committee_id": "C00365536",
     "count": 2,
     "entity_type": "PAC",
-    "name": "Chc Bold Pac"
+    "name": "CHC Bold PAC"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00082792",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Eli Lilly And Company Political Action Committee"
+    "name": "Eli Lilly and Company Political Action Committee"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00359539",
     "count": 3,
     "entity_type": "PAC",
-    "name": "American Academy Of Dermatology Association Political Action Committee (Skinpac)"
+    "name": "American Academy of Dermatology Association Political Action Committee (Skinpac)"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00140061",
     "count": 3,
     "entity_type": "PAC",
-    "name": "National Emergency Medicine Political Action Committee / American College Of Emergency Phy"
+    "name": "National Emergency Medicine Political Action Committee / American College of Emergency Phy"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00369751",
     "count": 3,
     "entity_type": "PAC",
-    "name": "Dell Technologies Inc Pac"
+    "name": "Dell Technologies Inc PAC"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00361758",
     "count": 4,
     "entity_type": "PAC",
-    "name": "T-Mobile Usa, Inc.  Political Action Committee (T-Pac)"
+    "name": "T-Mobile USA, Inc.  Political Action Committee (T-PAC)"
    },
    {
     "amount": 6000.0,
     "committee_id": "C00411900",
     "count": 5,
     "entity_type": "PAC",
-    "name": "Edwards Lifesciences Political Action Committee (A.K.A. Edwards Pac)"
+    "name": "Edwards Lifesciences Political Action Committee (A.K.A. Edwards PAC)"
    },
    {
     "amount": 5500.0,
     "committee_id": "C00430256",
     "count": 4,
     "entity_type": "PAC",
-    "name": "Molina Healthcare, Inc. Pac"
+    "name": "Molina Healthcare, Inc. PAC"
    },
    {
     "amount": 5202.5199999999995,
@@ -12770,35 +12770,35 @@
     "committee_id": "C00368142",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Office Of The Commissioner Of Major League Baseball Political Action Committee"
+    "name": "Office of the Commissioner of Major League Baseball Political Action Committee"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00002469",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Machinists Non Partisan Political League Of The International Association Of Machinists"
+    "name": "Machinists Non Partisan Political League of the International Association of Machinists"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00375048",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Consumer Technology Association Pac"
+    "name": "Consumer Technology Association PAC"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00411116",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Space Exploration Technologies Corp. Pac"
+    "name": "Space Exploration Technologies Corp. PAC"
    },
    {
     "amount": 5000.0,
     "committee_id": "C00029447",
     "count": 1,
     "entity_type": "PAC",
-    "name": "International Association Of Fire Fighters, Afl-Cio (Iaff)"
+    "name": "International Association of Fire Fighters, AFL-CIO (Iaff)"
    },
    {
     "amount": 5000.0,
@@ -12812,7 +12812,7 @@
     "committee_id": "C00004036",
     "count": 1,
     "entity_type": "PAC",
-    "name": "Seiu Cope (Service Employees International Union Committee On Political Education)"
+    "name": "SEIU Cope (Service Employees International Union Committee on Political Education)"
    }
   ]
  },
